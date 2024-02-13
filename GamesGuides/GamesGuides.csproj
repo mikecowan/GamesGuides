@@ -1,0 +1,260 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+	  <AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\ColtExpress\angry_marshal.png" />
+    <None Remove="Images\ColtExpress\arch_enemy.png" />
+    <None Remove="Images\ColtExpress\braking.png" />
+    <None Remove="Images\ColtExpress\crime_doesnt_pay.png" />
+    <None Remove="Images\ColtExpress\deadly_fall.png" />
+    <None Remove="Images\ColtExpress\disarmed.png" />
+    <None Remove="Images\ColtExpress\dodge_bullets.png" />
+    <None Remove="Images\ColtExpress\drop_that_bag.png" />
+    <None Remove="Images\ColtExpress\escape.png" />
+    <None Remove="Images\ColtExpress\full_of_lead.png" />
+    <None Remove="Images\ColtExpress\golden_bullet_award.png" />
+    <None Remove="Images\ColtExpress\got_im.png" />
+    <None Remove="Images\ColtExpress\guilty_conscience.png" />
+    <None Remove="Images\ColtExpress\higher_speed.png" />
+    <None Remove="Images\ColtExpress\hostage_taking.png" />
+    <None Remove="Images\ColtExpress\marshals_revenge.png" />
+    <None Remove="Images\ColtExpress\mortal_bullet.png" />
+    <None Remove="Images\ColtExpress\normal_turn.png" />
+    <None Remove="Images\ColtExpress\normal_whiskey.png" />
+    <None Remove="Images\ColtExpress\old_whiskey.png" />
+    <None Remove="Images\ColtExpress\only_a_flesh_wound.png" />
+    <None Remove="Images\ColtExpress\panting_horses.png" />
+    <None Remove="Images\ColtExpress\passengers_rebellion.png" />
+    <None Remove="Images\ColtExpress\pickpocketing.png" />
+    <None Remove="Images\ColtExpress\reflex_action.png" />
+    <None Remove="Images\ColtExpress\rumors.png" />
+    <None Remove="Images\ColtExpress\safekeeping.png" />
+    <None Remove="Images\ColtExpress\sharing_the_loot.png" />
+    <None Remove="Images\ColtExpress\shotguns_rage.png" />
+    <None Remove="Images\ColtExpress\shot_of_whiskey.png" />
+    <None Remove="Images\ColtExpress\shoulder_injury.png" />
+    <None Remove="Images\ColtExpress\speeding_up.png" />
+    <None Remove="Images\ColtExpress\switching.png" />
+    <None Remove="Images\ColtExpress\swivel_arm.png" />
+    <None Remove="Images\ColtExpress\take_it_all.png" />
+    <None Remove="Images\ColtExpress\the_mail_must_go_through.png" />
+    <None Remove="Images\ColtExpress\throw_away_the_key.png" />
+    <None Remove="Images\ColtExpress\tunnel.png" />
+    <None Remove="Images\ColtExpress\turmoil.png" />
+    <None Remove="Images\ColtExpress\wounded_knee.png" />
+    <None Remove="Images\Smartphone\wifi_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\ColtExpress\angry_marshal.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\arch_enemy.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\braking.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\crime_doesnt_pay.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\deadly_fall.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\disarmed.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\dodge_bullets.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\drop_that_bag.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\escape.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\full_of_lead.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\golden_bullet_award.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\got_im.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\guilty_conscience.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\higher_speed.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\hostage_taking.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\marshals_revenge.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\mortal_bullet.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\normal_turn.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\normal_whiskey.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\old_whiskey.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\only_a_flesh_wound.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\panting_horses.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\passengers_rebellion.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\pickpocketing.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\reflex_action.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\rumors.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\safekeeping.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\sharing_the_loot.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\shotguns_rage.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\shot_of_whiskey.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\shoulder_injury.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\speeding_up.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\switching.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\swivel_arm.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\take_it_all.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\the_mail_must_go_through.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\throw_away_the_key.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\tunnel.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\turmoil.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\ColtExpress\wounded_knee.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Images\Smartphone\wifi_icon.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\lib\Images\Smartphone\4g_icon.png" />
+    <None Include="wwwroot\lib\Images\Smartphone\bars.png" />
+    <None Include="wwwroot\lib\Images\Smartphone\battery_icon.png" />
+    <None Include="wwwroot\lib\Images\Smartphone\game_icon.png" />
+    <None Include="wwwroot\lib\Images\Smartphone\gear.png" />
+    <None Include="wwwroot\lib\Images\Smartphone\gps_icon.png" />
+    <None Include="wwwroot\lib\Images\Smartphone\nfc_icon.png" />
+    <None Include="wwwroot\lib\Images\Smartphone\office.png" />
+    <None Include="wwwroot\lib\Images\Smartphone\phone.png" />
+    <None Include="wwwroot\lib\Images\Smartphone\phone_minus_dollar.png" />
+    <None Include="wwwroot\lib\Images\Smartphone\plus_dollar.png" />
+    <None Include="wwwroot\lib\Images\Smartphone\truck.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.23" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Games\Y\" />
+    <Folder Include="Views\Games\X\" />
+    <Folder Include="Views\Games\W\" />
+    <Folder Include="Views\Games\U\" />
+    <Folder Include="Views\Games\R\" />
+    <Folder Include="Views\Games\N\" />
+    <Folder Include="wwwroot\lib\Images\Covers\" />
+    <Folder Include="wwwroot\lib\Images\DuneImperium\" />
+    <Folder Include="wwwroot\lib\Images\Imhotep\" />
+    <Folder Include="wwwroot\lib\Images\Icons\" />
+    <Folder Include="wwwroot\lib\Images\MissionRedPlanet\" />
+    <Folder Include="wwwroot\lib\Images\DungeonPetz\" />
+    <Folder Include="wwwroot\lib\Images\GameOfThrones\" />
+    <Folder Include="wwwroot\lib\Images\7WondersDuel\" />
+    <Folder Include="wwwroot\lib\Images\OnMars\" />
+    <Folder Include="wwwroot\lib\Images\PuertoRico\" />
+    <Folder Include="wwwroot\lib\Audio\" />
+  </ItemGroup>
+
+</Project>

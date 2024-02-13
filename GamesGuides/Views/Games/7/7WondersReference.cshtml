@@ -1,0 +1,214 @@
+﻿@{
+    ViewData["Title"] = "7 Wonders Guide";
+}
+
+<style>
+.table .table-cell {
+    padding-bottom: 2em;
+}
+</style>
+diplomacy
+defeattoshield
+<div class="table table-100 table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/discardbuild.png" />
+        </div>
+        <div class="table-cell tc-4">
+            Free build from the discard pile
+        </div>
+
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/freebuild.png" />
+        </div>
+        <div class="table-cell tc-4">
+            Construct a building for free, once per age
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/copy.png" />
+        </div>
+        <div class="table-cell tc-4">
+            Copy from either neighbor
+        </div>
+
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/selfneighbors.png" />
+        </div>
+        <div class="table-cell tc-4">
+            Apply bonus for both neighbors and your own
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/selfbenefit.png" />
+        </div>
+        <div class="table-cell tc-4">
+            Count <b>X</b> that you own
+            <br />
+            Receive coins immediately, points at end game
+        </div>
+
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/ignoreresource.png" />
+        </div>
+        <div class="table-cell tc-4">
+            <b>X</b> cost no resources
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/dashedarrow.png" />
+        </div>
+        <div class="table-cell tc-4">
+            Gain benefit each time you play <b>X</b>
+        </div>
+
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/mask.png" />
+        </div>
+        <div class="table-cell tc-4">
+            Copy a neighbor's science symbol
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/resourcedouble.png" />
+        </div>
+        <div class="table-cell tc-4">
+            Produce 1 extra resource each turn
+            <br />
+            from your own gray / brown / Wonder
+        </div>
+
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/resourcemissing.png" />
+        </div>
+        <div class="table-cell tc-4">
+            Produce 1 resource each turn that is <i>not</i> produced
+            <br />
+            among your own gray / brown / Wonder
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/brokencoin.png" />
+        </div>
+        <div class="table-cell tc-4">
+            Other players pay coin value to bank
+            <br />
+            -1 vp per unpaid coin
+        </div>
+
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/victorypenalty.png" />
+        </div>
+        <div class="table-cell tc-4">
+            Other players pay $1 for each
+            <br />
+            <b>X</b> in <i>their</i> possession
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/coinsneighbors.png" />
+        </div>
+        <div class="table-cell tc-4">
+            You gain $6,
+            <br />
+            Neighbors gain $1
+        </div>
+
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/extrascience.png" />
+        </div>
+        <div class="table-cell tc-4">
+            Gain 1: your most common science symbol
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/commercial.png" />
+        </div>
+        <div class="table-cell tc-4">
+            Commercial level
+        </div>
+
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/tax.png" />
+        </div>
+        <div class="table-cell tc-4">
+            Other players lose coins,
+            <br />
+            reduced by Commercial Level
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/commercialloss.png" />
+        </div>
+        <div class="table-cell tc-4">
+            Other players lose $1 per Commercial Level
+        </div>
+
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/ignoretax.png" />
+        </div>
+        <div class="table-cell tc-4">
+            Ignore coin losses from tax and pirates
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/resourcediscount.png" />
+        </div>
+        <div class="table-cell tc-4">
+            Pay 1 resource less for <b>X</b>
+        </div>
+
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/cardtax.png" />
+        </div>
+        <div class="table-cell tc-4">
+            Pay an extra $A to build <b>X</b>
+            <br />
+            <b>A</b> = Age
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/freeboat.png" />
+        </div>
+        <div class="table-cell tc-4">
+            Free ship movement
+            <br />
+            Follow turn resolution if buying 2nd movement
+        </div>
+
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/incursion.png" />
+        </div>
+        <div class="table-cell tc-4">
+            Trigger extra ground conflict with target
+        </div>
+    </div>
+
+</div>
+
+<br />
+<br />
+<br />
+
+<img src="~/lib/Images/7Wonders/cardanatomy.png" />
+

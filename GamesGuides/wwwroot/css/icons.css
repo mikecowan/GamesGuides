@@ -1,0 +1,114 @@
+﻿
+span.win::after {
+    content: "\2611";
+}
+
+span.lose::after {
+    content: "\2612";
+}
+
+span.crown::after {
+    content: "\2655";
+}
+
+span.zero::after {
+    content: "\274D";
+}
+
+span.one::after {
+    content: "\2780";
+}
+
+span.two::after {
+    content: "\2781";
+}
+
+span.three::after {
+    content: "\2782";
+}
+
+span.four::after {
+    content: "\2783";
+}
+
+span.arrow::after {
+    content: "\2794";
+}
+
+span.arrowup::after {
+    content: "\21A5";
+}
+
+span.arrowdown::after {
+    content: "\21A7";
+}
+
+span.footman::after {
+    content: "\2659";
+}
+
+span.knight::after {
+    content: "\2658";
+}
+
+span.attack::after {
+    content: "\2694";
+}
+
+span.defense::after {
+    content: "\2699";
+}
+
+span.star::after {
+    content: "\272D";
+}
+
+span.kill::after {
+    content: "\2718";
+}
+
+span.add::after {
+    content: "\2713";
+}
+
+span.inf::after {
+    content: "\221E";
+}
+
+span.forall::after {
+    content: "\2200";
+}
+
+span.die1::after {
+    content: "\2680";
+}
+
+span.die2::after {
+    content: "\2681";
+}
+
+span.sigma::after {
+    content: "\2211";
+}
+
+span.cross::after {
+    content: "\00D7";
+}
+
+span.plusminus::after {
+    content: "\00B1";
+}
+
+span.asterisk::after {
+    content: "\2731";
+}
+
+span.dagger::after {
+    content: "\2020";
+}
+
+span.doubledagger:after {
+    content: "\2021";
+}
+
+

@@ -1,0 +1,88 @@
+﻿@model GamesGuides.Data.ChampionsOfMidgardDestinyData
+
+@{
+    ViewData["Title"] = "Champions of Midgard Rune Cards";
+}
+
+<style>
+.table .bold {
+    font-weight: bold;
+}
+
+.tc-2 {
+    text-align: center;
+}
+
+.icon {
+    width: 20px;
+}
+
+.table img {
+    width: 20px;
+    vertical-align:middle;
+}
+</style>
+
+<div class="table">
+    <div class="table-row">
+        <!-- left table -->
+        <div class="table-cell tc-6">
+            <h3>Colors</h3>
+            <div class="table table-padding-1" id="">
+                @foreach (var color in Model.Colors)
+                {
+                    <partial name="../Templates/_TableRow" model='new TableRow { Cells = new List<TableCell>() {
+                        new TableCell { Size = 2, StringContent = $"{color.PointsA} / {color.PointsB}"},
+                        new TableCell { Size = 4, StringContent = $"{color.Name}", AdditionalClasses = "bold" },
+                        new TableCell { Size = 6, richText= $"{color.Description}" }
+                    }}' />
+                }
+            </div>
+
+            <br /><br /><br /><br />
+            
+            <h3>Resources</h3>
+            <div class="table table-padding-1" id="">
+                @foreach (var resource in Model.Resources)
+                {
+                    <partial name="../Templates/_TableRow" model='new TableRow { Cells = new List<TableCell>() {
+                        new TableCell { Size = 2, StringContent = $"{resource.PointsA} / {resource.PointsB}"},
+                        new TableCell { Size = 4, StringContent = $"{resource.Name}", AdditionalClasses = "bold" },
+                        new TableCell { Size = 6, richText= $"{resource.Description}" }
+                    }}' />
+                }
+            </div>
+        </div>
+
+        <!-- right table -->
+        <div class="table-cell tc-6">
+            <h3>Enemy Types</h3>
+            <div class="table table-padding-1" id="">
+                @foreach (var enemytype in Model.EnemyTypes)
+                {
+                    <partial name="../Templates/_TableRow" model='new TableRow { Cells = new List<TableCell>() {
+                        new TableCell { Size = 2, StringContent = $"{enemytype.PointsA} / {enemytype.PointsB}"},
+                        new TableCell { Size = 4, StringContent = $"{enemytype.Name}", AdditionalClasses = "bold" },
+                        new TableCell { Size = 6, richText= $"{enemytype.Description}" }
+                    }}' />
+                }
+            </div>
+            
+            <br /><br /><br /><br />
+            
+            <h3>Souls</h3>
+            <div class="table table-padding-1" id="">
+                @foreach (var soul in Model.Souls)
+                {
+                    <partial name="../Templates/_TableRow" model='new TableRow { Cells = new List<TableCell>() {
+                        new TableCell { Size = 2, StringContent = $"{soul.PointsA} / {soul.PointsB}"},
+                        new TableCell { Size = 4, StringContent = $"{soul.Name}", AdditionalClasses = "bold" },
+                        new TableCell { Size = 6, richText= $"{soul.Description}" }
+                    }}' />
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+

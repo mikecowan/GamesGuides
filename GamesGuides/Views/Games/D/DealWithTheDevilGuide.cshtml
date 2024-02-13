@@ -1,0 +1,339 @@
+﻿@{
+    ViewData["Title"] = "Deal with the Devil Guide";
+}
+
+<h3>Setup</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>1 marker in starting space of interest cycle</li>
+                <li>alchemist courtier in its own space</li>
+                <li>other courtiers on $2 space</li>
+                <li>marker on 0 of debt track</li>
+                <li>shuffle building cards: set aside deck 1, then 2 atop 3 atop 4 atop 5</li>
+                <li>shuffle event cards: deck A atop B</li>
+                <li>take <i>your</i> starting resources shown on lower-left of main board</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <ul>
+                <li>markers on 0 of scoring track</li>
+                <li>markers on starting space (&lt;&lt;) of reputation track</li>
+                <li>place inquisition overview board with rounds 2 & 3 visible</li>
+                <li>inquisitor spaces:
+                    <ol>
+                        <li>The Ascetic (face up)</li>
+                        <li>The Fundamentalist</li>
+                        <li>The Plebian</li>
+                        <li>three random inquisitors in next 3 spaces</li>
+                    </ol>
+                </li>
+                <li>houseguest inquisitors near board</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+@*Chests
+Mortals
+3 pieces of soul
+1 token to guess the devil
+1 token to guess the cultist
+
+Cultist
+2 pieces of tainted soul
+1 marble, 1 glass, 1 coin
+1 token to guess the devil
+
+Devil
+1 marble, 1 glass, 1 wood, 1 stone, 1 wheat, 8 coins
+no soul pieces*@
+
+
+<h3>Phases</h3>
+<h4>1. Production</h4>
+<ul>
+    <li>premium resources take 2 production spaces</li>
+    <li>basic resources take 1 production space</li>
+    <li>$2 base income</li>
+    <li>each of the 4 spaces can be improved with minor achievements</li>
+    <li>premium resources need both spaces upgraded</li>
+</ul>
+
+<h4>2. Cards</h4>
+<ul>
+    <li>round 1: each player gets an A, B, C, and D card from deck 1, each player gets 1 event card</li>
+    <li>later rounds:
+        <ol>
+            <li>discard all buildings from hand except 1</li>
+            <li>draw 4 buildings</li>
+            <li>draw 1 event</li>
+            <li>keep 2 of the new buildings, pass the other 2 (direction varies)</li>
+            <li>all players may pay off some/all debt</li>
+        </ol>
+    </li>
+</ul>
+
+<h4>3. Deals</h4>
+<ol>
+    <li>Make an Offer
+        <ul>
+            <li>offer resources and coins in any combination</li>
+            <li>secretly place offer in chest; set indicator to show what you want</li>
+            <li>Mortals ask for 2-7 coins</li>
+            <li>Devil asks for 1 or 2 pieces of soul</li>
+            <li>Cultist asks for 2-6 coins OR 1 piece of soul</li>
+            <li><b>cannot offer pieces of soul</b>, must wait for cultist/devil to ask for them</li>
+        </ul>
+    </li>
+    <li>Distributing the Offers
+        <ul>
+            <li>shuffle chests, set app to correct round/phase</li>
+            <li>scan each chest and distribute them</li>
+        </ul>
+    </li>
+    <li>Considering Offers
+        <ul>
+            <li>Accept offer: take everything and put in the amount asked for. remember you can take out loans</li>
+            <li>Reject offer: leave everything in the chest</li>
+        </ul>
+    </li>
+    <li>Second Offer
+        <ul>
+            <li>mix chests and use app  to distribute them again</li>
+            <li>if payment matches the indicator then the offer was already accepted - shut it and wait</li>
+            <li>if offer is still available, may accept or reject it</li>
+            <li>may not tamper with the payment of an offer that was already accepted</li>
+            <li>cultist may <b>not</b> replace piece of pure mortal soul with piece of cultist soul</li>
+        </ul>
+    </li>
+    <li>Returning Chests
+        <ul>
+            <li>set app to the correct step</li>
+            <li>scan each so players get their starting chest back</li>
+            <li>can use app's back button to correct mistakes (e.g. payment was incorrect)</li>
+        </ul>
+    </li>
+</ol>
+
+<p>soul ~~ 1 premium + 1 basic
+    players can say what they hope to see in an offer and place a reminder card for it</p>
+
+<h4>4. Action</h4>
+<ol>
+    <li>Planning Your Event
+        <ul>
+            <li>discard down to 1 event</li>
+            <li>decide whether to play it, and which option to use</li>
+        </ul>
+    </li>
+    <li>Planning Your Action Tokens
+        <ul>
+            <li>first 2 tokens are free</li>
+            <li>next 2 tokens cost 1 wheat each</li>
+        </ul>
+    </li>
+    <li>Buildings
+        <ul>
+            <li>place desired building in a slot with a token above it</li>
+            <li>permanent effects (show a phase in upper right)</li>
+            <li>immediate effects (lightning bolt) occur immediately upon build</li>
+            <li>action effects (tools icon) actions to plan with tokens</li>
+        </ul>
+    </li>
+    <li>Planning to Use Action Buildings
+        <ul>
+            <li>use a token for building 1 or building 2</li>
+            <li>2 spaces on board; may re-arrange action buildings at any time</li>
+        </ul>
+    </li>
+    <li>Planning to Recruit a Courtier
+        <ul>
+            <li>each is $2 for its first recruit, then $3</li>
+        </ul>
+    </li>
+    <li>Resolving the Action Phase
+        <ul>
+            <li>use checkmark card to indicate you are ready</li>
+            <li>cannot re-arrange plans once all have revealed</li>
+            <li>resolve in order</li>
+        </ul>
+    </li>
+    <li>Achievements
+        <ul>
+            <li>take tokens for any completed achievements</li>
+            <li>some buildings count as 2 types</li>
+            <li>science symbols are wildcards</li>
+            <li>courtiers can contribute symbol to a set; return it to 3-coin space on the board as soon as this happens</li>
+            <li>buildings can fulfill multiple different achievements, may use science building as different symbols and for different achievements</li>
+            <li>alchemist: cannot enter service until the major achievement is met; then it goes to 3-coin space</li>
+            <li>minor achievements: each requires 3 buildings and upgrades a production space</li>
+            <li>major achievements: each requires 5 or 6 buildings, display in front of wall</li>
+        </ul>
+    </li>
+</ol>
+
+<p>
+    use reminder tokens for building effects
+    if you chose an action you cannot pay for, move down 1 space on reputation track
+</p>
+
+<h4>5. Interest</h4>
+<ul>
+    <li>skip if you have no debt</li>
+    <li>move interest marker 1 step per debt</li>
+    <li>every time interest marker hits starting space, increase debt by 1</li>
+    <li>if debt is at 10 and <i>would</i> move to 11
+        <ul>
+            <li>take 1 devil wing</li>
+            <li>move debt token back to 9</li>
+        </ul>
+    </li>
+</ul>
+
+<h4>6. Reputation</h4>
+<ul>
+    <li>Reputation Track
+        <ul>
+            <li>gain 1 angel wing for reaching top spot</li>
+            <li>you are <i>not</i> prevented from taking actions that cost more reputation points than you can move down on the track; stop at bottom space</li>
+            <li>if you move (downward only) onto or through 1 of the bottom 3 spaces, then gain a demon wing</li>
+        </ul>
+    </li>
+    <li>Rewards and Punishments
+        <ul>
+            <li>highest player(s) on reputation track gets 1 angel wing (all tied players get an angel wing)</li>
+            <li>lowest player(s) on reputation track get 1 demon wing (all tied players get a demon wing)</li>
+            <li>if all 4 players are tied, no one takes any tokens</li>
+        </ul>
+    </li>
+    <li>Effects
+        <ul>
+            <li>3 angel wings <span class="arrow"></span> return all 3 and take an indulgence token</li>
+            <li>3 demon wings <span class="arrow"></span> return all 3 and take 1 inquisitor from the Houseguest deck; lose 2 points (can be negative)</li>
+            <li>no more demon wing penalties for reputation losses if you are at the bottom space</li>
+        </ul>
+    </li>
+    <li>Forgetfulness
+        <ul>
+            <li>end of phase: move each reputation marker toward the middle (the knot), based on number of arrows</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Special Phases</h3>
+
+<h4>7. Witch Hunt (rounds 2 and 3)</h4>
+<ul>
+    <li>attempt to identify player(s) who do not have 3 pieces of soul</li>
+    <li>players vote, may choose not to vote (empty hand)</li>
+    <li>any player (could be 0, 1, or 2) receiving 2 votes is sent to be interrogated</li>
+    <li>Interrogation
+        <ul>
+            <li>prove your innocence:
+                <ul>
+                    <li>publicly reveal 3 pieces of soul</li>
+                    <li>only show unmarked sides</li>
+                    <li>gain 1 angel wing token</li>
+                </ul>
+            </li>
+            <li>confess your sins:
+                <ul>
+                    <li>only option if you have fewer than 3 pieces of soul</li>
+                    <li>lose 1 reputation and gain 1 demon wing token</li>
+                    <li>don't show <i>any</i> soul pieces (even if you have them)</li>
+                    <li>take an angry mob figure</li>
+                    <li>a player who confesses in round 2 cannot be accused again in round 3 but may still vote</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<h4>8. Inquisition (rounds 3 and 5)</h4>
+<ol>
+    <li>Preparation
+        <ul>
+            <li>players may buy angel wings for $5 each</li>
+        </ul>
+    </li>
+    <li>The Dark Ritual
+        <ul>
+            <li>everyone can place items in secret into their chest</li>
+            <li>Devil: put pieces of soul</li>
+            <li>anyone (including Devil): can put any number of coins (bribe to make inquisitors go away)</li>
+            <li>guesses: add token(s) to ring(s) to make guesses about devil and/or cultist</li>
+        </ul>
+    </li>
+    <li>Opening Chests in Round 3
+        <ul>
+            <li>coins in chests are added to the bribe spaces on inquisition board</li>
+            <li>when 5 spaces are filled, inquisitor A leaves. Extra coins remain for the round 5 inquisition</li>
+            <li>next 5 coins remove inquisitor B, then 5 for inquisitor C</li>
+            <li>Only A/B/C can be bribed</li>
+            <li>The Devil is rewarded (cumulative) for souls</li>
+            <li>The Cultist is rewarded for getting souls to the Devil: if at least 1 Devil soul has the cultist's mark, add 1 wheat & 1 coin; if both have mark, add an additional 3 coins</li>
+            <li>deal with guesses: need 2 guesses for devil (cultist) to be the same - remove the guesses and place beside inquisition board (including any off-guesses), guesses & tokens are now locked for entire game
+                <ul>
+                    <li>player is accused of being the Devil (by 2+ players): must answer honestly; if correct the devil moves down 4 reputation steps and inquisitor 3 is flipped face up, place 2 coins in each chest that had a correct Devil guess</li>
+                    <li>player is accused of being the cultist (by 2+ players): if correct the Cultist moves down 3 reputation steps, place 2 coins in each chest that had a correct cultist guess</li>
+                </ul>
+            </li>
+            <li>return chests, flip inquisition overview tile</li>
+        </ul>
+    </li>
+    <li>Opening Chests in Round 5
+        <ul>
+            <li>no need to mix them up when opening</li>
+            <li>deal with bribes first (again, only A/B/C can be bribed away)</li>
+            <li>The Devil is rewarded with points</li>
+            <li>Cultist does <b>not</b> get rewards for giving soul pieces to Devil (round 3 only)</li>
+            <li>Score guesses (some leftover from round 3, some new)</li>
+            <li>Devil takes back his soul pieces for next part</li>
+        </ul>
+    </li>
+    <li>The Inquisition (round 3 and round 5)
+        <ul>
+            <li>answer to The Ascetic unless he was bribed</li>
+            <li>round 5: answer to the Fundamentalist and The Plebian (unless bribed)</li>
+            <li>among inquisitors 1/2/3: answer to them if they are face up; if they were already face up in round 3 then they will pester you again in round 5</li>
+            <li>answer to any personal Houseguest inquisitors you have</li>
+            <li>for each inquisitor, must show 1 piece of soul or 1 indulgence or face consequences
+                <ul>
+                    <li>keep soul pieces, return indulgences</li>
+                    <li>if you do not appease each inquisitor, choose which</li>
+                </ul>
+            </li>
+            <li>round 3: reveal inquisitors B and C, return all Houseguest inquisitors (whether they were appeased or not), flip inquisition overview tile</li>
+            <li>round 5: game over, proceed to final scoring</li>
+        </ul>
+    </li>
+</ol>
+
+<h3>Final Scoring</h3>
+<ul>
+    <li>buildings (lower left corner)</li>
+    <li>debt (lose half points, rounded up)</li>
+    <li>2 points per major achievement (except for The Devil)</li>
+    <li>angel wing token = 1vp</li>
+    <li>demon wing token = -1vp</li>
+    <li>unspent indulgence = 2vp</li>
+    <li>unused courtiers = 1vp</li>
+    <li>cultist souls = -1vp</li>
+    <li>premium resource = 1vp</li>
+    <li>basic resources & coins: convert to premiums or score point fractions</li>
+</ul>
+
+may take loans at any time,
+may repay loans only in phases 1, 2, and 8
+
+
+Any phase
+    buy/sell resources
+    take a loan if you need coins; then increase debt for each coin; cannot increase debt beyond 10
+

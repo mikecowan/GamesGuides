@@ -1,0 +1,130 @@
+﻿@{
+    ViewData["Title"] = "7 Wonders Science Calculator";
+}
+
+<style>
+.icon {
+    width: 50px;
+}
+
+.change {
+    width: 50px;
+    cursor: pointer;
+    opacity: 50%;
+}
+
+.change:hover {
+    opacity: 100%;
+}
+</style>
+
+<h3>Science Calculator</h3>
+
+<div class="table table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/7Wonders/sci-compass.png" class="icon" />
+        </div>
+        <div class="table-cell tc-1">
+            <span id="compass">0</span>
+        </div>
+
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/greenplus.png" class="change" id="compass-up" />
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/redminus.png" class="change" id="compass-down" />
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/7Wonders/sci-gear.png" class="icon" />
+        </div>
+        <div class="table-cell tc-1">
+            <span id="gear">0</span>
+        </div>
+
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/greenplus.png" class="change" id="gear-up" />
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/redminus.png" class="change" id="gear-down" />
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/7Wonders/sci-tablet.png" class="icon" />
+        </div>
+        <div class="table-cell tc-1">
+            <span id="tablet">0</span>
+        </div>
+
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/greenplus.png" class="change" id="tablet-up" />
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/redminus.png" class="change" id="tablet-down" />
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-12">
+            <hr />
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <span id="points">0</span>
+        </div>
+        <div class="table-cell tc-6">
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script>
+    $('.change').on('click', function() {
+        var id = $(this).attr('id');
+        console.log(id);
+
+        var split = id.split('-');
+        console.log(split[0]);
+        console.log(split[1]);
+
+        var compass = parseInt($('#compass').html());
+        var gear = parseInt($('#gear').html());
+        var tablet = parseInt($('#tablet').html());
+
+        switch (split[0]) {
+            case 'compass':
+                compass += split[1] == 'up' ? 1 : -1;
+                if (compass < 0) { compass = 0; }
+                $('#compass').html(compass);
+                break;
+            case 'gear':
+                gear += split[1] == 'up' ? 1 : -1;
+                if (gear < 0) { gear = 0; }
+                $('#gear').html(gear);
+                break;
+            case 'tablet':
+                tablet += split[1] == 'up' ? 1 : -1;
+                if (tablet < 0) { tablet = 0; }
+                $('#tablet').html(tablet);
+                break;
+        }
+
+        var points = Math.pow(compass, 2) + Math.pow(gear, 2) + Math.pow(tablet, 2);
+
+        points += 7 * Math.min(compass, gear, tablet);
+
+        $('#points').html(points);
+    });
+</script>
+

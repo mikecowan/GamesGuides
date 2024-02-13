@@ -1,0 +1,463 @@
+﻿@{
+    ViewData["Title"] = "Game of Thrones Combat Cards";
+}
+
+<style>
+#border {
+    border: 1px solid black;
+    width: 1351px;
+    height: 1015px;
+}
+
+body {
+    width: 1351px;
+    height: 1020px;
+}
+
+.table-cell.tc-142 {
+    width: 14.2%;
+}
+
+#card-table h3 {
+    margin: 0;
+}
+
+#card-table h4 {
+    margin: 0;
+}
+
+#card-table p {
+    margin: 0;
+}
+
+.icon {
+    width: 40px;
+}
+
+.tc-4 {
+    padding-top: 2.2em;
+}
+
+
+.str {
+    width: 20px;
+    vertical-align: middle;
+}
+
+</style>
+
+<div id="card-table" class="table table-100">
+
+    <!--------------- Vassal Houses --------------->
+    <div class="table-row">
+        <div class="table-cell tc-4" style="padding-top: 0;">
+            <h3>Vassal</h3>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-4.png" class="str" /> Bronn</h4>
+            <p>2<span class="crown"></span><span class="arrow"></span><img src="~/lib/Images/GameOfThrones/shield-0.png" class="str" /> this</p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-3.png" class="str" /> Beric Dondarrion</h4>
+            <p><span class="win"></span><span class="arrow"></span>kill own unit</p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-2.png" class="str" /> Janos Slynt</h4>
+            <div>
+                <img src="~/lib/Images/GameOfThrones/sword.jpg" class="icon" />
+                <img src="~/lib/Images/GameOfThrones/sword.jpg" class="icon" />
+                <img src="~/lib/Images/GameOfThrones/fortification.jpg" class="icon" />
+            </div>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-2.png" class="str" /> Jon Connington</h4>
+            <p><span class="lose"></span><span class="arrow"></span>muster<span class="knight"></span></p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-1.png" class="str" /> Syrio Forel</h4>
+            <p><span class="defense"></span>: non-vassal <span class="footman"></span> = <img src="~/lib/Images/GameOfThrones/shield-0.png" class="str" /></p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-1.png" class="str" /> Jaqen H'gar</h4>
+            <p>cancel card, use random</p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-0.png" class="str" /> Varys</h4>
+            <p><span class="arrow"></span>top of fiefdoms track</p>
+        </div>
+    </div>
+
+    <!--------------- House Stark --------------->
+    <div class="table-row">
+        <div class="table-cell tc-4">
+            <h3>Stark</h3>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-4.png" class="str" /> Eddard Stark</h4>
+            <div>
+                <img src="~/lib/Images/GameOfThrones/sword.jpg" class="icon" />
+                <img src="~/lib/Images/GameOfThrones/sword.jpg" class="icon" />
+            </div>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-3.png" class="str" /> Robb Stark</h4>
+            <p><span class="win"></span><span class="arrow"></span>choose retreat</p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-2.png" class="str" /> Roose Bolton</h4>
+            <p><span class="lose"></span><span class="arrow"></span>retrieve all cards</p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-2.png" class="str" /> Greatjon Umber</h4>
+            <div>
+                <img src="~/lib/Images/GameOfThrones/sword.jpg" class="icon" />
+            </div>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-1.png" class="str" /> The Blackfish</h4>
+            <p>no casualties</p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-1.png" class="str" /> Ser Rodrick Cassel</h4>
+            <div>
+                <img src="~/lib/Images/GameOfThrones/fortification.jpg" class="icon" />
+                <img src="~/lib/Images/GameOfThrones/fortification.jpg" class="icon" />
+            </div>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-0.png" class="str" /> Catelyn Stark</h4>
+            <p>double defense order</p>
+        </div>
+    </div>
+
+    <!--------------- House Lannister --------------->
+    <div class="table-row">
+        <div class="table-cell tc-4">
+            <h3>Lannister</h3>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-4.png" class="str" /> Tywin Lannister</h4>
+            <p><span class="win"></span><span class="arrow"></span>+2<span class="crown"></span></p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-3.png" class="str" /> Ser Gregor Clegane</h4>
+            <div>
+                <img src="~/lib/Images/GameOfThrones/sword.jpg" class="icon" />
+                <img src="~/lib/Images/GameOfThrones/sword.jpg" class="icon" />
+                <img src="~/lib/Images/GameOfThrones/sword.jpg" class="icon" />
+            </div>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-2.png" class="str" /> Ser Jaime Lannister</h4>
+            <div>
+                <img src="~/lib/Images/GameOfThrones/sword.jpg" class="icon" />
+            </div>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-2.png" class="str" /> The Hound</h4>
+            <div>
+                <img src="~/lib/Images/GameOfThrones/fortification.jpg" class="icon" />
+                <img src="~/lib/Images/GameOfThrones/fortification.jpg" class="icon" />
+            </div>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-1.png" class="str" /> Ser Kevan Lannister</h4>
+            <p><span class="attack"></span>: friendly <span class="footman"></span> = <img src="~/lib/Images/GameOfThrones/shield-2.png" class="str" /></p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-1.png" class="str" /> Tyrion Lannister</h4>
+            <p>cancel <span class="arrow"></span> choose another</p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-0.png" class="str" /> Cersei Lannister</h4>
+            <p><span class="win"></span><span class="arrow"></span>remove any order</p>
+        </div>
+    </div>
+
+    <!--------------- House Baratheon --------------->
+    <div class="table-row">
+        <div class="table-cell tc-4">
+            <h3>Baratheon</h3>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-4.png" class="str" /> Stannis Baratheon</h4>
+            <p>lower throne: +<img src="~/lib/Images/GameOfThrones/shield-blank.png" class="str" /></p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-3.png" class="str" /> Renly Baratheon</h4>
+            <p><span class="win"></span><span class="arrow"></span>upgrade 1<span class="footman"></span>to<span class="knight"></span></p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-2.png" class="str" /> Ser Davos Seaworth</h4>
+            <p>Stannis disc: +<img src="~/lib/Images/GameOfThrones/shield-blank.png" class="str" /><img src="~/lib/Images/GameOfThrones/swordicon.png" class="str" /></p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-2.png" class="str" /> Brienne of Tarth</h4>
+            <div>
+                <img src="~/lib/Images/GameOfThrones/sword.jpg" class="icon" />
+                <img src="~/lib/Images/GameOfThrones/fortification.jpg" class="icon" />
+            </div>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-1.png" class="str" /> Salladhor Saan</h4>
+            <p>unsupp: other ships = <img src="~/lib/Images/GameOfThrones/shield-0.png" class="str" /></p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-1.png" class="str" /> Melisandre</h4>
+            <div>
+                <img src="~/lib/Images/GameOfThrones/sword.jpg" class="icon" />
+            </div>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-0.png" class="str" /> Patchface</h4>
+            <p><span class="arrow"></span>discard</p>
+        </div>
+    </div>
+
+    <!--------------- House Greyjoy --------------->
+    <div class="table-row">
+        <div class="table-cell tc-4">
+            <h3>Greyjoy</h3>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-4.png" class="str" /> Euron Crow's Eye</h4>
+            <div>
+                <img src="~/lib/Images/GameOfThrones/sword.jpg" class="icon" />
+            </div>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-3.png" class="str" /> Victarion Greyjoy</h4>
+            <p><span class="attack"></span>: ships = <img src="~/lib/Images/GameOfThrones/shield-2.png" class="str" /></p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-2.png" class="str" /> Balon Greyjoy</h4>
+            <p>house card = <img src="~/lib/Images/GameOfThrones/shield-0.png" class="str" /></p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-2.png" class="str" /> Theon Greyjoy</h4>
+            <p><span class="defense"></span>castle: +<img src="~/lib/Images/GameOfThrones/shield-blank.png" class="str" /><img src="~/lib/Images/GameOfThrones/swordicon.png" class="str" /></p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-1.png" class="str" /> Dagmer Cleftjaw</h4>
+            <div>
+                <img src="~/lib/Images/GameOfThrones/sword.jpg" class="icon" />
+                <img src="~/lib/Images/GameOfThrones/fortification.jpg" class="icon" />
+            </div>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-1.png" class="str" /> Asha Greyjoy</h4>
+            <p>unsupp: +<img src="~/lib/Images/GameOfThrones/swordicon.png" class="str" /><img src="~/lib/Images/GameOfThrones/swordicon.png" class="str" /><img src="~/lib/Images/GameOfThrones/towericon.png" class="str" /></p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-0.png" class="str" /> Aeron Damphair</h4>
+            <p>2<span class="crown"></span><span class="arrow"></span>choose new card</p>
+        </div>
+    </div>
+
+    <!--------------- House Tyrell --------------->
+    <div class="table-row">
+        <div class="table-cell tc-4">
+            <h3>Tyrell</h3>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-4.png" class="str" /> Mace Tyrell</h4>
+            <p>kill<span class="footman"></span></p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-3.png" class="str" /> Ser Loras Tyrell</h4>
+            <p><span class="attack"></span>:<span class="win"></span><span class="arrow"></span>bring march</p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-2.png" class="str" /> Ser Garlan Tyrell</h4>
+            <div>
+                <img src="~/lib/Images/GameOfThrones/sword.jpg" class="icon" />
+                <img src="~/lib/Images/GameOfThrones/sword.jpg" class="icon" />
+            </div>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-2.png" class="str" /> Randyll Tarly</h4>
+            <div>
+                <img src="~/lib/Images/GameOfThrones/sword.jpg" class="icon" />
+            </div>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-1.png" class="str" /> Alester Florent</h4>
+            <div>
+                <img src="~/lib/Images/GameOfThrones/fortification.jpg" class="icon" />
+            </div>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-1.png" class="str" /> Margaery Tyrell</h4>
+            <div>
+                <img src="~/lib/Images/GameOfThrones/fortification.jpg" class="icon" />
+            </div>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-0.png" class="str" /> Queen of Thorns</h4>
+            <p>remove adjacent order</p>
+        </div>
+    </div>
+
+    <!--------------- House Martell --------------->
+    <div class="table-row">
+        <div class="table-cell tc-4">
+            <h3>Martell</h3>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-4.png" class="str" /> The Red Viper</h4>
+            <div>
+                <img src="~/lib/Images/GameOfThrones/sword.jpg" class="icon" />
+                <img src="~/lib/Images/GameOfThrones/sword.jpg" class="icon" />
+                <img src="~/lib/Images/GameOfThrones/fortification.jpg" class="icon" />
+            </div>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-3.png" class="str" /> Areo Hotah</h4>
+            <div>
+                <img src="~/lib/Images/GameOfThrones/fortification.jpg" class="icon" />
+            </div>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-2.png" class="str" /> Obara Sand</h4>
+            <div>
+                <img src="~/lib/Images/GameOfThrones/sword.jpg" class="icon" />
+            </div>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-2.png" class="str" /> Darkstar</h4>
+            <div>
+                <img src="~/lib/Images/GameOfThrones/sword.jpg" class="icon" />
+            </div>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-1.png" class="str" /> Arianne Martell</h4>
+            <p><span class="defense"></span>: <span class="lose"></span><span class="arrow"></span>atk units stop</p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-1.png" class="str" /> Nymeria Sand</h4>
+            <p><span class="defense"></span>: +<img src="~/lib/Images/GameOfThrones/towericon.png" class="str" /></p>
+            <p><span class="attack"></span>: +<img src="~/lib/Images/GameOfThrones/swordicon.png" class="str" /></p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-0.png" class="str" /> oran Martell</h4>
+            <p>bottom any track</p>
+        </div>
+    </div>
+
+    <!--------------- House Targaryen --------------->
+    <div class="table-row">
+        <div class="table-cell tc-4">
+            <h3>Targaryen</h3>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-4.png" class="str" /> Khal Drogo</h4>
+            <p><span class="forall"></span><span class="knight"></span>: +<img src="~/lib/Images/GameOfThrones/swordicon.png" class="str" /><img src="~/lib/Images/GameOfThrones/shield-blank.png" class="str" /></p>
+            <p><span class="arrow"></span>remove</p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-3.png" class="str" /> Arstan Whitebeard</h4>
+            <div>
+                <img src="~/lib/Images/GameOfThrones/sword.jpg" class="icon" />
+                <img src="~/lib/Images/GameOfThrones/fortification.jpg" class="icon" />
+            </div>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-2.png" class="str" /> Ser Jorah Mormont</h4>
+            <div>
+                <img src="~/lib/Images/GameOfThrones/sword.jpg" class="icon" />
+                <img src="~/lib/Images/GameOfThrones/fortification.jpg" class="icon" />
+            </div>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-2.png" class="str" /> Xaro Xhoan Daxos</h4>
+            <p>more ships: ships = <img src="~/lib/Images/GameOfThrones/shield-2.png" class="str" /></p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-1.png" class="str" /> Daenerys Targaryen</h4>
+            <p>dragon: +2<img src="~/lib/Images/GameOfThrones/shield-blank.png" class="str" /></p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-1.png" class="str" /> Viserys Targaryen</h4>
+            <p>discard<span class="arrow"></span>+X<img src="~/lib/Images/GameOfThrones/shield-blank.png" class="str" /></p>
+            <p><span class="lose"></span><span class="arrow"></span>remove</p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-0.png" class="str" /> Illyrio Mopatis</h4>
+            <p><span class="arrow"></span>+X<span class="crown"></span></p>
+            <p>5<span class="crown"></span><span class="arrow"></span>remove</p>
+        </div>
+    </div>
+
+    <!--------------- House Arryn --------------->
+    <div class="table-row">
+        <div class="table-cell tc-4">
+            <h3>Arryn</h3>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-4.png" class="str" /> Lysa Arryn</h4>
+            <p>def order: <span class="win"></span><span class="arrow"></span> return this</p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-3.png" class="str" /> Bronze Yohn Royce</h4>
+            <div>
+                <img src="~/lib/Images/GameOfThrones/fortification.jpg" class="icon" />
+                <img src="~/lib/Images/GameOfThrones/fortification.jpg" class="icon" />
+                <img src="~/lib/Images/GameOfThrones/sword.jpg" class="icon" />
+            </div>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-2.png" class="str" /> Ser Vardis Egan</h4>
+            <p>&leq;<img src="~/lib/Images/GameOfThrones/shield-2.png" class="str" />: +<img src="~/lib/Images/GameOfThrones/shield-blank.png" class="str" /><img src="~/lib/Images/GameOfThrones/towericon.png" class="str" /><img src="~/lib/Images/GameOfThrones/towericon.png" class="str" /></p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-2.png" class="str" /> Harry Hardyng</h4>
+            <div>
+                <img src="~/lib/Images/GameOfThrones/sword.jpg" class="icon" />
+            </div>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-1.png" class="str" /> Godric Borrell</h4>
+            <p><span class="defense"></span>sea: +<img src="~/lib/Images/GameOfThrones/shield-blank.png" class="str" /> per land</p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-1.png" class="str" /> Anya Waynwood</h4>
+            <p><span class="win"></span><span class="arrow"></span>+3<span class="crown"></span>; also supporters</p>
+        </div>
+        <div class="table-cell tc-142">
+            <h4><img src="~/lib/Images/GameOfThrones/shield-0.png" class="str" /> obert Arryn</h4>
+            <p><span class="defense"></span>: remove this & lowest</p>
+        </div>
+    </div>
+
+</div>
+
+@*Key
+win
+lose
+after
+power
+footman
+knight
+for each
+attack
+defense
+: "while"
+*@

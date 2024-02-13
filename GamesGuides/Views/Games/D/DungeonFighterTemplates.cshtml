@@ -1,0 +1,120 @@
+﻿@{
+    ViewData["Title"] = "Dungeon Fighter Templates";
+}
+
+<style>
+img {
+    max-width: 100px;
+}
+
+.table-cell {
+    padding-bottom: 2em;
+}
+</style>
+
+<h3>Templates</h3>
+
+<ul>
+    <li>Flip template onto target board (like a coin)</li>
+    <li>Template touching table after flip <span class="arrow"></span> suffer 1 damage, flips again</li>
+    <li>Remove all templates during clean-up phase</li>
+    <li>Landing on template = normal hit</li>
+    <li>Icons still activate special abilities</li>
+    <li>Partially touching target board:  deal the damage and ignore template completely</li>
+    <li>Partially touching table: miss</li>
+</ul>
+
+
+<div class="table">
+    <div class="table-row">
+        <!-- Column 1 -->
+        <div class="table-cell tc-6">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/DungeonFighter/fireballtemplate.png" />
+                    </div>
+                    <div class="table-cell tc-6">
+                        <h4>Fireball</h4>
+                        <p>Deal damage: 6 or 10</p>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/DungeonFighter/explosiontemplate.png" />
+                    </div>
+                    <div class="table-cell tc-6">
+                        <h4>Explosion</h4>
+                        <p>All heroes suffer 2 damage</p>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/DungeonFighter/slimetemplate.png" />
+                    </div>
+                    <div class="table-cell tc-9">
+                        <h4>Slime</h4>
+                        <p>Place die on target board, wherever arrow points</p>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/DungeonFighter/majorhealingtemplate.png" />
+                    </div>
+                    <div class="table-cell tc-9">
+                        <h4>Major Healing</h4>
+                        <p>All heroes recover 5 hp</p>
+                        <p>Damage from ability & weapon bonuses only</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Column 2 -->
+        <div class="table-cell tc-6">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/DungeonFighter/chainlightningtemplate.png" />
+                    </div>
+                    <div class="table-cell tc-6">
+                        <h4>Chain Lightning</h4>
+                        <p>3 damage then throw again</p>
+                        <p>May be repeated indefinitely</p>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/DungeonFighter/armortemplate.png" />
+                    </div>
+                    <div class="table-cell tc-9">
+                        <h4>Armor</h4>
+                        <p>While on board, heroes deal -1 damage</p>
+                        <p>Hit: 1 damage & remove template</p>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/DungeonFighter/philosophersstonetemplate.png" />
+                    </div>
+                    <div class="table-cell tc-6">
+                        <h4>Philosopher's Stone</h4>
+                        <p>2 damage & earn 3 gold</p>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/DungeonFighter/weakpointtemplate.png" />
+                    </div>
+                    <div class="table-cell tc-6">
+                        <h4>Weak Point</h4>
+                        <p>7 damage</p>
+                        <p>Icon showing: instant kill</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

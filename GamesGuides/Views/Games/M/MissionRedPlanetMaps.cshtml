@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Mission: Red Planet Maps";
+}
+
+<style>
+.imgDiv {
+    /*margin: 5em 10em 5em;*/
+    height: 1100px;
+    position: relative;
+}
+
+.imgDiv img {
+    margin-left: 7em;
+    margin-top: 8em;
+}
+
+img {
+    width: 70%;
+}
+
+.imgDiv h1 {
+    position: absolute;
+    margin: 0;
+    font-size: 72px;
+}
+
+#img-0 h1 {
+/*    top: -50px;*/
+    left: 450px;
+}
+
+#img-90 h1 {
+    top: 450px;
+    left: 900px;
+}
+
+#img-180 h1 {
+    top: 875px;
+    left: 450px;
+}
+
+#img-270 h1 {
+    top: 450px;
+    left: 25px;
+}
+</style>
+
+<div id="img-0" class="imgDiv">
+    <h1>N</h1>
+    <img src="~/lib/Images/MissionRedPlanet/mars-0.png" />
+</div>
+
+<div id="img-90" class="imgDiv">
+    <h1 style="text-align: center;">N</h1>
+    <img src="~/lib/Images/MissionRedPlanet/mars-90.png" />
+</div>
+
+<br />
+<br />
+
+<div id="img-180" class="imgDiv">
+    <h1 style="text-align: center;">N</h1>
+    <img src="~/lib/Images/MissionRedPlanet/mars-180.png" />
+</div>
+
+<div id="img-270" class="imgDiv">
+    <h1 style="text-align: center;">N</h1>
+    @*<p style="position: absolute; left: -50px; top: 250px; z-index: 10;">top</p>*@
+    <img src="~/lib/Images/MissionRedPlanet/mars-270.png" />
+</div>

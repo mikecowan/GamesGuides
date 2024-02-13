@@ -1,0 +1,576 @@
+﻿@{
+    ViewData["Title"] = "Ark Nova Glossary";
+}
+
+<style>
+#timingtable .tc-2 {
+    width: 20%;
+    margin-bottom: 3em;
+}
+
+#table-one .tc-2 {
+    margin-bottom: 3em;
+}
+
+#timingtable .tc-10 {
+    width: 80%;
+}
+
+.icon {
+    width: 25px;
+}
+
+.icon-sm {
+    width: 12px;
+}
+
+.symbol{
+    width: 40px;
+}
+
+.endgamesymbol {
+    width: 50px;
+}
+
+.endgamecolumn .tc-2 {
+    margin-bottom: 1em;
+}
+</style>
+
+@*4 places to upgrade a card: zoo #2, university #2, reputation track, conservation 2 points
+
+
+<img src="~/lib/Images/ArkNova/reputation.png" />
+Appeal
+Conservation
+
+marking
+DISCARDED from display: card goes to your hand instead
+leaves display in any other way (drawn into hand or played from the display by *any* player): gain $2
+
+income
+appeal track (income number above)
+*map bonuses* from supporting conservation projects
+cards with income bonuses - $3/6/9 _not_ $1/2/3 !!
+
+
+*@
+<div class="table table-padding-p5" id="table-one">
+    <div class="table-row">
+        <div class="table-cell tc-12" style="border-bottom: 2px solid black; text-align: center;">
+            <h3>Basics</h3>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-4">
+            <div class="table table-padding-p5">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/conservation.png" class="symbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Conservation</h4>
+                        <ul>
+                            <li>2-3 points</li>
+                            <li>Unlocks bonuses</li>
+                            <li>Level 5 association</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-cell tc-4">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/appeal.png" class="symbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Appeal</h4>
+                        <ul>
+                            <li>1 point</li>
+                            <li>Increases income</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-cell tc-4">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/reputation.png" class="symbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Reputation</h4>
+                        <ul>
+                            <li>Center board track</li>
+                            <li>Improves card access</li>
+                            <li>Unlocks bonuses</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="table-row">
+        <!-- Kiosk -->
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/ArkNova/kiosk.png" class="symbol" />
+        </div>
+        <div class="table-cell tc-5">
+            <h4>Kiosk</h4>
+            <ul>
+                <li>Must be 3+ spaces apart from any other kiosk</li>
+                <li>$1 income per adjacent building</li>
+            </ul>
+        </div>
+
+        <!-- Pavilion -->
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/ArkNova/pavilion.png" class="symbol" />
+        </div>
+        <div class="table-cell tc-5">
+            <h4>Pavilion</h4>
+            <p>+1 <img src="~/lib/Images/ArkNova/appeal.png" class="icon-sm" /></p>
+        </div>
+    </div>
+
+    <!-- two columns -->
+    <div class="table-row">
+        <!-- Column 1 -->
+        <div class="table-cell tc-6">
+            <div class="table table-padding-p5">
+
+                <!-- Map Bonuses -->
+                <div class="table-row">
+                    <div class="table-cell tc-10" style="border-bottom: 2px solid black; text-align: center">
+                        <h3>Map Bonuses</h3>
+                    </div>
+                </div>
+                <!-- Card Draw -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/carddraw.png" class="symbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Card Draw</h4>
+                        <p>Draw 1 card from deck or within <img src="~/lib/Images/ArkNova/reputation.png" class="icon" /></p>
+                    </div>
+                </div>
+                <!-- Clever -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/clever.png" class="symbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Clever</h4>
+                        <p>After action: move any card to slot 1</p>
+                    </div>
+                </div>
+                <!-- Marketing -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/marketing.png" class="symbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Marketing</h4>
+                        <ol>
+                            <li>Play a sponsor card from <i>hand only</i></li>
+                            <li>Pay $X for strength X</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- Snap -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/snap.png" class="symbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Snap</h4>
+                        <p>Take <i>any</i> card from the display</p>
+                    </div>
+                </div>
+                <!-- Enclosure -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/enclosure.png" class="symbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Enclosure</h4>
+                        <p>Build a free size 2 enclosure</p>
+                    </div>
+                </div>
+                <!-- Special Enclosure -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/specialenclosure.png" class="symbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Special Enclosure</h4>
+                        <ul>
+                            <li>Build a free Bird Aviary or Reptile house</li>
+                            <li>Build card need not be upgraded</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Pouch -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/pouch.png" class="symbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Pouch</h4>
+                        <p>Place up to X cards here for 2 <img src="~/lib/Images/ArkNova/appeal.png" class="icon-sm" /> each</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Column 2 -->
+        <div class="table-cell tc-6">
+            <div class="table table-padding-p5">
+
+
+                <!-- Card Abilities -->
+                <div class="table-row">
+                    <div class="table-cell tc-10" style="border-bottom: 2px solid black; text-align: center">
+                        <h3>Card Abilities</h3>
+                    </div>
+                </div>
+                <!-- Tutor -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/tutor.png" class="symbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Tutor</h4>
+                        <ol>
+                            <li>Reveal cards from deck until finding icon</li>
+                            <li>Add it to hand, <i>tuck</i> the rest under deck</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- digging -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/digging.png" class="symbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Digging</h4>
+                        <ul>
+                            <li>Either discard from hand then draw from deck, or</li>
+                            <li>Remove <i>any</i> card from the display and replenish</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- sharkattack -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/sharkattack.png" class="symbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Shark Attack</h4>
+                        <ol>
+                            <li>Discard X <i>animal</i> cards within <img src="~/lib/Images/ArkNova/reputation.png" class="icon" /></li>
+                            <li>Gain half their <img src="~/lib/Images/ArkNova/appeal.png" class="icon-sm" /> (add first, round down)</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- reef -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/reef.png" class="symbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Reef</h4>
+                        <p>Gain <i>all</i> reef effects in your zoo</p>
+                    </div>
+                </div>
+                <!-- extrashift -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/extrashift.png" class="symbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Extra Shift</h4>
+                        <p>Retrieve 1 association worker</p>
+                    </div>
+                </div>
+                <!-- hunter -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/hunter.png" class="symbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Hunter</h4>
+                        <ol>
+                            <li>Draw X cards from the deck</li>
+                            <li>Keep 1 <i>animal</i> card, discard the rest</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- mark -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/mark.png" class="symbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Mark</h4>
+                        <p>Place cube on <i>unmarked animal</i> card in the display</p>
+                        <ul>
+                            <li>Gain the card if discarded</li>
+                            <li>Gain $2 if <i>any player</i> plays or draws</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-12" style="border-bottom: 2px solid black;">&nbsp;</div>
+    </div>
+
+    
+
+    <div class="table-row">
+        <!-- flock -->
+        <div class="table-cell tc-1">
+            <h4>Flock</h4>
+        </div>
+        <div class="table-cell tc-11">
+            <ol>
+                <li>Check for existing herbivore size X+</li>
+                <li>Play animal with <i>Flock X</i>, do not flip an enclosure</li>
+            </ol>
+            
+            <p><i>I want to play my Red Kangaroo (Flock Animal 4). Because my zoo already has a Muskox (size 4 herbivore), I can use the Red Kangaroo's Flock ability and play it without flipping an enclosure.</i></p>
+            
+            <br />
+
+            <p><i>I want to play my Mountain Tapir (size 2 herbivore <u>without</u> Flock) and my zoo already has a Llama (size 2 herbivore with Flock 2). I may <u>not</u> apply flock in this instance because the flock ability of the Lama does not retroactively trigger; flock only triggers on the card being played. The Mountain Tapir needs its own enclosure.</i></p>
+            
+            <br />
+
+            <p><i>I want to play my Reindeer with Flock Animal 3 and on previous a previous turn I put my Mountain Tapir (size 2 herbivore) in a <u>size 3</u> enclosure. I may <u>not</u> apply flock in this instance because flock checks the size of the <u>animal</u>, not the size of the <u>enclosure</u></i>.<span class="dagger"></span></p>
+        </div>
+    </div>
+
+</div>
+
+<br /><br /><br /><br />
+
+<p><span class="dagger"></span> Ark Nova has no "memory" of which animal belongs to which enclosure</p>
+
+<div class="table table-padding-p5" id="timingtable">
+    <!-- Timing -->
+    <div class="table-row">
+        <div class="table-cell tc-8" style="border-bottom: 2px solid black; text-align: center">
+            <h3>Timing</h3>
+        </div>
+    </div>
+    <!-- Instant -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/ArkNova/instant.png" />
+        </div>
+        <div class="table-cell tc-10">
+            <h4>Instant</h4>
+            <p>Use ability as soon as card enters play</p>
+            <p><i>Immediately gain 1 <img src="~/lib/Images/ArkNova/appeal.png" class="icon-sm" /> for each bird icon in your zoo</i></p>
+        </div>
+    </div>
+    <!-- Income -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/ArkNova/income.png" />
+        </div>
+        <div class="table-cell tc-10">
+            <h4>Income</h4>
+            <p>Receive benefit as income during each break</p>
+            <p><i>For 1 / 3 / 5 bird icons, gain $3 / 6 / 9</i></p>
+        </div>
+    </div>
+    <!-- Endgame -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/ArkNova/endgame.png" />
+        </div>
+        <div class="table-cell tc-10">
+            <h4>Endgame</h4>
+            <p>Receive benefit at endgame</p>
+            <p><i>Receive 1 conservation point if your zoo has 6+ bird icons</i></p>
+        </div>
+    </div>
+    <!-- alltrigger -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/ArkNova/alltrigger.png" />
+        </div>
+        <div class="table-cell tc-10">
+            <h4>Trigger All</h4>
+            <p>Receive benefit when the icon is added to <u>any</u> zoo</p>
+            <p><i>Receive $3 when a bird icon is added to any zoo</i></p>
+        </div>
+    </div>
+    <!-- selftrigger -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/ArkNova/selftrigger.png" />
+        </div>
+        <div class="table-cell tc-10">
+            <h4>Trigger Self</h4>
+            <p>Receive benefit when the icon is added to <u>your</u> zoo</p>
+            <p><i>Gain 2 <img src="~/lib/Images/ArkNova/appeal.png" class="icon-sm" /> when a bird icon is added to your zoo</i></p>
+        </div>
+    </div>
+    <!-- specialbuilding -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/ArkNova/specialbuilding.png" />
+        </div>
+        <div class="table-cell tc-10">
+            <h4>Specal Building</h4>
+            <p>Find the depicted building, add it to zoo</p>
+        </div>
+    </div>
+</div>
+
+<div class="table table-padding-p5">
+    <!-- two columns -->
+    <div class="table-row">
+
+        <!-- Column 1 -->
+        <div class="table-cell tc-6">
+            <div class="table table-padding-p5">
+                <!-- Attacks -->
+                <div class="table-row">
+                    <div class="table-cell tc-10" style="border-bottom: 2px solid black; text-align: center">
+                        <h3>Attacks</h3>
+                    </div>
+                </div>
+                <!-- Venom -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/venom.png" class="symbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Venom</h4>
+                        <ul>
+                            <li>Remove venom token by using card</li>
+                            <li>Either remove <i><b><u>a</u></b></i> venom token or lose $2</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Hypnosis -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/hypnosis.png" class="symbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Hypnosis</h4>
+                        <ul>
+                            <li>Use that player's card, including basic/upgraded</li>
+                            <li>May use X-tokens</li>
+                            <li>Move card to slot 1 after using</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Constriction -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/constriction.png" class="symbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Constriction</h4>
+                        <ul>
+                            <li>Remove constriction token by using card</li>
+                            <li>Reduce strength of card by 2</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Pilfering -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/pilfering.png" class="symbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Pilfering</h4>
+                        <p>Steal from the player with the most <img src="~/lib/Images/ArkNova/appeal.png" class="icon-sm" /></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="table-cell tc-6">
+            <div class="table table-padding-p5 endgamecolumn">
+                <!-- Attacks -->
+                <div class="table-row">
+                    <div class="table-cell tc-12" style="border-bottom: 2px solid black; text-align: center">
+                        <h3>End Game</h3>
+                    </div>
+                </div>
+                <!-- different animals -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/differentanimals.png" class="endgamesymbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Different Animal Icons</h4>
+                    </div>
+                </div>
+                <!-- different continents -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/differentcontinents.png" class="endgamesymbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Different Continent Icons</h4>
+                    </div>
+                </div>
+                <!-- different icons -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/differenticons.png" class="endgamesymbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>All Icons</h4>
+                        <p>Different animal icons and continent icons</p>
+                    </div>
+                </div>
+                <!-- animals -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/animalcategory.png" class="endgamesymbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Animal</h4>
+                        <p>Animal icons of 1 category</p>
+                    </div>
+                </div>
+                <!-- continents -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/ArkNova/continentcategory.png" class="endgamesymbol" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Continent</h4>
+                        <p>Continent icons of 1 continent</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+

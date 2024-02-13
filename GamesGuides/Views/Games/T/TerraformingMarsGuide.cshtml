@@ -1,0 +1,476 @@
+﻿@{
+    ViewData["Title"] = "Terraforming Mars Guide";
+}
+
+<style>
+.icon {
+    width: 20px;
+
+}
+</style>
+
+note that cards like Ecological Zone have the phrase "including these" to denote that it triggers itself
+otherwise, assume that cards do not trigger themselves
+
+tags on event cards are only considered at the point of play, then never again
+do not count them for any effects during the game, or awards at end game
+
+note greenery must be placed next to your own tile if possible
+
+<h3>Setup</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>2 corporations, keep 1</li>
+                <li>10 project cards, $3 for each kept</li>
+                <li><u>Prelude</u> 4 preludes, keep 2</li>
+                <li><u>Colonies</u>
+                    <ul>
+                        <li>1 trade fleet per player</li>
+                        <li>N+2 colony tiles (5 for a 2p game)</li>
+                        <li>white cube on step 2</li>
+                        <li>exceptions for Titan, Enceladus, Miranda</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Turmoil</h4>
+            <ul>
+                <li>Replace Terraformer milestone</li>
+                <li>1 delegate per player in lobby</li>
+                <li>Neutral delegate in chairman seat</li>
+                <li>Draw card for "Coming Global Event" <span class="arrow"></span> add delegate using <u>top-left</u>
+                    <ul>
+                        <li>Dominant party</li>
+                    </ul>
+                </li>
+                <li>Draw card for "Distant Global Event" <span class="arrow"></span> add delegate using <u>top-left</u></li>
+                <li>Greens start as Ruling part</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<h4>Game 1 variant</h4>
+<ul>
+    <li>remove corporate era cards <img src="~/lib/Images/TerraformingMars/corporateera.png" class="icon" /></li>
+    <li>start with 1 extra production of each resource</li>
+    <li>TR = 20</li>
+    <li>beginner corporation card</li>
+    <li>10 project cards, keep them all</li>
+    <li>text</li>
+    <li>text</li>
+</ul>
+
+discards are always face down
+
+generation 1: skip player order phase and research phase
+
+<hr />
+
+<h3>Phases</h3>
+
+<h4>1. Player Order</h4>
+<ul>
+    <li>skip in first generation</li>
+    <li>first player marker passes 1 step clockwise</li>
+    <li>generation marker moves 1 step</li>
+</ul>
+
+<h4>2. Research</h4>
+<ul>
+    <li>skip in first generation</li>
+    <li>all players draw 4 cards</li>
+    <li>keep 0-4 cards by paying $3 each</li>
+    <li>discard the others facedown</li>
+    <li>no hand limit</li>
+</ul>
+
+<h4>3. Action</h4>
+<ul>
+    <li>1 - 2 actions, or pass</li>
+    <li>pass <span class="arrow"></span> no more actions this generation</li>
+</ul>
+
+<br />
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-4">
+            <ul>
+                <li>Play a card</li>
+                <li>Standard project</li>
+                <li>Milestone</li>
+                <li>Award</li>
+                <li>Blue card action</li>
+                <li>8 plants <span class="arrow"></span> greenery</li>
+                <li>8 heat <span class="arrow"></span> temp increase</li>
+                <li><u>Colonies</u>: Trade with a colony</li>
+                <li><u>Turmoil</u>: Lobbying</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <b>Standard Projects</b>
+            <ul>
+                <li>Sell patents <span class="arrow"></span> sell X cards for $1 each</li>
+                <li>Power plant $11 <span class="arrow"></span> increase energy production</li>
+                <li>Asteroid $14 <span class="arrow"></span> increase temperature</li>
+                <li>Aquifer $18 <span class="arrow"></span> place ocean tile</li>
+                <li>Greenery $23 <span class="arrow"></span> place a greenery tile</li>
+                <li>City $25 <span class="arrow"></span> place a city tile and increase income</li>
+                <li><u>Venus</u>: Air Scrapping $15 <span class="arrow"></span> raise Venus scale</li>
+                <li><u>Colonies</u>: Building a colony $17 <span class="arrow"></span> add a colony</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<h4>4. Production</h4>
+<ol>
+    <li>energy <span class="arrow"></span> heat</li>
+    <li>receive resources, money = TR + $ production</li>
+    <li>remove player markers from action cards</li>
+</ol>
+
+<h4>5. Solar</h4>
+
+<h5>1. Game End Check</h5>
+<p>Parameters all maxed <span class="arrow"></span> game ends with normal plant conversion to greenery then final scoring</p>
+
+<br />
+
+<h5>2. (Venus) World Government Terraforming</h5>
+<p>Variant: skip this step for a longer game</p>
+<ul>
+    <li>First player increases a parameter that is not maxed-out</li>
+    <li>No one gets any TR, step bonus, or placement bonus</li>
+    <li>Cards may be triggered by this (e.g. arctic algae)</li>
+</ul>
+
+<p>
+    Note that if the world government finishes the terraforming, the end game check has already passed. Therefore, one more generation should be played. However, this could be house-ruled for an even shorter game.
+</p>
+
+<ul>
+    <li><b>Long game</b> skip step 2 of solar phase entirely</li>
+    <li><b>Medium game</b> include step 2 of solar phase, and strictly follow the end game timing</li>
+    <li><b>Slightly shorter game</b> same as above, but end the game immediately if the world gov finishes off the terraforming</li>
+</ul>
+
+<h5>3. Colony Production</h5>
+<ul>
+    <li>Return all trade fleets to the trade fleets tile</li>
+    <li>Advance white markers 1 step on each colony tile</li>
+</ul>
+
+<h5>4. Turmoil</h5>
+<ol>
+    <li>TR Revision: all players lose 1 TR</li>
+    <li>Global Event: perform the current global event, taking influence into account</li>
+    <li>New Government
+        <ol style="list-style:lower-alpha; margin-bottom:0">
+            <li>dominant <span class="arrow"></span> ruling; change policy tile</li>
+            <li>resolve the ruling bonus (affects all players)</li>
+            <li>return former chairman and all non-leader delegates from dominant party to reserve</li>
+            <li>party leader of dominant party <span class="arrow"></span> new chairman, earning 1 TR</li>
+            <li>dominance marker <span class="arrow"></span> new dominant party</li>
+            <li>fill the lobby from the reserve so each player has 1 delegate there</li>
+        </ol>
+    </li>
+    <li>Changing Times
+        <ol style="list-style:lower-alpha">
+            <li>place coming global event on top of current global event; add the neutral delegate indicated at mid-right on the card</li>
+            <li>move the distant global event into the coming global event space</li>
+            <li>turn the top card of the global event deck face up, add the top-left neutral delegate</li>
+        </ol>
+    </li>
+</ol>
+<hr />
+
+<h3>Action Details</h3>
+<ol>
+    <li>Play card from hand</li>
+    <li>Standard Project</li>
+    <li>Claim milestone</li>
+    <li>Fund award</li>
+    <li>Blue card action</li>
+    <li>Greenery for 8 plants</li>
+    <li>Temperature for 8 heat</li>
+    <li><u>Colonies</u> Trade with a colony</li>
+    <li><u>Turmoil</u> Lobbying</li>
+</ol>
+
+<p>
+playing a card from hand
+1. check requirements
+    must meet requirements
+    must be able to perfrom the effect
+        e.g. if a card effect has negative energy production, you must be able to decrease energy production to play it
+        exceptions:
+            play a card that raises a maxed-out parameter, or
+            adds resources you cannot collect (e.g. add microbes to another card, but no other cards collect microbes), or
+            removes resources from another player (when you cannot or do not want to)
+
+2. pay & gain immediate effects
+    pay card cost
+    lower panel shows any immediate effects
+    the card's effects, and any effects that the card triggers, are performed in any order of the player's choice
+    brown box production is mandatory
+    red frame resource or production affects any 1 player of your choice (including self)
+    tiles & tags with a red border means it targets any player's tiles or tags
+    non-standard resources (animals, microbes, etc) are collected on specific cards - by default on the card that generates them
+    asterisk (*) denotes exception to normal rules; read card
+3. place card appropriately
+    red Event cards are collected facedown, tags only apply while being played
+    green Automated cards have no further effects, but tags still apply
+    blue Active cards have ongoing effects
+</p>
+
+<hr />
+
+Project Cards
+---
+blue ribbon marks ongoing effect or action
+requirements must be met to play the card, but not to use it later
+Active (blue)
+
+Automated (green)
+
+Event (red)
+
+
+removing resources only hurts 1 player, cannot split amongst many
+
+<hr />
+
+<h3>End Game</h3>
+<ul>
+    <li>trigger: all 3 parameters hit max</li>
+    <li>finish the current generation, including the production step</li>
+    <li>then players can convert plants into greenery</li>
+</ul>
+
+<h4>Final Scoring</h4>
+<ul>
+    <li>TR = base score</li>
+    <li>awards: 5vp or 2vp
+        <ul>
+            <li>do NOT count tags on event cards</li>
+            <li>no 2nd place in 2-player game</li>
+            <li>friendly ties, but 1st place tie -> no 2nd place</li>
+        </ul>
+    </li>
+    <li>milestones: 5vp to player who claimed</li>
+    <li>game board
+        <ul>
+            <li>greenery = 1vp each</li>
+            <li>city = 1vp per adjacent greenery (regardless of greenery owner)</li>
+        </ul>
+    </li>
+    <li>cards
+        <ul>
+            <li>cards with fixed vp value</li>
+            <li>cards that collect resources for vp</li>
+            <li>include facedown event cards (for points only, not tags)</li>
+            <li>Jovian cards</li>
+        </ul>
+    </li>
+</ul>
+
+<hr />
+
+<h3>Variants</h3>
+
+<h4>Corporate Era (extended game)</h4>
+<ul>
+    <li>add cards with red/white arrow icon, including 2 corporations</li>
+    <li>no extra resource production at setup</li>
+</ul>
+
+<h4>Draft</h4>
+<ul>
+    <li>research phase draft</li>
+    <li>draw 4 and draft</li>
+    <li>skip in generation 1 (since research phase is skipped)</li>
+    <li>even generations: pass CW</li>
+    <li>odd generations: pass CCW</li>
+</ul>
+
+
+wild tag
+    counts as any tag during an action
+    does not trigger when being put into play
+    cannot count toward awards
+    can use it to help claim a milestone
+
+
+<h3>Colonies</h3>
+
+<h4>Build a colony</h4>
+<ul>
+    <li>new standard project</li>
+    <li>$17 -> place player marker on lowest available spot on colony track, advancing the white marker 1 step if necessary</li>
+    <li>take placement bonus</li>
+    <li>limit 3 colonies per colony tile</li>
+    <li>limit 1 colony per player per colony tile (e.g. green cannot place a 2nd colony on Callisto)</li>
+</ul>
+
+<h4>Trading with a Colony Tile</h4>
+<ul>
+    <li>new action - not a standard project</li>
+    <li>pay $9 or 3 energy or 3 titanium</li>
+    <li>move trade fleet from Trade Fleets Tile to an available colony tile</li>
+    <li>each colony tile is limited to 1 trade fleet at a time</li>
+    <li>check colony tile track to determine trade income</li>
+    <li>give local colony owners their colony bonus</li>
+    <li>after trading, move white marker as far left as possible - either bottom of the track or directly next to a player colony</li>
+    <li>at end of generation the trade fleets will reset to the trade fleets tile, and all white markers will advance 1 step (solar phase)</li>
+</ul>
+
+<h3>Turmoil</h3>
+
+<h4>Summary</h4>
+<ul>
+    <li>6 parties; 1 is the <b>Dominant Party</b> and 1 is the <b>Ruling Party</b>
+        <ul>
+            <li>can be the same party</li>
+            <li>dominant party: most delegates</li>
+            <li>party leader of the dominant party becomes the chairman during Turmoil step of Solar phase (gain 1 TR)</li>
+            <li>ruling party: dominant party from last round; ruling bonus triggers (once) and a new policy changes a game rule</li>
+        </ul>
+    </li>
+    <li>Global event cards show what will happen in coming generations
+        <ul>
+            <li>initial flip (distant event): add delegate using top-left symbol</li>
+            <li>slide to center (coming event): no additional delegate</li>
+            <li>final card slide (current event): add delegate using mid-right symbol</li>
+        </ul>
+    </li>
+    <li>Global Events
+        <ul>
+            <li>Count the given parameter, but limit of 5</li>
+            <li>Influence can then adjust the count (possibly beyond 5)</li>
+            <li>Each player can have 0-3 influence, 1 point of influence for
+                <ol>
+                    <li>Chairman</li>
+                    <li>Party leader of <b>dominant party</b></li>
+                    <li>At least 1 non-leader delegate of <b>dominant party</b></li>
+                </ol>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+
+
+<h4>Lobbying</h4>
+(new action, NOT a standard project)
+move one of your delegates into the delegate area of your desired party on the Terraforming Committee board
+    $5 from delegate reserve
+    $0 from the Lobby
+
+Delegates
+---
+1+ delegates in the delegate area of the dominant party gives 1 influence
+a delegate can also be party leader or chairman, giving 1 influence each
+
+party leader
+---
+    first delegate placed in a party automatically becomes party leader
+    any player (including neutral) who has more delegates in a party than the current party leader -> replace party leader with their own
+        old party leader becomes normal delegate for the party
+    also counts as a delegate for the party
+    party leader in the dominant party counts as 1 influence; will become chairman in turmoil phase
+chairman
+---
+    when dominant party becomes ruling party, the party leader becomes chairman
+    delegate moves to chairman seat and that player gets 1 TR
+
+dominant party
+---
+party with the most delegates
+dominant party becomes ruling party next generation
+party becomes ruling -> delegates returned to their reserves, dominance marker is shifted to the new party with the most delegates
+    more than 1 party tied for most: dominance marker is moved clockwise from the new ruling party, going to first in line
+
+ruling party
+---
+active policy tile shows which party is ruling
+effect/action on the policy tile is only active during the Action phase
+party becomes ruling -> appoints a new chairman and applies a ruling bonus
+
+becoming ruling
+---
+Solar phase -> Turmoil -> step 3
+dominant party becomes ruling party, replacing old ruling party
+place party's policy tile on top of the pile
+ruling bonus of new party is applied to all players
+old chairman and all delegates in the ruling party return to reserves
+party leader becomes new chairman
+that player gains 1 TR
+dominance marker shifts
+lobby is refilled
+
+Lobby
+---
+start of each generation: each player gets 1 delegate in the lobby
+may place the delegate in a party as a free lobbying action
+end of each generation: each spent delegate in the loby is replaced by a new delegate from the delegate reserve
+
+neutral delegates
+---
+count as a separate player
+can become party leader and chairman
+
+project card requirements
+---
+may show icon of a party -> only playable if that party is currently the ruling party OR if you have 2+ delegates in that party
+
+influence
+---
+any global event that counts resources, production, cards, tiles, tags, etc. can count a maximum of 5
+the count (max 5) can then be modified up/down (including beyond 5) by influence
+a player has 0-3 influence, based on
+    owning chairman = 1 inf
+    owning leader of dominant party = 1 inf
+    owning 1+ non-leader delegates of dominant party = 1 inf
+
+TR Revision
+---
+at start of Turmoil phase, after production, all players lose 1 TR
+
+Distant Global Event
+---
+Global Event reveal: add a neutral delegate in the party indicated by the card
+
+Coming Global Event
+---
+when card transitions from COMING -> CURRENT, place a neutral delegate in the party indicated by the card
+
+Current Global Event
+---
+Turmoil phase, end of the generation
+current event effect is performed
+if "first player" makes a decision they do not receive bonuses or TR
+no current global event in generation 1
+
+Special Cases
+---
+max global parameters may not be affected again for rest of game
+Volcanic Eruptions trigger ocean bonus at 0C -> first player places ocean but receives no bonuses
+Snow Cover lowers temp below 0C -> nothing happens, but ocean bonus maynow be triggered again
+
+Final Scoring
+---
+Turmoil step is not performed when the game ends
+last step in scoring: all party leaders and the chairman are worth 1vp for that player
+
+
+
+
+
+
+

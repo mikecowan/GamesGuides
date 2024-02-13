@@ -1,0 +1,171 @@
+﻿@{
+    ViewData["Title"] = "Imperial Settlers Guide";
+}
+
+<style>
+ul {
+    /*padding: 0;*/
+}
+
+.icon {
+    width: 60px;
+}
+</style>
+
+<h3>Setup</h3>
+
+<ul>
+    <li>2 common cards + 2 faction cards</li>
+    
+</ul>
+
+<h3>Extra Rules</h3>
+<ul>
+    <li>No hand limit</li>
+    <li>Gold can be used as food/wood/stone</li>
+    <li>Empty faction decks do not get reshuffled</li>
+    <li>"Draw from your discard pile" refers to your faction discard pile</li>
+    <li>Open Production Locations
+        <ul>
+            <li>Send 1 worker (max) to an opponent's open production building</li>
+            <li>Max 2 workers per open production per round</li>
+            <li>You receive resource/card, they receive 1 worker</li>
+            <li>Cannot activate your own open production location</li>
+        </ul>
+    </li>
+    <li>Production + Feature locations
+        <ul>
+            <li>Place in production row</li>
+        </ul>
+    </li>
+    <li>Sets
+        <ul>
+            <li>Group of 3</li>
+            <li>Each card can be counted for more than one effect</li>
+            <li>Cards include self when counting sets</li>
+            <li>Production locations that check sets will include themself</li>
+            <li>For features that count new sets, use facedown common cards to keep count</li>
+            <li>Cannot exploit set-counting feature triggers with raze/rebuild</li>
+        </ul>
+    </li>
+    <li>Conquest
+        <ul>
+            <li>Can add defense tokens to faction locations
+                <ul>
+                    <li>+1 raze token</li>
+                    <li>Max 1 of: defense token, printed token, samurai</li>
+                </ul>
+            </li>
+            <li>Conquer an opponent's <i>faction</i> location</li>
+            <li>In any row, left-most (newest) costs 2 raze tokens, then 3, 4, 5, ...</li>
+            <li>Remove any tokens/goods</li>
+            <li>Add conquered location to <i>right-most</i> space on faction side</li>
+            <li>Trigger production/feature effects, do <i>not</i> trigger building bonuses</li>
+            <li>Defender receives 1 worker</li>
+        </ul>
+    </li>
+    <li>Fortresses
+        <ul>
+            <li>Fortress buildings are immune to all negative effects other than Siege</li>
+            <li>Mark fortification level with a spare token, only clears with Siege action</li>
+            <li>Siege: spend 2 raze tokens to clear an opponent's fortification</li>
+        </ul>
+    </li>
+</ul>
+
+
+
+<h3>End Game</h3>
+
+<ul>
+    <li>Common locations: 1vp</li>
+    <li>Faction locations: 2vp</li>
+    <li>Special location bonuses</li>
+    <li>Tie:
+        <ol>
+            <li>Leftover workers & resources</li>
+            <li>Most cards in hand</li>
+        </ol>
+    </li>
+</ul>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br />
+
+<h3>Factions</h3>
+
+<h4>Japan</h4>
+<ul>
+    <li>Faction locations can be razed</li>
+    <li>Discarded instead of becoming foundation</li>
+    <li>Any time during turn: deploy any number of workers as samurai to faction locations</li>
+    <li>Max 1 samurai per location</li>
+    <li>A samurai increases required raze tokens by 1</li>
+    <li>Samurai are not discarded during cleanup</li>
+</ul>
+
+<h4>Atlanteans</h4>
+<ul>
+    <li>Tech tokens
+        <ul>
+            <li>Basic: repeat production, double the feature's effect, or allow additional action</li>
+            <li>Advanced scoring: +1vp each time this location produces/triggers/activates</li>
+            <li>Advanced defense: acts same as regular defense token, location cannot have both</li>
+        </ul>
+    </li>
+    <li>Production phase: receive N defense tokens</li>
+    <li>May place any number of tech tokens during turn, before or after action</li>
+    <li>Common locations: max 1 tech token per type (max 3 total)</li>
+    <li>Cannot move tech tokens once placed</li>
+    <li>Do not discard tech tokens during cleanup</li>
+    <li>After razing,
+        <ul>
+            <li><i>Basic</i> tech tokens return to player</li>
+            <li><i>Advanced</i> tech tokens return to supply</li>
+        </ul>
+    </li>
+    <li>Non-Atlanteans can only use tech tokens as activation costs</li>
+</ul>
+
+<h4>Aztecs</h4>
+<ul>
+    <li>Max 1 blessing per color, for each player</li>
+    <li>Tricolor token
+        <ul>
+            <li>May count as 1 of brown/gray/red for each action</li>
+            <li>Color can change for each action</li>
+            <li>Does not count toward color limit</li>
+        </ul>
+    </li>
+    <li>Pray X
+        <ul>
+            <li>Draw X common cards</li>
+            <li>"Announce": pick color <i>before</i> cards are revealed</li>
+            <li>"Choose": pick color <i>after</i> cards are revealed</li>
+        </ul>
+    </li>
+    <li>Using blessings during pray (blessing is not consumed)
+        <ul>
+            <li>Guarantee: skip the pray action, count matching blessing colors instead</li>
+            <li>Augment: blessings that match the pray action count as 1 extra of that color
+                <br />
+                Example:
+                <br />
+                <span style="margin-left: 20px;">card: Pray 5, gain for black/pink/golden</span>
+                <br />
+                <span style="margin-left: 20px;">Draw: pink, pink, blue, golden, gray (no black)</span>
+                <br />
+                <span style="margin-left: 20px;">Result: +1 for a pink blessing, +1 for a golden blessing, +1 for a <u>black</u> blessing</span>
+                <br />
+                Note: no blessings would trigger if 0 cards matched
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<h4>Amazons</h4>
+<ul>
+    <li>Foundation from production/deal: add a common card as a foundation, do not take wood</li>
+    <li>Amazons shuffle faction cards back into the deck when used for a build cost</li>
+    <li>Conquered enemy locations that are used to pay a cost go back to that enemy's faction deck</li>
+</ul>

@@ -1,0 +1,632 @@
+﻿@{
+    ViewData["Title"] = "Space Alert Specializations";
+}
+
+<style>
+.specicon {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.buttonicon {
+    width: 25px;
+    vertical-align: bottom;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+div > ul {
+    padding-left: 0;
+    padding-right: 1em;
+}
+</style>
+
+<div class="table table-padding-1">
+    <!-- Rocketeer -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/SpaceAlert/rocketeer.png" class="specicon" />
+        </div>
+        <div class="table-cell tc-11">
+            <h2>Rocketeer</h2>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/SpaceAlert/rocketeerbasic.png" class="specicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <ul>
+                            <li>Launch a rocket from anywhere</li>
+                            <li>Repair lower blue <img src="~/lib/Images/SpaceAlert/c.png" class="buttonicon" />-malfunction from anywhere<span class="dagger"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-cell tc-6">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/SpaceAlert/rocketeeradv.png" class="specicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <ul>
+                            <li>Lower blue <span class="arrow"></span> launch 2 rockets with total strength 5</li>
+                            <li>No effect if a rocket was already launched this turn</li>
+                            <li><img src="~/lib/Images/SpaceAlert/c.png" class="buttonicon" />-action if
+                                <ul>
+                                    <li>fewer than 2 rockets <i>or</i></li>
+                                    <li>lower blue has a <img src="~/lib/Images/SpaceAlert/c.png" class="buttonicon" />-malfunction <i>or</i></li>
+                                    <li>not in lower blue station</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Analyst -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/SpaceAlert/dataanalyst.png" class="specicon" />
+        </div>
+        <div class="table-cell tc-11">
+            <h2>Data Analyst</h2>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/SpaceAlert/dataanalystbasic.png" class="specicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <ul>
+                            <li>Computer maintenance from anywhere, and +1 point</li>
+                            <li>Repair upper white <img src="~/lib/Images/SpaceAlert/c.png" class="buttonicon" />-malfunction from anywhere<span class="dagger"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-cell tc-6">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/SpaceAlert/dataanalystadv.png" class="specicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <ul>
+                            <li>Lower white <span class="arrow"></span> visual confirmation, and counts as 3 players</li>
+                            <li>New point values: 3-5-7-9-11</li>
+                            <li><img src="~/lib/Images/SpaceAlert/c.png" class="buttonicon" />-action if
+                                
+                                <ul>
+                                    <li>lower white has a <img src="~/lib/Images/SpaceAlert/c.png" class="buttonicon" />-malfunction <i>or</i></li>
+                                    <li>not in lower white</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Energy Technician -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/SpaceAlert/energytechnician.png" class="specicon" />
+        </div>
+        <div class="table-cell tc-11">
+            <h2>Energy Technician</h2>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/SpaceAlert/energytechnicianbasic.png" class="specicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <ul>
+                            <li>Recharge central reactor from anywhere</li>
+                            <li>Requires fuel rod</li>
+                            <li>Repair lower white <img src="~/lib/Images/SpaceAlert/b.png" class="buttonicon" />-malfunction from anywhere<span class="dagger"></span></li>
+                            <li>Power System Overload: may indirectly destroy with bonus damage trigger</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-cell tc-6">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/SpaceAlert/energytechnicianadv.png" class="specicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <ul>
+                            <li>Any upper <span class="arrow"></span> <b>all</b> shields get temporary bonus this turn
+                                <ul>
+                                    <li>current zone: +2 str</li>
+                                    <li>other zones: +1 str</li>
+                                </ul>
+                            </li>
+                            <li>Does not count toward max capacity</li>
+                            <li>Does not affect any shield recharge actions</li>
+                            <li>Still works if shields are affected by a malfunction</li>
+                       </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pulse Gunner -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/SpaceAlert/pulsegunner.png" class="specicon" />
+        </div>
+        <div class="table-cell tc-11">
+            <h2>Pulse Guner</h2>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/SpaceAlert/pulsegunnerbasic.png" class="specicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <ul>
+                            <li>Fire station's laser <i>and</i> pulse cannon</li>
+                            <li>Laser must not be malfunctioning</li>
+                            <li>Each requires energy</li>
+                            <li>If either cannot fire, then neither fires</li>
+                            <li><img src="~/lib/Images/SpaceAlert/a.png" class="buttonicon" />-action if
+                                <ul>
+                                    <li>station's laser is malfunctioning <i>or</i></li>
+                                    <li>in lower white</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-cell tc-6">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/SpaceAlert/pulsegunneradv.png" class="specicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <ul>
+                            <li>Lower white <span class="arrow"></span> fire pulse cannon with extra effect
+                                <ul>
+                                    <li>2 strength to ranges 1-2</li>
+                                    <li>1 strength to range 3</li>
+                                </ul>
+                            </li>
+                            <li>If pulse cannon is damaged
+                                <ul>
+                                    <li>2 strength to range 1</li>
+                                    <li>1 strength to range 2</li>
+                                </ul>
+                            </li>
+                            <li><img src="~/lib/Images/SpaceAlert/a.png" class="buttonicon" />-action if
+                                <ul>
+                                    <li>lower white has a <img src="~/lib/Images/SpaceAlert/a.png" class="buttonicon" />-malfunction <i>or</i></li>
+                                    <li>not in lower white</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Medic -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/SpaceAlert/medic.png" class="specicon" />
+        </div>
+        <div class="table-cell tc-11">
+            <h2>Medic</h2>
+            <ul>
+                <li>Both special actions can be combined with a single <i>move</i> action, or played alone</li>
+                <li><i>Cannot</i> combine with a double action</li>
+                <li>Cannot combine both special actions on the same turn</li>
+                <li>Medic goes first when playing special actions</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/SpaceAlert/medicbasic.png" class="specicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <ul>
+                            <li>Other players in this station receive stimulant:<br /><img src="~/lib/Images/SpaceAlert/a.png" class="buttonicon" />, <img src="~/lib/Images/SpaceAlert/b.png" class="buttonicon" />, <img src="~/lib/Images/SpaceAlert/bots.png" class="buttonicon" />-actions become heroic</li>
+                            <li>Other actions are <i>not</i> effected, including special actions that are treated like <img src="~/lib/Images/SpaceAlert/a.png" class="buttonicon" />, <img src="~/lib/Images/SpaceAlert/b.png" class="buttonicon" />, <img src="~/lib/Images/SpaceAlert/bots.png" class="buttonicon" />-actions</li>
+                            <li>Only affects <i>first</i> action of a double action</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-cell tc-6">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/SpaceAlert/medicadv.png" class="specicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <ul>
+                            <li>Players in Medic's station are immune to knockouts</li>
+                            <li>-1 point penalty</li>
+                            <li>Players who join Medic acquire immunity</li>
+                            <li>Players who leave Medic lose immunity</li>
+                            <li>Immunity follows Medic</li>
+                            <li>Does not protect battlebots disable effects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Teleporter -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/SpaceAlert/teleporter.png" class="specicon" style="position: relative; top: .5em;" />
+        </div>
+        <div class="table-cell tc-11">
+            <h2>Teleporter</h2>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-5 tc-push-1">
+            <ul>
+                <li>Collect both teleporter tokens</li>
+                <li>During data transfer, can give tokens to <i>any</i> two players</li>
+                <li>Teleports do not count as movement</li>
+                <li>Ignores all obstacles or movement-triggering effects
+                    <ul>
+                        <li>damaged/occupied gravolifts</li>
+                        <li>impassable doors</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6 tc-push-1">
+            
+            <ul>
+                <li>Ignore effects that trigger on enter/leave
+                    <ul>
+                        <li>Parasite</li>
+                        <li>Ninja</li>
+                        <li>Slime</li>
+                    </ul>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/SpaceAlert/teleporterbasic.png" class="specicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <ul>
+                            <li>Green token player moves to orange token player</li>
+                            <li>No effect if
+                                <ul>
+                                    <li>1 player has both tokens <i>or</i></li>
+                                    <li>both players are in same station <i>or</i></li>
+                                    <li>either player is in space with interceptors</li>
+                                </ul>
+                            </li>
+                            <li>Teleport affects players with tokens at <i>end of action round</i>, not whoever held at time card was played</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-cell tc-6">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/SpaceAlert/teleporteradv.png" class="specicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <ul>
+                            <li>Red / blue zone <span class="arrow"></span> teleport to opposite zone, opposite deck</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hypernavigator -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/SpaceAlert/hypernavigator.png" class="specicon" style="position: relative; top: 1em;" />
+        </div>
+        <div class="table-cell tc-11">
+            <h2>Hypernavigator</h2>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/SpaceAlert/hypernavigatorbasic.png" class="specicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <ul>
+                            <li>Lower decks <span class="arrow"></span> <i>all</i> threats move 1 less square this turn</li>
+                            <li>Speed 1 threats will not advance this turn</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-cell tc-6">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/SpaceAlert/hypernavigatoradv.png" class="specicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <ul>
+                            <li>Lower white <span class="arrow"></span> make an early jump to hyperspace</li>
+                            <li>Turn 11: skip turn 12</li>
+                            <li>Turn 10: skip turns 11 and 12</li>
+                            <li>Complete the current turn, then skip to turn 13</li>
+                            <li>No effect before turn 10</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Special Ops -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/SpaceAlert/specialops.png" class="specicon" />
+        </div>
+        <div class="table-cell tc-11">
+            <h2>Special Ops</h2>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/SpaceAlert/specialopsbasic.png" class="specicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <ul>
+                            <li>Spend this turn preparing</li>
+                            <li>Next execution of <img src="~/lib/Images/SpaceAlert/a.png" class="buttonicon" />, <img src="~/lib/Images/SpaceAlert/b.png" class="buttonicon" />, or <img src="~/lib/Images/SpaceAlert/bots.png" class="buttonicon" /> is a heroic action</li>
+                            <li>Applies even if part of a double action</li>
+                            <li>Does not affect other actions prior to the heroic</li>
+                            <li>Cumulative heroic actions are wasted, will not apply to future actions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-cell tc-6">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/SpaceAlert/specialopsadv.png" class="specicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <ul>
+                            <li>Combine with another action to concentrate on that action</li>
+                            <li>Cannot be delayed <i>directly</i> (threats, computer maintenance)</li>
+                            <li>Ignore effects caused by other players
+                                <ul>
+                                    <li>including earlier players in turn order</li>
+                                    <li>protection ends when the action is complete</li>
+                                    <li>exception: Medic's special action</li>
+                                </ul>
+                            </li>
+                            <li>Ignore obstacles to movement
+                                <ul>
+                                    <li>broken gravolift</li>
+                                    <li>sealed door from Breached Airlock</li>
+                                </ul>
+                            </li>
+                            <li>Ignore action's side effects
+                                <ul>
+                                    <li>knock outs</li>
+                                    <li>Parasite attachment</li>
+                                    <li>Ninja drone poison</li>
+                                </ul>
+                            </li>
+                            <li>Ignore delay effects
+                                <ul>
+                                    <li>occupied gravolift</li>
+                                    <li>Slime</li>
+                                </ul>
+                            </li>
+                            <li>Protection only applies to self, not battlebots
+                                <ul>
+                                    <li>in space with disabled bots <span class="arrow"></span> return to upper red</li>
+                                    <li>action can still lead to effects on other players</li>
+                                </ul>
+                            </li>
+                            <li>Protection applies to both parts of a double action</li>
+                            <li>May protect the level 1 special action</li>
+                            <li>May protect the heroic action caused by level 1 special action</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Squad Leader -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/SpaceAlert/squadleader.png" class="specicon" style="position: relative; top: .5em;" />
+        </div>
+        <div class="table-cell tc-11">
+            <h2>Squad Leader</h2>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/SpaceAlert/squadleaderbasic.png" class="specicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <ul>
+                            <li>Active battlebots: repair 1 damage in this <i>zone</i></li>
+                            <li>Disabled battlebots: reactivate them</li>
+                            <li>Repair follows this priority:
+                                <ol>
+                                    <li>Weapon in current station</li>
+                                    <li>Weapon in other station</li>
+                                    <li>Gravolift</li>
+                                    <li>Energy system in current station</li>
+                                    <li>Energy system in other station</li>
+                                    <li>Structural damage</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-cell tc-6">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/SpaceAlert/squadleaderadv.png" class="specicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <ul>
+                            <li>Not in lower blue and leading active battlebots <span class="arrow"></span><br />move to upper red then leave ship in interceptors</li>
+                            <li>Not a regular movement but not a teleport</li>
+                            <li>Ignore obstacles that would normally delay you (occupied/damaged gravolifts, slime)</li>
+                            <li>Doors between you and red zone are sealed <span class="arrow"></span><br />move as close as possible to upper red</li>
+                            <li>Interceptors unavailable <span class="arrow"></span> move but stay on ship<br />(will not repair malfunctioning interceptors)</li>
+                            <li>With interceptors <span class="arrow"></span> treat as heroic <img src="~/lib/Images/SpaceAlert/bots.png" class="buttonicon" /></li>
+                            <li>No effect if
+                                <ul>
+                                    <li>not leading bots <i>or</i></li>
+                                    <li>bots are disabled <i>or</i></li>
+                                    <li>in lower blue</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mechanic -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/SpaceAlert/mechanic.png" class="specicon" />
+        </div>
+        <div class="table-cell tc-11">
+            <h2>Mechanic</h2>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/SpaceAlert/mechanicbasic.png" class="specicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <ul>
+                            <li>Prepare station's weapon for extra effect
+                                <ul>
+                                    <li>lower white <span class="arrow"></span> +1 range</li>
+                                    <li>all others <span class="arrow"></span> +1 strength</li>
+                                </ul>
+                            </li>
+                            <li>Strength bonus can stack with heroic <img src="~/lib/Images/SpaceAlert/a.png" class="buttonicon" />-action</li>
+                            <li>Range bonus can stack with heroic <img src="~/lib/Images/SpaceAlert/a.png" class="buttonicon" />-action or<br />Pulse Gunner's advanced special action</li>
+                            <li>Treat a damaged pulse cannon as undamaged</li>
+                            <li>Remove red cube bonus marker if
+                                <ul>
+                                    <li>weapon is fired, including by Pulse Gunner</li>
+                                    <li>weapon fails to fire due to lack of energy</li>
+                                    <li><img src="~/lib/Images/SpaceAlert/a.png" class="buttonicon" />-action was used to repair a malfunction</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-cell tc-6">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/SpaceAlert/mechanicadv.png" class="specicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <ul>
+                            <li>Repair <img src="~/lib/Images/SpaceAlert/a.png" class="buttonicon" />, <img src="~/lib/Images/SpaceAlert/b.png" class="buttonicon" />, or <img src="~/lib/Images/SpaceAlert/c.png" class="buttonicon" /> malfunction and deal 2 damage</li>
+                            <li>No carryover, extra damage is wasted</li>
+                            <li>Repair lowest numbered malfunction</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br /><br />
+
+
+<span class="dagger"></span> cannot be the final point of damage
+

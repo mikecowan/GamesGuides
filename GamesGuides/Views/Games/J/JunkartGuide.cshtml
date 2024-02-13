@@ -1,0 +1,491 @@
+﻿@{
+    ViewData["Title"] = "Junkart Guide";
+}
+
+<style>
+/* 210, 236, 232 */
+</style>
+
+
+
+
+
+<h3>City Summary</h3>
+
+<div class="table table-padding-1">
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <h4>Home Town</h4>
+        </div>
+        <div class="table-cell tc-4">
+            <ul class="list-sm">
+                <li>Give 2 cards to next player</li>
+                <li>That player keeps 1, gives 1 back</li>
+                <li>Both players add pieces</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-4">
+            <ul class="list-sm">
+                <li>End: any player has 5+ fallen pieces</li>
+                <li>Points: 5/3/1 for tallest</li>
+                <li>+1 fan per matching color/shape</li>
+                <li>-1 fan per fallen piece</li>
+                <li>Cannot end exhibition with net-negative fans</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-11"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <h4>Amsterdam</h4>
+        </div>
+        <div class="table-cell tc-4">
+            <ul class="list-sm">
+                <li>Simultaneous turns</li>
+                <li>All choose &amp; reveal, determine strongest</li>
+                <li>That player gathers &amp; distributes cards</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-4">
+            <ul class="list-sm">
+                <li>End: any player eliminated</li>
+                <li>Points: survive, tallest</li>
+                <li>3 fans to talleset structure</li>
+                <li>2 fans to other surviving players</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-11"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <h4>Gujarat</h4>
+        </div>
+        <div class="table-cell tc-4">
+            <ul class="list-sm">
+                <li>Simultaneous turns</li>
+                <li>Players take all of 1 color</li>
+                <li>Flip card from deck, all add matching shape</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-4">
+            <ul class="list-sm">
+                <li>End: any player has 2+ fallen pieces</li>
+                <li>Points: 5/3/1 for tallest</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-11"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <h4>Indianapolis</h4>
+        </div>
+        <div class="table-cell tc-4">
+            <ul class="list-sm">
+                <li>Simultaneous, real-time turns</li>
+                <li>All flip card, announce "Done"</li>
+                <li>Slowest player does not get to place</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-4">
+            <ul class="list-sm">
+                <li>End: all cards played</li>
+                <li>Points: most placed pieces, bonus for tallest</li>
+                <li>+1 fan for tallest</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-11"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <h4>Monaco</h4>
+        </div>
+        <div class="table-cell tc-4">
+            <ul class="list-sm">
+                <li>Entire exhibition is simultaneous, real-time</li>
+                <li>Place pieces 1 at a time</li>
+                <li>Fallen pieces must be re-added</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-4">
+            <ul class="list-sm">
+                <li>End: a player has placed all pieces</li>
+                <li>Points: most placed pieces, bonus for tallest</li>
+                <li>+1 fan for tallest</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-11"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <h4>Montreal</h4>
+        </div>
+        <div class="table-cell tc-4">
+            <ul class="list-sm">
+                <li>Simultaneous turns</li>
+                <li>Give card to next player</li>
+                <li>Replenish hand each turn</li>
+                <li>Every 3 cards, move 1 seat left </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-4">
+            <ul class="list-sm">
+                <li>End: last survivor</li>
+                <li>Points: be last survivor</li>
+                <li>5 fans for solo winner, 3 fans for a tie</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-11"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <h4>New York</h4>
+        </div>
+        <div class="table-cell tc-4">
+            <ul class="list-sm">
+                <li>Choose a card, add the piece</li>
+                <li>Take another turn if touching same color or shape</li>
+                <li>Turn ends if no cards remain, or fail above condition</li>
+                <li>Replenish display to 3 for next player</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-4">
+            <ul class="list-sm">
+                <li>End: star revealed</li>
+                <li>Points: tallest</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-11"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <h4>Paris</h4>
+        </div>
+        <div class="table-cell tc-4">
+            <ul class="list-sm">
+                <li>Shared base in center</li>
+                <li>Play a card for next player to add</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-4">
+            <ul class="list-sm">
+                <li>End: a player has 3+ fallen pieces</li>
+                <li>Points: 3 fans for anyone not eliminated</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-11"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <h4>Philadelphia</h4>
+        </div>
+        <div class="table-cell tc-4">
+            <ul class="list-sm">
+                <li>Keep 1, pass 1 left, pass 1 right</li>
+                <li>2-players: keep 1, pass the others</li>
+                <li>Each player adds all 3, in any order</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-4">
+            <ul class="list-sm">
+                <li>End: last survivor</li>
+                <li>Points: be last survivor</li>
+                <li>5 fans for solo winner, 3 fans for a tie</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-11"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <h4>Pisa</h4>
+        </div>
+        <div class="table-cell tc-4">
+            <ul class="list-sm">
+                <li>2 side-by-side bases in center</li>
+                <li>Only replenish display when empty</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-4">
+            <ul class="list-sm">
+                <li>End: a player has 2+ fallen pieces</li>
+                <li>Points: 3 fans for anyone not eliminated</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-11"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <h4>Tokyo</h4>
+        </div>
+        <div class="table-cell tc-4">
+            <ul class="list-sm">
+                <li>Place any card on top of deck, pass entire deck left</li>
+                <li>Players add piece on top card, repeat step 1</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-4">
+            <ul class="list-sm">
+                <li>End: all cards played</li>
+                <li>Points: 5/3/1 for tallest</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<br /><br /><br /><br />
+
+<ul>
+    <li>2-hand placement is allowed</li>
+    <li>Piece becomes active as soon as picked up</li>
+    <li>Active piece goes anywhere, but cannot touch table</li>
+    <li>May hold base with 1 hand</li>
+    <li>May use active piece to move other pieces</li>
+    <li>Must place pieces one at a time</li>
+    <li>If the active piece falls, it may picked it up again, but only if it fell immediately upon placement</li>
+    <li>Any time a piece falls off the structure and touches the table it becomes a fallen piece, and is set aside</li>
+</ul>
+
+<br /><br /><br /><br />
+
+<div class="table">
+    <div class="table-row">
+        <!-- left column -->
+        <div class="table-cell tc-4">
+            <img src="~/lib/Images/Junkart/card.png" style="width: 300px;" />
+        </div>
+        <!-- right column -->
+        <div class="table-cell tc-6">
+            <ol>
+                <li>City name, rulebook page</li>
+                <li>Player count</li>
+                <li>End condition</li>
+                <li>Direction of play</li>
+                <li>Quick setup reference</li>
+                <li>Fans and criteria</li>
+                <li>Common base</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+@*hometown
+---
+2-6
+goal: most fans, bonus for tallest
+end: a player has 5+ fallen pieces, finish current round so all players take same number of turns
+scoring: match active piece color/shape
+    -1 per fallen piece
+    tallest 3 structures get 5/3/1 bonus fans
+    score for hometown may not be negative (i.e. do not lose fans from previous rounds)
+
+deal 4 per player
+turns proceed 1 at a time
+1. AP chooses 2 cards, gives them to next player
+2. that player chooses 1 card and hands back the other
+3. both players add the pieces
+4. +1 fan for each matching color or shape as the active piece
+5. refill hand to 4
+
+
+Amsterdam
+---
+3-6
+goal: tallest
+end: a player is eliminated - has 2+ fallen pieces
+    or cards run out
+scoring: 3 fans to tallest structure, 2 fans to other non-eliminated players
+
+deal 3 per player
+turns are simultaneous
+1. choose 1 card then all reveal
+2. determine who played strongest card: highest card number
+    ties: orange > blue > green > gray
+3. winner gathers all cards, distributes 1 card to each player
+4. all players find & add
+
+Gujarat
+---
+2-4
+goal: tallest
+end: a player has 2+ fallen pieces
+    or pieces run out
+scoring: 5/3/1 fans to tallest 3 structures
+
+each player gets all pieces of 1 color
+turns are simultaneous
+1. Flip top card of deck, each player adds that to structure
+    discard shapes that were already placed (because of a different color)
+
+Indianapolis
+---
+2-6 (2-4???)
+goal: most placed pieces
+end: all cards played
+scoring: count pieces
+    10 -> 5 fans
+    7+ -> 3 fans
+    5+ -> 1 fan
+    bonus 1 fan for tallest
+
+deal 10 per player
+play turns simultaneously and race
+1. Go -> flip top of deck
+2. Add matching piece to structure
+3. Announce Done when finished, N-1 players place piece
+
+fallen pieces have no effect, return to supply
+
+Monaco
+---
+2-6
+goal: most placed pieces
+end: 1 player has placed all their pieces
+scoring: count pieces
+    10 -> 5 fans
+    7+ -> 3 fans
+    5+ -> 1 fan
+    bonus 1 fan for tallest
+
+deal 10 per player
+the entire exhibition is played in real time, simultaneously, no turns
+place pieces from cards, one at a time
+fallen pieces must be put back, one at a time, in any order, before continuing
+
+Montreal
+---
+2-6
+goal: last survivor
+end: 1 remaining player or remaining players are eliminated simultaneously or all cards played
+scoring: last player standing gets 5 fans
+    otherwise, the remaining players (or those who got the farthest) tie and get 3 fans each
+
+deal 3 per player
+play turns simultaneously
+1. Play a card in front of player to the left
+2. find matching piece, add it, keep cards in front of you
+3. redraw to 3
+
+after 3 cards are in front of you, discard them, then move one seat to the left, start at step 1
+
+eliminated if 2+ pieces fall off "at the same time" -> likely this should mean 2+ fallen pieces will eliminate a player
+
+New York
+---
+2-6
+goal: tallest
+end: star card revealed
+scoring: 5/3/1 fans to the tallest structures
+
+put star card two-thirds down the deck
+deal 3 to table
+
+turns proceed 1 at a time
+1. choose a face up card, add its piece
+    touches a matching color or shape -> repeat action with a face up card
+    turn ends: no face up cards remain OR place not touching a matching color or shape
+2. end turn and replenish face up cards
+
+fallen pieces are removed without effect
+
+shorter game: star card halfway down
+longer game: star card three-fourths down
+
+Paris
+---
+2-6
+goal: survive
+end: a player has 3+ fallen pieces
+scoring: all survivors win 3 fans
+
+shared base in center, instead of individual bases
+deal 3 per player
+
+1. choose card, place in front of next player
+2. that player adds the piece to center structure
+3. draw new card, next player's turn
+
+Philadelphia
+---
+2-6
+goal: last man standing
+end: 1 remaining player or remaining players are eliminated simultaneously or all cards played
+scoring: last player standing gets 5 fans
+    otherwise, the remaining players (or those who got the farthest) tie and get 3 fans each
+
+deal 3 per player
+
+simultaneous draft, simultaneous adding
+1. keep 1, pass 1 left, pass 1 right
+    2p: keep 1, pass 2 to other
+2. add all 3 pieces one at a time, any order
+3. start over by dealing 3 per player
+
+eliminated with 2+ fallen pieces
+
+Pisa
+---
+2-6
+goal: survive
+end: a player has 2+ fallen pieces
+scoring: all survivors win 3 fans
+
+no individual bases, 2 side-by-side bases in center
+deal N-1 to the table
+
+turns proceed 1 by 1
+1. choose a card, add it to common structure
+2. only replenish display when all are used, deal N-1 again
+
+Tokyo
+---
+2-6
+goal: tallest
+end: all cards played
+scoring: 5/3/1 fans to tallest structures
+
+deal 10 per player
+turns are simultaneous
+1. choose & place 1 card on top of deck, pass entire deck left
+2. flip top card, add that piece
+3. repeat step 1 with the smaller deck until all decks are exhausted
+
+fallen pieces are removed without effect
+
+Nashville
+---
+2-4
+goal: tallest
+end: 3rd cactus revealed
+scoring: 
+
+everyone takes a cowboy meeple
+place bases 50cm apart
+deal 4 cards per player
+prepare structure by playing 3 cards each
+    make personal discards, card for most recently played piece on top
+cut deck into A & B, 2 cactus -> A, 1 cactus face up on top of B; stack A on top of B
+
+turns proceed 1 at a time
+1. draw until 2 cards in hand
+*@

@@ -1,0 +1,194 @@
+﻿@{
+    ViewData["Title"] = "Terraforming Mars Scoring";
+}
+
+<style>
+.icon {
+    max-width: 70px;
+    max-height: 70px;
+}
+
+.icon-sm {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.icon-xs {
+    max-width: 15px;
+    max-height: 15px;
+}
+
+.no-padding {
+    padding-left: 1em;
+    font-size: 14px;
+}
+</style>
+
+<div class="table table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/TerraformingMars/terraformrating.png" class="icon" />
+        </div>
+        <div class="table-cell tc-10">
+            <h4>Terraform Rating</h4>
+            <ul class="no-padding">
+                <li>+1 income</li>
+                <li>Converts to points 1:1</li>
+                <li>Raise any of the following, <u>directly</u> or <u>indirectly</u></li>
+            </ul>
+            @*<p>Increase by raising any of the following, <u>directly</u> or <u>indirectly</u></p>*@
+
+            <br />
+
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-1" style="text-align: center">
+                        <img src="~/lib/Images/TerraformingMars/oxygen.png" class="icon-sm" />
+                        
+                    </div>
+                    <div class="table-cell tc-2">
+                        <h4>Oxygen</h4>
+                        <ul class="no-padding">
+                            <li>Greenery</li>
+                        </ul>
+                        
+                        
+                    </div>
+
+                    <div class="table-cell tc-1 tc-push-1" style="text-align: center">
+                        <img src="~/lib/Images/TerraformingMars/temperature.png" class="icon-sm" />
+                    </div>
+                    <div class="table-cell tc-2 tc-push-1">
+                        <h4>Temperature</h4>
+                        <ul class="no-padding">
+                            <li>$14 standard project</li>
+                            <li>8 <span class="cross"></span> <img src="~/lib/Images/TerraformingMars/heat.png" class="icon-xs" /></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-1" style="text-align: center">
+                        <img src="~/lib/Images/TerraformingMars/ocean2.png" class="icon-sm" />
+                    </div>
+                    <div class="table-cell tc-2">
+                        <h4>Oceans</h4>
+                        <ul class="no-padding">
+                            <li>$18 standard project</li>
+                        </ul>
+                    </div>
+
+                    <div class="table-cell tc-1 tc-push-1" style="text-align: center">
+                        <img src="~/lib/Images/TerraformingMars/terraformvenus.png" class="icon-sm" />
+                    </div>
+                    <div class="table-cell tc-2 tc-push-1">
+                        <h4>Venus</h4>
+                        <ul class="no-padding">
+                            <li>$15 standard project</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-10">
+            <hr />
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/TerraformingMars/greenery.png" class="icon" />
+        </div>
+        <div class="table-cell tc-3">
+            <h4>Greenery</h4>
+            <p>1vp per Greenery tile</p>
+            <ul class="no-padding">
+                <li>$23 standard project</li>
+                <li>8 <span class="cross"></span> <img src="~/lib/Images/TerraformingMars/plants.png" class="icon-xs" /></li>
+            </ul>
+        </div>
+
+        <div class="table-cell tc-1 tc-push-1">
+            <img src="~/lib/Images/TerraformingMars/city.png" class="icon" />
+        </div>
+        <div class="table-cell tc-4 tc-push-1">
+            <h4>Cities</h4>
+            <p>1vp per adjacent Greenery tile (of any player)</p>
+            <ul class="no-padding">
+                <li>$25 standard project</li>
+            </ul>
+
+            
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-10">
+            <hr />
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/TerraformingMars/cardpoint.png" class="icon" />
+        </div>
+        <div class="table-cell tc-3">
+            <h4>Card Points</h4>
+        </div>
+
+        <div class="table-cell tc-1 tc-push-1">
+            <img src="~/lib/Images/TerraformingMars/resourcepoint.png" class="icon" />
+        </div>
+        <div class="table-cell tc-3 tc-push-1">
+            <h4>Resource Points</h4>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-10">
+            <hr />
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-5">
+            <h4>Milestones</h4>
+            <ul class="no-padding">
+                <li>5vp each</li>
+                <li>$8 each, max 3 per game</li>
+                <li>Available when reaching criteria</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Awards</h4>
+            <ul class="no-padding">
+                <li>5vp / 2vp, friendly ties</li>
+                <li>$8 / 14 / 20 for award #1 / 2 / 3</li>
+                <li>Determine scoring category</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-10">
+            <hr />
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/TerraformingMars/chairman.png" class="icon-sm" />
+            <img src="~/lib/Images/TerraformingMars/partyleader.png" class="icon-sm" />
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Terraforming Committee</h4>
+            <p>1vp for Chairman and each Party Leader</p>
+        </div>
+    </div>
+
+</div>
+

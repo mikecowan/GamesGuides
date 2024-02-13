@@ -1,0 +1,602 @@
+﻿@{
+    ViewData["Title"] = "Star Wars Rebellion Tactics";
+}
+
+<style>
+h3, h4, ol, ul, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-bottom: .5em;
+}
+
+ol, ul {
+    margin-bottom: 1em;
+}
+
+li > ul {
+    margin-bottom: 0;
+}
+
+.icon {
+    width: 15px;
+}
+
+.smallunit {
+    width: 40px;
+}
+
+.tinyunit {
+    width: 20px;
+}
+
+.largeunit {
+    width: 40px;
+}
+
+footer {
+    margin-bottom: 0;
+}
+</style>
+
+<!-- Imperial Space -->
+<h3>Imperial Space</h3>
+
+<div class="table table-padding-1">
+
+    <!-- Entrapment -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Entrapment
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/interdictor.png" class="largeunit" />
+        </div>
+        <div class="table-cell tc-4">
+            Cancel, play additional space tactic
+        </div>
+        <div class="table-cell tc-4">
+            Rebel cannot play space tactic next round
+        </div>
+    </div>
+
+    <!-- Intercept -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Intercept
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/tiestriker.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            Destroy 1 <img src="~/lib/Images/StarWarsRebellion/triangle.png" class="icon" /> ground unit
+        </div>
+        <div class="table-cell tc-4">
+            Rebel ships cannot remove damage with <img src="~/lib/Images/StarWarsRebellion/lightsaber.png" />
+        </div>
+    </div>
+
+    <!-- Energy Shield -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Energy Shield
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/shieldbunker.png" class="largeunit" />
+        </div>
+        <div class="table-cell tc-4">
+            Remove 2 damage from ships
+        </div>
+        <div class="table-cell tc-4">
+            Resolve space attacks last
+        </div>
+    </div>
+
+    <!-- Superlaser Blast -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Superlaser Blast
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/deathstar.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            5 damage to 1 capital ship
+        </div>
+        <div class="table-cell tc-4">
+            1 damage
+        </div>
+    </div>
+
+    <!-- Swarm Tactics -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Swarm Tactics
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/tiefighter.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            2 damage (more fighters)
+        </div>
+        <div class="table-cell tc-4">
+            1 black damage
+        </div>
+    </div>
+
+    <!-- Tractor Beam -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Tractor Beam
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/stardestroyer.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            Capture leader (no rebel ships)
+        </div>
+        <div class="table-cell tc-4">
+            1 red damage
+        </div>
+    </div>
+
+    <!-- Reinforcements -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Reinforcements
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/assaultcarrier.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            Gain 1 TIE Fighter, prevent 2 black hits
+        </div>
+        <div class="table-cell tc-4">
+            Prevent 2 black hits
+        </div>
+    </div>
+
+    <!-- Overwhelming Presence -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Overwhelming Presence
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/superstardestroyer.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            Prevent 2 red, 1 direct hit
+        </div>
+        <div class="table-cell tc-4">
+            Prevent 2 red hits
+        </div>
+    </div>
+
+</div>
+
+<br /><br />
+<hr />
+<br /><br />
+
+<!-- Rebel Space -->
+<h3>Rebel Space</h3>
+
+<div class="table table-padding-1">
+
+    <!-- Outrun Them -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Outrun Them
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/corelliancorvette.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            Cancel
+        </div>
+        <div class="table-cell tc-4">
+            Imperial cannot play ground tactic next round
+        </div>
+    </div>
+
+    <!-- Deployment -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Deployment
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/uwing.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            Gain 1 <img src="~/lib/Images/StarWarsRebellion/triangle.png" class="icon" /> ground unit
+        </div>
+        <div class="table-cell tc-4">
+            Imperial ships cannot remove damage with <img src="~/lib/Images/StarWarsRebellion/lightsaber.png" />
+        </div>
+    </div>
+
+    <!-- Draw Their Fire -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Draw Their Fire
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/nebulonbfrigate.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            Remove 2 damage from ships
+        </div>
+        <div class="table-cell tc-4">
+            Resolve space attacks last
+        </div>
+    </div>
+
+    <!-- Ion Blast -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Ion Blast
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/ioncannon.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            1 damage to 1 capital ship; prevent heal
+        </div>
+        <div class="table-cell tc-4">
+            1 damage
+        </div>
+    </div>
+
+    <!-- Rogue Squadron Support -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Rogue Squadron Support
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/xwing.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            2 black damage
+        </div>
+        <div class="table-cell tc-4">
+            1 black damage
+        </div>
+    </div>
+
+    <!-- Bombing Run -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Bombing Run
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/ywing.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            2 red damage
+        </div>
+        <div class="table-cell tc-4">
+            1 red damage
+        </div>
+    </div>
+
+    <!-- Escort -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Escort
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/rebeltransport.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            Prevent 1 red, 1 black, 1 direct hit
+        </div>
+        <div class="table-cell tc-4">
+            Prevent 2 black hits
+        </div>
+    </div>
+
+    <!-- Fleet Logistics -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Fleet Logistics
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/moncalamaricruiser.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            Prevent 2 red, play additional tactic
+        </div>
+        <div class="table-cell tc-4">
+            Prevent 2 red hits
+        </div>
+    </div>
+</div>
+
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br />
+
+<!-- Imperial Ground -->
+<h3>Imperial Ground</h3>
+
+<div class="table table-padding-1">
+
+    <!-- Air Superiority -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Air Superiority
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/tiestriker.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            Cancel
+        </div>
+        <div class="table-cell tc-4">
+            Rebel cannot play ground tactic next round
+        </div>
+    </div>
+
+    <!-- Imposing Presence -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Imposing Presence
+        </div>
+        <div class="table-cell tc-1">
+            <div style="height: 40.47px; width: 1px;"></div>
+        </div>
+        <div class="table-cell tc-4">
+            Rebel ground cannot remove damage with <img src="~/lib/Images/StarWarsRebellion/lightsaber.png" class="icon" />
+        </div>
+        <div class="table-cell tc-4">
+            play additional ground tactic
+        </div>
+    </div>
+
+    <!-- Armored Patrol -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Armored Patrol
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/assaulttank.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            Prevent 2 red, 2 black hits
+        </div>
+        <div class="table-cell tc-4">
+            Prevent 1 red, 1 black hits
+        </div>
+    </div>
+
+    <!-- Overrun -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Overrun
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/atst.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            2 damage
+        </div>
+        <div class="table-cell tc-4">
+            1 damage
+        </div>
+    </div>
+
+    <!-- Bombardment -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Bombardment
+        </div>
+        <div class="table-cell tc-1">
+            <div style="height: 40.47px">
+                <img src="~/lib/Images/StarWarsRebellion/superstardestroyer.png" class="tinyunit" />
+                <img src="~/lib/Images/StarWarsRebellion/stardestroyer.png" class="tinyunit" />
+            </div>
+        </div>
+        <div class="table-cell tc-4">
+            2 black damage (if no Shield Generator)
+        </div>
+        <div class="table-cell tc-4">
+            1 damage
+        </div>
+    </div>
+
+    <!-- Support of the 501st  -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Support of the 501st
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/stormtrooper.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            Destroy 1 <img src="~/lib/Images/StarWarsRebellion/triangle.png" class="icon" /> ground unit
+        </div>
+        <div class="table-cell tc-4">
+            1 black damage
+        </div>
+    </div>
+
+    <!-- Target the Generator -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Target the Generator
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/atat.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            Destroy 1 structure
+        </div>
+        <div class="table-cell tc-4">
+            1 red damage
+        </div>
+    </div>
+
+    <!-- Armored Position -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Armored Position
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/shieldbunker.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            1/2/3 damage to Shield Bunker <span class="arrow"></span>
+            <br />
+            Remove 1/2/3 damage from ground units
+        </div>
+        <div class="table-cell tc-4">
+            Resolve ground attacks last
+        </div>
+    </div>
+
+</div>
+
+<br /><br />
+<hr />
+<br /><br />
+
+<!-- Rebel Ground -->
+<h3>Rebel Ground</h3>
+
+<div class="table table-padding-1">
+
+    <!-- Escape Plan -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Escape Plan
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/rebeltransport.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            Retreat <span class="arrow"></span> cancel
+        </div>
+        <div class="table-cell tc-4">
+            Imperial cannot play ground tactic next round
+        </div>
+    </div>
+
+    <!-- Rogue One -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Rogue One
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/uwing.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            Retreat <span class="arrow"></span>
+            <br />
+            Rescue leader or remove target marker
+        </div>
+        <div class="table-cell tc-4">
+            Imperial ground cannot remove damage with <img src="~/lib/Images/StarWarsRebellion/lightsaber.png" class="icon" />
+        </div>
+    </div>
+
+    <!-- Planetary Shield -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Planetary Shield
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/shieldgenerator.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            1/2/3 damage to Shield Generator <span class="arrow"></span>
+            <br />
+            Remove 1/2/3 damage from ground units
+        </div>
+        <div class="table-cell tc-4">
+            Resolve ground attacks last
+        </div>
+    </div>
+
+    <!-- Confrontation -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Confrontation
+        </div>
+        <div class="table-cell tc-1">
+            <div style="height: 40.47px; width: 1px;"></div>
+        </div>
+        <div class="table-cell tc-4">
+            Eliminate an Imperial leader
+        </div>
+        <div class="table-cell tc-4">
+            Play additional ground tactic
+        </div>
+    </div>
+
+    <!-- Tow Cables -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Tow Cables
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/airspeeder.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            4 damage to 1 AT-AT or 1 AT-ST
+        </div>
+        <div class="table-cell tc-4">
+            1 damage
+        </div>
+    </div>
+
+    <!-- Hold Them Back -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Hold Them Back
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/rebeltrooper.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            Destroy 1 <img src="~/lib/Images/StarWarsRebellion/triangle.png" class="icon" /> ground unit
+        </div>
+        <div class="table-cell tc-4">
+            1 black damage
+        </div>
+    </div>
+
+    <!-- Take it Down -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Take it Down
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/rebelvanguard.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            2 red damage
+        </div>
+        <div class="table-cell tc-4">
+            1 red damage
+        </div>
+    </div>
+
+    <!-- Take Cover -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Take Cover
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/StarWarsRebellion/golanarmsturret.png" class="smallunit" />
+        </div>
+        <div class="table-cell tc-4">
+            Prevent 2 red, 2 black hits
+        </div>
+        <div class="table-cell tc-4">
+            Prevent 1 red, 1 black hits
+        </div>
+    </div>
+
+</div>

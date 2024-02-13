@@ -1,0 +1,350 @@
+﻿@{
+    ViewData["Title"] = "Colt Express Guide";
+}
+
+<h2>Colt Express</h2>
+
+<h3>Setup</h3>
+<ul>
+	<li>Base Game
+		<ul>
+			<li>face-down $250 purse.</li>
+			<li>Use N train cars.</li>
+			<li>Place Marshal and strongbox in locomotive.</li>
+			<li>13 neutral bullet cards.</li>
+		</ul>
+	</li>
+	<li>Horses and Stagecoach
+		<ul>
+			<li>Stagecoach aligned with locomotive.</li>
+			<li>Place Strongbox on stagecoach roof, Shotgun on top of strongbox.</li>
+			<li>Place a face-down flask in each car, except locomotive.</li>
+			<li>Draw and display (N-1) hostage cards.</li>
+			<li>16 neutral bullet cards.</li>
+			<li>Horse Attack for starting locations, cannot be locomotive or stagecoach.</li>
+		</ul>
+	</li>
+	<li>Marshal and Prisoners
+		<ul>
+			<li>Remove Marshal cards from bandit decks.</li>
+			<li>Add Brilliant Idea cards to bandit decks.</li>
+			<li>Display wanted poster face up for each bandit.</li>
+			<li>Brawler cards: gold on top.</li>
+			<li>Marshal gets 2 stacks of 6 bullet cards.</li>
+			<li>Return arrest warrants of unused bandits.</li>
+			<li>2 or 3 bandits: return "Full of Lead" and "Arch Enemy" special target cards.</li>
+			<li>Draw 2 arrest warrants and 3 special target cards, without looking, to make a Marshal goal zone.</li>
+			<li>2-4 bandits: 4 cars + prison.</li>
+			<li>5+ bandits: 5 cars + prison.</li>
+			<li>Instead of strongbox, put both mailbags in locomotive.</li>
+			<li>Draw 3 prisoner cards, regardless of player count.</li>
+		</ul>
+	</li>
+</ul>
+
+
+<h3>Victory</h3>
+<ul>
+	<li>Marshal wins by completing 4 goals.</li>
+	<li>Otherwise, richest bandit wins
+		<ul>
+			<li>Loot</li>
+			<li>Gunslinger prize: bandit who shot the most
+				<ul>
+					<li>all tied players receive $1000</li>
+				</ul>
+			</li>
+			<li>Wanted poster: if Marshal never captured you</li>
+			<li>Prisoner: if you still have card</li>
+			<li>Hostage's ransom</li>
+			<li>Brawler prizes</li>
+			<li>Station card effects</li>
+		</ul>
+	</li>
+	<li>Tie: player who received fewest bullet cards from players and events</li>
+</ul>
+
+<br /><br /><br /><br /><br /><br />
+
+<div class="table table-100">
+	<div class="table-row">
+		<div class="table-cell tc-6">
+			<h3>Schemin'</h3>
+			<ul>
+				<li>Start: discard all bullet cards</li>
+				<li>End: keep some, discard the rest</li>
+				<li>Play a card or draw 3.</li>
+				<li>or fetch Brilliant Idea (Marshal & Prisoners).</li>
+			</ul>
+		</div>
+		<div class="table-cell tc-6">
+			<h3>Stealin'</h3>
+			<ul>
+				<li>Actions are mandatory.</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<br /><br /><br /><br /><br /><br />
+
+<div class="event-row">
+	<div class="event">
+		<h4><img src="~/lib/Images/ColtExpress/normal_turn.png" /><span>Normal Turn</span></h4>
+		<p>Play actions face up.</p>
+	</div>
+	<div class="event">
+		
+		<h4><img src="~/lib/Images/ColtExpress/tunnel.png" /><span>Tunnel</span></h4>
+		<p>Must play actions face down.</p>
+	</div>
+</div>
+
+<div class="event-row">
+	<div class="event">
+		<h4><img src="~/lib/Images/ColtExpress/speeding_up.png" /><span>Speeding Up</span></h4>
+		<p>Play twice (any action in any combination).</p>
+	</div>
+	<div class="event">
+		
+		<h4><img src="~/lib/Images/ColtExpress/switching.png" /><span>Switching</span></h4>
+		<p>Play this turn counter-clockwise, starting with First Player.</p>
+	</div>
+</div>
+
+<div class="event-row">
+	<div class="event">
+		<h4><img src="~/lib/Images/ColtExpress/turmoil.png" /><span>Turmoil</span></h4>
+		<p>All players choose actions then simultaneously reveal.</p>
+		<p>Players who want to draw 3 must declare before the reveal.</p>
+	</div>
+</div>
+
+<div class="event-row">
+	<div class="event">
+		<h4><img src="~/lib/Images/ColtExpress/normal_whiskey.png" class="whiskey" /><span>Normal Whiskey</span></h4>
+		<p>Draw 3 cards then play an action.</p>
+		<p>Must play a card with the action.</p>
+	</div>
+	<div class="event">
+		
+		<h4><img src="~/lib/Images/ColtExpress/old_whiskey.png" class="whiskey" /><span>Old Whiskey</span></h4>
+		<p>Play 2 action cards in a row.</p>
+		<p>Cannot use either action to draw cards.</p>
+	</div>
+</div>
+
+<br /><br /><br /><br /><br />
+
+<h3>Actions</h3>
+<ul>
+	<li>Move: 1 inside train, up to 3 on roof</li>
+	<li>Fire
+		<ul>
+			<li>cannot shoot someone in your location</li>
+			<li>distance 1 inside train, no limit on roof but subject to line of sight</li>
+			<li>bullet cards go on top of a player's deck</li>
+		</ul>
+	</li>
+	<li>Punch
+		<ul>
+			<li>puncher chooses what to drop</li>
+			<li>purses are chosen at random, placed without looking</li>
+		</ul>
+	</li>
+	<li>Ride
+		<ul>
+			<li>Only resolves if bandit is aligned with a horse.</li>
+			<li>Can jump on a horse either from roof or inside train.</li>
+			<li>Move 0-3 cars.</li>
+			<li>Place bandit inside adjacent an adjacent train car or stagecoach.</li>
+		</ul>
+	</li>
+	<li>Brilliant Idea
+		<ul>
+			<li>New action: add Brilliant Idea to hand from discard or deck.</li>
+			<li>Not in/on prison car roof/corridor/cell: copy last bandit action other than Brilliant Idea.
+				<ul>
+					<li>Ignore Marshal's bullet penalties.</li>
+					<li>Can copy shoot/punch during special Jarring turns</li>
+				</ul>
+			</li>
+			<li>In prison cell: move to roof or corridor.</li>
+			<li>Prison roof/corridor:
+				<ul>
+					<li>take a prisoner card, max 1 - cannot choose this if already have a prisoner card.</li>
+					<li>free another bandit, move that bandit to your space and he gives you 1 loot of his choice.</li>
+				</ul>
+			</li>
+		</ul>
+</ul>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+<h3>Stagecoach</h3>
+<p>At end of round, move stagecoach one car toward caboose, unless already aligned with caboose.</p>
+<ul>
+	<li>Inside
+		<ul>
+			<li>Enter with Ride, or with Floor Change from stagecoach roof.</li>
+			<li>Considered adjacent to the interior of its aligned train car for Fire and Punch.</li>
+			<li>Marshal never enters stagecoach.</li>
+			<li>When entering for first time, must take a hostage (max 1).</li>
+		</ul>
+	</li>
+	<li>Roof
+		<ul>
+			<li>Enter with Move from train roof, or with Floor Change from stagecoach interior.</li>
+			<li>Considered adjacent to the roof of its aligned train car for Move, Fire, and Punch.</li>
+			<li>Bandits on roof can shoot any bandit on the train's roof, and vice versa.</li>
+		</ul>
+	</li>
+	<li>Shotgun
+		<ul>
+			<li>Guards strongbox, idle until punched.</li>
+			<li>Release the strongbox by punching Shotgun, moving him to the roof of the aligned car.</li>
+			<li>Take a neutral bullet if on Shotgun's location, then move to an adjacent car's roof (not stagecoach).</li>
+			<li>Shotgun blocks line of sight, but not when firing from stagecoach.</li>
+			<li>Shotgun is always aligned with the stagecoach.</li>
+		</ul>
+	</li>
+</ul>
+
+<h3>Prison Car</h3>
+<ul>
+	<li>Cannot choose to enter cell.</li>
+	<li>Cannot shoot/punch a captured bandit.</li>
+	<li>Cannot move a bandit into a cell with shoot/punch.</li>
+	<li>Brilliant Idea is the only action that will resolve for captured bandits.</li>
+</ul>
+
+<h3>Prisoners</h3>
+<ul>
+	<li>Max 1 prisoner per bandit.</li>
+	<li>Trusty sidekick: take 2 loot takens with Rob action.</li>
+	<li>Not trusty sidekick: gain power of corresponding bandit.</li>
+</ul>
+
+<h3>Marshal</h3>
+<ul>
+	<li>Bandits can punch/shoot Marshal and move into his location.</li>
+	<li>Punch Marshal - take a Brawler card.</li>
+	<li>Goals
+		<ul>
+			<li>Add a new goal to current goal zone each round.</li>
+			<li>Marshal wins by completing 4 goals.</li>
+		</ul>
+	<li>Actions
+		<ul>
+			<li>Move+ and Floor Change+
+				<ul>
+					<li>Play an additional card.</li>
+					<li>Can be chained.</li>
+					<li>Bonus play only triggers on standard turns.</li>
+					<li>Cannot draw cards with bonus play.</li>
+				</ul>
+			<li>Capture
+				<ul>
+					<li>Send a bandit in his location to the prison cell.</li>
+					<li>Take bandit's wanted poster, never loses it.</li>
+					<li>Can capture a bandit multiple times per game.</li>
+				</ul>
+			</li>
+			<li>Shoot
+				<ul>
+					<li>Can shoot twice if 2+ bandits are available - one card from each pile.</li>
+					<li>Cannot shoot the same bandit twice - choose either pile.</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li>Modified Events
+		<ul>
+			<li>Angry Marshal: Resolve 1 shoot action, then resolve 1 move action.</li>
+			<li>A Shot of Whiskey...: Take flask on this location, may use it like a bandit.
+				<ul>
+					<li>Marshal never drops whiskey.</li>
+					<li>Old Whiskey: Ignore bonus plays, 2 action cards maximum.</li>
+				</ul>
+			</li>
+			<li>Marshal's Revenge: Affects bandits in Marshal's location too.</li>
+		</ul>
+	</li>
+	<li>End Game
+		<ul>
+			<li>Remaining prisoner cards are added to achievement zone.</li>
+			<li>Any mailbag on the train is added to achievement zone.</li>
+		</ul>
+	</li>
+</ul>
+
+
+
+
+
+
+
+
+<!-- 
+
+<h3>Couriers and Armored Train</h3>
+
+setup:
+split into two teams, use Il Professore with odd numbers
+alternate seating
+Wild Bunch token and 23 neutral bullets
+starting train:
+	locomotive, 3 cars in any order (restaurant, baggage car, first class car)
+	all bandits in the caboose
+armored train:
+	locomotive, tender car, armored car, armory, armored car, infirmary, armored car
+	gatling on roofs of armory and infirmary cars, 1 bag in each
+	1 bag on roof of each armored car
+	1 secret document in each armored car
+	3 gold nuggets on the tender car
+	courier pawn on roof of armored cars 1 and 3, inside armored car 2
+	1 strongbox in locomotive
+place locomotives adjacent, going in opposite directions
+remove Marshal cards, add Nudge cards
+-->
+
+
+
+
+
+
+<style>
+body {
+/*	font-family: courier new;
+	font-family: calibri;
+	width: 750px;
+*/}
+
+.event p {
+	margin: 0;
+}
+
+.event-row {
+	clear: both;
+	
+}
+
+.event-row .event {
+	/*border: 1px solid black;*/
+	padding: 0 1em;
+	vertical-align: top;
+	width: 45%;
+	float: left;
+	margin-bottom: 3em;
+}
+
+.whiskey {
+	width: 32px;
+}
+
+.event h4 span {
+	vertical-align: top;
+	margin-left: 5px;
+}
+
+</style>

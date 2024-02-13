@@ -1,0 +1,425 @@
+﻿@{
+    ViewData["Title"] = "Medieval Academy Guide";
+}
+
+<style>
+.shield {
+    width: 40px;
+}
+
+h5 {
+    padding: 0;
+    margin: 0;
+}
+</style>
+
+<div class="table table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <h4><u>Board</u></h4>
+        </div>
+        <div class="table-cell tc-5">
+            <h4><u>Basic</u></h4>
+        </div>
+        <div class="table-cell tc-5">
+            <h4><u>Variant</u></h4>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <h5>Gallantry</h5>
+        </div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>Advance 1-3 on one track</li>
+                <li>Rank 1 receives benefit last</li>
+                <li>Cannot split movement among different boards</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>Phase 1: After the deal, players add a disc to bet card</li>
+                <li>Discs do not block other discs</li>
+                <li>Move disc [rank] <span class="cross"></span> [cards] on bet track</li>
+                <li>e.g. 1st place Gallantry with 2 Quest cards played<br /><span class="arrow"></span> Advance 3<span class="cross"></span>2 = 6 squares on Quests</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-12">
+            <hr />
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <h5>Jousts / Tournaments</h5>
+        </div>
+        <div class="table-cell tc-5">
+            <img src="~/lib/Images/MedievalAcademy/pos1.png" class="shield" />
+            <img src="~/lib/Images/MedievalAcademy/pos2.png" class="shield" />
+            <img src="~/lib/Images/MedievalAcademy/pos3.png" class="shield" />
+        </div>
+        <div class="table-cell tc-5">
+            <img src="~/lib/Images/MedievalAcademy/pos1.png" class="shield" />
+            <img src="~/lib/Images/MedievalAcademy/pos2.png" class="shield" />
+            <img src="~/lib/Images/MedievalAcademy/pos3.png" class="shield" />
+            <img src="~/lib/Images/MedievalAcademy/pos5.png" class="shield" />
+            <img src="~/lib/Images/MedievalAcademy/pos8.png" class="shield" />
+
+            <ul>
+                <li>Single game board; tug-of-war; cup starts in center</li>
+                <li>Choose white/black after each card</li>
+                <li>May advance on both sides on different turns</li>
+                <li>Winning knight awards higher point values</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-12">
+            <hr />
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <h5>Quests</h5>
+        </div>
+        <div class="table-cell tc-5">
+            <img src="~/lib/Images/MedievalAcademy/pos4.png" class="shield" />
+            <img src="~/lib/Images/MedievalAcademy/pos10.png" class="shield" />
+            <img src="~/lib/Images/MedievalAcademy/pos17.png" class="shield" />
+        </div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>Count tokens from Joust, Tournament, King's Service</li>
+                <li>First: +1pt per positive token</li>
+                <li>Second: +1pt per <i>pair</i> of positive tokens</li>
+                <li>Last: -1pt per <i>pair</i> of positive tokens</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-12">
+            <hr />
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <h5>Education</h5>
+        </div>
+        <div class="table-cell tc-5">
+            <img src="~/lib/Images/MedievalAcademy/neg3.png" class="shield" />
+            <img src="~/lib/Images/MedievalAcademy/neg1.png" class="shield" />
+        </div>
+        <div class="table-cell tc-5">
+            <img src="~/lib/Images/MedievalAcademy/neg3.png" class="shield" />
+            <img src="~/lib/Images/MedievalAcademy/neg1.png" class="shield" />
+            <img src="~/lib/Images/MedievalAcademy/zero.png" class="shield" />
+            <img src="~/lib/Images/MedievalAcademy/zero.png" class="shield" />
+            <img src="~/lib/Images/MedievalAcademy/zero.png" class="shield" />
+
+            <ul>
+                <li>Randomize tokens face-down, using [N-2] 0-point tokens</li>
+                <li>Phase 3: Peek at 1 token when playing an Education card</li>
+                <li>Phase 4: Take tokens in rank order</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-12">
+            <hr />
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <h5>Charity</h5>
+        </div>
+        <div class="table-cell tc-5">
+            <img src="~/lib/Images/MedievalAcademy/neg5.png" class="shield" />
+            <img src="~/lib/Images/MedievalAcademy/neg10.png" class="shield" />
+        </div>
+        <div class="table-cell tc-5">
+            <h5>First Place</h5>
+            <ul>
+                <li>Give last-place a negative token from Education</li>
+                <li>Take up to 2 tokens (value 1-3) from last-place</li>
+            </ul>
+
+            <h5>Second Place (4+)</h5>
+            <ul>
+                <li>Give next-to-last a negative token from Education</li>
+                <li>Take 1 token (value 1-3) from last-place*</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-12">
+            <hr />
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <h5>King's Service</h5>
+        </div>
+        <div class="table-cell tc-5">
+            <img src="~/lib/Images/MedievalAcademy/pos6.png" class="shield" />
+            <img src="~/lib/Images/MedievalAcademy/pos12.png" class="shield" />
+
+            <ul>
+                <li>Ties are not relevant; disc movement awards points</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-5">
+            <img src="~/lib/Images/MedievalAcademy/pos1blue.png" class="shield" />
+            <img src="~/lib/Images/MedievalAcademy/pos2blue.png" class="shield" />
+            <img src="~/lib/Images/MedievalAcademy/pos3blue.png" class="shield" />
+            <img src="~/lib/Images/MedievalAcademy/pos4blue.png" class="shield" />
+            <img src="~/lib/Images/MedievalAcademy/pos6.png" class="shield" />
+
+            <ul>
+                <li>Score if at least 1 scroll is taken</li>
+                <li>Score double if both scrolls taken in same round</li>
+                <li>Reset board when both scrolls are taken</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<hr />
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>1. Deal Cards</h3>
+            <ul>
+                <li>Shuffle all 52 cards</li>
+                <li>Deald 5 to each player</li>
+            </ul>
+            
+            <h3>2. Draft Cards</h3>
+            <ul>
+                <li>Keep selected card in a pile in front of you</li>
+                <li>Draft direction alternates each round</li>
+                <li>At end of draft, take the 5 selected cards into hand</li>
+            </ul>
+            
+            <h3>3. Play Cards</h3>
+            <ul>
+                <li>Start with first player</li>
+                <li>Play card <span class="arrow"></span> move disc by amount on card</li>
+                <li>Four rounds of play, 1 card unplayed</li>
+                <li>Jousts / Tournaments movement cannot be split between boards</li>
+                <li>Discs stack, with the newly-arrived disc going on top</li>
+                <li>King's Service stops at 12 squares, others have no limit</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>4. Scoring</h3>
+            <ul>
+                <li>Start with Gallantry board</li>
+                <li>Score on turns denoted on scrolls</li>
+                <li>Ties are broken with position on stack</li>
+                <li>All discs at space 0 are considered to be last</li>
+                <li><u>Advanced</u> Before scoring, first player can win a single tie</li>
+                <li><u>Advanced</u> Players on Gallantry retreat 1 square after gaining benefit</li>
+            </ul>
+            
+            <h3>5. Reset</h3>
+            
+
+            <ul>
+                <li>After turn 3, reset discs to square 0 on boards with scroll symbol</li>
+                <li>Gallantry, Jousts, Tournaments, Education, King's Service</li>
+                <li><u>Advanced</u> does not apply to King's Service
+                    <div class="table">
+                        <div class="table-row">
+                            <div class="table-cell tc-9">
+                                <ul>
+                                    <li>Last <span class="arrow"></span> square 0</li>
+                                    <li>Next-to-last <span class="arrow"></span> square 1</li>
+                                    <li>etc.</li>
+                                </ul>
+                            </div>
+                            <div class="table-cell">
+                                <img src="~/lib/Images/MedievalAcademy/reset.png" style="width: 50px;" />
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            
+            <br /><br /><br /><br />
+
+            <h3>6. Change First Player</h3>
+            <ul>
+                <li>Pass Excalibur left</li>
+                <li>Move hourglass</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<p>Tie breaker: gallantry track</p>
+
+<hr />
+
+<h3>Card Distribution</h3>
+
+<div class="table table-50 table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <b><u>Board</u></b>
+        </div>
+        <div class="table-cell tc-1">
+            <b><u>2</u></b>
+        </div>
+        <div class="table-cell tc-1">
+            <b><u>3</u></b>
+        </div>
+        <div class="table-cell tc-1">
+            <b><u>4</u></b>
+        </div>
+        <div class="table-cell tc-1">
+            <b><u>5</u></b>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Gallantry
+        </div>
+        <div class="table-cell tc-1">
+            2
+        </div>
+        <div class="table-cell tc-1">
+            3
+        </div>
+        <div class="table-cell tc-1">
+            2
+        </div>
+        <div class="table-cell tc-1">
+            1
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Joust / Tournament
+        </div>
+        <div class="table-cell tc-1">
+            0
+        </div>
+        <div class="table-cell tc-1">
+            6
+        </div>
+        <div class="table-cell tc-1">
+            4
+        </div>
+        <div class="table-cell tc-1">
+            2
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Quest
+        </div>
+        <div class="table-cell tc-1">
+            2
+        </div>
+        <div class="table-cell tc-1">
+            3
+        </div>
+        <div class="table-cell tc-1">
+            2
+        </div>
+        <div class="table-cell tc-1">
+            1
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Education
+        </div>
+        <div class="table-cell tc-1">
+            2
+        </div>
+        <div class="table-cell tc-1">
+            3
+        </div>
+        <div class="table-cell tc-1">
+            2
+        </div>
+        <div class="table-cell tc-1">
+            1
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Charity
+        </div>
+        <div class="table-cell tc-1">
+            2
+        </div>
+        <div class="table-cell tc-1">
+            3
+        </div>
+        <div class="table-cell tc-1">
+            2
+        </div>
+        <div class="table-cell tc-1">
+            1
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            King's Service
+        </div>
+        <div class="table-cell tc-1">
+            2
+        </div>
+        <div class="table-cell tc-1">
+            3
+        </div>
+        <div class="table-cell tc-1">
+            2
+        </div>
+        <div class="table-cell tc-1">
+            1
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+
+        </div>
+        <div class="table-cell tc-1">
+
+        </div>
+        <div class="table-cell tc-1">
+
+        </div>
+        <div class="table-cell tc-1">
+
+        </div>
+        <div class="table-cell tc-1">
+
+        </div>
+    </div>
+</div>
+
+

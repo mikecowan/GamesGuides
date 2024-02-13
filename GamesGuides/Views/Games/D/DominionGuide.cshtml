@@ -1,0 +1,337 @@
+﻿@{
+    ViewData["Title"] = "Dominion Guide";
+}
+
+<style>
+h3, h4, ol, ul, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-bottom: .5em;
+}
+
+ol, ul {
+    margin-bottom: 1em;
+}
+
+li > ul {
+    margin-bottom: 0;
+}
+
+footer {
+    margin-bottom: 0;
+}
+</style>
+
+<h3>Reminders</h3>
+<ul>
+    <li>Must play all treasures before using any buys, cannot play additional treasures after buying a card</li>
+    <li>Once a card/event has been bought, no additional treasures may be played</li>
+    <li>Buy <b>then</b> gain, then on-gain effect will trigger while the new card is in your discard pile</li>
+    <li>Trader reaction: you do not "gain" the silver, instead you "gain" the original card (which is then exchange for silver)</li>
+</ul>
+
+<h3>5-6 player</h3>
+<ul>
+    <li>Combine basic treasure card piles from Dominion and Intrigue</li>
+    <li>Provinces: 15 for 5p, 18 for 6p</li>
+    <li>Victory piles are still 8 cards for 2p and 12 cards for all other player counts</li>
+    <li>Game end requires provinces or <b>four</b> empty supply piles</li>
+</ul>
+
+<!-- Duration -->
+<h3>Durations</h3>
+<ul>
+    <li>Not discarded during cleanup if they have something left to do</li>
+    <li>Stay in play until cleanup of the last turn in which they have something to do</li>
+    <li>If a duration is played multiple times (e.g. Throne Room), that other card also stays in play until the Duration is discarded</li>
+</ul>
+
+<!-- Events -->
+<h3>Events</h3>
+<ul>
+    <li>Can buy the event during buy phase, using up a buy</li>
+    <li>Do the effect on the card, but event card stays on the table</li>
+    <li>The same event can be bought multiple times on the same turn (with enough +buy)</li>
+    <li>Cannot play more treasures after buying an event</li>
+    <li>Not considered "buying a card" so cards that trigger "after buy" do not trigger after buying an event</li>
+    <li>Event costs are not reduced by cost-reducers</li>
+</ul>
+
+<!-- Split Piles -->
+<h3>Split Piles</h3>
+<ul>
+    <li>Cheaper card on top during setup</li>
+    <li>May only buy or gain the card showing</li>
+    <li>If a card returns to the pile, it may cover up the other type</li>
+    <li>Pile can be in non-conventional order from cards that return other cards to the supply</li>
+    <li>Cards that reference cost/type of a pile as if 1 card: go with what is on randomizer card</li>
+    <li>Any reference to cards from a particular pile work on all cards from split pile
+        <ul>
+            <li>tokens from Adventures</li>
+        </ul>
+    </li>
+    <li>Empty top half of pile does not count toward empty piles</li>
+    <li>2-player: use 1 of each castle, otherwiese use all</li>
+    <li>Rotate: take the card(s) on top (by name) and place them on bottom of the pile
+        <ul>
+            <li>can also rotate Castles (Empires) or Knights (Dark Ages) or Ruins (Dark Ages)</li>
+        </ul>
+    </li>
+</ul>
+
+<!-- Coffers -->
+<h3>Coffers</h3>
+<ul>
+    <li>When instructed, add a token to coffers mat</li>
+    <li>Any number of coffers can be discarded for +1 coin</li>
+    <li>"Take a coin token" means +1 coffer</li>
+    <li>Can only be used during buy phase or when instructed (not during Black Market buy)</li>
+</ul>
+
+<h3>Unusual Costs</h3>
+<ul>
+    <li>When they change cost, all copies change cost everywhere for all purposes
+        <ul>
+            <li>Governor (other players use same cost as you)</li>
+        </ul>
+    </li>
+    <li><b>Can</b> change cost in the middle of resolving effects</li>
+    <li>"When you buy" rules happen before actually gaining the card</li>
+    <li>Range "$3 to $6" will never include cards with debt or potion costs</li>
+    <li>"Up to $5" will not include cards with debt or potion costs</li>
+    <li>Cost of $X really means $X + 0 potion + 0 debt</li>
+</ul>
+
+<h3>Landscape Cards</h3>
+<ul>
+    <li>Maximum 1 Ally (with any number of Liaison cards from Allies)</li>
+    <li>Maximum 2 Events / Landmarks / Projects / Ways / Traits, but never 2 Ways</li>
+</ul>
+
+<br /><br /><br /><br />
+
+<!-- Prosperity -->
+<h3>Prosperity</h3>
+<h4>Platinum/Colony</h4>
+<ul>
+    <li>Use both or neither</li>
+    <li>Randomizer to decide whether to include</li>
+    <li>Empty colony pile triggers game end</li>
+</ul>
+
+<hr />
+
+<!-- Dark Ages -->
+<h3>Dark Ages</h3>
+<ul>
+    <li>Shelters: Randomizer to decide whether to include</li>
+    <li>Cultist, Death Cart, Marauder: include 10(N-1) ruins cards</li>
+    <li>Knights: entire deck is shuffled</li>
+</ul>
+
+<hr />
+
+<!-- Adventures -->
+<h3>Adventures</h3>
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-3">
+            <h4>Setup</h4>
+            <ul>
+                <li>Ball: -1 coin</li>
+                <li>Bridge Troll: -1 coin</li>
+                <li>Borrow: -1 card</li>
+                <li>Estate: Inheritance</li>
+                <li>Ferry: -2 cost</li>
+                <li>Giant: journey</li>
+                <li>Lost Arts: +1 action</li>
+                <li>Pathfinding: +1 card</li>
+                <li>Peasant: all +X tokens</li>
+                <li>Pilgrimage: journey</li>
+                <li>Plan: trashing</li>
+                <li>Raid: -1 card</li>
+                <li>Ranger: journey</li>
+                <li>Relic: -1 card</li>
+                <li>Seaway: +1 buy</li>
+                <li>Training: +1 coin</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-9">
+            <h4>Tavern</h4>
+            <ul>
+                <li>Tan-colored Reserve cards</li>
+                <li>When playing a Reserve card, execute above-the-line text</li>
+                <li>Card sits on Tavern until it can be called, then execute below-the-line text</li>
+            </ul>
+            
+            <h4>Tokens</h4>
+            <ul>
+                <li>Still function on empty piles</li>
+                <li>Can be placed on empty piles</li>
+                <li>A pile can have multiple tokens</li>
+                <li>+1 action/buy/card/coin bonus when <i>playing</i> that card</li>
+                <li>Trashing: may trash a card from hand when <i>buying</i> (not gaining) that card</li>
+                <li>-1 card: next time player would draw, draw 1 card less and discard token</li>
+                <li>-1 coin: next time player would get at least $1 (from any source), get -1 coin and discard token</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<hr />
+
+<!-- Empires -->
+<h3>Empires</h3>
+
+<h4>Debt</h4>
+<ul>
+    <li>Remove debt during buy phase, after playing treasures</li>
+    <li>Debt can be paid down before or after buying cards</li>
+    <li>Removing debt does not use up a Buy</li>
+</ul>
+
+<hr />
+
+<!-- Nocturne -->
+<h3>Nocturne</h3>
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Setup</h4>
+            <ul>
+                <li>Heirlooms (yellow banner): replace starting copper(s)</li>
+                <li>Fate (type): Boon deck and Will-o'-Wisp pile</li>
+                <li>Doom (type): Hex deck, Deluded/Envious, Miserable</li>
+            <br />
+                <li>Cemetery: Ghost pile</li>
+                <li>Devil's Workshop: Imp pile</li>
+                <li>Druid: deal 3 Boon cards associated with it</li>
+                <li>Exorcist: all 3 spirit piles (Will-o'-Wisp, Imp, Ghost)</li>
+                <li>Fool: Lost in the Woods</li>
+                <li>Leprechaun: Wish pile</li>
+                <li>Necromancer: 3 zombies in trash</li>
+                <li>Secret Cave: Wish pile</li>
+                <li>Tormentor: Imp pile</li>
+                <li>Vampire: Bat pile</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Night phase</h4>
+            <ul>
+                <li>Action - Buy - Night - Cleanup</li>
+                <li>Play any number of night cards</li>
+            </ul>
+            
+            <h4>Boon / Hex</h4>
+            <ul>
+                <li>Shuffle, reveal and apply when necessary</li>
+                <li>Discard after applying effect</li>
+                <li>Re-shuffle deck when necessary</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<hr />
+
+<!-- Renaissance -->
+<h3>Renaissance</h3>
+
+<h4>Villagers</h4>
+<ul>
+    <li>When instructed, add a token to villager mat</li>
+    <li>Any number of villagers can be discarded for +1 action</li>
+</ul>
+
+<h4>Projects</h4>
+<ul>
+    <li>Buy a project during buy phase, it uses up a buy</li>
+    <li>Place your cube on card when buying it, you have that ability for rest of game</li>
+    <li>Cannot place 2 cubes on same project</li>
+    <li>Cannot remove a cube from a project</li>
+    <li>Cubes don't block other players' cubes</li>
+    <li>Buying a project is not "buying a card" and cost reducers have no effect</li>
+    <li>Cannot buy a project while you have debt</li>
+</ul>
+
+<hr />
+
+<!-- Menagerie -->
+<h3>Menagerie</h3>
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Exile</h4>
+            <ul>
+                <li>"Exile a card" = put it on exile mat</li>
+                <li>Include exiled cards for scoring</li>
+                <li>When gaining a card, may discard other copies from exile mat
+                    <ul>
+                        <li>all or none</li>
+                    </ul>
+                </li>
+                <li>Exiling a card from the supply does not count as "gaining" the card</li>
+                <li>Discarding a card from the exile mat <b>does</b> count as discarding it</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Ways</h4>
+            <ul>
+                <li>All actions can instead be used as the Way</li>
+                <li>Text below dividing lines still applies</li>
+                <li>Can use the Way instead of Enchantress +1 Card/+1 Action effect</li>
+                <li>Cards played at an unusual time can be used as Ways</li>
+                <li>For action repeaters, choose for each instance whether to use Way</li>
+                <li>For a Duration played multiple times, each can be a Way
+                    <ul>
+                        <li>at least 1 must be the Duration in order to stay in play</li>
+                        <li>track the tallies for Duration vs Way</li>
+                    </ul>
+                </li>
+                <li>Tokens from Adventures still apply when using the card as a Way</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<hr />
+
+<!-- Allies -->
+<h3>Allies</h3>
+<ul>
+    <li>Required when there is a Liaison card</li>
+    <li>Players start with 1 favor token (5 if using Importer)</li>
+    <li>Use 1 Ally per game, even with multiple Liaisons</li>
+    <li>Add coin tokens to Favor mat to identify them as favors</li>
+    <li>Spending favors may be done once per favor window, unless it specifies repeat as desired</li>
+</ul>
+
+<hr />
+
+<!-- Plunder -->
+<h3>Plunder</h3>
+<h4>Loot</h4>
+<ul>
+    <li>Shuffle loot deck face down</li>
+    <li>"Gain a loot" means gain top card of loot pile, revealing to all players</li>
+</ul>
+
+<h4>Traits</h4>
+<ul>
+    <li>Choose a random <b>Action</b> or <b>Treasure</b> kingdom pile and put a Trait on it</li>
+    <li>Max 1 trait per pile</li>
+    <li>Affects all the cards from the split pile</li>
+    <li>Traits continue even when the pile is empty</li>
+</ul>

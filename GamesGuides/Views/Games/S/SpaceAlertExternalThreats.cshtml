@@ -1,0 +1,142 @@
+﻿@{
+    ViewData["Title"] = "Space Alert Specific Exxternal Threats";
+}
+
+<style>
+.table ul {
+    /*list-style: none;*/
+    margin: 0;
+    padding: 0;
+}
+
+</style>
+
+<h3>External Threats</h3>
+
+<div class="table table-100 table-padding-1">
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Behemoth
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>Heroic action: 10 damage, knockout still happens</li>
+                <li>Multiple threats: deal damage to each but no knockout effect from Behemoth</li>
+                <li>Knockout also disables bots and permanently disables interceptors</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Jellyfish
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>Jellyfish receives 2 extra damage</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Juggernaut
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>Rockets <u>always</u> target Juggernaut, regardless of range</li>
+                <li>+1 shield after step 3.3 "Compute Damage"</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Leviathan Tanker
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>Add a red block to all threats</li>
+                <li>Ignore any special abilities: untargetable, cryoshield, swarm, etc</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Marauder
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>X: Shield bonus also applies to threats that appear after the X action</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Nemesis
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>Effect triggers when damage comes from Leviathan Tanker's on-destroyed effect</li>
+                <li>Effect triggers during compute damage step, and separate from movement and XYZ actions</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Scout
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>X: Damage bonus also applies to special attacks (e.g. nemesis, asteroid)</li>
+                <li>X: Damage bonus also applies to threats that appear after the X action</li>
+                <li>Y: does not apply to phased-out threats</li>
+                <li>Y: move other threats in order; Perform X/Y/Z action immediately</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Spinning Saucer
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>Rocket need not deal damage to knock Saucer off course</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Transmitter Satellite
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>Y: move other threats in order; Perform X/Y/Z action immediately</li>
+                <li>Note threats may be moved by the satellite, but then also have a regular movement later</li>
+            </ul>
+        </div>
+    </div>
+
+</div>

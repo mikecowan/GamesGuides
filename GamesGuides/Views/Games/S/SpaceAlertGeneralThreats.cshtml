@@ -1,0 +1,331 @@
+﻿@{
+    ViewData["Title"] = "Space Alert General Threats";
+}
+
+<style>
+ul {
+    /*list-style: none;*/
+    margin: 0;
+    padding: 0;
+}
+</style>
+
+<div class="table table-100 table-padding-1">
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Assist Allies
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>Threats that appear later will receive buff, even if they were not present when buff triggered</li>
+                <li>Threats that move after the buff triggers will receive buff, even on same round</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-2">
+            <ul>
+                <li>Marauder</li>
+                <li>Scout</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Asteroids
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>If destroyed, deals damage at end of Compute Damage, step 3.3</li>
+                <li>If multiple, deal damage in order, starting with lowest numbered token</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-2">
+            <ul>
+                <li>Minor Asteroid</li>
+                <li>Asteroid</li>
+                <li>Major Asteroid</li>
+                <li>Planetoid</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Avoid Heavy
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>Heavy lasers target next nearest threat instead</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-2">
+            <ul>
+                <li>Plasmatic Needleship</li>
+                <li>Scout</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Call In
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>New threats do not move on the turn they appear</li>
+                <li>Use &alpha;-&beta;-&gamma;-&delta;-&epsilon;</li>
+                <li>Numbers activate before greek letters</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-2">
+            <ul>
+                <li>Overlord</li>
+                <li>Sealed Capsule</li>
+                <li>Transmitter Satellite</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Carrier
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>Variable range: interceptors must be at same range for damage reduction</li>
+                <li>Else: interceptors always give damage reduction</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-2">
+            <ul>
+                <li>Mini-Carrier</li>
+                <li>Spacecraft Carrier</li>
+                <li>Super-Carrier</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Cryoshield
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>Leviathan Tanker's effect does <u>not</u> break the cryoshield</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-2">
+            <ul>
+                <li>Cryoshield Fighter</li>
+                <li>Cryoshield Frigate</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Destroyer
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>Double damage applies to destroyer's attack, not the amount it receives</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-2">
+            <ul>
+                <li>Destroyer</li>
+                <li>Megashield Destroyer</li>
+                <li>Phasing Destroyer</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Energy Attack
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>Heal 1 for each point of shield absorption, including temporary shield from Energy Technician</li>
+                <li>Z: not an attack, deals damage and ignores shields</li>
+                <li>Z: action does not deplete reactors</li>
+                <li>Note Z-action is <i>this zone</i> for Snake, but <i>all zones</i> for dragon</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-2">
+            <ul>
+                <li>Energy Dragon</li>
+                <li>Energy Snake</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Energy Shield
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>Pulse cannon sets shields to 0 for the round</li>
+                <li>Pulse cannon also deals damage</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-2">
+            <ul>
+                <li>Energy Cloud</li>
+                <li>Energy Dragon</li>
+                <li>Energy Snake</li>
+                <li>Maelstrom</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Jump
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>Jump is ignored if the destination trajectory is too short</li>
+                <li>Jumping left from red leads to blue; jumping right from blue leads to red</li>
+                <li>Jumping <u>onto</u> XYZ will not trigger that effect</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-2">
+            <ul>
+                <li>Jumper</li>
+                <li>Leaper</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Phasing
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>Only targetable every other round</li>
+                <li>Targetable on round it appears</li>
+                <li>Use phased [x] ability during phased rounds</li>
+                <li>Scout's Y action does not affect phased-out threats</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-2">
+            <ul>
+                <li>Phasing [X]</li>
+@*                <li>Phasing Destroyer</li>
+                <li>Phasing Fighter</li>
+                <li>Phasing Frigate</li>
+                <li>Phasing Man-of-War</li>
+                <li>Phasing Pulser</li>
+                <li>Phasing Anomaly</li>
+                <li>Phasing Mine Layer</li>
+                <li>Phasing Troopers</li>
+*@            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Polarized
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>"Attack strength" is halved, and then reduced by shield</li>
+                <li>Pulse cannon is not a laser</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-2">
+            <ul>
+                <li>Polarized Fighter</li>
+                <li>Polarized Frigate</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Satellite
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>Cannot be targeted by variable range interceptors</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-2">
+            <ul>
+                <li>Pulse Satellite</li>
+                <li>Psionic Satellite</li>
+                <li>Transmitter Satellite</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Span
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>Only trigger XYZ with main trajectory</li>
+                <li>Can be hit on all trajectories, even if the spanning token cannot be placed yet</li>
+                <li>Pulse cannon only hits it once</li>
+                <li>Interceptors treat it as a single threat</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-2">
+            <ul>
+                <li>Overlord</li>
+                <li>Super-Carrier</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Swarm
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>Leviathan Tanker's effect adds a red cube, ignores damage limit</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-2">
+            <ul>
+                <li>Mother-Swarm</li>
+                <li>Swarm</li>
+            </ul>
+        </div>
+    </div>
+
+</div>

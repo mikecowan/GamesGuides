@@ -1,0 +1,128 @@
+﻿@{
+    ViewData["Title"] = "Cryo Guide";
+}
+
+<style>
+#actiontable .tc-2 {
+    width: 12%;
+}
+
+#actiontable h4 {
+    margin: 0;
+}
+
+#actiontable p {
+    margin: 0;
+}
+
+.resource {
+    width: 20px;
+    vertical-align: middle;
+}
+</style>
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Setup</h3>
+            <ul>
+                <li>1 crystal/organic/tech/energy, 0 nanite</li>
+                <li>2 crew pods on large stasis chambers</li>
+                <li>Place N matching resource tiles on each space</li>
+                <li>Place 8/6/4 damage markers</li>
+                <li>Place cavern tiles and flip 2 of them:<br />first cave & cave directly south</li>
+                <li>Place 1 early incident token on the 4 incident spaces</li>
+                <li>Place incident tokens in stacks of N on the track,<br />sunset under last stack</li>
+                <li>Deal 5 cards to each player, keep 3</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Recall</h3>
+            <ol>
+                <li>Recover Salvage
+                    <ul>
+                        <li>gain 1 resource per pod</li>
+                        <li>leave pods on salvage spaces</li>
+                    </ul>
+                </li>
+                <li>Resolve Incident
+                    <ul>
+                        <li>resolve any token on a ship space</li>
+                        <li>replace it with a token from track</li>
+                    </ul>
+                </li>
+                <li>Return Drones
+                    <ul>
+                        <li>dock and do platform actions</li>
+                        <li>note: card as cost means discard</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>Extra Starting Resources</h3>
+            <ol>
+                <li>None</li>
+                <li><img src="~/lib/Images/Cryo/crystal.png" class="resource" /></li>
+                <li><img src="~/lib/Images/Cryo/crystal.png" class="resource" /><img src="~/lib/Images/Cryo/tech.png" class="resource" /></li>
+                <li><img src="~/lib/Images/Cryo/crystal.png" class="resource" /><img src="~/lib/Images/Cryo/tech.png" class="resource" /><img src="~/lib/Images/Cryo/organic.png" class="resource" /></li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Sabotage</h3>
+            <ul>
+                <li>lowest-numbered chamber without a sabotage token</li>
+                <li>destroy all crew pods in the chamber</li>
+                <li>if 3 chambers already destroyed, choose another section for sabotage</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Scrap</h3>
+            <ul>
+                <li>Free action, 1<span class="cross"></span> per turn, any time</li>
+                <li>Discard resource tile from platform; OR card from hand
+                    <ul>
+                        <li>tiles <span class="arrow"></span> box</li>
+                        <li>cards <span class="arrow"></span> discard</li>
+                    </ul>
+                </li>
+                <li>Immediately gain the benefit shown</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>End Game</h3>
+<ul>
+    <li>Triggers:
+        <ul>
+            <li>a player <i>resolves</i> the sunset token, OR</li>
+            <li>any player has all crew in caverns (or destroyed)</li>
+        </ul>
+    </li>
+    <li>Scoring:
+        <ul>
+            <li>2vp: each crew pod in a cavern</li>
+            <li>1vp: each upgrade and vehicle on platform</li>
+            <li>1vp: each crew pod on platform or in vehicle</li>
+            <li>points from mission cards</li>
+            <li>cavern majorities</li>
+        </ul>
+    </li>
+    <li>Ties:
+        <ul>
+            <li>cavern tie for first: each tied player scores lower amount, no other players score</li>
+            <li>cavern tie for second: those tied players do not score</li>
+            <li>game score tie: tied player with most crew pods in caverns wins</li>
+        </ul>
+    </li>
+</ul>
+

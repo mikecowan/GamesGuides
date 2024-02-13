@@ -1,0 +1,162 @@
+﻿@{
+    ViewData["Title"] = "Dungeon Petz Phases";
+}
+
+<style>
+footer {
+    margin-bottom: 0px;
+}
+</style>
+<h3>Phases</h3>
+<div class="table table-100">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>1: Setup Phase</h4>
+            <ul>
+                <li>Income: 1-1-2-2</li>
+                <li>Reveal new information (skip in round 1)
+                    <ul>
+                        <li>next exhibition tile</li>
+                        <li>next customer tile(s)</li>
+                    </ul>
+                </li>
+                <li>Add new stuff (skip in round 1)
+                    <ul>
+                        <li>Food</li>
+                        <li>Artifacts</li>
+                        <li>Cages: slide lowest cage to top spot, add 2</li>
+                        <li>Addons: slide lowest addon to top spot, add 1</li>
+                        <li>Pets
+                            <ul>
+                                <li>discard all size 3 pets, add 1 meat* to meat stand for each</li>
+                                <li>age up the remaining size 2 pets</li>
+                                <li>add 3 new size 2 pets</li>
+                            </ul>
+                        </li>
+                        <li>Accessories: discard top if necessary, slide others up</li>
+                        <li>Industrial Zone: add another facility</li>
+                    </ul>
+                </li>
+                <li>Never replenish Black Market</li>
+            </ul>
+            
+            <p>* Vegetable for Stareplant, gold for Baby Golem, nothing for Ghosty</p>
+
+            <h4>2: Shopping Phase</h4>
+            <ul>
+                <li>Form groups with 1<sup>+</sup> imp and 0<sup>+</sup> gold</li>
+                <li>Select actions ordered by descending group size</li>
+                <li>May take a pet with no cage room, and assume you get a cage later</li>
+                <li>Action details
+                    <ul>
+                        <li>Artifacts: take both</li>
+                        <li>Cage: group with 2+ imps required</li>
+                        <li>Pets: group with 1+ gold required</li>
+                        <li>Invite: new imp(s) join action space, available next round</li>
+                        <li>Hospital: imp(s) join action space, does not prevent later injuries</li>
+                        <li>Platform: imps only return home when selling</li>
+                        <li>Black Market: pick one food group for exhibition tile</li>
+                        <li>Fortune Teller: removing 1 gold token is mandatory</li>
+                        <li>Industrial Zone: move permission & use a facility</li>
+                        <li>Slug Shop: take an accessory, 1 imp may return home with it</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4>3: Need Cards Phase</h4>
+            <ul>
+                <li>Arrange cages and pets
+                    <ul>
+                        <li>cannot move cages or addons</li>
+                        <li>may discard & replace cages or addons</li>
+                        <li>pets & manure are transferred into cage replacements</li>
+                        <li>pets can be moved & swapped among cages, manure remains</li>
+                    </ul>
+                </li>
+                <li>Arrange Accessories - swap, move, leave off entirely</li>
+                <li>Draw need cards - accessories count as extra bar</li>
+                <li>Assign need cards to pets</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>4: Showing Off Phase</h4>
+            <ul>
+                <li>Evaluating needs - follow the order
+                    <ul>
+                        <li>Hunger: meat/veg</li>
+                        <li>Poop</li>
+                        <li>Play: 1 imp satisfies 1 play need for 2 <b>different</b> and <b>adjacent</b> pets</li>
+                        <li>Magic</li>
+                        <li>Anger: 1 imp "adds" 1 cage strength, then goes to hospital</li>
+                        <li>Disease: X = disease + manure
+                            <ul>
+                                <li>X &leq; 2: no effect</li>
+                                <li>X > 2: suffer (X - 1)</li>
+                            </ul>
+                        </li>
+                        <li>Potion: ignore 1 effect, then discard a card</li>
+                    </ul>
+                </li>
+                <li>Score Exhibition (skip in round 1)
+                    <ul>
+                        <li>single-pet or full-display</li>
+                        <li>light frame: counts positive toward score</li>
+                        <li>dark frame: counts negative toward score</li>
+                        <li>include manure in empty cages when manure tokens are counted</li>
+                        <li>0 reputation if exhibition score is 0 or less</li>
+                        <li>tie: full reputation, minus number of players tied with you</li>
+                    </ul>
+                </li>
+                <li>Losing a Pet - remove it from game, lose 1 reputation per 10
+                    <ul>
+                        <li>pet was not put in a cage in phase 3</li>
+                        <li>suffering tokens &geq; size</li>
+                        <li>anger needs > cage strength + imps</li>
+                        <li>2+ mutations</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <h4>5: Business Phase</h4>
+            <ul>
+                <li>Sell a Pet (skip in first 2 rounds)
+                    <ul>
+                        <li>optional</li>
+                        <li>size 4+ only</li>
+                        <li>light frame: what customer wants</li>
+                        <li>dark frame: what customer does not want</li>
+                        <li>poop symbol always refers to cards, never manure tokens</li>
+                        <li>match score must be greater than zero</li>
+                        <li>rainbow symbols: only count 1 card per color</li>
+                        <li>normally gain 2X reputation where X = match score</li>
+                        <li>3X reputation with imp from platform</li>
+                        <li>$2 discount for mutation, must be able to pay for negative</li>
+                        <li>each customer will purchase max 1 pet per player</li>
+                        <li>may sell 2 pets in the final round(s) (1 to each customer)</li>
+                        <li>max 1 pet from the platform per round (even the final rounds)</li>
+                        <li>$1 bonus for each accessory</li>
+                    </ul>
+                </li>
+                <li>Discard assigned cards</li>
+                <li>Use available imps - choose the order, cannot move pets
+                    <ul>
+                        <li>clean <b>empty</b> cages</li>
+                        <li>generate 1 gold</li>
+                        <li>use <b>one</b> unlocked facility
+                            <ul>
+                                <li>max 1 facility, regardless if payment was imp, gold, or food</li>
+                            </ul>    
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <h4>6: Aging Phase</h4>
+            <ul>
+                <li>Pets grow up</li>
+                <li>Food loses freshness</li>
+                <li>Imps return home</li>
+            </ul>
+        </div>
+    </div>
+</div>

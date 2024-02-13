@@ -1,0 +1,38 @@
+﻿@model GamesGuides.Models.TableRow
+
+<div class="table-row">
+    @foreach (var cell in Model.Cells)
+    {
+        if (cell.richText != null)
+        {
+            <div class="table-cell tc-@cell.Size @cell.AdditionalClasses">
+                <partial name="../Templates/_RichText" model='new RichText {
+                    RawHtml = @cell.richText
+                }' />
+            </div>
+        }
+        else if (!string.IsNullOrEmpty(cell.ImgUrl))
+        {
+            <div class="table-cell tc-@cell.Size @cell.AdditionalClasses">
+                @for (int i = 0; i < cell.ImgRepeat; i++)
+                {
+                    <img src="@Url.Content($"~/lib/Images/{cell.ImgUrl}")" class="@cell.ImgClasses" />
+                }
+            </div>
+        }
+        else if (!string.IsNullOrEmpty(cell.HtmlContent))
+        {
+            <div class="table-cell tc-@cell.Size @cell.AdditionalClasses">
+                @Html.Raw(cell.HtmlContent)
+            </div>
+        }
+        else if (cell.StringContent == "&nbsp;")
+        {
+            <div class="table-cell tc-@cell.Size @cell.AdditionalClasses">&nbsp;</div>
+        }
+        else
+        {
+            <div class="table-cell tc-@cell.Size @cell.AdditionalClasses">@cell.StringContent</div>
+        }
+    }
+</div>

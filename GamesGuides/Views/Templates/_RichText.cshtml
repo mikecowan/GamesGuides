@@ -1,0 +1,47 @@
+﻿@model GamesGuides.Models.RichText
+
+@{
+    var richObjList = new List<RichObj>();
+    var rawCopy = Model.RawHtml.Substring(0);
+
+    while (rawCopy.IndexOf('[') != -1)
+    {
+        var firstImageStart = rawCopy.IndexOf('[');
+        var firstImageEnd = rawCopy.IndexOf(']');
+
+        richObjList.Add(new RichObj()
+        {
+            str = rawCopy.Substring(0, firstImageStart),
+            isImg = false
+        });
+
+        richObjList.Add(new RichObj()
+        {
+            str = rawCopy.Substring(firstImageStart + 1, firstImageEnd - firstImageStart - 1),
+            isImg = true
+        });
+
+        rawCopy = rawCopy.Substring(firstImageEnd + 1);
+    }
+
+    if (rawCopy.Length > 0)
+    {
+        richObjList.Add(new RichObj()
+        {
+            str = rawCopy,
+            isImg = false
+        });
+    }
+}
+
+@foreach (var item in richObjList)
+{
+    if (item.isImg)
+    {
+        <img src="@Url.Content($"~/lib/Images/{item.str}")" />
+    }
+    else
+    {
+        @Html.Raw(item.str)
+    }
+}

@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Puerto Rico";
+}
+
+<h2>Puerto Rico</h2>
+
+<p>@Html.ActionLink("Guide", "Index", "Games", new { gamename = "PuertoRicoGuide" })
+    <br />includes a setup summary, recommended changes, and common building edge cases (print 1, 2-sided)</p>
+
+    <br /><br />
+
+<p>@Html.ActionLink("Base Buildings", "Index", "Games", new { gamename = "PuertoRicoBaseBuildings" })
+    <br />intended as a new player guide, includes brief description of all buildings and a general flow of role selection (print 5, 2-sided)</p>
+
+    <br /><br />
+
+<p>@Html.ActionLink("All Buildings", "Index", "Games", new { gamename = "PuertoRicoAllBuildings" })
+    <br />building summary (print 5)</p>
+
+    <br /><br />
+
+<p>@Html.ActionLink("Buccaneer", "Index", "Games", new { gamename = "PuertoRicoBuccaneer" })
+    <br />summary of Buccaneer promo (print 1 sheet, cut into cards)</p>
+

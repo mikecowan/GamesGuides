@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "Spirit Island Element Tracker";
+}
+
+<style>
+.icon {
+    width: 60px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.elementtable {
+    width: 840px;
+}
+
+.row > div {
+    float: left;
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+}
+
+.row {
+    height: 90px;
+    clear: both;
+}
+
+.elementtable .top {
+    border-top: 1px solid #ccc;
+}
+
+.elementtable .bot {
+    border-bottom: 1px solid #ccc;
+}
+
+.elementtable .rt {
+    border-right: 1px solid #ccc;
+}
+
+.elementtable .lt {
+    border-left: 1px solid #ccc;
+}
+
+.center {
+    text-align: center;
+}
+
+.mid {
+    line-height: 3.7;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 24px;
+}
+</style>
+
+<div class="table table-100">
+    <div clss="table-row">
+        <div class="table-cell tc-12">
+            <partial name="../PartialViews/_SpiritIslandElementTable" />
+        </div>
+        <div class="table-cell tc-6">
+            @*<partial name="../PartialViews/_SpiritIslandElementTable" />*@
+        </div>
+    </div>
+
+    <div clss="table-row"><div class="table-cell tc-12" style="margin-top: 5em;">&nbsp;</div></div>
+
+    <div clss="table-row">
+        <div class="table-cell tc-6">
+            @*<partial name="../PartialViews/_SpiritIslandElementTable" />*@
+        </div>
+        <div class="table-cell tc-6">
+            @*<partial name="../PartialViews/_SpiritIslandElementTable" />*@
+        </div>
+    </div>
+</div>

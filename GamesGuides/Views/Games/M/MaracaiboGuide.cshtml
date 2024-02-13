@@ -1,0 +1,345 @@
+﻿@{
+    ViewData["Title"] = "Maracaibo Guide";
+}
+
+<!-- Setup -->
+<h3>Setup</h3>
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>2p: cover city of Maracaibo with Maracaibo city tile</li>
+                <li>3p or 4p: Maracaibo city tile is not used</li>
+                <li>Include city tiles with matching player count</li>
+                <li>Use both tiles with "helm" icon, and randomly choose 2 more</li>
+                <li>randomly place the 4 tiles on Puerto Plata, Santo Domingo, Port Royal, and Cartagena</li>
+                <li>Separate project cards
+                    <ul>
+                        <li>A-cards (dark rope) 56</li>
+                        <li>B-cards (light rope) 101</li>
+                        <li>deal 8 A-cards to each player</li>
+                        <li>count 40 B-cards and shuffle into remaining A-cards</li>
+                        <li>reveal top 4 cards of deck</li>
+                    </ul>
+                </li>
+                <li>shuffle and add 4 prestige buildings
+                    <ul>
+                        <li>1 face up</li>
+                        <li>3 face down</li>
+                        <li>variant: all face up</li>
+                    </ul>
+                </li>
+                <li>2p: add ownership markers
+                    <ul>
+                        <li>red -> #6 (San Juan)</li>
+                        <li>white -> #7 (St. Kitts)</li>
+                        <li>blue -> #8 (Martinique)</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Player Setup</h3>
+            <ul>
+                <li>2 figures</li>
+                <li>2 career cards, choose 1 and add 1 figure to each of its 3 spaces</li>
+                <li>$8 / 9 / 10 / 11</li>
+                <li>Keep 4 cards, add 1 card to planning area, discard 3 cards</li>
+            </ul>
+
+            <h3>Uprising</h3>
+            <ul>
+                <li>add B-cards</li>
+                <li>add new career cards</li>
+                <li>add two new city tiles</li>
+                <li>replace quest tiles so they match new ship boards</li>
+                <li>add scenario cards 74, 78, 79, 193 to base game</li>
+            </ul>
+
+
+        </div>
+    </div>
+</div>
+
+EXP
+====
+
+
+
+scenario: all inclusive
+
+for any scenario:
+each player gets new ship board
+upper left: combat action tile with base game combat actions showing
+below: resistance tile with "take $5" face up
+final recess is for "home port" with 2 discs
+
+
+no campaign: use story card #75, follow instructions
+
+
+<hr />
+
+<h3>A. Sailing</h3>
+<ul>
+    <li>Move 1 to 7 spaces</li>
+    <li>ships don't block other ships</li>
+    <li>[red hand] locations cannot be skipped</li>
+</ul>
+
+<h3>B. Main Action</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>2. City Actions</h4>
+            <ol>
+                <li>Deliver goods
+                    <ul>
+                        <li>Requires an empty space</li>
+                        <li>Discard matching symbol to add disc</li>
+                        <li>1 good max</li>
+                        <li>Optional, may do action regardless</li>
+                    </ul>
+                </li>
+                <li>Action
+                    <ul>
+                        <li>Not dependent on delivery</li>
+                        <li>Action always follows delivery step</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h4>2. Village Action(s)</h4>
+            <ul>
+                <li>Village location required (location without a scroll)</li>
+                <li>for each village action, pick 1:
+                    <ul>
+                        <li>discard all cards for $2; min 1 card for money</li>
+                        <li>take $1</li>
+                        <li>buy a card: hand, planning area, prestige building</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4>3. Quest</h4>
+            <ul>
+                <li>Quest tile location required</li>
+                <li>Pay cost, receive reward</li>
+                <li>Take tile and add to ship board</li>
+                <li>Score vp for X quests</li>
+            </ul>
+
+            <h4>4. Assistant Actions</h4>
+            <ul>
+                <li>Assistant location required</li>
+                <li>May only use assistants of your color</li>
+                <li>Limit 1 assistant action per turn</li>
+                <li>Assistants can share a space with other assistants, any color(s)</li>
+                <li>2 vp for skipping your assistant</li>
+            </ul>
+
+            <h4>5. Homeward Bound</h4>
+            <ul>
+                <li>Cannot skip, must end movement on each</li>
+                <li>See Interim Scoring section</li>
+            </ul>
+
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Combat</h4>
+            <ul>
+                <li>Choose a nation, pay costs or take bonuses</li>
+                <li>Most/least modifiers are ignored with ties</li>
+                <li>Do any number of combat actions, no repeating</li>
+                <li>A nation cannot displace its own cube</li>
+                <li>Cannot "buy" combat points or figures leftover combat value</li>
+                <li>All combat tokens gone <span class="arrow"></span> each nation has combat value 3</li>
+            </ul>
+
+            <h4>Exploring</h4>
+            <ul>
+                <li>Cannot move backwards</li>
+                <li>Skip occupied spaces, max 1 explorer per space</li>
+                <li>Must move 1 space, may move less than maximum</li>
+                <li>No rewards for moving through a space, only final space</li>
+                <li>Do not replenish completed quests</li>
+                <li>Red barrier: +3 influence with <i>one</i> nation</li>
+                <li>Blue/Green barriers: 4vp for first to cross; 2vp otherwise</li>
+                <li>Multiple players can share final space; 1 village action and score X vp</li>
+            </ul>
+
+            <h4>Free Actions</h4>
+            <ul>
+                <li>Before, during, or after Main action</li>
+                <li>Add a card to planning area</li>
+                <li>Complete a career goal</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<h3>C. Draw Cards</h3>
+<ul>
+    <li>Draw to hand limit (4 or 6)</li>
+    <li>May draw from deck (free) or take from display ($1 until ship is upgraded)</li>
+    <li>Shuffle and create new draw pile if it runs out</li>
+    <li>all players share the common draw pile and use a common discard pile</li>
+</ul>
+
+<hr />
+
+<h3>Scoring</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Interim Scoring</h4>
+            <p>Triggered when a ship ends movement on space 21a</p>
+            <p>Start with player who triggered break</p>
+
+            <ol>
+                <li>Buy a card or prestige building, or 2 vp</li>
+                <li>Receive money and points from income tracks</li>
+                <li>Clear all delivered goods from cities</li>
+                <li>Clear the display and draw 4 new cards</li>
+                <li>Reveal the next prestige card</li>
+                <li>Add new quests (non-campaign)</li>
+                <li>Return <i>all</i> ships to Havana</li>
+            </ol>
+
+            <p>The next player begins the next round</p>
+
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Final Scoring</h4>
+            <p>Triggered when a ship ends movement on space 22</p>
+
+            <ol>
+                <li>Same as interim</li>
+                <li>Same as interim</li>
+                <li>Score vp for cards in display</li>
+                <li>For each nation, 3 vp for most influence (ties: all players get 3 vp)</li>
+                <li>For each nation, score noble ranks:
+                    <ul>
+                        <li>N <span class="cross"></span> [E + M]</li>
+                        <li>N: Noble Rank</li>
+                        <li>E: # of empty cube spaces</li>
+                        <li>M: Majority Bonus (# of ownership markers on board)
+                            <ul>
+                                <li>2-1-0</li>
+                                <li>2-2-0</li>
+                                <li>2-2-2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Expansion Modules</h3>
+
+<h4>Home Port</h4>
+<ul>
+    <li>Deal 3 to each player when dealing career cards</li>
+    <li>Choose 1 home port and add 2 discs</li>
+    <li>New ship upgrade</li>
+    <li>Immediate bonus and an ongoing bonus</li>
+</ul>
+
+<br />
+
+<h4>Resistance Tile</h4>
+<ul>
+    <li>Flip resistance tile to show village action</li>
+    <li>Liberate a location using any action with [cube slashed out icon]
+        <ul>
+            <li>project cards with the icon</li>
+            <li>village action on the resistance tile</li>
+            <li>legacy tile L40 from Uprising module</li>
+            <li>combat action from Freeing the Carribbean module</li>
+        </ul>
+    </li>
+    <li>Remove cube, add to empty square in resistance tile, receive reward</li>
+    <li>Adjacent cubes must be different colors
+        <ul>
+            <li>if unable to place: remove from game, receive no reward</li>
+        </ul>
+    </li>
+    <li>Fill 4 spaces <span class="arrow"></span> remove cubes from game, take $3 and 1 vp per combat token</li>
+    <li><i>May</i> place ownership markers on resistance tile even if village action is still locked</li>
+</ul>
+
+<p>note: "displace" action from base game removes cube from the game; the cube does not go to resistance tile</p>
+<p>note on Gravedigger (base game): the effect also triggers when liberating a location (not only when displacing)</p>
+
+<br /><br />
+
+
+<h4>Uprising</h4>
+<ul>
+    <li>Use legacy tile L40, always play together with Resistance Tile module</li>
+    <li>Combat action: either fight <i>FOR</i> or <i>AGAINST</i> a nation</li>
+    <li>Fighting <i>FOR</i>: base game rules apply</li>
+    <li>Fighting <i>AGAINST</i>
+        <ul>
+            <li>Combat value is the same</li>
+            <li>Bonuses for most/least are ignored</li>
+            <li>Gain influence from the combat token <span class="arrow"></span> score 2 vp instead</li>
+            <li>Base game combat actions (influence/annex/displace) are <b>not</b> available</li>
+            <li>Combat actions gained via cards or ship upgrades are <b>not</b> available</li>
+            <li>Liberate City and Liberate Village (on L40) are only options, limit 1 each</li>
+            <li><b>Liberate City</b>
+                <ul>
+                    <li>1vp per city with <i>any</i> ownership marker</li>
+                    <li>Remove cube of matching color from any <i>city</i>, place on resistance tile</li>
+                    <li>Action is only available if you can remove an ownership marker</li>
+                </ul>    
+            </li>
+            <li><b>Liberate Village</b> 
+                <ul>
+                    <li>Remove cube of matching color from any <i>village</i>, place on resistance tile</li>
+                    <li>3vp per neighboring location with an ownership marker (of any color)</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<p>all card effects involving the combat action (and the "Galleon" card effects) are only available if fighting *for* a nation</p>
+<p>cards that give combat points "before combat" can still be used (sailor, amaro pargo, etc.)</p>
+
+<hr />
+
+Career Cards
+-----
+free action, complete at any time
+complete in any order
+may wait and complete the lower/better reward for points in addition to money
+
+complete all tasks: $2 and 2 points
+
+
+
+reminders
+-----
+GOODS vs OBJECTS
+    one of the unlocked board abilities allows you to discard 3 identical GOODS - NOT OBJECTS - for $2 and 2 points
+
+
+
+
+
+
+
+
+
+
+
+
+
+asdf

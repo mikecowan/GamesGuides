@@ -1,0 +1,137 @@
+﻿@{
+    ViewData["Title"] = "Imhotep Guide";
+}
+
+<style>
+ul {
+    /*padding: 0;*/
+}
+
+.icon {
+    width: 60px;
+}
+</style>
+
+<div class="table table-100">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Setup</h3>
+            <ul>
+                <li>2 / 3 / 4 / 5 stones</li>
+                <li>6 cards for correct player count</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Actions</h3>
+            <ul>
+                <li>excavate 3 stones</li>
+                <li>place 1 stone</li>
+                <li>sail a ship</li>
+                <li>3x: place a scarab on a prophecy card</li>
+                <li>1x: wager (from quarry)</li>
+                <li>1x: favor (from quarry)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Market</h3>
+            <ul>
+                <li>Clear and refresh after each round</li>
+                <li>Draw from deck if market is empty when a card should be gained</li>
+                <li><b>B:</b> Discard 1, keep other</li>
+                <li><b>C:</b> Setup: collect 2 coins; Action: Spend coin to take 2 adjacent</li>
+                <li><b>D:</b>
+                    <ul>
+                        <li>May look at a face-down stack, keep 1 and return the rest</li>
+                        <li>Face-down stacks are never cleared</li>
+                        <li>Replenish face-down stacks to 3 <i>between rounds</i></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Pyramid</h3>
+            <ul>
+                <li>
+                    <img class="icon" src="~/lib/Images/Imhotep/PointSled.png" /> put 1 stone from sled onto an unsailed ship
+                </li>
+                <li><b>C:</b> Return 1 scaffold at random face-up to the box</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Temple</h3>
+            <ul>
+                <li>
+                    <img class="icon" src="~/lib/Images/Imhotep/ScryThree.png" />
+                    Draw 3, keep 1 then discard rest
+                </li>
+                <li><b>D:</b>
+                    <ul>
+                        <li>If chariot <i>lands</i> on occupied space, move to next free space</li>
+                        <li>multiple chariots at finish: all get 1<sup>st</sup> place, no one gets 2<sup>nd</sup> place</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Burial Chamber</h3>
+            <ul>
+                <li><b>C:</b> Place on lowest available level or on any two neighboring stones</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<h3>Obelisk</h3>
+<ul>
+    <li><b>C:</b> No gaps, and nothing can stick out beyond edge. Return to box if unable to place</li>
+</ul>
+
+@*<br /><br /><br /><br /><br />*@
+<br />
+<br />
+
+<h3>Sun Ship</h3>
+<ul style="list-style: none;">
+    <li>
+        <img class="icon" src="~/lib/Images/Imhotep/CardSwap.png" />
+        Swap 1 card with 1 face-up Market card 
+    </li>
+    <li>
+        <img class="icon" src="~/lib/Images/Imhotep/LockBoat.png" />
+        Lock <i>any</i> unsailed boat to an open site this round 
+    </li>
+    <li>
+        <img class="icon" src="~/lib/Images/Imhotep/StoneCard.png" />
+        1x: Discard 1 stone to draw 1 card
+    </li>
+    <li>
+        <img class="icon" src="~/lib/Images/Imhotep/StoneSwap.png" />
+        Swap positions of <i>any</i> 2 stones on a single boat, does not trigger Sun Ship tokens
+    </li>
+    <li>
+        <img class="icon" src="~/lib/Images/Imhotep/TwoPoints.png" />
+        1x: Discard 1 stone for 2 points
+    </li>
+</ul>
+
+<h3>Ties</h3>
+<ul>
+    <li>Obelisk A: Tied players add corresponding point values and split, rounding down. Must have at least 1 stone to receive points.</li>
+    <li>Burial Chamber B: Tied players add corresponding point values and split, rounding down. Must have at least 1 stone to receive points.</li>
+    <li>Obelisk C: Break ties with most incomplete rows. If still tied, players add corresponding point values and split</li>
+    <li>Prophecy Cards: Shared majority is sufficient</li>
+    <li>Stonemason's Wager: Treat each tied site as one rank down</li>
+</ul>
+
+
+<style>
+footer {
+    margin-bottom: 10px;
+}
+</style>

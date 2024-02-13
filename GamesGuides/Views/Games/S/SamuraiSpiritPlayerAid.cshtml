@@ -1,0 +1,239 @@
+﻿@{
+    ViewData["Title"] = "Samurai Spirit Player Aids";
+}
+
+<style>
+h3, h4, ol, ul, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-bottom: .5em;
+}
+
+ol, ul {
+    margin-bottom: 1em;
+}
+
+li > ul {
+    margin-bottom: 0;
+}
+
+footer {
+    margin-bottom: 0;
+}
+
+.talenticon {
+    width: 45px;
+}
+
+.kiaiicon {
+    height: 45px;
+}
+
+.wrap {
+    width: 90%;
+}
+
+.table > .table-row {
+    padding-bottom: 6em;
+}
+
+.table .table-cell {
+    /*vertical-align: middle;*/
+}
+
+img {
+    vertical-align:middle;
+    margin-right: 1em;
+}
+
+.samuraitable .tc-6 {
+    margin-top: .5em;
+}
+</style>
+
+
+
+<div class="wrap">
+@*    <h3>Turn Order</h3>
+    <ol>
+        <li>Apply Penalty</li>
+        <li>Action
+            <ul>
+                <li>Fight</li>
+                <li>Support</li>
+                <li>Pass</li>
+            </ul>
+        </li>
+        <li>Return support token(s)</li>
+    </ol>
+*@    
+    <div class="table table-padding-1 samuraitable">
+        <div class="table-row" style="padding-bottom: 1em;">
+            <div class="table-cell tc-4">
+                <h3>Talents</h3>
+            </div>
+            <div class="table-cell tc-4">
+                <h3>Kiai</h3>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell tc-4">
+                <img src="~/lib/Images/SamuraiSpirit/talent1.png" class="talenticon" />
+                Pass even numbers
+            </div>
+            <div class="table-cell tc-6">
+                <img src="~/lib/Images/SamuraiSpirit/kiai1.png" class="kiaiicon" />
+                Rebuild fence
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell tc-4">
+                <img src="~/lib/Images/SamuraiSpirit/talent2.png" class="talenticon" />
+                Pass odd numbers
+            </div>
+            <div class="table-cell tc-6">
+                <img src="~/lib/Images/SamuraiSpirit/kiai2.png" class="kiaiicon" />
+                <i>Any</i> most recent card <span class="arrow"></span> any other samurai
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell tc-4">
+                <img src="~/lib/Images/SamuraiSpirit/talent3.png" class="talenticon" />
+                Ignore even penalties
+            </div>
+            <div class="table-cell tc-6">
+                <img src="~/lib/Images/SamuraiSpirit/kiai3.png" class="kiaiicon" />
+                Discard 2 from raider deck
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell tc-4">
+                <img src="~/lib/Images/SamuraiSpirit/talent4.png" class="talenticon" />
+                Ignore odd penalties
+            </div>
+            <div class="table-cell tc-6">
+                <img src="~/lib/Images/SamuraiSpirit/kiai4.png" class="kiaiicon" />
+                Discard 2 from intruder stack
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell tc-4">
+                <img src="~/lib/Images/SamuraiSpirit/talent5.png" class="talenticon" />
+                May fight twice
+            </div>
+            <div class="table-cell tc-6">
+                <img src="~/lib/Images/SamuraiSpirit/kiai5.png" class="kiaiicon" />
+                Discard most recent card from <i>any</i> samurai
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell tc-4">
+                <img src="~/lib/Images/SamuraiSpirit/talent6.png" class="talenticon" />
+                After draw: discard identical
+            </div>
+            <div class="table-cell tc-6">
+                <img src="~/lib/Images/SamuraiSpirit/kiai6.png" class="kiaiicon" />
+                Move <i>any</i> talent to <i>any</i> samurai
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell tc-4">
+                <img src="~/lib/Images/SamuraiSpirit/talent7.png" class="talenticon" />
+                After draw: bottom deck
+            </div>
+            <div class="table-cell tc-6">
+                <img src="~/lib/Images/SamuraiSpirit/kiai7.png" class="kiaiicon" />
+                Re-arrange top 2 raider cards
+            </div>
+        </div>
+    </div>
+</div>
+    <br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br />
+    <br /><br /><br />
+<div class="wrap" style="margin-left: 10%;">
+    <h3>Raider Penalties</h3>
+    <!-- raider penalties -->
+    <div class="table table-padding-1">
+        <div class="table-row">
+            <div class="table-cell tc-6">
+                <img src="~/lib/Images/SamuraiSpirit/penalty-fire.png" class="talenticon" />
+                Destroy barricade or farm
+            </div>
+            <div class="table-cell tc-6">
+                <img src="~/lib/Images/SamuraiSpirit/penalty-pass.png" class="talenticon" />
+                Must choose Pass action
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell tc-6">
+                <img src="~/lib/Images/SamuraiSpirit/penalty-wound.png" class="talenticon" />
+                Take a wound
+            </div>
+            <div class="table-cell tc-6">
+                <img src="~/lib/Images/SamuraiSpirit/penalty-shuffle.png" class="talenticon" />
+                Shuffle a random card from discards back into deck<sup><span class="asterisk"></span></sup>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell tc-6">
+                <img src="~/lib/Images/SamuraiSpirit/penalty-ninja.png" class="talenticon" />
+                Add a card to intruder stack
+            </div>
+            <div class="table-cell tc-6">
+                <img src="~/lib/Images/SamuraiSpirit/penalty-talents.png" class="talenticon" />
+                During turn, cannot use talent or support tokens
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell tc-6">
+                <img src="~/lib/Images/SamuraiSpirit/penalty-defense.png" class="talenticon" />
+                During turn, cannot defend
+            </div>
+            <div class="table-cell tc-6">
+                <img src="~/lib/Images/SamuraiSpirit/penalty-discard.png" class="talenticon" />
+                Must discard from left side<sup><span class="asterisk"></span></sup>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell tc-6">
+                <img src="~/lib/Images/SamuraiSpirit/penalty-support.png" class="talenticon" />
+                During turn, cannot choose Support action
+            </div>
+            <div class="table-cell tc-6">
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell tc-6">
+                <img src="~/lib/Images/SamuraiSpirit/penalty-left.png" class="talenticon" />
+                Neighbor adds a card to <i>combat line</i><sup><span class="asterisk"></span><span class="dagger"></span></sup>
+            </div>
+            <div class="table-cell tc-6">
+                <span class="asterisk"></span> If unable to apply penalty, take a wound instead
+                <br />
+                <span class="dagger"></span> Talents cannot be applied, but Kiai may activate
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+

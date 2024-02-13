@@ -1,0 +1,50 @@
+﻿@model GamesGuides.Data.ChampionsOfMidgardJourneyData
+
+@{
+    ViewData["Title"] = "Champions of Midgard Rune Cards";
+}
+
+<style>
+.table .bold {
+    font-weight: bold;
+}
+
+.tc-1 {
+    text-align: center;
+}
+
+.icon {
+    width: 20px;
+}
+
+#journeytable img {
+    width: 20px;
+    vertical-align:middle;
+}
+</style>
+
+<h3>Sea Journeys</h3>
+<div class="table table-padding-1" id="journeytable">
+    @foreach (var journey in Model.Sea)
+    {
+        <partial name="../Templates/_TableRow" model='new TableRow { Cells = new List<TableCell>() {
+            new TableCell { Size = 1, StringContent = $"{journey.Quantity}"},
+            new TableCell { Size = 2, StringContent = $"{journey.Name}", AdditionalClasses = "bold" },
+            new TableCell { Size = 9, richText= $"{journey.Description}" }
+        }}' />
+    }
+</div>
+
+<br /><br /><br /><br />
+
+<h3>Land Journeys</h3>
+<div class="table table-padding-1" id="journeytable">
+    @foreach (var journey in Model.Land)
+    {
+        <partial name="../Templates/_TableRow" model='new TableRow { Cells = new List<TableCell>() {
+            new TableCell { Size = 1, StringContent = $"{journey.Quantity}"},
+            new TableCell { Size = 2, StringContent = $"{journey.Name}", AdditionalClasses = "bold" },
+            new TableCell { Size = 9, richText= $"{journey.Description}" }
+        }}' />
+    }
+</div>

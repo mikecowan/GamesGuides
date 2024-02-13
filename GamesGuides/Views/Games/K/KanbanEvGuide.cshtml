@@ -1,0 +1,377 @@
+﻿@{
+    ViewData["Title"] = "Kanban EV Guide";
+}
+
+<style>
+p, h3, h4 {
+    margin-top: 0;
+}
+
+h3 {
+    margin-bottom: .5em;
+}
+
+h4 {
+    margin-bottom: .2em;
+}
+
+ul, ol {
+    margin-top: 0;
+}
+</style>
+
+<h3>Setup</h3>
+
+<div class="table table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Main Board</h4>
+            <ul>
+                <li>Decide Sandra side</li>
+                <li>Final goal tile</li>
+                <li>3 random part types in recycling</li>
+                <li>2 factory goals from each type, 2 speech tokens per goal</li>
+                <li>2 cars per color at assembly</li>
+                <li>3 award tiles at each training track, speech token on top</li>
+                <li>2 demand tiles at assembly, X speech bubbles</li>
+                <li>Draw 1 order card and place all 6 parts shown</li>
+                <li><u>Speedcharger</u> [3N + 2] tokens in supply</li>
+                <li><u>Special Garage</u> reverse draft for 5th garage tile</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Player Setup</h4>
+            <ul>
+                <li>1 speech token, 1 parts voucher, 0 banked shift</li>
+                <li>Garage tiles: pick basic/expert/special, padlock tile in far right</li>
+                <li>3 goal cards, 2 order cards</li>
+                <li>15 points (0 points for <u>Nice Sandra</u>)</li>
+            </ul>
+
+            <h4>Orientation</h4>
+            <ul>
+                <li>Choose a space in first section of certification track, gain bonus</li>
+                <li>In certification order, take
+                    <ul>
+                        <li>1 car part from logistics</li>
+                        <li>1 design tile from design</li>
+                    </ul>
+                </li>
+                <li>May take a design from a stack, do not gain benefits</li>
+                <li>Do not refill designs spaces until all players have chosen</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<ul>
+    <li>Day 1: worker placement proceeds in certification track order (right to left)</li>
+    <li>Stations are activated top to bottom</li>
+    <li>New stations are chosen top to bottom</li>
+    <li>Must choose a different department</li>
+    <li>Max 4 shifts per day</li>
+    <li>Sandra does not move on the first day of the game</li>
+    <li>Cannot choose to discard car parts or designs</li>
+    <li>At end of an assembly turn, if either demand token has 0 speech bubbles draw a new demand tile (before shuffling previous back in)</li>
+    <li>Do not add a car to assembly if there are not enough of the given color</li>
+    <li>Cars move for <u>each part</u> that is added</li>
+    <li>Max 4 cars at the test track, if a 5th enters then return lead car to supply</li>
+    <li>No speech token limit, but excess are unavailable for next meeting; convert after the meeting</li>
+</ul>
+
+<hr />
+
+<h3>Scoring</h3>
+
+
+<h4>Meetings</h4>
+<div class="table table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>End of Week Scoring</h4>
+            <p style="margin-bottom: 0">Sandra's admin task. For each car in your garage...</p>
+            <ul>
+                <li>1 point for each upgrade to that car (by all players)</li>
+                <li>1 point for each of your <i>tested</i> designs for that model</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>End of Game</h4>
+            <ul>
+                <li>Production cycle marker and week marker have advanced far enough
+                    <ul>
+                        <li>one is at space 2 or higher, the other is at space 3 or higher</li>
+                    </ul>
+                </li>
+                <li>Finish the day, then end-of-week scoring and/or meeting</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Meetings</h4>
+            <ul>
+                <li>After end-of-week scoring</li>
+                <li>Triggered when pace car reaches/crosses striped space</li>
+                <li>Recycling <i>cannot</i> be used during meetings</li>
+                <li>Players act in certification track order</li>
+                <li>Ends when all players pass consecutively</li>
+                <li>Action 1: Speak
+                    <ol>
+                        <li>Play performance goal card (1x per meeting) and/or</li>
+                        <li>Place speech token on a goal card</li>
+                    </ol>
+                    note: when doing both 1 & 2, speech token goes on card just played
+                </li>
+                <li>Action 2: Pass
+                    <ul>
+                        <li>Only if you have played 1 of your performance goal cards</li>
+                        <li>Does not take you out of the meeting</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Meeting Notes</h4>
+            <ul>
+                <li>must play goal card at some point</li>
+                <li>not required to place token on your own goal card</li>
+                <li>may place token on another player's card</li>
+                <li>may place a token even if it awards 0 points</li>
+                <li>cannot place multiple tokens on same card</li>
+                <li>must choose highest available slot</li>
+                <li>end of meeting: after N consecutive passes
+                    <ol>
+                        <li>Return all speech tokens from <i>cards</i> to supply</li>
+                        <li>Convert generic white speech tokens to colored tokens</li>
+                        <li>Discard performance goal cards</li>
+                        <li>Contribute cards for next meeting's performance goals</li>
+                        <li>Players draw 2 new performance cards</li>
+                        <li>Return meeting marker to test track</li>
+                        <li>Advance production cycle marker 1 space</li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-9">
+            <h4>Final Scoring</h4>
+            <ol>
+                <li>Final goal tile: no blocking, may use generic (banked) speech tokens, may score any/all</li>
+                <li>1 point per banked shift remaining</li>
+                <li>1 point per speech token (colored or generic), book, parts voucher</li>
+                <li>X points per car, shown on player board</li>
+                <li>5/3/1 points for relative position on scoring track; ties favor most recent training; 0 training = 0 points</li>
+                <li>X points for each <i>tested</i> design, according to the part's value above the upgrade track</li>
+                <li><u>Speedcharger</u> Each charger is worth 1 point per car</li>
+            </ol>
+        </div>
+        <div class="table-cell tc-3">
+    
+            <h4>Ties</h4>
+            <ol>
+                <li>Most cars</li>
+                <li>Most tested designs</li>
+                <li>Most banked shifts</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<h3>Work Stations</h3>
+<div class="table table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Assembly Department</h4>
+            <ul>
+                <li>Turn start: clear parts for any full car station</li>
+                <li>Turn end: draw new demand token(s) if necessary</li>
+                <li>Car rolls off line
+                    <ul>
+                        <li>gain 1 or 2 points</li>
+                        <li>take available speech bubble if car matches demand</li>
+                        <li>move car to end of car line on test track</li>
+                    </ul>
+                </li>
+                <li>Task: Provide a needed part
+                    <ul>
+                        <li>cannot duplicate parts on same car</li>
+                        <li>upgraded parts must be provided <u>first</u></li>
+                        <li>move car 1 space along arrows, displacing as needed</li>
+                        <li>place new car of this model at start of assembly line</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4>Logistics Department</h4>
+            <ul>
+                <li>Task: Issue kanban order (max 1<span class="cross"></span> per turn)
+                    <ul>
+                        <li>gain a banked shift</li>
+                        <li>place an order card</li>
+                        <li>place matching parts</li>
+                        <li>return order card to bottom of deck</li>
+                        <li>draw new order card</li>
+                    </ul>
+                </li>
+                <li>Task: Collect car parts
+                    <ul>
+                        <li>take any number of car parts from 1 warehouse</li>
+                    </ul>
+                </li>
+                <li>Task: Receive parts voucher (requires certification)</li>
+            </ul>
+
+        </div>
+        <div class="table-cell tc-6">
+
+            <h4>R & D Department</h4>
+            <ul>
+                <li>Task: Claim car
+                    <ul>
+                        <li>return design to bottom of central stack</li>
+                        <li>pay 1/2/2/3 shifts for car #1/2/3/4</li>
+                    </ul>
+                </li>
+                <li>Turn end:
+                    <ul>
+                        <li>move pace car 1 space for each car claimed</li>
+                        <li>fill gaps behind pace car</li>
+                        <li>check factory goal</li>
+                    </ul>
+                </li>
+                <li>Task: Upgrade a design
+                    <ul>
+                        <li>add car part from your board or voucher</li>
+                        <li>receive any printed benefit</li>
+                        <li>move car part marker 1 space right</li>
+                        <li>flip the design face down, keep next to board</li>
+                    </ul>
+                </li>
+                <li>Tested design
+                    <ul>
+                        <li>can trigger after either R&D task</li>
+                        <li>car in garage + upgraded design</li>
+                        <li>may have multiple tested designs above each car</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4>Design Department</h4>
+            <ul>
+                <li>Select a design from either row</li>
+                <li>Take bonuses</li>
+                <li>Fill at end of turn</li>
+            </ul>
+
+            <h4>Administration Department</h4>
+            <ul>
+                <li>May split shifts between admin and/or <i>one</i> other department</li>
+                <li>The only admin dept task is training</li>
+                <li><u>Speedcharger</u> spend a shift for a charger (1<span class="cross"></span> per turn)</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Certification Details</h3>
+<div class="table table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Design</h4>
+            <ul>
+                <li>Room for extra design</li>
+                <li>May take designs from any of the 3 stacks</li>
+                <li>Immediately fill office stacks from central stack, if empty</li>
+            </ul>
+
+            <h4>Assembly</h4>
+            <ul>
+                <li>5th garage space</li>
+            </ul>
+
+            <h4>Admin</h4>
+            <ul>
+                <li>Space for additional speech token</li>
+            </ul>
+
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Research & Development</h4>
+            <ul>
+                <li>Access to double-upgrade (1<span class="cross"></span> per game ability)</li>
+                <li>May trigger when you complete "Upgrade a design" task</li>
+                <li>Increase part value by 2 and flip the marker</li>
+                <li>Gain X points where X is the new value of the car part</li>
+                <li>Flip double-upgrade tile on your board</li>
+            </ul>
+
+            <h4>Logistics</h4>
+            <ul>
+                <li>Room for extra car part</li>
+                <li>3rd task option: receive parts voucher</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+
+<hr />
+
+<div class="table table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Sandra</h3>
+            <ul>
+                <li>Sandra does not move on day 1</li>
+                <li>Last to move on day 2</li>
+                <li>Place her on the next empty work station of the next department</li>
+                <li>Skip a department if both stations are taken</li>
+                <li>At admin, she ignores the workstation and sits at her desk</li>
+                <li>Only evaluate the player(s) with the least training</li>
+                <li>Sandra has a task for each department</li>
+                <li>Fail requirement <span class="arrow"></span> lose 1vp plus 1vp per banked shift below 5</li>
+                <li><u>Nice Sandra</u>
+                    <ul>
+                        <li>Evaluate player(s) with most training</li>
+                        <li>Meet requirement <span class="arrow"></span> +1vp per banked shift above 5</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Player Count Changes</h3>
+            <ul>
+                <li>2 award tiles per training track for 2/3p</li>
+                <li>Test track overlays</li>
+                <li>3p: 1 speech token on factory goal with higher number</li>
+                <li>2p: 1 speech token on each factory goal</li>
+                <li>Draw extra goal cards after meetings - should be 4 public goals</li>
+                <li>2-player Sandra
+                    <ul>
+                        <li>Sandra blocks players her entire department, including Admin</li>
+                        <li>Players never block Sandra</li>
+                        <li>Sandra removes 8 tiles from Design department</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+

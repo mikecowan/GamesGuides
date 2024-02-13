@@ -1,0 +1,232 @@
+﻿@{
+    ViewData["Title"] = "Dogs Guide";
+}
+
+<style>
+h3, h4, ol, ul, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-bottom: .5em;
+}
+
+ol, ul {
+    margin-bottom: 1em;
+}
+
+li > ul {
+    margin-bottom: 0;
+}
+
+footer {
+    margin-bottom: 0;
+}
+</style>
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Setup</h3>
+            <ul>
+                <li>2 food, 6 gas, 2 medicine, 3 coins</li>
+                <li>2 bonus cards to each action space</li>
+                <li>Reveal 1 dog fair card</li>
+                <li>Place dog tiles on each paw print</li>
+            </ul>
+
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Game End</h3>
+            <ul>
+                <li>No one moved during phase 1, or</li>
+                <li>Not enough dog tiles to fill the board in phase 3, or</li>
+                <li>All roadwork tiles on the board</li>
+            </ul>
+    
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Phase 1</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>1. Move or Return</h4>
+            <ul>
+                <li>1 gas per movement</li>
+                <li>Starting location does not count as a space</li>
+                <li>Can pass through other trucks, cannot share space</li>
+                <li>Initial movement is optional</li>
+            </ul>
+
+            <h4>2. Move & Collect</h4>
+            <ul>
+                <li>Collect dog on destination space</li>
+                <li>Healthy and sick dogs go to truck tile</li>
+                <li>Reward dogs go directly to dog fair; take reward printed on board</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>3. Return to ARC</h4>
+            <ul>
+                <li>Pay 1 gas and go directly to ARC</li>
+                <li>May play the Additional Dog card</li>
+                <li>First and last player to return receive 1 food/medicine/gas</li>
+                <li>Bonus gas cannot be used for the return trip</li>
+                <li>Out of gas <span class="arrow"></span> return all dogs to bag and return to ARC</li>
+            </ul>
+
+            <h4>4. Put Dogs in Kennel</h4>
+            <ul>
+                <li>May rearrange dogs in stalls</li>
+                <li>Sick dogs go to infirmary</li>
+                <li>Healthy dogs go to kennels that are built</li>
+                <li>Only dogs of the same breed can be side by side</li>
+                <li>May play the Veterinarian card</li>
+                <li>Excess dogs go to left neighbor</li>
+                <li>Any unplaced dog goes to the dog fair, healthy or sick</li>
+                <li>4 of the same breed in 1 kennel -> one-time bonus of $1</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Phase 2</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>1. Assign Worker</h4>
+            <ul>
+                <li>Max 2 workers per action space, can be same player</li>
+                <li>Can use the Free Entry card to break the 2-meeple rule</li>
+            </ul>
+    
+    
+            <h4>2. Collect Card</h4>
+            <ul>
+                <li>Take 1 of the cards, unless using Free Entry</li>
+                <li>Trade in resource cards immediately</li>
+                <li>Special cards may be saved or played immediately (if applicable)</li>
+                <li>No hand limit</li>
+            </ul>
+
+        </div>
+        <div class="table-cell tc-6">
+            <h4>3. Building Action (optional)</h4>
+            <ul>
+                <li><u>Town Hall</u> pay $2 to build next stall</li>
+                <li><u>Warehouse</u> swap 2 resources</li>
+                <li><u>Pet Shop</u> $1 <span class="arrow"></span> 2 resources</li>
+                <li><u>Veterinary</u> cure up to 6 dogs, move to kennels but cannot rearrange</li>
+                <li><u>Dog Fair</u>
+                    <ul>
+                        <li>Buy from fair, $X, add to a kennel, cannot rearrange</li>
+                        <li>Sell for $2, check fair card, can use Trained Dog and/or Prized Dog</li>
+                        <li>Trade: swap 2 dogs between kennel and dog fair</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Phase 3</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>1. Feed the dogs</h4>
+            <ul>
+                <li>Pay 1 food per non-empty stall</li>
+                <li>Do not pay for dogs in infirmary</li>
+                <li>For any unfed stall, 1 dog goes to infirmary</li>
+                <li>If infirmary is full, send dog to dog fair</li>
+            </ul>
+
+            <h4>2. Pay Wages</h4>
+            <ul>
+                <li>Pay $1 to assistant, or use the Assistant card</li>
+                <li>If unable to pay, lose 1 meeple for next round</li>
+                <li>May rehire a previously-lost assistant for $1</li>
+            </ul>
+
+        </div>
+        <div class="table-cell tc-6">
+            <h4>3. Board Clean up</h4>
+            <ul>
+                <li>Clear and refill action slot cards</li>
+                <li>Reveal new dog fair card</li>
+                <li>Refill empty dog spaces</li>
+                <li>Game ends if you cannot completely refill dog tiles on the board</li>
+            </ul>
+
+            <h4>4. Player Clean Up</h4>
+            <ul>
+                <li>Collect $1 as income</li>
+                <li>May purchase gas: $1 for 3 gas, to a max of 9 gas</li>
+                <li>Pass first player marker left</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Advanced Rules</h3>
+
+            <h4>Road Work Variant</h4>
+            <ul>
+                <li>Remove all resource cards that show 3 items</li>
+                <li>Add 6 roadwork tiles to bag - 3 country, 3 city</li>
+                <li>Must spend 2 gas to move over roadwork, cannot stop on it</li>
+                <li>Retrieve all roadwork tiles to bag before placing dogs in phase 3</li>
+                <li>If all 6 roadwork tiles are on the board, this will be the final round</li>
+            </ul>
+
+            <h4>Pet Store</h4>
+            <p>Max $2 during Pet Shop action</p>
+            <ul></ul>
+
+            <h4>Last Stall</h4> 
+            <p></p>
+            <ul>
+                <li>End game is triggered after any player builds the last stall</li>
+                <li>Play 1 final full round</li>
+            </ul>
+
+            <h4>Diversity</h4>
+            <ul>
+                <li>Need 1<sup>+</sup> country, 1<sup>+</sup> city dog; otherwise -5 points</li>
+                <li>Dogs in infirmary do not count</li>
+            </ul>
+
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Scoring</h3>
+            <ul>
+                <li>Dog breeds in stalls: 2-12 points</li>
+                <li>Additional stalls: score 0 points if empty</li>
+                <li>Kennel diversity: 2 points per breed (not in infirmary)</li>
+                <li>Infirmary: -2 points per dog</li>
+                <li>Assistant: 2 points if paid in last round</li>
+                <li>Resources: 3:1 ratio, coins don't count</li>
+                <li>Tie breaker: coins</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,465 @@
+﻿@{
+    ViewData["Title"] = "Space Alert Training Missions";
+}
+
+<style>
+.icon {
+    width: 20px;
+}
+
+.buttonicon {
+    width: 25px;
+    vertical-align: bottom;
+}
+</style>
+
+<h3>Training Missions</h3>
+
+<div class="table table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            <h4>Test Run 1</h4>
+        </div>
+        <div class="table-cell tc-2">
+            <h4>Test Run 2</h4>
+        </div>
+        <div class="table-cell tc-2">
+            <h4>Sim Mission</h4>
+        </div>
+        <div class="table-cell tc-2">
+            <h4>Adv Sim Mission</h4>
+        </div>
+        <div class="table-cell tc-2">
+            <h4>First Mission</h4>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Timer
+        </div>
+        <div class="table-cell tc-2">
+            7:00
+        </div>
+        <div class="table-cell tc-2">
+            7:00
+        </div>
+        <div class="table-cell tc-2">
+            10:00
+        </div>
+        <div class="table-cell tc-2">
+            10:00
+        </div>
+        <div class="table-cell tc-2">
+            10:00
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Soundtrack
+        </div>
+        <div class="table-cell tc-2">
+            First Test
+        </div>
+        <div class="table-cell tc-2">
+            Second Test
+        </div>
+        <div class="table-cell tc-2">
+            Random Sim
+        </div>
+        <div class="table-cell tc-2">
+            Random Adv Sim
+        </div>
+        <div class="table-cell tc-2">
+            Random Mission
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Rounds
+        </div>
+        <div class="table-cell tc-2">
+            7
+        </div>
+        <div class="table-cell tc-2">
+            7
+        </div>
+        <div class="table-cell tc-2">
+            12
+        </div>
+        <div class="table-cell tc-2">
+            12
+        </div>
+        <div class="table-cell tc-2">
+            12
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Actions
+        </div>
+        <div class="table-cell tc-2">
+            face-up
+        </div>
+        <div class="table-cell tc-2">
+            face-up
+        </div>
+        <div class="table-cell tc-2">
+            face-down
+        </div>
+        <div class="table-cell tc-2">
+            face-down
+        </div>
+        <div class="table-cell tc-2">
+            face-down
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Trajectories
+        </div>
+        <div class="table-cell tc-2">
+            T6-T2-T4
+        </div>
+        <div class="table-cell tc-2">
+            T3-T5-T1
+        </div>
+        <div class="table-cell tc-2">
+            Random
+        </div>
+        <div class="table-cell tc-2">
+            Random
+        </div>
+        <div class="table-cell tc-2">
+            Random
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Threats
+        </div>
+        <div class="table-cell tc-2">
+            E1-01 to E1-03
+        </div>
+        <div class="table-cell tc-2">
+            E1-04 to E1-06
+        </div>
+        <div class="table-cell tc-2">
+            Serious, Random
+        </div>
+        <div class="table-cell tc-2">
+            Serious, Random
+        </div>
+        <div class="table-cell tc-2">
+            Serious, Random
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Unconfirmed Reports
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/checkmark.png" class="icon" />
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Comm Systems<br />down
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/checkmark.png" class="icon" />
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Rockets
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/checkmark.png" class="icon" />
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Computer
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/checkmark.png" class="icon" />
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Delays &<br />Tripping
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/checkmark.png" class="icon" />
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Gravolift
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/checkmark.png" class="icon" />
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Damage Tiles
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/checkmark.png" class="icon" />
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Internal Threats
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/checkmark.png" class="icon" />
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Battlebots
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/checkmark.png" class="icon" />
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Malfunctions
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/checkmark.png" class="icon" />
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Intruders
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/checkmark.png" class="icon" />
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Interceptors
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/checkmark.png" class="icon" />
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Heroic Actions
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/checkmark.png" class="icon" />
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Visual Confirmations
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/checkmark.png" class="icon" />
+        </div>
+    </div>
+</div>

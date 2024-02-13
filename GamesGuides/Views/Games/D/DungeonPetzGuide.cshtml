@@ -1,0 +1,254 @@
+﻿@{
+    ViewData["Title"] = "Dungeon Petz Guide";
+}
+
+<div class="table table-100">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Setup</h3>
+            <ul>
+                <li>Fill size 2 row</li>
+                <li>1 pet in size 3 row</li>
+                <li>6 imps</li>
+                <li>2 gold</li>
+                <li>1 manure in each player's starting cage</li>
+                <li>1 card of each color</li>
+                <li>Reveal round 2 exhibition</li>
+                <li>Reveal round 3 customer</li>
+                <li>exp: +1 imp, +1 gold</li>
+                <li>Reveal 1 facility tile</li>
+                <li>Add 3 accessories</li>
+                <li>Fill Black Market, add 1 gold to each</li>
+                <li>Optional extra round</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>2 or 3 player games</h3>
+            <ul>
+                <li>Add a dummy imp to action spaces with a dot in the corner
+                    <ul>
+                        <li>2-player: add a dummy imp 3 spaces away, along arrows</li>
+                    </ul>
+                </li>
+                <li>Dummy imps on an action slot
+                    <ul>
+                        <li>Size 2 pet: only add 2 pets</li>
+                        <li>Size 3 pet: remove the leftmost remaining size 2 pet from the game <b>without</b> adding a meat</li>
+                        <li>Cage: Deal 1 new cage, leave 1 pit empty</li>
+                        <li>Addon: Skip, do not add or discard anything</li>
+                        <li>Food: No food <i>here</i> this round</li>
+                        <li>Small Red food: 1 less meat on mixed-food stand</li>
+                        <li>Small Green food: 1 less vegetable on mixed-food stand</li>
+                        <li>Artifact: No artifacts this round</li>
+                        <li>Industrial Zone: No new facility this round</li>
+                        <li>Slug Shop: Skip, do not add or discard anything</li>
+                    </ul>
+                </li>
+                <li>Income during setup phase: 1-2-2 or 1-2</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<h3>Groups</h3>
+<ul>
+    <li>Can withdraw any group(s) still waiting in addition to withdrawing the active group or sending it to town</li>
+    <li>If group size increases it cuts in line for turn order right away</li>
+    <li>If group size decreases play continues as though it had been that size all along</li>
+</ul>
+
+<h3>Next round</h3>
+<ul>
+    <li>->: Pass token to the left</li>
+    <li>?: Give to player with lowest reputation</li>
+</ul>
+
+<h3>Final Scoring</h3>
+<ul>
+    <li>2 exhibitions, scored separately</li>
+    <li>Lose 1 reputation for every exhibition score below 0</li>
+    <li>First exhibition: do not round gold, -2 per missing imp (hospital, on platform, progress board)</li>
+</ul>
+
+<div class="table table-100">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Artifacts</h3>
+            <ul>
+                <li>Books: choose 1 color, +1 card of that color</li>
+                <li>Crystal Ball: before drawing cards, discard 3 and draw replacements</li>
+                <li>Long-Handled Shovel:
+                    <ul>
+                        <li>phase 4: one available imp can remove 2 manure tokens</li>
+                        <li>can clean occupied cages</li>
+                        <li>may use after poop needs and before disease needs</li>
+                    </ul>
+                </li>
+                <li>Imp Armor:
+                    <ul>
+                        <li>can protect 2 imps</li>
+                        <li>boost a purple or red number by 1</li>
+                        <li>chosen imps do not go to hospital</li>
+                    </ul>
+                </li>
+                <li>Employee of the Month:
+                    <ul>
+                        <li>1 imp counts as 2 for cleaning, entertaining, or catching pets</li>
+                        <li>can combine with other effects like shovel or armor</li>
+                        <li>imp does <b>not</b> collect 2 gold</li>
+                    </ul>
+                </li>
+                <li>Whip of Obedience: +&half; to all exhibitions (except final scoring)</li>
+                <li>Magic Box: immediately add food token from bank
+                    <ul>
+                        <li>food on this can be used as either type</li>
+                        <li>food does not age</li>
+                        <li>phase 6: if empty, may add a food you would move or discard</li>
+                    </ul>
+                </li>
+                <li>Fancy Hat: immediately assign to any waiting group
+                    <ul>
+                        <li>+&half; group size</li>
+                        <li>hat stays with imp (with accessory, on platform, in hospital)</li>
+                    </ul>
+                </li>
+                <li>Gift Box:
+                    <ul>
+                        <li>clone an artifact owned by another player for rest of game</li>
+                        <li>can choose to wait to trigger copying</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Facilities</h3>
+            <ul>
+                <li>Headhunter Headquarters (gold)
+                    <ul>
+                        <li>gain 1 imp (leftmost progress board, hospital, or platform)</li>
+                        <li>phase 2: imp is available, but cannot join a group</li>
+                        <li>phase 5: keep imp at facility, not available until next round</li>
+                    </ul>
+                </li>
+                <li>Lollipop Factory (vegetable)
+                    <ul>
+                        <li>turns 1 veggie into a lollipop (gold on top of veg)</li>
+                        <li>satisfy 1 hunger need and/or 1 play need (on a <b>single</b> pet)</li>
+                    </ul>
+                </li>
+                <li>Pet Food Cannery (meat)
+                    <ul>
+                        <li>turns 1 meat into a food can (manure on top of meat)</li>
+                        <li>can eat multiple canned foods, but not beyond hunger needs</li>
+                        <li>+1 exhibition score for each relevant canned food eaten</li>
+                    </ul>
+                </li>
+                <li>Office (imp)
+                    <ul>
+                        <li>+2 gold</li>
+                    </ul>
+                </li>
+                <li>Pet Psychiatrist (imp)
+                    <ul>
+                        <li>remove either a suffering or mutation token from 1 pet</li>
+                    </ul>
+                </li>
+                <li>Fecal Slug (gold)
+                    <ul>
+                        <li>remove 2 manure tokens from anywhere</li>
+                        <li>works on occupied cages</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<br /><br /><br /><br /><br />
+
+<div class="table table-100">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Bodyguard</h3>
+            <ul>
+                <li>may add to a waiting group upon acquiring</li>
+                <li>can never be in a group by himself</li>
+                <li>cannot be used for:
+                    <ul>
+                        <li>cleaning manure</li>
+                        <li>entertaining pets</li>
+                        <li>catching angry pets</li>
+                        <li>earning gold</li>
+                        <li>working in facilities</li>
+                    </ul>
+                </li>
+                <li>does nothing outside shopping phase</li>
+                <li>returns home if sent to platform action</li>
+                <li>he <b>can</b> carry an accessory home for you</li>
+                <li>cannot be left alone on action space (due to accessory)</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Processed Food</h3>
+            <ul>
+                <li>can be treated as meat or veg</li>
+                <li>can only be created with fresh food from storage</li>
+                <li>cannot be put in magic box</li>
+                <li>does not age</li>
+                <li>stored it in artifact storage</li>
+                <li>cannot satisfy hunger for the House Vampire pet</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="table table-100">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Industrial Zone</h3>
+            <ul>
+                <li>put permission tile under most recently facility</li>
+                <li>may immediately use any revealed facility</li>
+                <li>send an ungrouped imp from quarters</li>
+                <li>use gold from treasury</li>
+                <li>food from storage (not magic box, not processed)</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Slug Shop</h3>
+            <ul>
+                <li>take an accessory, 1 imp may return home with it</li>
+                <li>imp can come from any action space (including cage)</li>
+                <li>1 imp must remain to block the space</li>
+                <li>still get accessory if no imps are able to return</li>
+                <li>bodyguard can take it home but he cannot be left alone</li>
+                <li>imp may go to quarters OR join a group</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="table table-100">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Cleaning Cages</h3>
+            <ul>
+                <li>must be empty</li>
+                <li>place imp at center of pet board</li>
+                <li>remove 2 manure from same or different cages</li>
+                <li>cages need not be adjacent</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Selling from Platform</h3>
+            <ul>
+                <li>3X reputation</li>
+                <li>max 1 per round</li>
+                <li>place imp on empty cage</li>
+                <li>imp is <b>not</b> available</li>
+            </ul>
+        </div>
+    </div>
+</div>

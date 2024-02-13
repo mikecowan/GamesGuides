@@ -1,0 +1,340 @@
+﻿@{
+    ViewData["Title"] = "Spirit Island Picker";
+}
+
+<script>
+    var aspects = [
+        { id: 0, spiritId: 0, name: "base" },
+        { id: 0, spiritId: 0, name: "Immense" },
+        { id: 1, spiritId: 0, name: "Pandemonium" },
+        { id: 2, spiritId: 0, name: "Sparking" },
+        { id: 3, spiritId: 0, name: "Wind" },
+
+        { id: 4, spiritId: 1, name: "base" },
+        { id: 4, spiritId: 1, name: "Haven" },
+        { id: 5, spiritId: 1, name: "Sunshine" },
+        { id: 6, spiritId: 1, name: "Travel" },
+
+        { id: 7, spiritId: 2, name: "base" },
+        { id: 7, spiritId: 2, name: "Amorphous" },
+        { id: 8, spiritId: 2, name: "Dark Fire" },
+        { id: 9, spiritId: 2, name: "Foreboding" },
+        { id: 10, spiritId: 2, name: "Madness" },
+        { id: 11, spiritId: 2, name: "Reach" },
+
+        { id: 12, spiritId: 3, name: "base" },
+        { id: 12, spiritId: 3, name: "Might" },
+        { id: 13, spiritId: 3, name: "Nourishing" },
+        { id: 14, spiritId: 3, name: "Resilience" },
+
+        { id: 15, spiritId: 4, name: "base" },
+        { id: 15, spiritId: 4, name: "Regrowth" },
+        { id: 16, spiritId: 4, name: "Tangles" },
+
+        { id: 17, spiritId: 5, name: "base" },
+        { id: 17, spiritId: 5, name: "Tactician" },
+        { id: 18, spiritId: 5, name: "Warrior" },
+
+        { id: 19, spiritId: 6, name: "base" },
+        { id: 19, spiritId: 6, name: "Enticing" },
+        { id: 20, spiritId: 6, name: "Violence" },
+
+        { id: 21, spiritId: 7, name: "base" },
+        { id: 21, spiritId: 7, name: "Deeps" },
+
+        { id: 22, spiritId: 8, name: "base" },
+        { id: 22, spiritId: 8, name: "Spreading Hostility" },
+
+        { id: 23, spiritId: 9, name: "base" },
+        { id: 23, spiritId: 9, name: "Encircle" },
+        { id: 24, spiritId: 9, name: "Unconstrained" },
+
+        { id: 25, spiritId: 10, name: "base" },
+        { id: 25, spiritId: 10, name: "Transforming" },
+
+        { id: 26, spiritId: 11, name: "base" },
+        { id: 26, spiritId: 11, name: "Locus" },
+
+        { id: 27, spiritId: 13, name: "base" },
+        { id: 27, spiritId: 13, name: "Lair" },
+
+        { id: 28, spiritId: 15, name: "base" },
+        { id: 28, spiritId: 15, name: "Intensify" },
+        { id: 29, spiritId: 15, name: "Mentor" },
+
+        { id: 30, spiritId: 18, name: "base" },
+        { id: 30, spiritId: 18, name: "Stranded" },
+    ];
+
+    var spirits = [
+        { id: 0, name: "Lightning's Swift Strike",
+            aspects: [
+                { id: 0, name: "base" },
+                { id: 1, name: "Immense" },
+                { id: 2, name: "Pandemonium" },
+                { id: 3, name: "Sparking" },
+                { id: 4, name: "Wind" }
+            ] },
+        { id: 1, name: "River Surges in Sunlight",
+            aspects: [
+                { id: 0, name: "base" },
+                { id: 1, name: "Haven" },
+                { id: 2, name: "Sunshine" },
+                { id: 3, name: "Travel" }
+            ] },
+        { id: 2, name: "Shadows Flicker Like Flame",
+            aspects: [
+                { id: 0, name: "base" },
+                { id: 1, name: "Amorphous" },
+                { id: 2, name: "Dark Fire" },
+                { id: 3, name: "Foreboding" },
+                { id: 4, name: "Madness" },
+                { id: 5, name: "Reach" }
+            ] },
+        { id: 3, name: "Vital Strength of the Earth",
+            aspects: [
+                { id: 0, name: "base" },
+                { id: 1, name: "Might" },
+                { id: 2, name: "Nourishing" },
+                { id: 3, name: "Resilience" }
+            ]},
+        { id: 4, name: "A Spread of Rampant Green",
+            aspects: [
+                { id: 0, name: "base" },
+                { id: 1, name: "Regrowth" },
+                { id: 2, name: "Tangles" }
+            ]},
+        { id: 5, name: "Thunderspeaker",
+            aspects: [
+                { id: 0, name: "base" },
+                { id: 1, name: "Tactician" },
+                { id: 2, name: "Warrior" }
+            ] },
+        { id: 6, name: "Bringer of Dreams and Nightmares",
+            aspects: [
+                { id: 0, name: "base" },
+                { id: 1, name: "Enticing" },
+                { id: 2, name: "Violence" }
+            ] },
+        { id: 7, name: "Ocean's Hungry Grasp",
+            aspects: [
+                { id: 0, name: "base" },
+                { id: 1, name: "Deeps" }
+            ] },
+        { id: 8, name: "Keeper of the Forbidden Wilds",
+            aspects: [
+                { id: 0, name: "base" },
+                { id: 1, name: "Spreading Hostility" }
+            ] },
+        { id: 9, name: "Sharp Fangs Behind the Leaves",
+            aspects: [
+                { id: 0, name: "base" },
+                { id: 1, name: "Encircle" },
+                { id: 2, name: "Unconstrained" }
+            ] },
+        { id: 10, name: "Heart of the Wildfire",
+            aspects: [
+                { id: 0, name: "base" },
+                { id: 1, name: "Transforming" }
+            ] },
+        { id: 11, name: "Serpent Slumbering Beneath the Island",
+            aspects: [
+                { id: 0, name: "base" },
+                { id: 1, name: "Locus" }
+            ] },
+        { id: 12, name: "Grinning Trickster Stirs Up Trouble" },
+        { id: 13, name: "Lure of the Deep Wilderness",
+            aspects: [
+                { id: 0, name: "base" },
+                { id: 1, name: "Lair" }
+            ] },
+        { id: 14, name: "Many Minds Move as One" },
+        { id: 15, name: "Shifting Memory of Ages",
+            aspects: [
+                { id: 0, name: "base" },
+                { id: 1, name: "Intensify" },
+                { id: 2, name: "Mentor" }
+            ] },
+        { id: 16, name: "Stone's Unyielding Defiance" },
+        { id: 17, name: "Volcano Looming High" },
+        { id: 18, name: "Shroud of Silent Mist",
+            aspects: [
+                { id: 0, name: "base" },
+                { id: 1, name: "Stranded" }
+            ] },
+        { id: 19, name: "Vengeance as a Burning Plague" },
+        { id: 20, name: "Fractured Days Split the Sky" },
+        { id: 21, name: "Starlight Seeks its Form" },
+        { id: 22, name: "Downpour Drenches the World" },
+        { id: 23, name: "Finder of Paths Unseen" },
+        { id: 24, name: "Devouring Teeth Lurk Underfoot" },
+        { id: 25, name: "Eyes Watch from the Trees" },
+        { id: 26, name: "Fathomless Mud of the Swamp" },
+        { id: 27, name: "Rising Heat of Stone and Sand" },
+        { id: 28, name: "Sun-Bright Whirlwind" },
+        { id: 29, name: "Breath of Darkness Down Your Spine" },
+        { id: 30, name: "Relentless Gaze of the Sun" },
+        { id: 31, name: "Towering Roots of the Jungle" },
+        { id: 32, name: "Dances up Earthquakes" },
+        { id: 33, name: "Wandering Voice Keens Delirium" },
+        { id: 34, name: "Wounded Waters Bleeding" },
+        { id: 35, name: "Hearth Vigil" },
+        { id: 36, name: "Ember-Eyed Behemoth" }
+    ];
+
+    var excludeSpirits = [];
+    var availableSpirits = [];
+    var includeSpirits = [];
+
+    $(document).ready(function() {
+        InitializeSpiritAvailable();
+
+        $('#btnPickSpirits').on('click', function() {
+            PickSpirits();
+        });
+
+        $('#includeright').on('click', function() {
+            IncludeRight();
+        });
+    });
+
+    function IncludeRight() {
+        var selected = $('#spiritavailable').find(':selected');
+
+        var options = [];
+
+        selected.each(function() {
+            includeSpirits.push();
+
+            var id = $(this).attr('id');
+            var val = $(this).attr('value');
+            var spiritid = $(this).data('id');
+            var subid = $(this).data('subid');
+            var optionObj = { id: id, value: val, spiritid: spiritid, aspectid: subid };
+
+            options.push(optionObj);
+        });
+
+        $('#spiritinclude').html('<option>test</option>');
+    }
+
+    function InitializeSpiritAvailable() {
+        var optionMarkup = [];
+        for (var i = 0; i < spirits.length; i++) {
+            var name = spirits[i].name;
+
+            if (spirits[i].aspects !== undefined) {
+                for (var j = 0; j < spirits[i].aspects.length; j++) {
+                    optionMarkup.push('<option value="' + name + ' - ' + spirits[i].aspects[j].name + '"data-id="' + i + '" data-spiritid="' + spirits[i].id + '" data-subid="' + spirits[i].aspects[j].id + '">' + name + ' - ' + spirits[i].aspects[j].name + '</option>');
+                }
+            }
+            else {
+                optionMarkup.push('<option value="' + name + '"data-id="' + i + '" data-spiritid="' + spirits[i].id + '">' + name + '</option>');
+            }
+        }
+
+        $('#spiritavailable').html(optionMarkup);
+    }
+
+    function PickSpirits() {
+        var options = [];
+
+        $('#spiritavailable option').each(function() {
+            var spiritid = $(this).data('spiritid');
+
+            if (options.filter(o => o.spiritid == spiritid).length == 0) {
+                var id = $(this).data('id');
+                var val = $(this).attr('value');
+                var subid = $(this).data('subid');
+                var optionObj = { id: id, value: val, spiritid: spiritid, aspectid: subid };
+
+                options.push(optionObj);
+            }
+
+        });
+
+        var pickedSpirits = [];
+        var spiritcount = $('#spiritcount').val();
+        spiritcount = spiritcount < 1 ? 1 : spiritcount > 6 ? 6 : spiritcount;
+
+        for (var i = 0; i < spiritcount; i++) {
+            var rand = Math.floor(options.length * Math.random());
+            var pickedSpirit = options[rand];
+
+            var aspectMatch = aspects.filter(a => a.spiritId == pickedSpirit.id);
+            if (aspectMatch.length > 0) {
+                var aspectRand = Math.floor(aspectMatch.length * Math.random());
+                options[rand].aspectid = aspectMatch[aspectRand];
+                options[rand].value = spirits.find(s => s.id == options[rand].id).name + " - " + aspectMatch[aspectRand].name;
+            }
+
+            pickedSpirits.push(options[rand]);
+            options.splice(rand, 1);
+
+            //var spiritmatches = options.filter((spirit) => spirit.spiritid == options[rand].spiritid);
+
+            //var firstIndex = options.findIndex((item) => item.id == spiritmatches[0].id)
+
+            //options.splice(firstIndex, spiritmatches.length);
+        }
+
+        pickedSpirits.sort((x,y) => {
+            return x.id - y.id;
+        });
+        var listMarkup = [];
+        for (var i = 0; i < pickedSpirits.length; i++) {
+            listMarkup.push('<li>' + pickedSpirits[i].value + '</li>');
+        }
+
+        $('#spiritlist').html(listMarkup);
+    }
+</script>
+
+<h3>Spirit Island Picker</h3>
+
+<div class="table">
+    <div class="table-row">
+        <h4>Exclude</h4>
+        <br />
+        <div class="table-cell tc-3">
+            <select multiple id="spiritexclude">
+            </select>
+        </div>
+
+        <div class="table-cell tc-1">arrow</div>
+
+        <div class="table-cell tc-3">
+            <h4>Available</h4>
+            <br />
+            <select multiple id="spiritavailable">
+            </select>
+        </div>
+
+        <div class="table-cell tc-1">
+            <button id="includeleft"><<</button>
+
+            <br />
+
+            <button id="includeright">>></button>
+        </div>
+
+        <div class="table-cell tc-3">
+            <h4>Include</h4>
+            <br />
+            <select multiple id="spiritinclude">
+            </select>
+        </div>
+    </div>
+</div>
+
+<br />
+<br />
+<br />
+
+<input id="spiritcount" type="number" min="1" max="6" step="1" value="1" />
+
+<button id="btnPickSpirits">Pick Spirits</button>
+
+<ul id="spiritlist">
+
+</ul>

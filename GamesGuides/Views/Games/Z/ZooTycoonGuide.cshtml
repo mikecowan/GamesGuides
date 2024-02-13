@@ -1,0 +1,244 @@
+﻿@{
+    ViewData["Title"] = "Zoo Tycoon Guide";
+}
+
+<h3>Setup</h3>
+
+AE = Animal Exchange
+
+square 10 of money track
+6 enclosure tiles
+1 cube on each of the two "0" squares of cost track
+1 cube of each color on space 0 of conservation, education, and popularity
+8 prohibition tiles on top 8 squares of all zoo boards
+
+round marker on space 1
+season marker on summer
+
+-----
+
+7 rounds (years)
+4 seasons per year (except round 1: start with summer)
+
+spring
+    year starts
+    offspring
+summer
+    departures
+    new arrivals of animals
+fall
+    construction of new enclosures
+winter
+    year is evaluated
+    year ends
+
+move season marker whenever a season is complete
+
+final score:
+    lower score between conservation and popularity
+    between two cities style
+
+-----
+animal cards
+
+1 level: where it is found on the board
+2 category: primates, ungulates, carnivores, birds
+3 popularity: add directly to popularity track
+4 education: can be scored using focal points
+5 conservation: can be scored using focal points
+6 additional requirements
+7 national park cooperation: 1st/2nd to gather all national park species
+8 enclosure capacity: # of meeples that can go on an enclosure tile
+    colored background shows the required biome
+9 cost: running cost for an enclosure tile with at least 1 animal meeple
+10 social behavior of males
+    alpha: 1 male max
+    bachelor groups: 0 females -> no male limit
+    else: all combinations allowed
+11 tolerance for mixing
+    co-species: represented by tiles
+                can inhabit an enclosure alone or with a main species
+                large occupy 2 tiles, small occupy 1
+                have base values (pop, edu, cons)
+                running cost always $2
+                belong to a category/biome
+                unlike main species, always available and are not taken until building phase in the fall
+12 happiness: 4 needs, minimum cube value determines overall happiness
+                experience
+                free space
+                retreat
+                group size
+13 popularity focus: group size determines how many yellow focal points may be placed
+14 offspring dice roll: outcome is determined by happiness
+    one die per female
+    one die per pair
+    one die
+15 litter size: determines # of offspring discs to place with dice success
+16 nurture: icon means female meeple is laid down for the round
+    no offspring while laying down
+
+-----
+<h3>Spring</h3>
+1. pass start player marker clockwise
+2. Event Cards
+    discard previous event card
+    reveal new event card
+    execute effects of Breaking News immediately
+    News event cards affect the entire round (or 1 season)
+3. Offspring
+    roll dice for *each* main species that satisfy these conditions:
+        1+ male and 1+ female in the enclosure
+        happiness must be high enough to allow offspring or dice rolling
+    for each successful dice roll,
+        draw the species-specific number of offspring discs
+    each player advances popularity track:
+        base value of the most popular species that had offspring
+    nurture: decrease number of dice rolled by 1 for each female currently laid down
+    after dice are rolled and buzz is scored, reset female animals to standing position
+    next, lay down all female animals that had new offspring
+
+    offspring discs
+        take up 0 space
+        do not influence free space or group size needs
+        do not incur any costs
+        can be converted into an animal meeple at any time (then will be treated just like an animal meeple)
+        can be left in disc form indefinitely
+        can be given away in the leaving phase (if there is demand)
+        leftover offspring discs give a 1 popularity point deduction at endgame
+
+<h3>Summer</h3>
+Main species are brought into the zoo or given away
+zoos have 2 trades availalbe per round at the AE (no trading between players)
+workers can be used to obtain additional trades
+each round, the animal exchange sheet shows which Main species are "at offer" on the AE
+    and which are "in demand"
+    red filled icons: species are in demand
+    green icons: species is offered
+    green framed: species is offered, and offer includes X animals where X = at least as many are needed to meet min group size
+no money is paid or earned when animals are exchanged
+
+1. Renew Animal Exchange
+    move AE sheet by 1 position
+    same position must never been visited twice in the same game
+2. Leaving
+    in turn order, players give away animals
+    take animal meeples from quarantine or offspring discs from enclosures -> corresponding animal picture on the AE
+    each time animals from one species are given away, it counts as _one_ trade, regardless of how many
+    animals can only be given away if there is demand
+        or until this demand has been completely fulfilled by players
+    after demand is met, animals from that species cannot be given away for remainder of round
+    animal meeples from quarantine or offspring discs only
+    animal meeples or co-species tiles that are part of an enclosure cannot be given away
+3. Arrival
+    in turn order, players take 1+ animal of _one_ species
+    snake draft
+    continue until all players pass (does not specify consecutively - I think pass = done taking for the current Summer)
+    an offer can only be taken up by one player, but does not have to be taken up completely
+        if parts of the offer are left behind, another player can take remaining animals
+    to take animals, these conditions must be met:
+        available: total supply = all animals offered by the AE + animals given away during the leaving phase
+            picking up offspring: do not keep discs, immediately convert to animal meeples
+        fulfilled requirements: no req for level I species
+            II & III: only zoos where no species has happiness below light green; + additional requirements possibly
+            exception: _always_ have access to species that you already have in zoo / quarantine, regardless of current happiness
+        space: 2 options
+            existing enclosure: adjust happiness after adding
+            quarantine: for animals that cannot be placed in an existing enclosure
+                accommodates up to 2 species
+                no limit to # of animals
+                any combination of animals, ignoring restrictions
+                animals in quarantine are not part of the zoo yet; no effect on happiness, popularity, donor cards, etc.
+    place cube when taking (also giving away) onto AE illustration so other players can see action, and also track # of trades
+4. Clear the AE
+    end of summer
+    return cubes that were used for marking trades
+    any unclaimed offspring or animal meeples (previously given away) are removed from AE
+        return to stock / cloth bag
+    cubes on conservation projects and on unexpected supply, unexpected demand are NOT removed
+
+
+
+<h3>Fall</h3>
+1. enclosure tiles
+    all players receive 3 free enclosure tiles
+    revealed donor awards another free tile
+        all tied players receive free enclosure tile
+        no player gets a tile if no one meets criteria
+    free enclosure tile to player leading conservation track,
+        and all players in the same segment as that player
+        players in 3 white starting spaces (0-2) do not receive a free tile
+    gained tiles are placed on corresponding field on zoo board; biome is chosen freely until placing them in the building phase
+2. Replace Donor
+    reveal new donor card for the coming year
+3. Loans
+    players with less than $10 can take loan(s)
+    1 loan = $4 and place 1 additional prohibition tile on a free square
+    must have a free square to take a loan
+    afte taking a loan, money cannot exceed $10; i.e. taking a loan at $8 will only give you $2
+    prohibition tiles block squares, can only remove them by buying enclosure tiles
+4. Building Phase
+    new enclosures/buildings, or expand existing enclosures
+    along with arrival phase, building is the only other time when animals can enter the zoo
+    buildings and different enclosures do _not_ have to be adjacent to each other or to existing structures
+    once built, structures cannot be moved except with construction actions
+
+    Enclosures
+        to build/expand, use tiles received earlier
+        can buy more enclosure tiles for $7 each
+        purchased tiles must be placed this round, cannot be stored for later
+        for each enclosure tile purchased, may remove 1 prohibition tile
+        must be built contiguously and matching biome
+        can be occupied by 1 Main Species from Quarantine and/or 1 co-species from the AE that match the biome
+            place animeeples on the enclosure tiles
+        animeeples cannot be placed on top of co-species tiles
+        cannot have two separate enclosures with the same animal
+
+    buzz & popularity
+        popularity (*) is permanant: earn with animals, buildings, staff actions, and education
+        buzz ( :) ) resets each year: gain with event cards, animal offspring, popularity of main species
+        buzz does not unlock the asian elephant, giant panda, or commercial buildings; need fixed popularity for that
+
+    new enclosure checklist
+        1. min requirements
+            placement rules: social behavior of males, max animals per tile, tolerance of main species (if adding co-species)
+            experience
+            free space
+            retreats
+            group size
+        2. add popularity base value of all new animal species (including co-species)
+        3. for the new main species with highest popularity base value - score with cylinders as buzz
+        4. add new running costs
+        5. focal points
+
+    Focal Points
+        $2 each
+        placed on enclosure tiles
+        limit 1 focal point per enclosure tile
+        focal point effects are not fixed; strength of its effects adjust to updates to game state
+        may only be built if they affect the chosen position (exception: retreats)
+        4 types:
+            popularity (yellow): 1 popularity point, max number is determined by the number unlocked by the group size
+            education (blue): score the entire edu level of an enclosure on the edu track
+            conservation (green): 1 conservation point, max number is determined by total conservation value of the enclosure
+            retreat (brown): +1 retreat for the species in the enclosure
+
+    Buildings
+        effects are not fixed (similar to focal points)
+        may only be built if they have an effect at the chosen position
+        enclosures/buildings only count once toward each building effect
+        each building in the zoo must be unique
+        2 categories:
+            focal buildings
+                parks: 1 popularity per adjacent building, no proc off other parks, max 4 popularity points
+                education booths: each combines 2 biomes; 2 edu points for each adjacent enclosure that matches a biome and has at least 1 species with an education value; max 8 edu points
+                conservation centers: 1 conservation point per adjacent enclosure containing at least 1 species with a conservation value; max 4 conservation points
+            commercial buildings: can be built in zoos with popularity 10 or higher
+                food booths: $3 revenue
+                zoo shops: $5 revenue
+                each is assigned to 1 of 3 biomes
+
+
+<h3>Winter</h3>
+
+
+

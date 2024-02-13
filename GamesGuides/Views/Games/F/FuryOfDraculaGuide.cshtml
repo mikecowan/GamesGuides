@@ -1,0 +1,284 @@
+﻿@{
+    ViewData["Title"] = "Fury of Dracula Guide";
+}
+
+
+<h3>Clarifications</h3>
+<ul>
+    <li>Vampires ignore pride, can escape in round 4 at the earliest</li>
+    <li>Seduction has priority over Stake, and should read "Play when a hunter performs a search action and before any hunter cards are resolved"</li>
+    <li>Sister Agatha only applies to combat with Dracula - not with a vampire</li>
+    <li>Do not reveal location cards if a hunter moves through it by using a train ticket</li>
+    <li>Encounter cards are discarded after resolved</li>
+    <li>Dracula does not place an encounter on opening location</li>
+    <li>Dracula cannot use a power card, a sea location, or Castle Dracula for opening location</li>
+    <li>
+        Castle Dracula:
+        <ul>
+            <li>recover 5 damage</li>
+            <li>prevents supply & reserve ticket actions</li>
+        </ul>
+    </li>
+    <li>Lairs: can clear anytime, must clear if 0 encounters</li>
+    <li>
+        Fangs:
+        <ul>
+            <li>Recover 2 damage</li>
+            <li>if night & mesmerized: influence++, bite & remove</li>
+            <li>if day or not mesermized: deal 2 damage</li>
+        </ul>
+    </li>
+    <li>
+        Heavenly Host:
+        <ul>
+            <li>if Fangs: hunter is bitten & removed</li>
+            <li>if not Fangs: vampire takes 4 damage</li>
+            <li>Discard Heavenly host in either case</li>
+        </ul>
+    </li>
+</ul>
+
+
+<h3>Influence</h3>
+<ul>
+    <li>any movement with 3 despair tokens: +3</li>
+    <li>
+        mature a vampire
+        <ul>
+            <li>New: 3</li>
+            <li>Reckless: 4</li>
+            <li>Aristocratic: 4</li>
+        </ul>
+    </li>
+    <li>defeat a hunter (D+2)</li>
+    <li>
+        resolve fangs in combat
+        <ul>
+            <li>Reckless Vampire: 1 if during an ambush</li>
+            <li>Mesmerized at night: 1</li>
+            <li>
+                Note that +2 influence would be possible only if
+                <ol>
+                    <li>hunter moved at night for an ambush</li>
+                    <li>hunter is mesmerized</li>
+                    <li>fangs is resolved</li>
+                </ol>
+            </li>
+        </ul>
+    </li>
+</ul>
+    
+<h3>Token Removal</h3>
+<ul>
+    <li>
+        Dawn (end)
+        <ul>
+            <li>all Heavenly Host tokens</li>
+        </ul>
+    </li>
+    <li>
+        Dusk (end)
+        <ul>
+            <li>1 fog token from every city</li>
+            <li>1 storm token</li>
+            <li>1 roadblock token</li>
+        </ul>
+    </li>
+</ul>
+
+
+<h3>Tokens</h3>
+<ul>
+    <li>
+        Bats
+        <ul>
+            <li>Dracula moves & delays the hunter for their next action</li>
+            <li>can be done at night</li>
+            <li>follow other movement restrictions (roadblocks, fog, etc.)</li>
+        </ul>
+    </li>
+    <li>
+        Fog
+        <ul>
+            <li>Dracula can choose to skip combat</li>
+            <li>Prevents hunters from entering/leaving a city</li>
+            <li>Prevents search action</li>
+            <li>End of dusk: Dracula removes one fog token from each city on the board that has at least one fog token</li>
+        </ul>
+    </li>
+    <li>
+        Storm
+        <ul>
+            <li>Prevents hunters from entering</li>
+            <li>End of dusk: Dracula removes one</li>
+        </ul>
+    </li>
+    <li>
+        Heavenly Host
+        <ul>
+            <li>prevents Dracula from entering, or passing through with Wolf Form or Escape as Bat</li>
+            <li>prevents Feed, Dark Call, and Hide in the case that Dracula is in the city</li>
+            <li>Remove all Heavenly Host tokens at end of next dawn</li>
+        </ul>
+    </li>
+    <li>
+        Consecrated Ground
+        <ul>
+            <li>prevents Dracula from entering, or passing through with Wolf Form or Escape as Bat</li>
+            <li>prevents Feed, Dark Call, and Hide in the case that Dracula is in the city</li>
+            <li>stays on board until discarded by a card effect</li>
+        </ul>
+    </li>
+    <li>
+        Roadblock
+        <ul>
+            <li>End of dusk: remove one</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Defeated</h3>
+<ol>
+    <li>influence += despair + 2</li>
+    <li>next dawn: move to nearest hospital</li>
+    <li>Discard all item and event cards</li>
+</ol>
+
+<h3>Hospital</h3>
+<ul>
+    <li>Supply: Draw 1 item card, no events</li>
+    <li>Move: move to attached city</li>
+    <li>
+        Not actually in the city for game rule purposes
+        <ul>
+            <li>combat</li>
+            <li>encounters</li>
+            <li>events</li>
+            <li>trade</li>
+            <li>Psychic Bond</li>
+            <li>Blood Transfusion</li>
+            <li>Hypnosis</li>
+            <li>hideout/lair reveals</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Weakened</h3>
+<p>Must keep one event and one item revealed, but not during combat</p>
+
+<h3>Dracula Power Cards</h3>
+<ul>
+    <li>
+        Dark Call
+        <ul>
+            <li>No card limit</li>
+            <li>No encounter</li>
+            <li>Cannot use at sea</li>
+            <li>Blocked by Consecrated Ground & Heavenly Host</li>
+        </ul>
+    </li>
+    <li>
+        Feed
+        <ul>
+            <li>No encounter</li>
+            <li>Cannot use at sea</li>
+            <li>Blocked by </li>
+        </ul>
+    </li>
+    <li>
+        Hide
+        <ul>
+            <li>Reveal when associated location is revealed</li>
+            <li>*Can* be used with Wolf Form</li>
+            <li>Cannot mature encounters</li>
+            <li>Can ambush with cards from location and/or Hide</li>
+            <li>When associated location is removed, encounters on Hide cannot be searched or used to ambush</li>
+            <li>Cannot use at sea</li>
+        </ul>
+    </li>
+    <li>
+        Misdirect
+        <ul>
+            <li>Cannot clear Castle Dracula, power cards, or location associated with Hide</li>
+        </ul>
+    </li>
+    <li>
+        Wolf Form
+        <ul>
+            <li>*Can* be used with Hide</li>
+            <li>Cannot move through Consecrated Ground & Heavenly Host</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Sea</h3>    
+<ul>
+    <li>Dracula does not reveal sea card if hunters enter the location</li>
+    <li>port to sea: 2 damage</li>
+    <li>sea to sea: 1 damage</li>
+    <li>Cannot play Feed, Dark Call, or Hide at sea</li>
+    <li>*Can* play Misdirect or Wolf Form (to enter a port)</li>
+</ul>
+
+<h3>Escape Limits</h3>
+
+<div class="table table-sm">
+    <div class="table-row">
+        <div class="table-cell tc-5">Despair Tokens</div>
+        <div class="table-cell tc-5">Earliest Escape</div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-5">0</div>
+        <div class="table-cell tc-5">2</div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-5">1</div>
+        <div class="table-cell tc-5">3</div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-5">2</div>
+        <div class="table-cell tc-5">4</div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-5">3</div>
+        <div class="table-cell tc-5">5</div>
+    </div>
+</div>
+
+<br />
+
+<h3>Train Tokens</h3>
+
+<div class="table table-sm">
+    <div class="table-row">
+        <div class="table-cell tc-2">count</div>
+        <div class="table-cell tc-2">white</div>
+        <div class="table-cell tc-2">yellow</div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-2">3</div>
+        <div class="table-cell tc-2">1</div>
+        <div class="table-cell tc-2">-</div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-2">2</div>
+        <div class="table-cell tc-2">1</div>
+        <div class="table-cell tc-2">1</div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-2">3</div>
+        <div class="table-cell tc-2">2</div>
+        <div class="table-cell tc-2">1</div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-2">4</div>
+        <div class="table-cell tc-2">2</div>
+        <div class="table-cell tc-2">2</div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-2">4</div>
+        <div class="table-cell tc-2">3</div>
+        <div class="table-cell tc-2">2</div>
+    </div>
+</div>
+

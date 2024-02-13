@@ -1,0 +1,749 @@
+﻿@{
+    ViewData["Title"] = "Keyflower Tile Summary";
+}
+
+<style>
+.table-row.spacer {
+    padding: .5em;
+}
+
+.table-row.spacer-1 {
+    padding: 1em;
+}
+
+.tile {
+    width: 120px;
+}
+
+.boattable .table .table-cell {
+    padding-bottom: 2em;
+}
+</style>
+
+<h3>Summer Boats</h3>
+
+<div class="table boattable" id="">
+    <div class="table-row">
+        <!-- left column -->
+        <div class="table-cell tc-6">
+            <div class="table">
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/boat1a.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>Boat 1a</h4>
+                        <ul class="list-sm">
+                            <li>+2 workers at season end, <i>after</i> meeples from tile market go to bag</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/boat2a.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>Boat 2a</h4>
+                        <ul class="list-sm">
+                            <li>May ignore roads for transport and tile placement</li>
+                            <li>Sea Bastion still requires connected roads</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/boat3a.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>Boat 3a</h4>
+                        <ul class="list-sm">
+                            <li>Wood/Stone/Iron can substitute any other resource for upgrading</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/boat4a.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>Boat 4a</h4>
+                        <ul class="list-sm">
+                            <li>When bidding: may choose not to match non-green</li>
+                            <li>the workers used for bidding must still match each other</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/boat5a.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>Boat 5a</h4>
+                        <ul class="list-sm">
+                            <li>Different types of animals may move into and share a field, they still breed</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/boat6a.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>Boat 6a</h4>
+                        <ul class="list-sm">
+                            <li>+2 wheat at season end</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/boat7a.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>Boat 7a</h4>
+                        <ul class="list-sm">
+                            <li>When obtaining animals and resources from sources outside your own village, may ignore the home tile rule</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- right column -->
+        <div class="table-cell tc-6">
+            <div class="table">
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/boat1b.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>Boat 1b</h4>
+                        <ul class="list-sm">
+                            <li>+1 green meeple at season end</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/boat2b.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>Boat 2b</h4>
+                        <ul class="list-sm">
+                            <li>Transport and upgrade capacity are doubled</li>
+                            <li>Keyflower and Ianvincible II boats are also doubled</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/boat3b.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>Boat 3b</h4>
+                        <ul class="list-sm">
+                            <li>Wood/Stone/Iron can substitute any other resource for end game scoring</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/boat4b.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>Boat 4b</h4>
+                        <ul class="list-sm">
+                            <li>When activating a color-locked tile: may choose not to match color</li>
+                            <li>With 2+ workers they need not match each other</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/boat5b.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>Boat 5b</h4>
+                        <ul class="list-sm">
+                            <li>For end game scoring, wheat may count as any type of resource and vice versa</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/boat6b.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>Boat 6b</h4>
+                        <ul class="list-sm">
+                            <li>+Pig and +Sheep at season end, added to home tile <i>before</i> breeding</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/boat7b.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>Boat 7b</h4>
+                        <ul class="list-sm">
+                            <li>+Wood, +Stone, +Iron at season end</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*<div class="table table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            1a
+        </div>
+        <div class="table-cell tc-11">
+            +2 workers at season end, <i>after</i> meeples from tile market go to bag
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            1b
+        </div>
+        <div class="table-cell tc-11">
+            +1 green meeple at season end
+        </div>
+    </div>
+
+    <div class="table-row spacer"><div class="table-cell tc-12"></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            2a
+        </div>
+        <div class="table-cell tc-11">
+            May ignore roads for transport and tile placement; Sea Bastion still requires connected roads
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            2b
+        </div>
+        <div class="table-cell tc-11">
+            Transport and upgrade capacity is doubled; Keyflower and Ianvincible II boats are also doubled
+        </div>
+    </div>
+
+    <div class="table-row spacer"><div class="table-cell tc-12"></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            3a
+        </div>
+        <div class="table-cell tc-11">
+            Wood/Stone/Iron can substitute any other resource for upgrading
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            3b
+        </div>
+        <div class="table-cell tc-11">
+            Wood/Stone/Iron can substitute any other resource for end game scoring
+        </div>
+    </div>
+
+    <div class="table-row spacer"><div class="table-cell tc-12"></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            4a
+        </div>
+        <div class="table-cell tc-11">
+            When bidding: may choose not to match non-green; the workers you use for bidding must still match each other
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            4b
+        </div>
+        <div class="table-cell tc-11">
+            When activating a color-locked tile: may choose not to match color, with 2+ workers they need not match each other
+        </div>
+    </div>
+
+    <div class="table-row spacer"><div class="table-cell tc-12"></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            5a
+        </div>
+        <div class="table-cell tc-11">
+            Different types of animals may move into and share a field, they still breed
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            5b
+        </div>
+        <div class="table-cell tc-11">
+            For end game scoring, wheat may count as any type of resource and vice versa
+        </div>
+    </div>
+
+    <div class="table-row spacer"><div class="table-cell tc-12"></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            6a
+        </div>
+        <div class="table-cell tc-11">
+            +2 wheat at season end
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            6b
+        </div>
+        <div class="table-cell tc-11">
+            +Pig and +Sheep at season end, added to home tile <i>before</i> breeding
+        </div>
+    </div>
+
+    <div class="table-row spacer"><div class="table-cell tc-12"></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            7a
+        </div>
+        <div class="table-cell tc-11">
+            When obtaining animals and resources from sources outside your own village, may ignore the home tile rule
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            7b
+        </div>
+        <div class="table-cell tc-11">
+            +Wood, +Stone, +Iron at season end
+        </div>
+    </div>
+</div>
+*@
+<br /><br /><br /><br />
+
+<h3>Winter Boats</h3>
+
+<div class="table boattable" id="">
+    <div class="table-row">
+        <!-- left column -->
+        <div class="table-cell tc-6">
+            <div class="table">
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/keyflower.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>Keyflower</h4>
+                        <ul class="list-sm">
+                            <li>1vp for each transport capacity</li>
+                            <li>Can be doubled with 2b</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/seabastion.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>Sea Bastion</h4>
+                        <ul class="list-sm">
+                            <li>1vp for each <i>tile</i> connected by roads as part of a loop</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/seabreese.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>Sea Breese</h4>
+                        <ul class="list-sm">
+                            <li>Max 32 points</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/flipper.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>Flipper</h4>
+                        <ul class="list-sm">
+                            <li>Upgrade a village tile without paying</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/ianvincible.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>Ianvincible</h4>
+                        <ul class="list-sm">
+                            <li>5vp</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/whitewind.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>White Wind</h4>
+                        <ul class="list-sm">
+                            <li>1vp per worker (that is not already part of scoring)</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- right column -->
+        <div class="table-cell tc-6">
+            <div class="table">
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/keyflower2.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>Keyflower II</h4>
+                        <ul class="list-sm">
+                            <li>+3 gold to home tile</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/seabastion2.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>Sea Bastion II</h4>
+                        <ul class="list-sm">
+                            <li>End of Fall: choose a boat that is not in the game to replace Sea Bastion II</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/seabreese2.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>Sea Breese II</h4>
+                        <ul class="list-sm">
+                            <li>2vp per winter tile, not counting turn-order and boat tiles</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/flipper2.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>Flipper II</h4>
+                        <ul class="list-sm">
+                            <li>Extend an upgraded tile without paying</li>
+                            <li>note: winter tiles are never upgraded</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/ianvincible2.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>Ianvincible II</h4>
+                        <ul class="list-sm">
+                            <li>2vp per upgrade icon (including cabins)</li>
+                            <li>can be doubled with 2b</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/Keyflower/whitewind2.png" class="tile" />
+                    </div>
+                    <div class="table-cell tc-8">
+                        <h4>White Wind II</h4>
+                        <ul class="list-sm">
+                            <li>10vp (instead of 7) for each completed contract</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@*<div class="table table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Keyflower
+        </div>
+        <div class="table-cell tc-10">
+            1vp for each transport capacity; can be doubled with 2b
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Keyflower II
+        </div>
+        <div class="table-cell tc-10">
+            +3 gold to home tile
+        </div>
+    </div>
+
+    <div class="table-row spacer"><div class="table-cell tc-12"></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Sea Bastion
+        </div>
+        <div class="table-cell tc-10">
+            1vp for each <i>tile</i> connected by roads as part of a loop
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Sea Bastion II
+        </div>
+        <div class="table-cell tc-10">
+            At end of Fall, choose a boat that is not in the game to replace Sea Bastion II
+        </div>
+    </div>
+
+    <div class="table-row spacer"><div class="table-cell tc-12"></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Sea Breese
+        </div>
+        <div class="table-cell tc-10">
+            Max 32 points
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Sea Breese II
+        </div>
+        <div class="table-cell tc-10">
+            2vp per winter tile, not counting turn-order and boat tiles
+        </div>
+    </div>
+
+    <div class="table-row spacer"><div class="table-cell tc-12"></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Flipper
+        </div>
+        <div class="table-cell tc-10">
+            Upgrade a village tile without paying
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Flipper II
+        </div>
+        <div class="table-cell tc-10">
+            Extend an upgraded tile without paying, note: winter tiles are never upgraded
+        </div>
+    </div>
+
+    <div class="table-row spacer"><div class="table-cell tc-12"></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Ianvincible
+        </div>
+        <div class="table-cell tc-10">
+            5vp
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Ianvincible II
+        </div>
+        <div class="table-cell tc-10">
+            2vp per upgrade icon (including cabins); can be doubled with 2b
+        </div>
+    </div>
+
+    <div class="table-row spacer"><div class="table-cell tc-12"></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            White Wind
+        </div>
+        <div class="table-cell tc-10">
+            1vp per worker (that is not already part of scoring)
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            White Wind II
+        </div>
+        <div class="table-cell tc-10">
+            10vp (instead of 7) for each completed contract
+        </div>
+    </div>
+</div>
+*@
+<br />
+<br />
+
+<h3>Village Tiles</h3>
+<div class="table table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Barn<br />Blacksmith<br />Stone Yard<br />Timber Yard
+        </div>
+        <div class="table-cell tc-10">
+            Resources must be <i>on</i> these tiles to score
+        </div>
+    </div>
+
+    <div class="table-row spacer-1"><div class="table-cell tc-12"></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Craftsman's Guild
+        </div>
+        <div class="table-cell tc-10">
+            Green meeples don't count
+        </div>
+    </div>
+
+    <div class="table-row spacer-1"><div class="table-cell tc-12"></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Developer
+        </div>
+        <div class="table-cell tc-10">
+            Score X points for each upgrade icon (including cabins) on adjacent tiles
+        </div>
+    </div>
+
+    <div class="table-row spacer-1"><div class="table-cell tc-12"></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Hillside
+        </div>
+        <div class="table-cell tc-10">
+            1vp for every tile that the field on the Hillside extends to
+        </div>
+    </div>
+
+    <div class="table-row spacer-1"><div class="table-cell tc-12"></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Hiring Fair
+        </div>
+        <div class="table-cell tc-10">
+            Draw new tiles before putting payment in bag
+        </div>
+    </div>
+
+    <div class="table-row spacer-1"><div class="table-cell tc-12"></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Sorcerer
+        </div>
+        <div class="table-cell tc-10">
+            Take the action of another tile in the owner's village - adjacent or any - depending on upgrade
+        </div>
+    </div>
+
+    <div class="table-row spacer-1"><div class="table-cell tc-12"></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Sheep Fold
+        </div>
+        <div class="table-cell tc-10">
+            Walled center area does not make an extra field
+        </div>
+    </div>
+
+    <div class="table-row spacer-1"><div class="table-cell tc-12"></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Sheep Shelter
+        </div>
+        <div class="table-cell tc-10">
+            Each sheep in this field may be allocated to the sheep shelter.
+            <br />
+            Each allocated sheep scores X points at the end of the game.
+        </div>
+    </div>
+
+    <div class="table-row spacer-1"><div class="table-cell tc-12"></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Tavern
+        </div>
+        <div class="table-cell tc-10">
+            Put meeple in bag before drawing reward meeples
+        </div>
+    </div>
+</div>

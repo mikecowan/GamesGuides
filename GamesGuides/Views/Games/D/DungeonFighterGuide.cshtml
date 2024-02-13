@@ -1,0 +1,319 @@
+﻿@{
+    ViewData["Title"] = "Dungeon Fighter Guide";
+}
+
+<style>
+footer {
+    margin-bottom: 0;
+}
+</style>
+
+<h3>Setup</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>$2 and 1 white die</li>
+                <li>Build dungeon
+                    <ul>
+                        <li>3 dungeon cards: 2 levels then 1 boss</li>
+                        <li>Boss cards are double sided: boss vs normal</li>
+                        <li>Draw 1 boss card</li>
+                        <li>Shuffle un-selected boss cards in with others, dungeon side up</li>
+                        <li>Draw 2 dungeon cards</li>
+                    </ul>
+                </li>
+@*                <li>Draw a random boss monster, face down</li>
+                <li>Arrange the 3 cards in a line to create the dungeon</li>
+                <li>Place hero party marker on entry space of dungeon card #1</li>
+                <li>Place monster cards of level N on level N of the tower (descending)</li>*@
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            Sort monster cards by number, build monster deck according to table
+
+            <div class="table table-padding-1">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        &nbsp;
+                    </div>
+                    <div class="table-cell tc-2">
+                        I
+                    </div>
+                    <div class="table-cell tc-2">
+                        II
+                    </div>
+                    <div class="table-cell tc-2">
+                        III
+                    </div>
+                    <div class="table-cell tc-2">
+                        IV
+                    </div>
+                </div>
+
+                <div class="table-row"">
+                    <div class="table-cell tc-2">
+                        Easy
+                    </div>
+                    <div class="table-cell tc-2">
+                        4
+                    </div>
+                    <div class="table-cell tc-2">
+                        4
+                    </div>
+                    <div class="table-cell tc-2">
+                        4
+                    </div>
+                    <div class="table-cell tc-2">
+                        2
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        Norm
+                    </div>
+                    <div class="table-cell tc-2">
+                        3
+                    </div>
+                    <div class="table-cell tc-2">
+                        3
+                    </div>
+                    <div class="table-cell tc-2">
+                        3
+                    </div>
+                    <div class="table-cell tc-2">
+                        5
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        Hard
+                    </div>
+                    <div class="table-cell tc-2">
+                        2
+                    </div>
+                    <div class="table-cell tc-2">
+                        2
+                    </div>
+                    <div class="table-cell tc-2">
+                        2
+                    </div>
+                    <div class="table-cell tc-2">
+                        8
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br /><br />
+
+<hr />
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Phases</h3>
+            <ol>
+                <li>Movement</li>
+                <li>Encounter and fighting</li>
+                <li>Clean-up</li>
+            </ol>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>1. Movement Phase</h3>
+            <ul>
+                @*<li>Round 1: move to entry space of first dungeon card</li>*@
+                @*<li>Follow corridors in direction of arrows</li>*@
+                <li>Follow arrows</li>
+                @*<li>Move from final room on card to the entry room of next card</li>*@
+            </ul>
+        </div>
+    </div>
+</div>
+
+<br /><br />
+
+<h3>2. Encounter and Fighting Phase</h3>
+<ul>
+    <li>Every room triggers an encounter</li>
+    @*<li>Draw 1 monster from highest available stack</li>*@
+    <li>Set monster health, add gold coins</li>
+</ul>
+
+<h4>Fighting</h4>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Throw a die, must bounce on table first</li>
+                <li>Player picks color for white dice</li>
+                <li>Dice outcomes
+                    <ul>
+                        <li>Table or bones: miss</li>
+                        <li>Dividing line: majority section, ties to lower value</li>
+                        <li>Bullseye + icon: instant kill</li>
+                    </ul>
+                </li>
+                @*<li>All 3 colored dice are available at start of each fight</li>*@
+                @*<li>In turn, player picks a colored die, unavailable to next player</li>*@
+@*                <li>Instant kill: hit bullseye with hero icon showing</li>
+                <li>Dice must bounce on table before board at least once</li>
+                <li>Die ends touching table or bones: miss</li>
+                <li>Die ends on a dividing line: majority section, lower if tied</li>
+*@                <li>Hero miss: take damage according to monster card
+                    <ul>
+                        <li>Skip future throws if hp = 0 - "faint"</li>
+                    </ul>
+                </li>
+                @*<li>White dice are one-shot throws, players pick its color</li>*@
+                @*<li>Each colored die may only be used once per fight</li>*@
+                <li>Monster still alive after using all 3 hero dice:
+                    <ul>
+                        <li>Use a white die, or</li>
+                        <li>Flip token to defeat side
+                            <ul>
+                                <li>All heroes take X (unavoidable) damage</li>
+                                <li>Reset hero dice</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Fight Results</h4>
+            <ul>
+                <li>Monster is defeated: proceed to clean-up phase
+                    <ul>
+                        <li>+1 white die per remaining hero die</li>
+                        <li>No bonus if token on defeat side</li>
+                    </ul>
+                </li>
+                <li>All heroes are unconscious: loss of game</li>
+            </ul>
+
+            <h4>Special Abilities</h4>
+            <ul>
+                <li>Hero abilities with target symbol only trigger on hits</li>
+                @*<li>Hero abilities in general trigger even on a miss</li>*@
+                <li>Special abilities work against final boss too</li>
+                <li>Combine all depicted weapon/monster/room abilities</li>
+                <li>Duplicate icon does not double the effect</li>
+                <li>Multiple damage bonuses: multiply before adding</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<br /><br />
+
+<h3>3. Clean-up Phase</h3>
+<p>In any order:</p>
+<ul>
+    @*<li>Give 3 hero dice to next player in turn order</li>*@
+    @*<li>Add gold from slain monster to treasury</li>*@
+    <li>Add a scar token to fainted heroes
+        <ul>
+            <li>3 scar tokens <span class="arrow"></span> flip hero card, eliminated from game</li>
+        </ul>
+    </li>
+    <li>Special abilities that activate during clean-up (e.g. seduction)</li>
+    <li>Flip leader token to undefeated side</li>
+    @*<li>Discard any white dice that were used</li>*@
+    @*<li>Monster card to discard pile (unless a special ability says otherwise)</li>*@
+    <li>Heroes can swap any equipment they are carrying</li>
+    <li>Use special rooms (shop, fountain, etc.)</li>
+</ul>
+
+<hr />
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Special Rooms</h4>
+            <ul>
+                <li>Shops
+                    <ul>
+                        <li>draw N+3 equipment cards</li>
+                        <li>$2 = 1 white die</li>
+                        <li>$1 = all heroes heal 1</li>
+                    </ul>
+                </li>
+                <li>Healing fountain: all heroes heal to full</li>
+                <li>Treasure chambers: receive the room's reward</li>
+                <li>Dangerous rooms: fight monster with extra requirement</li>
+                <li><u>Temples</u>: first roll is elemental die</li>
+            </ul>
+
+            <h3>Final Boss</h4>
+            <ul>
+                <li>After completing final room, the next encounter is final boss</li>
+                <li>Cannot take option B when running out of hero dice
+                    <ul>
+                        <li>limited to 3 hero dice + white dice in treasure chest</li>
+                        <li>lose game if run out of dice</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Items/Armor/Weapons</h4>
+            <ul>
+                <li>The carry limit is on character sheet</li>
+                <li>Discard something immediately if exceeding limit</li>
+                <li>"1x" means 1-time use, can be used at any time</li>
+            </ul>
+
+            <h3>Impossible Situations</h4>
+            <ul>
+                <li>All heroes take 1 damage</li>
+                <li>Put monster card to bottom of its stack</li>
+                <li>Redraw from same stack (next stack if it was the only card)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Expansions</h3>
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Power deck</h4>
+            <ul>
+                <li>Any icon showing, hit or miss <span class="arrow"></span> may take 2XP</li>
+                <li>At shop, draw 3 power cards</li>
+                <li>All power cards cost 1XP</li>
+                <li>Limit 3 power cards per hero</li>
+                <li>Activate on turn by paying XP cost</li>
+            </ul>
+            
+            <h4>Elemental Dice</h4>
+            <ul>
+                <li>Fire: +X damage, even on miss</li>
+                <li>Water: throw all 3, all hit or all miss <span class="arrow"></span> 1 icon</li>
+                <li>Earth: gain 3 gold</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Abilities</h4>
+            <ul>
+                <li>Burn: Before each roll, discard 1 and suffer 1 damage</li>
+                <li>Oxygen: Before each roll, discard 1 and faint if 0 remain</li>
+                <li>Flying: Lift board with square, place X parts under each bone</li>
+                <li>Misty: Flip mist token, face up <span class="arrow"></span> monster/hero suffers -3 damage</li>
+                <li>Slow: Place the 2-damage tokens in board holes</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+

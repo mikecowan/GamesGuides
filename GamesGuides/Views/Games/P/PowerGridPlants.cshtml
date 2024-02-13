@@ -1,0 +1,26 @@
+﻿@model GamesGuides.Data.PowerGridPlantsData
+@{
+    ViewData["Title"] = "Power Grid Plant Data";
+}
+
+<div class="table table-sm center">
+    <div class="table-row">
+        <div class="table-cell tc-2">Num</div>
+        <div class="table-cell tc-2">Type</div>
+        <div class="table-cell tc-2">Amt</div>
+        <div class="table-cell tc-2">Power</div>
+        <div class="table-cell tc-2">Efficiency</div>
+    </div>
+
+    @foreach (var plant in @Model.Plants)
+    {
+        <partial name="../Templates/_TableRow" model='new TableRow { Cells = new List<TableCell>() {
+            new TableCell { Size = 2, StringContent = $"{plant.num}" },
+            new TableCell { Size = 2, StringContent = $"{plant.type}" },
+            new TableCell { Size = 2, StringContent = $"{plant.amt}" },
+            new TableCell { Size = 2, StringContent = $"{plant.power}" },
+            new TableCell { Size = 2, StringContent = $"{plant.efficiency}" },
+        }}' />
+    }
+</div>
+

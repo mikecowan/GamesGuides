@@ -1,0 +1,196 @@
+﻿@{
+    ViewData["Title"] = "Alien Frontiers Asteroid Cards";
+}
+
+<style>
+#cardtable .table-row {
+    padding: 1em;
+}
+
+.table-cell:first-child {
+    font-weight: bold;
+}
+
+.complex .table-cell:first-child {
+    background-color: lightblue;
+}
+
+.generator {
+    display: inline-block;
+    text-align: center;
+    border-radius: 15px;
+    width: 20px;
+    padding: 2px;
+    color: white;
+    font-weight: bold;
+    outline: 1px solid black;
+}
+
+.orange {
+    background-color: #ED5822;
+}
+
+.green {
+    background-color: #8BC042;
+}
+
+.purple {
+    background-color: #6B2B84;
+}
+
+.icon {
+    width: 25px;
+    vertical-align:middle;
+}
+
+.header .table-cell {
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+}
+</style>
+
+<h3>Asteroid Cards</h3>
+
+<div class="table table-100" id="cardtable">
+    <div class="table-row header">
+        <div class="table-cell tc-3">Name</div>
+        <div class="table-cell tc-2">Docking Cost</div>
+        <div class="table-cell tc-7">Effect</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Abandoned Ship (2)</div>
+        <div class="table-cell tc-2"><img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /> <img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /> <img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /></div>
+        <div class="table-cell tc-7"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> move <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /> from stock to <img src="~/lib/Images/AlienFrontiers/maintenance.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Alien Beacon</div>
+        <div class="table-cell tc-2"><img src="~/lib/Images/AlienFrontiers/die3.png" class="icon" /> <img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /></div>
+        <div class="table-cell tc-7">1 vp</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Alien Satellite</div>
+        <div class="table-cell tc-2"><img src="~/lib/Images/AlienFrontiers/die4.png" class="icon" /> <img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /></div>
+        <div class="table-cell tc-7">1 vp</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Cargo Salvage</div>
+        <div class="table-cell tc-2"><img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /></div>
+        <div class="table-cell tc-7">Roll <img src="~/lib/Images/AlienFrontiers/asteroid.png" class="icon" /> for <img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> or <img src="~/lib/Images/AlienFrontiers/ore.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Cometary Fragment</div>
+        <div class="table-cell tc-2"><img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /> <img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /></div>
+        <div class="table-cell tc-7">Roll <img src="~/lib/Images/AlienFrontiers/asteroid.png" class="icon" /> for <img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> or <img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Composite Asteroid (3)</div>
+        <div class="table-cell tc-2"><img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /></div>
+        <div class="table-cell tc-7"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/ore.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Damaged Ship (2)</div>
+        <div class="table-cell tc-2"><img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /> <img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /></div>
+        <div class="table-cell tc-7">Buy a new <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Heavy Metals Asteroid (3)</div>
+        <div class="table-cell tc-2"><img src="~/lib/Images/AlienFrontiers/die4.png" class="icon" /> <img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /></div>
+        <div class="table-cell tc-7"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> <img src="~/lib/Images/AlienFrontiers/ore.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/ore.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/ore.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Iron Asteroid (3)</div>
+        <div class="table-cell tc-2"><img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /></div>
+        <div class="table-cell tc-7"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> <img src="~/lib/Images/AlienFrontiers/ore.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/ore.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Message Buoy</div>
+        <div class="table-cell tc-2"><img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /> <img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /></div>
+        <div class="table-cell tc-7">Deal extra Agenda to each player</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Micro-Singularity</div>
+        <div class="table-cell tc-2"><img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /> <img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /></div>
+        <div class="table-cell tc-7">Clear Outer Belt board</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Orbital Debris</div>
+        <div class="table-cell tc-2"><img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /> <img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /></div>
+        <div class="table-cell tc-7">Roll <img src="~/lib/Images/AlienFrontiers/asteroid.png" class="icon" /> for <img src="~/lib/Images/AlienFrontiers/ore.png" class="icon" /> or <img src="~/lib/Images/AlienFrontiers/card.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Raiders' Rock</div>
+        <div class="table-cell tc-2"><img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /> = <img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /></div>
+        <div class="table-cell tc-7">Steal <img src="~/lib/Images/AlienFrontiers/resource.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/resource.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/resource.png" class="icon" /> or <img src="~/lib/Images/AlienFrontiers/card.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Ship's Lifeboat</div>
+        <div class="table-cell tc-2"><img src="~/lib/Images/AlienFrontiers/dieany.png" class="icon" /> <img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /></div>
+        <div class="table-cell tc-7"><img src="~/lib/Images/AlienFrontiers/hubmove.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/hubmove.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/hubmove.png" class="icon" /> at <img src="~/lib/Images/AlienFrontiers/hub.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Ship in Distress (2)</div>
+        <div class="table-cell tc-2"><img src="~/lib/Images/AlienFrontiers/die2.png" class="icon" /> <img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /></div>
+        <div class="table-cell tc-7"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> draw <img src="~/lib/Images/AlienFrontiers/card.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/card.png" class="icon" />, keep 1</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Tactical Meteoroids</div>
+        <div class="table-cell tc-2"><img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /> <img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /></div>
+        <div class="table-cell tc-7">Move any/all <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /> to <img src="~/lib/Images/AlienFrontiers/maintenance.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Terraforming Module (2)</div>
+        <div class="table-cell tc-2"><img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /> = <img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /></div>
+        <div class="table-cell tc-7"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> and return <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /> <span class="arrow"></span> place <img src="~/lib/Images/AlienFrontiers/colony.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Orbital Pilot</div>
+        <div class="table-cell tc-2"><img src="~/lib/Images/AlienFrontiers/die2.png" class="icon" /> <img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /></div>
+        <div class="table-cell tc-7">Change a <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /> to 1 or 2</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Belter Pilot</div>
+        <div class="table-cell tc-2"><img src="~/lib/Images/AlienFrontiers/die3.png" class="icon" /> <img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /></div>
+        <div class="table-cell tc-7">Change a <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /> to 2 or 3</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">System Pilot</div>
+        <div class="table-cell tc-2"><img src="~/lib/Images/AlienFrontiers/die4.png" class="icon" /> <img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /></div>
+        <div class="table-cell tc-7">Change a <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /> to 3 or 4</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Hyperspace Pilot</div>
+        <div class="table-cell tc-2"><img src="~/lib/Images/AlienFrontiers/die6.png" class="icon" /> <img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /></div>
+        <div class="table-cell tc-7"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> Change a <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /> to 5 or 6</div>
+    </div>
+
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+

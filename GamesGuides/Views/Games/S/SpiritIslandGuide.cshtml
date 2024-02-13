@@ -1,0 +1,192 @@
+﻿@{
+    ViewData["Title"] = "Spirit Island Guide";
+}
+
+<style>
+.token {
+    height: 18px;
+    vertical-align: middle;
+}
+
+.icon {
+
+}
+
+</style>
+
+<h3>Setup</h3>
+<ul>
+    <li>fear deck: TOP / MIDDLE / BOTTOM</li>
+    <li>explore with first invader card, then put in build space</li>
+    <li><img src="~/lib/Images/SpiritIsland/beastsicon.png" class="token" /> lowest-numbered land with no printed setup icons</li>
+    <li><img src="~/lib/Images/SpiritIsland/diseaseicon.png" class="token" /> land #2</li>
+</ul>
+
+<h3>Phases</h3>
+<ol>
+    <li>Spirit Phase
+        <ul>
+            <li>Play and pay for all power cards, both fast and slow</li>
+        </ul>
+    </li>
+    <li><img src="~/lib/Images/SpiritIsland/fasticon.png" class="token" /> Fast Power Phase
+        <ul>
+            <li>Use powers in any order</li>
+            <li>Using cards is optional</li>
+            <li>May not delay fast powers until slow phase, does not carry over to next turn</li>
+        </ul>
+    </li>
+    <li>Invader Phase
+        <ul>
+            <li>Blighted Island - Event Card - Fear Cards</li>
+            <li><img src="~/lib/Images/SpiritIsland/dahanicon.png" class="token" /> fight back even if damage was 0, but not if ravage was skipped</li>
+            <li>Escalation effect occurs before explore</li>
+        </ul>
+    </li>
+    <li><img src="~/lib/Images/SpiritIsland/slowicon.png" class="token" /> Slow Power Phase
+        <ul>
+            <li>Operates the same as Fast Power Phase but with Slow Powers</li>
+        </ul>
+    </li>
+    <li>Time Passes
+        <ul>
+            <li><u>All</u> damage clears</li>
+        </ul>
+    </li>
+</ol>
+
+<h3>Repeat</h3>
+<ul>
+    <li>Does not give elements again, cannot be chained, retains slow/fast</li>
+    <li>Any changes to the power carry over to the repeat (e.g. slow is made fast)</li>
+    <li>May make different choices on the repeat</li>
+    <li>Follow repeat's instructions for where to use it, otherwise can choose any valid target</li>
+    <li>Repeating does not count as playing another power card</li>
+</ul>
+    
+
+<h3>Aided By</h3>
+<p>One bonus per card, e.g. cannot discard for +2 and forget the same card for +4. Cannot gain energy from "aided by" effects</p>
+<ul>
+    <li>+4: forget card(s) from hand / play / discard</li>
+    <li>+2: discard card(s) from hand to discard</li>
+    <li>+1: anything in play - cards in play, presence track, other effects</li>
+</ul>
+
+
+<h3>Ravage Timing</h3>
+<ol>
+    <li>Add damage from each individual invader. Apply modifiers to individual invaders (such as <img src="~/lib/Images/SpiritIsland/strifeicon.png" class="token" />)</li>
+    <li>If invaders deal nonzero damage, increase it by any "per-land" modifiers</li>
+    <li>Lower damage with defend</li>
+    <li>Simultaneously
+        <ul>
+            <li>deal damage to land</li>
+            <li>deal damage to <img src="~/lib/Images/SpiritIsland/dahanicon.png" class="token" />. If nonzero damage is done to Dahan they take +1 damage per <img src="~/lib/Images/SpiritIsland/badlandsicon.png" class="token" /></li>
+        </ul>
+    </li>
+    <li>Surviving <img src="~/lib/Images/SpiritIsland/dahanicon.png" class="token" /> damage invaders - apply modifiers in same order, apply <img src="~/lib/Images/SpiritIsland/badlandsicon.png" class="token" /> in the same way</li>
+</ol>
+
+
+<h3>Reminders</h3>
+<ul>
+    <li>"adjacent" includes corners</li>
+    <li>new terror victory conditions apply immediately</li>
+    <li>gaining a major power forces forgetting another power (under board or the discard pile for its <i>deck</i>)</li>
+    <li>elements are never "spent," powers only check for thresholds</li>
+    <li><img src="~/lib/Images/SpiritIsland/blighticon.png" class="token" /> comes from / goes to blight card, but blight card never flips back to healthy</li>
+    <li>adding <img src="~/lib/Images/SpiritIsland/blighticon.png" class="token" /> to a land destroys <u>one</u> presence per spirit</li>
+    <li>destroyed <img src="~/lib/Images/SpiritIsland/presenceicon.png" class="token" /> does <u>not</u> return to player board</li>
+    <li>optional: when you would add <img src="~/lib/Images/SpiritIsland/presenceicon.png" class="token" />, may instead move presence already on the board</li>
+    <li>"Defend X": reduce total damage of invaders by X whenever they deal damage to land or <img src="~/lib/Images/SpiritIsland/dahanicon.png" class="token" /> Defend abilities are all additive
+</li>
+    <li>replaced invaders keep damage they had removing/replacing does not generate fear</li>
+    <li>"on each board: do A or B" may make different decisions on each board</li>
+    <li>events are only considered "Spirit Effects" if the spirits pay a cost to make something happen</li>
+</ul>
+
+<h3>Tokens</h3>
+<ul>
+    <li><img src="~/lib/Images/SpiritIsland/beastsicon.png" class="token" /> Beasts: no intrinsic effect, depends on cards</li>
+    <li><img src="~/lib/Images/SpiritIsland/wildsicon.png" class="token" /> Wilds: when invaders <u>would</u> explore the land, remove one <img src="~/lib/Images/SpiritIsland/wildsicon.png" class="token" /> instead</li>
+    <li><img src="~/lib/Images/SpiritIsland/diseaseicon.png" class="token" /> Disease: when invaders <u>would</u> build on the land, remove one <img src="~/lib/Images/SpiritIsland/diseaseicon.png" class="token" /> instead</li>
+    <li><img src="~/lib/Images/SpiritIsland/strifeicon.png" class="token" /> Strife
+        <ul>
+            <li>add to specific invader rather than entire land, therefore must have an invader to place it</li>
+            <li>when any <img src="~/lib/Images/SpiritIsland/strifeicon.png" class="token" /> invader <u>would</u> damage the land and/or dahan, deal 0 damage and remove a <img src="~/lib/Images/SpiritIsland/strifeicon.png" class="token" /> instead</li>
+            <li>using <img src="~/lib/Images/SpiritIsland/strifeicon.png" class="token" /> is required, cannot be saved for later even if damage would be 0</li>
+            <li>if invaders damage other invaders, <img src="~/lib/Images/SpiritIsland/strifeicon.png" class="token" /> has no effect and the token is not removed</li>
+            <li><img src="~/lib/Images/SpiritIsland/dahanicon.png" class="token" /> fight back even when <img src="~/lib/Images/SpiritIsland/strifeicon.png" class="token" /> reduces damage to 0</li>
+            <li><img src="~/lib/Images/SpiritIsland/strifeicon.png" class="token" /> moves with its invader</li>
+            <li><img src="~/lib/Images/SpiritIsland/strifeicon.png" class="token" /> goes to supply if its invader is destroyed</li>
+            <li><img src="~/lib/Images/SpiritIsland/strifeicon.png" class="token" /> goes to the new invader if its invader is replaced, but will not go to non-invaders that replace invaders (e.g. <img src="~/lib/Images/SpiritIsland/beastsicon.png" class="token" />, <img src="~/lib/Images/SpiritIsland/dahanicon.png" class="token" />)</li>
+            <li><img src="~/lib/Images/SpiritIsland/strifeicon.png" class="token" /> removed when the damage is dealt</li>
+            <li>ravage: removed with <img src="~/lib/Images/SpiritIsland/dahanicon.png" class="token" /> casualties, before the <img src="~/lib/Images/SpiritIsland/dahanicon.png" class="token" /> counterattack (relevant for "-1 health per <img src="~/lib/Images/SpiritIsland/strifeicon.png" class="token" />" fear card)</li>
+            <li>timing
+                <ol>
+                    <li>all other modifiers to an individual invader's damage</li>
+                    <li><img src="~/lib/Images/SpiritIsland/strifeicon.png" class="token" /></li>
+                    <li>effects which change the total damage done to the land (e.g. defend)</li>
+                </ol>
+            </li>
+        </ul>
+    </li>
+    <li><img src="~/lib/Images/SpiritIsland/badlandsicon.png" class="token" /> Badlands
+        <ul>
+            <li>The first time each action damages invaders in a land, increase that damage by 1 per <img src="~/lib/Images/SpiritIsland/badlandsicon.png" class="token" />.</li>
+            <li>The first time each action damages Dahan in a land, increase that damage by 1 per <img src="~/lib/Images/SpiritIsland/badlandsicon.png" class="token" />.</li>
+            <li>restrictions to types of pieces affect bonus damage (e.g. "1 damage to towns/cities")</li>
+            <li>if damage is reduced to 0 then <img src="~/lib/Images/SpiritIsland/badlandsicon.png" class="token" /> are not relevant</li>
+            <li>if a power's damage is capped at a maximum, bonus damage from <img src="~/lib/Images/SpiritIsland/badlandsicon.png" class="token" /> does not count against that maximum</li>
+            <li>actions damaging "each invader" or "each <img src="~/lib/Images/SpiritIsland/dahanicon.png" class="token" />" in a land do <u>not</u> get bonus damage for each piece, only 1 total per <img src="~/lib/Images/SpiritIsland/badlandsicon.png" class="token" />, distributed how you want</li>
+            <li>actions dealing damage in multiple lands add bonus damage in each land according to how many <img src="~/lib/Images/SpiritIsland/badlandsicon.png" class="token" /> are there</li>
+            <li><img src="~/lib/Images/SpiritIsland/badlandsicon.png" class="token" /> only boost damage, they don't change destroy effects</li>
+            <li><img src="~/lib/Images/SpiritIsland/badlandsicon.png" class="token" /> are active immediately when added to a board; so a power that adds <img src="~/lib/Images/SpiritIsland/badlandsicon.png" class="token" /> and then deals damage will get a boost</li>
+            <li><img src="~/lib/Images/SpiritIsland/badlandsicon.png" class="token" /> stay on the board unless explicitly removed</li>
+        </ul>
+    </li>
+</ul>
+
+
+
+<h3>Edge cases</h3>
+<ul>
+    <li>elemental boon as a randomizer: choose whether it has element</li>
+    <li>moving <img src="~/lib/Images/SpiritIsland/blighticon.png" class="token" /> does <u>not</u> destroy presence or trigger cascade</li>
+    <li>invaders or <img src="~/lib/Images/SpiritIsland/dahanicon.png" class="token" />: health-changing effects never reduce health below 1. if piece already has damage beyond new health -> immediately destroyed</li>
+    <li>apply individual modifiers first, then land-wide modifiers</li>
+    <li>Skip one Invader action: may choose at the moment it would happen, don't have to choose right away</li>
+</ul>
+
+
+<h3>Action</h3>
+<p>An "action" is a group of game effects that go to gether, e.g.</p>
+<ul>
+    <li>one use of a power</li>
+    <li>a ravage, build, or explore in a single land</li>
+    <li>everything one fear card does *</li>
+    <li>everything a main event does *</li>
+    <li>everything a token event does *</li>
+    <li>everything a dahan event does *</li>
+    <li>everything a flipped blight card does *</li>
+</ul>
+
+<p>* "each board" or "each land" or "each player" or "each spirit" instructions cause one action per qualifying board/land/player/spirit</p>
+
+<h3>Isolate</h3>
+<ul>
+    <li>Lasts 1 turn</li>
+    <li>Invaders do not explore isolated lands, and isolated lands are not a source of explorers</li>
+    <li>Invaders do not consider isolated lands to be adjacent to anything, only adjacent if you want it to be</li>
+    <li>Isolate does not affect <img src="~/lib/Images/SpiritIsland/blighticon.png" class="token" /> (<img src="~/lib/Images/SpiritIsland/blighticon.png" class="token" /> != invader) so <img src="~/lib/Images/SpiritIsland/blighticon.png" class="token" /> still considers isolated land adjacent for cascading</li>
+    <li>Isolate does not change whether a land is coastal</li>
+    <li>You can allow invaders in an isolated land to use some/all adjacencies for a given action if you want</li>
+    <li>If oceans are in play, isolating an ocean does <u>not</u> affect whether lands are coastal, but it does prevent it from being a source of explorers</li>
+</ul>
+
+
+
+
+
+

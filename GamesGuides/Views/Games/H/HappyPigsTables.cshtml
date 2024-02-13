@@ -1,0 +1,118 @@
+﻿@model GamesGuides.Data.HappyPigsSeasonCardData
+@{
+    //ViewData["Title"] = "Happy Pigs Tables";
+}
+
+
+<h2>Happy Pigs</h2>
+
+<br /><br /><br />
+
+<div class="table table-sm">
+    <div class="table-row">
+        <div class="table-cell tc-4">&nbsp;</div>
+        <div class="table-cell tc-2 rotate-60">Normal</div>
+        <div class="table-cell tc-2 rotate-60">Sanitary Inspection</div>
+        <div class="table-cell tc-2 rotate-60">Ham</div>
+        <div class="table-cell tc-2 rotate-60">Bacon</div>
+    </div>
+
+    @foreach (var pig in Model.PigPrices)
+    {
+        <partial name="../Templates/_TableRow" model='new TableRow { Cells = new List<TableCell>() {
+            new TableCell { Size = 4, StringContent = $"{pig.Name}" },
+            new TableCell { Size = 2, StringContent = $"{pig.Normal}" },
+            new TableCell { Size = 2, StringContent = $"{pig.SanitaryInspection}" },
+            new TableCell { Size = 2, StringContent = $"{pig.Ham}" },
+            new TableCell { Size = 2, StringContent = $"{pig.Bacon}" },
+        }}' />
+    }
+
+    <div class="table-row"><div class="table-cell">&nbsp;</div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-4">Fields</div>
+        <div class="table-cell tc-4">10, 15, 20</div>
+    </div>
+</div>
+
+<br /><br /><br />
+
+<div class="table table-60">
+    <div class="table-row">
+        <div class="table-cell tc-12">For each action point in ...</div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-2">Feed</div>
+        <div class="table-cell tc-10">grow a pig by one size</div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-2">Mate</div>
+        <div class="table-cell tc-10">an average or big pig gives birth to a piglet, max 1 piglet per average/big pig</div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-2">Buy</div>
+        <div class="table-cell tc-10">buy a pig, item, or field</div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-2">Sell</div>
+        <div class="table-cell tc-10">sell a pig</div>
+    </div>
+</div>
+
+<br /><br /><br />
+
+<div class="table table-60">
+    <div class="table-row">
+        <div class="table-cell tc-12">Items</div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-2">Vaccine</div>
+        <div class="table-cell tc-10">flip a pig token to red cross side</div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-2">Supplement</div>
+        <div class="table-cell tc-10">skip one level on a feed action</div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-2">Amulet</div>
+        <div class="table-cell tc-10">add a small pig (instead of piglet) on a mate action</div>
+    </div>
+</div>
+
+<br /><br /><br />
+
+<div class="table table-md table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-3">&nbsp;</div>
+        <div class="table-cell tc-1">Feed</div>
+        <div class="table-cell tc-1">Mate</div>
+        <div class="table-cell tc-1">Buy</div>
+        <div class="table-cell tc-1">Sell</div>
+        <div class="table-cell tc-5">&nbsp;</div>
+    </div>
+
+    @for (int i = 1; i <= 4; i++)
+    {
+        foreach (var card in @Model.SeasonCards.Where(x => x.SeasonNum == i))
+        {
+            var fullname = $"{card.Name}";
+            if (card.Duplicate)
+            {
+                fullname += " (2)";
+            }
+            <partial name="../Templates/_TableRow" model='new TableRow { Cells = new List<TableCell>() {
+                new TableCell { Size = 3, StringContent = $"{fullname}" },
+                new TableCell { Size = 1, StringContent = $"{card.Feed}" },
+                new TableCell { Size = 1, StringContent = $"{card.Mate}" },
+                new TableCell { Size = 1, StringContent = $"{card.Buy}" },
+                new TableCell { Size = 1, StringContent = $"{card.Sell}" },
+                new TableCell { Size = 5, StringContent = $"{card.Description}" },
+            }}' />
+        }
+
+        <partial name="../Templates/_TableRow" model='new TableRow { Cells = new List<TableCell>() {
+            new TableCell { Size = 1, StringContent = "&nbsp;" },
+        }}' />
+    }
+</div>

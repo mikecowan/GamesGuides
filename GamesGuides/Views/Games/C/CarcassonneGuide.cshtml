@@ -1,0 +1,1110 @@
+﻿@{
+    ViewData["Title"] = "Carcassonne Guide";
+}
+
+<style>
+h3, h4, ol, ul, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-bottom: .5em;
+}
+
+ol, ul {
+    margin-bottom: 1em;
+}
+
+li > ul {
+    margin-bottom: 0;
+}
+
+footer {
+    margin-bottom: 0;
+}
+
+.expicon {
+    width: 40px;
+}
+</style>
+
+
+<h3>Turn Order</h3>
+
+<h4>1. Place a land tile</h4>
+<ul>
+    <li>Volcano: add dragon</li>
+    <li>Princess: may remove 1 knight</li>
+    <li>Fairy: +1 point</li>
+    <li>Abbey: instead of land tile, fill a hole</li>
+    <li>place a bridge if necessary</li>
+    <li>Hill: add tile underneath</li>
+    <li>add/move big top</li>
+</ul>
+
+<h4>1b. Move dragon (after placing a dragon tile)</h4>
+<ul>
+    <li>may not enter Fairy tile</li>
+    <li>may not return to an already-visited tile</li>
+</ul>
+
+<h4>2. Place a meeple</h4>
+<ul>
+    <li>or retrieve Abbott</li>
+    <li>or place Builder</li>
+    <li>or place Pig</li>
+    <li>or move Fairy</li>
+    <li>or place Shepherd</li>
+    <li>or add Acrobat (on existing or surrounding tile)</li>
+    <li>or score a complete Acrobat pyramid</li>
+    <li>Princess: may not place Meeple if triggering</li>
+    <li>Magic Portal: current or previous tile</li>
+    <li>Tower foundation:
+        or place a tower floor on any foundation space
+        or place a tower floor on any open tower
+        or add a meeple to any open tower</li>
+</ul>
+
+<h4>2b. Shepherd (after expanding field with your Shepherd)</h4>
+<ul>
+    <li>Grow flock</li>
+    <li>or Guide to stable (auto-trigger if any player completes the field, but if YOU complete the field you may choose to grow the flock first, before the auto-trigger)</li>
+</ul>
+
+<h4>3. Score points</h4>
+<ul>
+    <li>deploy from City of Carcassonne</li>
+    <li>check for castles</li>
+    <li>Hills break ties</li>
+    <li>small city: may add castle instead</li>
+    <li>Check for King / Robber</li>
+    <li>Check for Shrine vs Monastery</li>
+    <li>+3X for Vineyard(s)</li>
+    <li>+X for Inn(s)</li>
+    <li>+X for Cathedral(s)</li>
+    <li>collect goods</li>
+    <li>+3 for Fairy, regardless of who scored feature</li>
+    <li>Wagon: may move to surrounding feature</li>
+    <li>score circus if it moved</li>
+    <li>+2X for Ringmaster</li>
+</ul>
+
+<h4>4. City of Carcassonne</h4>
+<ul>
+    <li>if completing a feature and another player scores points, you score 0:
+        may move 1 (maximum) meeple to a district
+        may move the Count</li>
+    <li>text</li>
+</ul>
+
+<h4>5. Bazaar Auction</h4>
+<ul>
+    <li>text</li>
+    <li>text</li>
+</ul>
+
+<h3>Placement Restrictions</h3>
+Abbott: garden and monastery
+Builder: road or city, must already have meeple from a previous turn
+Pig: field, must already have farmer from a previous turn
+Mayor: city
+Barn: 4 tile junction of farms
+Wagon: city, road, monastery
+
+Garden: Abbott only
+Monastery: Abbott
+Tower: Large Meeple
+
+<h3>Carcassonne City restrictions</h3>
+allowed:
+abbot (cathedral)
+large meeple
+wagon (not market)
+mayor (only castle)
+ringmaster
+
+not allowed:
+shepherd
+barn
+
+
+
+<h3>Dragon diet</h3>
+Meeple
+Abbott
+Large Meeple
+Builder
+Pig
+Tower Meeple
+Mayor
+Wagon
+Shepherd + adjacent sheep
+
+Fairy
+Tower piece
+Barn
+Bridge
+Castle
+
+<h3>Circus</h3>
+these score:
+normal meeple
+Abbott
+Large meeple
+Wagon
+Mayor
+Ringmaster
+
+these do not score:
+Builder
+Pig
+Barn
+Shepherd
+
+
+<h3>Final Scoring</h3>
+0 points for Inns
+0 points for Cathedrals
+Goods
+Barn
+King
+Robber
+
+
+<hr />
+
+<h4>Exp 1</h4>
+<ul>
+    <li>Exp 4: Large meeple can cap a tower
+        May capture large meeple</li>
+    <li>Exp 6: king does not score bonus points for cathedral in completed city
+        robber does not score bonus points for inn on completed road</li>
+    <li>Exp 9: large meeple can share field with shepherd without any effect
+        large meeple can benefit from hill
+        abbott: can only score additional vineyard points with monasteries (not gardens) and only if completed</li>
+    <li>Exp 10: only normal meeples can be acrobats</li>
+</ul>
+
+<h4>Exp 2</h4>
+<ul>
+    <li>Exp 3: If dragon eats player's last knight/highwayman/farmer, builder/pig is returned
+        If princess removes player's last knight, builder is returned
+        If princess removes a knight, cannot place builder or pig
+        Magic portal may not place builder or pig
+        May not score fairy on both turns via builder
+        If moving the fairy, may not also place the builder or pig</li>
+    <li>Exp 4: May not capture pig or builder</li>
+    <li>Exp 5: When barn is placed, score +1 point per city (4) if pig is in the field
+        When farm is connected to barn, score +1 point per city (2) if pig is in the field</li>
+    <li>Exp 6: pigsty increases field value by 1, in addition to pig meeple
+        double turn: can add meeple to Carcassonne city on both</li>
+    <li>Exp 8: castle is worth 5 points with a pig
+        if bazaar tile completes (continues ???) a feature with your builder, complete the bazaar auction before beginning double turn</li>
+    <li>Exp 9: pig can share field with shepherd without any effect</li>
+</ul>
+
+<h4>Exp 3</h4>
+<ul>
+    <li>Exp 3: If princess removes a knight, cannot place fairy</li>
+    <li>Exp 4: Fairy does not protect from tower capture
+        Fairy does not protect from tower capture
+        Dragon can eat a meeple on a tower
+    </li>
+    <li>Exp 5: Volcano does not prevent Barn placement
+        If princess removes a knight, cannot place mayor, barn, or wagon
+        If moving the fairy, may not also place the mayor, barn, or wagon
+        Fairy cannot be placed next to barn
+        Dragon will not eat barn
+        cannot place barn with magic portal
+        Mayor and wagon can be placed by magic portal, restricted to their normal placement rules
+
+    </li>
+    <li>Exp 6: Dragon may not enter Count's city
+        place dragon on volcano lake tile
+        cannot move dragon or fairy into Carcassonne city
+    </li>
+    <li>Exp 8: Dragon may not eat meeple in castle
+        dragon cannot eat meeples in castle
+        fairy can be placed next to meeple in castle and score as usual
+        if placing a dragon tile during a bazaar auction, dragon moves immediately (before continuing the auction)
+    </li>
+    <li>Exp 9: If princess removes a knight, cannot place shepherd
+        If moving the fairy, may not also place the shepherd
+        dragon will only eat shepherd (and flock) on its tile; not other sheep or shepherds
+        fairy cannot be assigned to shepherd
+    </li>
+    <li>Exp 10: a fairy assigned to an acrobat counts for all acrobats, score 1 point per meeple of your color
+        can use magic portal to place an acrobat</li>
+</ul>
+
+<h4>Exp 4</h4>
+<ul>
+    <li>Exp 5: Cannot place wagon, mayor, or barn on a tower
+        May capture wagon or mayor
+        May not capture barn
+        barn cannot be captured by tower
+        mayor and wagon can be captured by tower
+        cannot place barn, mayor, or wagon on tower
+    </li>
+    <li>Exp 6: May not capture from Carcassonne city
+        cannot capture meeples from Carcassonne city with tower
+    </li>
+    <li>Exp 8: May not capture from a castle
+        Bridge and tower may occupy same tile
+        may place bridge on same tile as a tower tower
+        cannot capture meeple in castle
+    </li>
+    <li>Exp 9: Cannot place shepherd on a tower
+        May not capture shepherd
+        cannot capture shepherd with tower
+    </li>
+    <li>Exp 10: when capturing an acrobat with tower, can choose any meeple regardless of position
+        ringmaster can cap a tower</li>
+</ul>
+
+<h4>Exp 5</h4>
+<ul>
+    <li>Exp 6: if barn placement triggers field scoring, players may deploy meeples from Carcassonne city market
+        if barn triggers field scoring where others score but you do not, may add a meeple to Carcassonne city
+        barn does not score extra points for pigsty; farmers only
+        mayor may only be placed in Carcassonne city castle quarter
+        Wagon may be placed in all but market quarter of Carcassonne city
+        can deploy meeples from market during barn scorings
+        Carcassonne city counts as a city when scoring a barn
+    </li>
+    <li>Exp 8: Castles are worth +1 point for fields, both for farmers and barns
+        wagon can occupy a castle
+        mayor can occupy a castle but will score 0 (no coats of arms)
+        mayor will not score points if placed in a castle
+        castle is worth +1 point when scoring fields, whether for farmers or barns
+    </li>
+    <li>Exp 9: barn can share field with shepherd without any effect
+        wagon and mayor (if there is a shield) can benefit from hill
+        cannot place abbey tile under a hill
+        hill can be part of the junction the barn is placed on, but offers no effect
+        abbeys can score additional points for vineyards</li>
+    <li>Exp 10: if ringmaster is used as a farmer, score ringmaster points in all cases (final scoring, after barn is placed in his field, after his field is connected to a barn)</li>
+</ul>
+
+<h4>Exp 6</h4>
+<ul>
+    <li>Exp 8: castle does not count as a completed city for the king
+        castle does not score as a completed city for the king
+    </li>
+    <li>Exp 9: vineyards work the same for shrines as for monasteries
+        cannot place shepherd into Carcassonne city
+        can place a meeple from Carcassonne city on a hill tile with a feature that has not (not???) been completed. If you do, gain the benefit of the hill
+        shrines can score additional points for vineyards, with a challenge you only get bonus if you win the challenge
+    </li>
+</ul>
+
+<h4>Exp 8</h4>
+<ul>
+    <li>Exp 9: meeple on a bridge can benefit from hill
+        can place a bridge on a hill
+        can place a castle (even partially) on a hill
+        if taking a hill tile during bazaar auction, do not take facedown tile until it is your turn to place hill tile
+        can place a bridge on a vineyard tile</li>
+    <li>Exp 10: may place bridge over a campground
+        may only place a bridge on an acrobat tile if there are no acrobats
+        meeple in castle can score for circus
+        acrobat pyramids do not count as a completed feature for the castle
+        can build bridge on a circus tile with or without big top
+        meeple in castle will count for circus if at least on tile forming the castle is adjacent to the big top
+        can build bridge on acrobat tile only if no acrobats are on it
+        cannot add acrobats if there is a bridge
+        acrobat pyramid does not count as a feature for castles
+    </li>
+</ul>
+
+<h4>Exp 9</h4>
+<ul>
+    <li>Exp 10: ringmaster can share field with shepherd without any effect
+        ringmaster can benefit from hill</li>
+</ul>
+
+<div class="table table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/meeple.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            Inn
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/meeple.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            Cathedral
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/pig.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            Builder
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/pig.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            Pig
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/pig.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            Goods
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/fairy.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            Fairy
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/fairy.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            Dragon
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/fairy.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            Princess
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/fairy.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            Magic Portal
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/tower.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            Tower
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/barn.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            Abbey
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/barn.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            Mayor
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/barn.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            Wagon
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/barn.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            Barn
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/crown.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            Count
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/crown.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            King / Robber
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/crown.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            Shrine
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/bridge.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            Bazaar
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/bridge.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            Castle
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/bridge.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            Bridge
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/sheep.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            Shepherd
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/sheep.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            Hill
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/sheep.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            Vineyard
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/tent.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            Circus
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Carcassonne/tent.png" class="expicon" />
+        </div>
+        <div class="table-cell tc-2">
+            Acrobat
+        </div>
+        <div class="table-cell tc-9">
+            asdf
+        </div>
+    </div>
+</div>
+
+
+<h3>Exp Table</h3>
+
+<div class="table table-padding-1">
+    <!-- header -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            Exp 1
+        </div>
+        <div class="table-cell tc-1">
+            Exp 2
+        </div>
+        <div class="table-cell tc-1">
+            Exp 3
+        </div>
+        <div class="table-cell tc-1">
+            Exp 4
+        </div>
+        <div class="table-cell tc-1">
+            Exp 5
+        </div>
+        <div class="table-cell tc-1">
+            Exp 6
+        </div>
+        <div class="table-cell tc-1">
+            Exp 8
+        </div>
+        <div class="table-cell tc-1">
+            Exp 9
+        </div>
+        <div class="table-cell tc-1">
+            Exp 10
+        </div>
+    </div>
+
+    <!-- exp 1 -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            Exp 1
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 1 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 2 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 3 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 4 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 5 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 6 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 8 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 9 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 10 -->
+            &nbsp;
+        </div>
+    </div>
+
+    <!-- exp 2 -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            Exp 2
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 1 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 2 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 3 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 4 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 5 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 6 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 8 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 9 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 10 -->
+            &nbsp;
+        </div>
+    </div>
+
+    <!-- exp 3 -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            Exp 3
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 1 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 2 -->
+            If dragon eats player's last knight/highwayman/farmer, builder/pig is returned
+            If princess removes player's last knight, builder is returned
+            If princess removes a knight, cannot place builder or pig
+            Magic portal may not place builder or pig
+            May not score fairy on both turns via builder
+            If moving the fairy, may not also place the builder or pig
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 3 -->
+            If princess removes a knight, cannot place fairy
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 4 -->
+            Fairy does not protect from tower capture
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 5 -->
+            Volcano does not prevent Barn placement
+            If princess removes a knight, cannot place mayor, barn, or wagon
+            If moving the fairy, may not also place the mayor, barn, or wagon
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 6 -->
+            Dragon may not enter Count's city
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 8 -->
+            Dragon may not eat meeple in castle
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 9 -->
+            If princess removes a knight, cannot place shepherd
+            If moving the fairy, may not also place the shepherd
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 10 -->
+        </div>
+    </div>
+
+    <!-- exp 4 -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            Exp 4
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 1 -->
+            Large meeple can cap a tower
+            May capture large meeple
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 2 -->
+            May not capture pig or builder
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 3 -->
+            Fairy does not protect from tower capture
+            Dragon can eat a meeple on a tower
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 4 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 5 -->
+            Cannot place wagon, mayor, or barn on a tower
+            May capture wagon or mayor
+            May not capture barn
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 6 -->
+            May not capture from Carcassonne city
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 8 -->
+            May not capture from a castle
+            Bridge and tower may occupy same tile
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 9 -->
+            Cannot place shepherd on a tower
+            May not capture shepherd
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 10 -->
+            &nbsp;
+        </div>
+    </div>
+
+    <!-- exp 5 -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            Exp 5
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 1 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 2 -->
+            When barn is placed, score +1 point per city (4) if pig is in the field
+            When farm is connected to barn, score +1 point per city (2) if pig is in the field
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 3 -->
+            Fairy cannot be placed by barn
+            Dragon will not eat barn
+            cannot place barn with magic portal
+            Mayor and wagon can be placed by magic portal, restricted to their normal placement rules
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 4 -->
+            barn cannot be captured by tower
+            mayor and wagon can be captured by tower
+            cannot place barn, mayor, or wagon on tower
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 5 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 6 -->
+            if barn placement triggers field scoring, players may deploy meeples from Carcassonne city market
+            if barn triggers field scoring where others score but you do not, may add a meeple to Carcassonne city
+            barn does not score extra points for pigsty; farmers only
+            mayor may only be placed in Carcassonne city castle quarter
+            Wagon may be placed in all but market quarter of Carcassonne city
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 8 -->
+            Castles are worth +1 point for fields, both for farmers and barns
+            wagon can occupy a castle
+            mayor can occupy a castle but will score 0 (no coats of arms)
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 9 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 10 -->
+            &nbsp;
+        </div>
+    </div>
+
+    <!-- exp 6 -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            Exp 6
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 1 -->
+            king does not score bonus points for cathedral in completed city
+            robber does not score bonus points for inn on completed road
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 2 -->
+            pigsty increases field value by 1, in addition to pig meeple
+            double turn: can add meeple to Carcassonne city on both
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 3 -->
+            place dragon on volcano lake tile
+            cannot move dragon or fairy into Carcassonne city
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 4 -->
+            cannot capture meeples from Carcassonne city with tower
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 5 -->
+            can deploy meeples from market during barn scorings
+            Carcassonne city counts as a city when scoring a barn
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 6 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 8 -->
+            castle does not count as a completed city for the king
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 9 -->
+            vineyards work the same for shrines as for monasteries
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 10 -->
+            &nbsp;
+        </div>
+    </div>
+
+    <!-- exp 8 -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            Exp 8
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 1 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 2 -->
+            castle is worth 5 points with a pig
+            if bazaar tile completes (continues ???) a feature with your builder, complete the bazaar auction before beginning double turn
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 3 -->
+            dragon cannot eat meeples in castle
+            fairy can be placed next to meeple in castle and score as usual
+            if placing a dragon tile during a bazaar auction, dragon moves immediately (before continuing the auction)
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 4 -->
+            may place bridge on same tile as a tower
+            tower cannot capture meeple in castle
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 5 -->
+            mayor will not score points if placed in a castle
+            castle is worth +1 point when scoring fields, whether for farmers or barns
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 6 -->
+            castle does not score as a completed city for the king
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 8 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 9 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 10 -->
+            may place bridge over a campground
+            may only place a bridge on an acrobat tile if there are no acrobats
+            meeple in castle can score for circus
+            acrobat pyramids do not count as a completed feature for the castle
+        </div>
+    </div>
+
+    <!-- exp 9 -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            Exp 9
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 1 -->
+            large meeple can share field with shepherd without any effect
+            large meeple can benefit from hill
+            abbott: can only score additional vineyard points with monasteries (not gardens) and only if completed
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 2 -->
+            pig can share field with shepherd without any effect
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 3 -->
+            dragon will only eat shepherd (and flock) on its tile; not other sheep or shepherds
+            fairy cannot be assigned to shepherd
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 4 -->
+            cannot capture shepherd with tower
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 5 -->
+            barn can share field with shepherd without any effect
+            wagon and mayor (if there is a shield) can benefit from hill
+            cannot place abbey tile under a hill
+            hill can be part of the junction the barn is placed on, but offers no effect
+            abbeys can score additional points for vineyards
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 6 -->
+            cannot place shepherd into Carcassonne city
+            can place a meeple from Carcassonne city on a hill tile with a feature that has not (not???) been completed. If you do, gain the benefit of the hill
+            shrines can score additional points for vineyards, with a challenge you only get bonus if you win the challenge
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 8 -->
+            meeple on a bridge can benefit from hill
+            can place a bridge on a hill
+            can place a castle (even partially) on a hill
+            if taking a hill tile during bazaar auction, do not take facedown tile until it is your turn to place hill tile
+            can place a bridge on a vineyard tile
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 9 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 10 -->
+            ringmaster can share field with shepherd without any effect
+            ringmaster can benefit from hill
+        </div>
+    </div>
+
+    <!-- exp 10 -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            Exp 10
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 1 -->
+            only normal meeples can be acrobats
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 2 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 3 -->
+            a fairy assigned to an acrobat counts for all acrobats, score 1 point per meeple of your color
+            can use magic portal to place an acrobat
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 4 -->
+            when capturing an acrobat with tower, can choose any meeple regardless of position
+            ringmaster can cap a tower
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 5 -->
+            if ringmaster is used as a farmer, score ringmaster points in all cases (final scoring, after barn is placed in his field, after his field is connected to a barn)
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 6 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 8 -->
+            can build bridge on a circus tile with or without big top
+            meeple in castle will count for circus if at least on tile forming the castle is adjacent to the big top
+            can build bridge on acrobat tile only if no acrobats are on it
+            cannot add acrobats if there is a bridge
+            acrobat pyramid does not count as a feature for castles
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 9 -->
+            &nbsp;
+        </div>
+        <div class="table-cell tc-1">
+            <!-- 10 -->
+            &nbsp;
+        </div>
+    </div>
+</div>

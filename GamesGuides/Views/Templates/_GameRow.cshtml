@@ -1,0 +1,32 @@
+﻿@model GamesGuides.Models.GameList
+
+<div class="gamerow">
+    @foreach (var game in Model.List)
+    {
+        var rect = game.Rectangle ? "rect" : string.Empty;
+        var src = $"/lib/Images/Covers/{game.Title}.webp";
+
+        var imagePath = @"lib\Images\Covers\" + game.Title + ".webp";
+        var contentTest =Url.Content("~/lib/Images/Covers/" + game.Title + ".webp");
+
+        var firstLetter = game.Title.Substring(0, 1);
+        var nums = new string[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+        if (nums.Contains(firstLetter))
+        {
+            firstLetter = "num";
+        }
+
+        <div class="coverwrap @firstLetter">
+            @if (game.Available)
+            {
+                <a href="@Url.Action("Index", "Games", new { gamename = game.Title })">
+                    <img class="gamecover @rect" src="@contentTest" />
+                </a>
+            }
+            else
+            {
+                <img class="gamecover unavailable @rect" src="@contentTest" />
+            }
+        </div>
+    }
+</div>

@@ -1,0 +1,33 @@
+﻿@model GamesGuides.Data.ChampionsOfMidgardRunesData
+
+@{
+    ViewData["Title"] = "Champions of Midgard Rune Cards";
+}
+
+<style>
+#runetable .bold {
+    font-weight: bold;
+}
+
+.icon {
+    width: 20px;
+}
+
+#runetable img {
+    width: 20px;
+    vertical-align:middle;
+}
+</style>
+
+<h3>Rune Cards</h3>
+<div class="table table-padding-1" id="runetable">
+    @foreach (var rune in Model.RuneCards)
+    {
+        <partial name="../Templates/_TableRow" model='new TableRow { Cells = new List<TableCell>() {
+            new TableCell { Size = 1, StringContent = $"{rune.Points}", ImgUrl = $"ChampionsOfMidgard/glory.png", ImgRepeat = rune.Points, ImgClasses="icon" },
+            new TableCell { Size = 2, StringContent = $"{rune.Name}", AdditionalClasses = "bold" },
+            new TableCell { Size = 9, richText= $"{rune.Description}", StringContent = $"{rune.Description}" }
+        }}' />
+    }
+</div>
+

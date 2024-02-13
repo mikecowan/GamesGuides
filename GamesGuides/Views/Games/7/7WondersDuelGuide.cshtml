@@ -1,0 +1,178 @@
+﻿@{
+    ViewData["Title"] = "7 Wonders Duel Guide";
+}
+
+<style>
+body {
+    /*width: 918px;*/
+}
+
+.wonderwrap {
+    width: 90%;
+}
+
+.civ-icon {
+    max-width: 35px;
+    max-height: 66px;
+    
+}
+
+.divinity-icon {
+    max-width: 90px;
+    /*max-height: 70px;*/
+    max-height: 50px;
+}
+
+h3, h4 {
+    margin-top: 0;
+}
+
+h3 {
+    margin-bottom: .5em;
+}
+
+h4 {
+    margin-bottom: .2em;
+}
+
+ul, ol {
+    margin-top: 0;
+}
+
+.title {
+    height: 40px;
+    margin-top: 3em;
+}
+
+.divinity-title {
+    /*display: inline;*/
+    /*vertical-align: baseline;*/
+    /*margin-left: 2em;*/
+}
+</style>
+<div class="wonderwrap">
+
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Setup</h3>
+            <ul>
+                <li>7 coins</li>
+                <li><u>Pantheon:</u> 3 Grand temples instead of 3 Guilds</li>
+                <li><u>Agora:</u>
+                    <ul>
+                        <li>12 cubes each</li>
+                        <li>add 5/5/3 Senator cards <i>after</i> discarding to box</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Turn Order</h3>
+            <ol>
+                <li>Trigger <i>one</i> Conspiracy (optional, if available)</li>
+                <li>Activate a Pantheon card OR play a card from structure to
+                    <ul>
+                        <li>Construct a building / Recruit a Senator</li>
+                        <li>Discard for coins</li>
+                        <li>Construct a Wonder</li>
+                        <li>Prepare a Conspiracy (no cost)</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+
+
+<h3>Reminders</h3>
+<ul>
+    <li>Discarding: $2, plus $1 per yellow card</li>
+    <li>Buying resources: $2, plus $1 per brown/gray that opponent has (ignore yellow and Wonder production)</li>
+    <li>Min $1 to buy a resource</li>
+    <li>7 Wonders max, return 8th Wonder to box immediately after 7th construction</li>
+    <li>Weaker military decides who starts each age; tie: player who took most recent turn decides</li>
+    <li><u>Pantheon</u> Take a Token (Mythology or Offering) when you must flip the card it is on</li>
+    <li><u>Agora</u> Some decrees start face-up, others face-down</li>
+    <li><u>Agora</u> Recruiting a Senator costs $1 for each Senator you already have (0, 1, 2, ...)</li>
+    <li>Tie: player with more points from blue buildings</li>
+</ul>
+
+
+<h3>Clarifications</h3>
+<ul>
+    <li>Cannot retrieve cards discarded during setup (Mausoleum, Hades)</li>
+    <li>Military tokens: no further penalty for insufficient funds - lose all money</li>
+    <li>Shipowners Guilds (brown/gray): pick 1 city for both cards, cannot count city A for brown and city B for gray</li>
+    <li>For "destroy a card" attacks, the attacker chooses</li>
+    <li><u>Pantheon</u> Mythology Tokens are <u>not</u> discarded when used to purchase grand temples</li>
+    <li><u>Pantheon</u> Double or half prices <i>before</i> applying discounts</li>
+    <li><u>Agora</u> Leave triggered conspiracies face-up with the Age card underneath it</li>
+</ul>
+
+
+<h3>Agora</h3>
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Politicians</h4>
+            
+            <ul style="margin: 0;">
+                <li>Place a cube in one of the two indicated spaces</li>
+                <li>Move <i>any</i> cube to an adjacent space</li>
+            </ul>
+
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Conspirators</h4>
+            <ul>
+                <li>Place 1 cube anywhere, OR Conspire</li>
+                <li>Conspire: draw 2 and keep 1, other to bottom of deck</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+</div>
+
+<br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br />
+<br /><br /><br />
+
+<div class="wonderwrap" style="margin-left: 102px;">
+<h3>FAQ</h3>
+<ul>
+    <li>Shields are <u>not</u> considered instant effects, and losing a Wonder with shields also takes away the shields</li>
+    <li>Symbols on Grand Temples are considered to be chains for purposes of Decrees and Progress tokens</li>
+    <li>Placing/moving cubes is never mandatory</li>
+    <li>Curia Julia Wonder allows a second conspiracy trigger on the turn it is built</li>
+    <li>Upper left ability of a Wonder is ignored when Wonders are stolen</li>
+    <li>Neptune: Apply the effect of token 2 against opponent, regardless of where it came from</li>
+    <li>Coercion
+        <ul>
+            <li>both players get symbol pair: active player chooses token first</li>
+            <li>both players get 6 science symbols: game ends immediately in a tie</li>
+            <li>break a symbol pair: no progress discard</li>
+            <li>opponent has no cards of color you want: may play it just to place a cube</li>
+            <li>take card with Nisaba snake: snake token is discarded for no effect</li>
+        </ul>
+    </li>
+    <li>Treason: only the chosen card is revealed</li>
+    <li>Espionage: only the chosen token is revealed</li>
+    <li>Obscurantism: when choosing a token from the box, you need not reveal to opponent</li>
+    <li>Sabotage: 8th Wonder stays in the box, if it had been placed there</li>
+    <li>Turn of Events: may gain tokens from multiple cards on the same turn</li>
+    <li>Extortion: Wonder is stolen but not constructed</li>
+</ul>
+
+
+
+</div>

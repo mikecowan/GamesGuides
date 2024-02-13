@@ -1,0 +1,74 @@
+﻿@model GamesGuides.Models.GameList
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+body {
+    width: 1200px;
+}
+
+span.filter {
+    text-decoration: underline;
+    cursor: pointer;
+}
+</style>
+
+@{
+    var availableGames = Model.List.FindAll(x => x.Available);
+}
+
+<div id="menu" style="position: fixed; z-index: 99; background-color: #aaa; padding: 1em;">
+    <span class="filter" data-letter="num">#</span>&nbsp;&nbsp;
+    <span class="filter" data-letter="A">A</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="B">B</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="C">C</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="D">D</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="E">E</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="F">F</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="G">G</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="H">H</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="I">I</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="J">J</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="K">K</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="L">L</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="M">M</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="N">N</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="O">O</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="P">P</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="Q">Q</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="R">R</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="S">S</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="T">T</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="U">U</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="V">V</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="W">W</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="X">X</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="Y">Y</span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="filter" data-letter="Z">Z</span>
+</div>
+
+<div style="padding-top: 3em;">
+    @for (int i = 0; i < Math.Ceiling(Model.List.Count / 3.0); i++)
+    @*@for (int i = 0; i < Math.Ceiling(availableGames.Count / 3.0); i++)*@
+    {
+        <partial name="../Templates/_GameRow" model='new GameList {
+            
+            List = Model.List.Skip(3*i).Take(3).ToList()
+        }' />
+    
+            @*List = Model.List.Skip(3*i).Take(3).ToList()*@
+            @*List = availableGames.Skip(3*i).Take(3).ToList()*@
+    }
+</div>
+
+<script>
+    $('.filter').on('click', function() {
+        var letter = $(this).data('letter');
+        $('.coverwrap').hide();
+
+        var cname = '.coverwrap.' + letter;
+        $(cname).show();
+    });
+</script>

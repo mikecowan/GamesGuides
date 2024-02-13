@@ -1,0 +1,63 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+Captain
+=======
+move submarine
+    draw line in that direction
+    line can never cross nor touch
+    cannot move through islands
+    cannot move into your own mine
+activate system
+    confirm availability with engineer
+    must move between activations
+torpedo
+    range 1-4, may zig-zag
+    can damage self
+    detonates mines for chain reactions
+mines
+    cannot place on route line
+    may trigger independently of first mate guage
+drone
+    ask sector
+sonar
+    row / column / sector
+    one true, one false
+silence
+    move 0-4 spaces in straight line, following other normal movement rules
+
+
+
+First Mate
+==========
+mark a box after every movement
+announce "ready" after each mark
+clear system after activation
+collaborate with captain for which system to prioritize
+
+silence: mark no spaces for 0 movement; mark only 1 space for 1-4 movement
+
+Radio Operator
+==============
+listen to opposing captain's movement
+opponent silence: move 0-4 spaces in single direction, following normal movement rules
+opponent surfaces: their entire trail clears
+
+
+Engineer
+========
+mark any symbol after every movement: in the box matching the direction
+trigger auto repair
+announce "ready" after each mark
+confirm whether systems can be used
+
+silence: mark no symbols for 0 movement; mark only 1 symbol for 1-4 movement
+
+all radiation symbols marked: 1 damage, clear ALL breakdowns
+all symbols in a box marked: 1 damage, clear ALL breakdowns
+
+surface: clear ALL breakdowns
+

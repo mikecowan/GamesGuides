@@ -1,0 +1,493 @@
+﻿@{
+    ViewData["Title"] = "Space Alert Guide";
+}
+
+<style>
+.icon {
+    width: 20px;
+}
+
+.buttonicon {
+    width: 25px;
+    vertical-align: bottom;
+}
+</style>
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Reminders</h3>
+            <ul>
+                <li><img src="~/lib/Images/SpaceAlert/b.png" class="buttonicon" /> actions are <i>not</i> limited to 1<span class="cross"></span> per station per turn</li>
+                <li>Lower white <img src="~/lib/Images/SpaceAlert/b.png" class="buttonicon" /> <span class="arrow"></span> a full reactor still depletes a fuel rod</li>
+                <li>Rockets target the closest threat (on any trajectory)
+                    <ul>
+                        <li>Tie: lowest numbered token</li>
+                    </ul>
+                </li>
+                <li>Delay: the <i>next</i> action slot will become empty</li>
+                <li>Delays are not cumulative, max 1 per turn</li>
+                <li>Battlebots can never be transferred to another player</li>
+                <li>Limit 1 battlebot squad per player</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Threats</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>In order (1-8, &alpha;-&epsilon;) each threat moves then performs actions</li>
+                <li>After performing Z action, the threat ...
+                    <ul>
+                        <li>no longer affected by players' actions</li>
+                        <li>takes no more actions and players have survived it</li>
+                        <li>if intruder: remove its oval (except: Slimes, Contamination)</li>
+                        <li>if malfunction: effected system is unrepairable</li>
+                    </ul>
+                </li>
+                <li>Teleportation ignores obstructions or reactions to movement
+                    <ul>
+                        <li>teleporter's action</li>
+                        <li>space-time vortex</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Special movements ignore effects if <i>passing through</i> a station
+                    <ul>
+                        <li>Heroic movement</li>
+                        <li>Squad Leader's action</li>
+                    </ul>
+                </li>
+                <li>Internal threats taking bonus damage: +1 <i>total</i> extra damage
+                    <ul>
+                        <li>Battlebot Uprising</li>
+                        <li>Power Pack Overload</li>
+                        <li>Power System Overload</li>
+                    </ul>
+                </li>
+                <li>Multiple malfunctions at same station:
+                    <ul>
+                        <li>repair actions ignore unrepairable malfunctions</li>
+                        <li>prioritize lowest number token, regardless of trajectory position</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Damage</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Refers to physically adding a red block</li>
+                <li>Rockets target closest threat, break ties in favor of lowest number</li>
+                <li>Damage from internal threats is <i>not</i> reduced by shields; exceptions:
+                    <ul>
+                        <li>Ninja rocket attack</li>
+                        <li>Pulse Cannon Short Circuit backfire effect</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <ol>
+                <li>Determine which threats are targeted by which weapons</li>
+                <li>For each threat: 
+                    <ol>
+                        <li>Add the strength of all targeting weapons</li>
+                        <li>Reduce strength by shield points</li>
+                        <li>Damage = Strength - Shield</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Interceptors</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Interceptors attack on takeoff turn</li>
+                <li>Only one player can be in space</li>
+                <li>Knockouts or delays from threats do not affect pilot</li>
+                <li>Delay from failed computer maintenance does not affect pilot</li>
+                <li>Ultrafast return knocks out the pilot, disables bots</li>
+            </ul>
+        </div>
+@*        <div class="table-cell tc-6">
+            Actions in space:
+            <ul>
+                <li>Increase distance (or ultrafast return)
+                    <ul>
+                        <li><img src="~/lib/Images/SpaceAlert/c.png" class="buttonicon" /></li>
+                        <li><img src="~/lib/Images/SpaceAlert/c.png" class="buttonicon" /> + ?</li>
+                        <li>?+<img src="~/lib/Images/SpaceAlert/c.png" class="buttonicon" /></li>
+                    </ul>
+                </li>
+                <li>Maintain distance
+                    <ul>
+                        <li><img src="~/lib/Images/SpaceAlert/bots.png" class="buttonicon" /></li>
+                        <li><img src="~/lib/Images/SpaceAlert/bots.png" class="buttonicon" /> + ?</li>
+                        <li>? + <img src="~/lib/Images/SpaceAlert/bots.png" class="buttonicon" /></li>
+                        <li>but <i>not</i> with <img src="~/lib/Images/SpaceAlert/bots.png" class="buttonicon" /> + <img src="~/lib/Images/SpaceAlert/c.png" class="buttonicon" /></li>
+                    </ul>
+                </li>
+                <li>Reduce distance
+                    <ul>
+                        <li>null-action</li>
+                        <li>any other action (delay the action too)</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+*@    </div>
+    <div class="table-row">
+        <div class="table-cell tc-2 tc-push-5">
+            <h3>Actions in Space</h3>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-4">
+            <h4>Increase Distance</h4>
+            <ul>
+                <li><img src="~/lib/Images/SpaceAlert/c.png" class="buttonicon" /></li>
+                <li><img src="~/lib/Images/SpaceAlert/c.png" class="buttonicon" /> + ?</li>
+                <li>?+<img src="~/lib/Images/SpaceAlert/c.png" class="buttonicon" /></li>
+            </ul>
+        </div>
+        <div class="table-cell tc-4">
+            <h4>Maintain Distance</h4>
+            <ul>
+                <li><img src="~/lib/Images/SpaceAlert/bots.png" class="buttonicon" /></li>
+                <li><img src="~/lib/Images/SpaceAlert/bots.png" class="buttonicon" /> + ?</li>
+                <li>? + <img src="~/lib/Images/SpaceAlert/bots.png" class="buttonicon" /></li>
+                <li>but <i>not</i> with <img src="~/lib/Images/SpaceAlert/bots.png" class="buttonicon" /> + <img src="~/lib/Images/SpaceAlert/c.png" class="buttonicon" /></li>
+            </ul>
+        </div>
+        <div class="table-cell tc-4">
+            <h4>Reduce distance</h4>
+            <ul>
+                <li>null-action</li>
+                <li>any other action (delay the action too)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Androids</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>3-player: 6-6-6 cards for each player</li>
+                <li>2-player: 9-6-6 cards for each player</li>
+                <li>Each android gets & plays its own heroic action (or spec)</li>
+                <li>Cannot play <i>your</i> heroic action (or spec) on an android's board</li>
+                <li>Cannot take an android's heroic action (or spec)</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Variant: 5th Crew Member</h4>
+            <ul>
+                <li>4 players + 1 android</li>
+                <li>Unconfirmed reports apply</li>
+                <li>Same deal as crew of 4, but +1 card per player in phase 1</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Heroic Actions</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li><img src="~/lib/Images/SpaceAlert/a.png" class="buttonicon" /> +1 strength to weapon</li>
+                <li><img src="~/lib/Images/SpaceAlert/b.png" class="buttonicon" /> +1 energy block (from bank)
+                    <ul>
+                        <li>at least 1 block must be transferred for the effect</li>
+                        <li>allows shields and reactors to exceed capacity</li>
+                        <li>no effect if shields are already at max capacity</li>
+                        <li>no effect if attempting to draw power from an empty reactor</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <ul>
+                <li><img src="~/lib/Images/SpaceAlert/bots.png" class="buttonicon" /> enhance bots or interceptors
+                    <ul>
+                        <li>prevent bots from being disabled by intruders that return fire, <i>or</i></li>
+                        <li>increase interceptor damage to 4 or 2 (to each target)</li>
+                    </ul>
+                </li>
+                
+                <li style="margin-top: 1em;">Movement: go directly to station</li>
+                <li>Heroic repair: two simultaneous repairs</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<hr />
+
+<h3>Specializations</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Setup</h4>
+            <ul>
+                <li>Game 1: deal 2, choose 1</li>
+                <li>Later games: either advance 1 level, or take an unused spec. at level 1</li>
+                <li>Mission fail: reset all specializations, repeat rules for game 1</li>
+            </ul>
+
+            <h4>Androids</h4>
+            <ul>
+                <li>Each gets a specialization</li>
+                <li>For each android, deal <i>one</i> extra normal card to <i>one</i> player<br />(this compensates for the heroic card)</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <ul>
+                <li>No heroic action cards if using specializations</li>
+                <li>Phase 1: 5 cards + special action card(s)</li>
+                <li>Cannot transfer special action cards</li>
+                <li>Levels
+                    <ol>
+                        <li>basic card</li>
+                        <li>advanced card</li>
+                        <li>both cards</li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Double Actions</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Longer missions: two threats have the same numbered token <span class="arrow"></span> external threat moves first</li>
+                <li>Upper action first, must do both actions</li>
+                <li>Action half doubled <span class="arrow"></span> first of 2 symbols will be button-pushing</li>
+                <li>Movement half doubled <span class="arrow"></span> first of 2 symbols will be movement</li>
+                <li>With androids, "incoming data" nets 1 additional card <i>per android</i> divided as evenly as possible</li>
+                <li>Impossible action <span class="arrow"></span> ignore it, but still perform the doable action</li>
+                <li>Cannot choose to ignore part of a double action</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Delays</h4>
+            <ul>
+                <li>Something else causes the delay <span class="arrow"></span> move double action card as normal</li>
+                <li>2<sup>nd</sup> action causes a delay <span class="arrow"></span>  do entire double-action but delay the next turn's action, just as with a standard card</li>
+                <li>1<sup>st</sup> action causes a delay <span class="arrow"></span>
+                    <ol>
+                        <li>perform 1<sup>st</sup> action (the one that causes the delay)</li>
+                        <li>if next space has a card, move it right</li>
+                        <li>move the delay-causing card right, "half-step"</li>
+                        <li>next turn: do 2<sup>nd</sup> action</li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Campaign</h3>
+            <ul>
+                <li>Up to 3 missions</li>
+                <li>May quit campaign early and score only completed missions</li>
+                <li>0 points for failure</li>
+            </ul>
+            
+            <p>Choose difficulty level before each mission</p>
+            <ul>
+                <li>Choose difficulty for common threats - same for internal & external</li>
+                <li>Choose difficulty for serious threats - same for internal & external</li>
+            </ul>
+            
+            <p>Do these steps between missions</p>
+            <ol>
+                <li>Remove all internal threat tokens</li>
+                <li>Each knocked out player returns</li>
+                <li>Players who were not knocked out <u>either</u>
+                    <ul>
+                        <li>repair 1 damage tile (limit 2 per zone) <i>or</i></li>
+                        <li>repair 1 disabled battlebot squad</li>
+                    </ul>
+                </li>
+                <li>Additional effects for unrepaired tiles/bots
+                    <ul>
+                        <li>shields / reactors: -1 block at setup</li>
+                        <li>structural: damage to zone is doubled</li>
+                        <li>battlebot: do not place on board</li>
+                    </ul>
+                </li>
+            </ol>
+            
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Scoring</h3>
+            <ul>
+                <li>-1 point per damage</li>
+                <li>-1 point per damage to most-damaged zone</li>
+                <li>-2 points per knocked-out player</li>
+                <li>-1 point per disabled battlebot squad</li>
+                <li>+visual confirmation points</li>
+                <li>+threat points</li>
+                <li>no points for threats that remain on trajectories at hyperspace jump</li>
+            </ul>
+
+            <h4>Campaign score</h4>
+            <ul>
+                <li>Add points for threats from all missions</li>
+                <li>Apply penalties for final mission only</li>
+                <li>Divide visual confirmation points by number of missions, round down</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Experience System</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Always use specializations</li>
+                <li>No heroic actions</li>
+                <li>Before each mission, choose a spec (if level 1+)</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Androids</h4>
+            <ul>
+                <li>Limit 1 specialization for each android</li>
+                <li>Specialization must be known to at least 1 explorer</li>
+                <li>Use the same specialization level as the explorer who knows it best</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Leveling Up</h4>
+            <ul>
+                <li>Start at level 0</li>
+                <li>At any new level, check exactly 1 new specialization box</li>
+                <li>Level 1: earn first specialization</li>
+                <li>Level 2: earn another spec (at level 1)</li>
+                <li>Level 3+: new option to raise a level 1 spec to level 2</li>
+                <li>Level 6+: new option to raise a level 2 spec to level 3</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Mission Experience</h4>
+            <ul>
+                <li>Fail: gain 0 exp, explorer either dies or returns as a clone</li>
+                <li>Success: gain exp from achievements and mission score
+                    <ul>
+                        <li>2 exp for completing mission, <i>plus</i></li>
+                        <li>1 exp for every 10 mission points, <i>plus</i></li>
+                        <li>achievement points</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Hardcore Mode</h4>
+            <ul>
+                <li>Do not consent to be cloned - single mission fail and explorer dies</li>
+                <li>Skip exp boxes with dots, enables faster leveling</li>
+                <li>May (permanently) consent to be cloned later
+                    <ul>
+                        <li>not during a mission</li>
+                        <li>not during a campaign</li>
+                        <li>do not retroactively check skipped exp boxes</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Campaigns</h4>
+            <ul>
+                <li>Decide on length of campaign</li>
+                <li>Base exp for 1-mission campaign is 2
+                    <ul>
+                        <li>+6 exp for final mission</li>
+                        <li>+4 exp for any other mission</li>
+                        <li>e.g. 5-mission campaign worth 2/6/10/14/20 exp,<br />depending if/when team quits</li>
+                    </ul>
+                </li>
+                <li>Limit 1 achievement per category for entire campaign
+                    <ul>
+                        <li>Exception: "Addiction"</li>
+                    </ul>
+                </li>
+                <li>Mark achievements only at end - no rewards for a failed campaign</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<h4>Achievements</h4>
+<ul>
+    <li>Limit 1<span class="cross"></span> achievement per category per mission (except "Addict")</li>
+    <li>Some achievements are limited to explorers level "2+" or "5+"</li>
+    <li>"Missions" and "Full Campaign" categories not eligible for "easy" double missions</li>
+    <li>For difficulty-level achievements, may check box for an easier achievement</li>
+    <li>Serious threats and normal threats have different difficulty-levels <span class="arrow"></span> combined difficulty-level is the easier of the two</li>
+    <li>"Full Campaign" category only scores if team did not quit early</li>
+</ul>
+
+<hr />
+
+<h3>Roles</h3>
+<ul>
+<li><b>Captain</b> leader, goes first</li>
+<li><b>Comm Officer</b> relay all information from the computer; tracks external threats</li>
+<li><b>Chief of Security</b> tracks internal threats</li>
+<li><b>Tactical Officer</b> keeps crew synchronized and updates game board</li>
+<li><b>Chief Engineer</b> tracks energy</li>
+<li><b>Lieutenant</b> #1, consults with captain</li>
+<li><b>Science Officer</b> collects data & records score in mission log</li>
+</ul>
+

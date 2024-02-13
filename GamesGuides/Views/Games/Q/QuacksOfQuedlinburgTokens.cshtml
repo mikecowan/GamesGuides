@@ -1,0 +1,170 @@
+﻿@{
+    ViewData["Title"] = "Quacks of Quedlinburg Tokens";
+}
+
+<style>
+h3, h4, ol, ul, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-bottom: .5em;
+}
+
+ol, ul {
+    margin-bottom: 1em;
+}
+
+li > ul {
+    margin-bottom: 0;
+}
+
+footer {
+    margin-bottom: 0;
+}
+</style>
+
+<h3>Blue</h3>
+Set 1
+Draw 1/2/4 chips, <i>may</i> place one
+
+Set 2
+Receive both bonuses if explode within next 1/2/4 chips
+
+Set 3
+Take ruby if placed on ruby space
+
+Set 4
+1/2/4 points if placed on ruby space
+
+Set 5
+Receive N points if there are N pumpkins after drawing N-chip
+
+Set 6
+Receive 1 ruby per 1-white within the preceding 1/2/4 chips
+
+
+<h3>Red</h3>
+Set 1
+1/2 pumpkins: +1 space
+3+ pumpkins: +2 spaces
+
+Set 2
+Set aside after drawing, may place after stopping (on any turn)
+
+Set 3
+If previous chip is white, move X extra spaces, X = value of white chip
+
+Set 4
+Future 1-white chips move 2 spaces
+
+Set 5
+Movement equal to value of highest red chip already in pot
+
+Set 6
+Draw and set aside another chip, choose when to place but it must be placed this turn
+
+<h3>Yellow</h3>
+Set 1
+Return previous chip if it is white
+
+Set 2
+Next chip's movement is doubled
+
+Set 3
+After drawing 1 (3) chips, explosion threshold rises from 7 to 8 (9)
+
+Set 4
+Chip #1/2/3 moves an extra 1/2/3 spaces, no bonus for 4th+
+
+Set 5
+Peek at another chip, move extra spaces equal to its value
+
+Set 6
+May pay 1 ruby to move 3 extra spaces
+
+<h3>Black</h3>
+Set 1 (2p)
+tie: move droplet
+winner: also take ruby
+
+Set 1 (3p+)
+defeat 1 neighbor: move droplet
+defeat both neighbors: also take ruby
+
+Set 5
+when purchased, advance droplet and give chip to left-player
+you receive 1 ruby for each black chip in their pot, they treat black as green Set 1
+
+Set 6
+Farthest black chip: move droplet
+2nd farthest: take ruby
+
+<h3>Green</h3>
+Set 1
+Ruby with last 2
+
+Set 2
+If within last 2, take a bonus 1-chip
+1-chip: orange
+2-chip: blue/red
+4-chip: yellow/purple
+
+Set 3
+move last chip by X if white chips add to 7
+X = value of green chips
+
+Set 4
+pay ruby to move droplet for each green in last 2
+
+Set 5
+for each green in last 2, set aside a chip for pot next turn
+
+Set 6
+for each green in last 2, roll die
+
+<h3>Purple</h3>
+Set 1
+1: 1 point
+2: 1 point + ruby
+3+: 2 points + droplet
+
+Set 2
+1: black + 1 point + ruby
+2: green-1 + blue-2 + droplet
+3+: yellow-4 + 6 points + ruby + 2 droplet
+
+Set 3
+gain floor(X / 10) points
+
+Set 4
+1: upgrade 1->2
+2: upgrade 2->4
+3: upgrade 1->4
+
+Set 5
+add victory points from purple chip spaces, convert to "money" and buy up to 2 chips
+
+Set 6
+receive X points, X = printed value of next chip
+
+<h3>Locoweed</h3>
+Set 5
+Move X spaces, X = rat stone movement + 1
+max value of X = 4
+
+Set 6
+copy action and value of last non-white chip
+
+Set ??
+move essence extra space
+
+Set ??
+move X spaces, X = number of different non-white colors
+
+Set ??
+return any non-white chip to bag
+
+Set ??
+move X spaces, X = value of white chips already in pot

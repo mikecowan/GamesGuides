@@ -1,0 +1,156 @@
+﻿@{
+    ViewData["Title"] = "Bark Avenue Guide";
+}
+
+<style>
+.icon-table .table .table-cell {
+    padding-top: 2em;
+}
+
+.icon {
+    width: 60px;
+}
+</style>
+
+may move through other player pawns
+may not end movement on another player pawn
+
+may not drop off 2 dogs on the same turn, unless you have 2 actions
+each drop off takes an action
+
+<div class="table table-padding-1 icon-table">
+    <div class="table-row">
+        <!-- left column -->
+        <div class="table-cell tc-6">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/BarkAvenue/10bonus.png" class="icon" />
+                    </div>
+                    <div class="table-cell tc-6">
+                        <h4>$10 Bonus</h4>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/BarkAvenue/extraaction.png" class="icon" />
+                    </div>
+                    <div class="table-cell tc-6">
+                        <h4>Extra Action</h4>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/BarkAvenue/thirdleash.png" class="icon" />
+                    </div>
+                    <div class="table-cell tc-6">
+                        <h4>Third Leash</h4>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/BarkAvenue/freecoffee.png" class="icon" />
+                    </div>
+                    <div class="table-cell tc-6">
+                        <h4>Free Coffee or Treat</h4>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/BarkAvenue/dogpark.png" class="icon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Dog Park</h4>
+                        <p>Unlock action: advance all walk trackers 1 space</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- right column -->
+        <div class="table-cell tc-6">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/BarkAvenue/anywalk.png" class="icon" />
+                    </div>
+                    <div class="table-cell tc-6">
+                        <h4>Any Walk</h4>
+                        <p>Free review</p>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/BarkAvenue/wellrounded.png" class="icon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Well Rounded</h4>
+                        <p>Have at least 1 drop-off of each size, including this</p>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/BarkAvenue/foster.png" class="icon" />
+                    </div>
+                    <div class="table-cell tc-6">
+                        <h4>Foster Dog</h4>
+                        <p>Only way to earn 2 reviews</p>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/BarkAvenue/perfectwalk.png" class="icon" />
+                    </div>
+                    <div class="table-cell tc-6">
+                        <h4>Perfect Walk</h4>
+                        <p>All 3 bonus objectives</p>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/BarkAvenue/3dogs.png" class="icon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>3 Dogs</h4>
+                        <p>Dropped off while currently walking 3 dogs</p>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/BarkAvenue/expert.png" class="icon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Expert</h4>
+                        <p>Have at least 3 drop-offs of same size, including this</p>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/BarkAvenue/solo.png" class="icon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Solo Walk</h4>
+                        <p>Solo dog and was walked alone (no treats applied)</p>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/BarkAvenue/treattraining.png" class="icon" />
+                    </div>
+                    <div class="table-cell tc-6">
+                        <h4>Treat Training</h4>
+                        <p>Applied a treat to ignore a restriction</p>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/BarkAvenue/local.png" class="icon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Local</h4>
+                        <p>Have at least 2 drop-offs from same neighborhood</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

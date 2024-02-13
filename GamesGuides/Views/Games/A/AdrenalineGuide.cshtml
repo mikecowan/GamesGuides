@@ -1,0 +1,475 @@
+﻿@{
+    ViewData["Title"] = "Adrenaline Guide";
+}
+
+<style>
+.icon {
+    width: 20px;
+    vertical-align: middle;
+}
+</style>
+
+<h3>General</h3>
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Setup</h4>
+            <ul>
+                <li>3 weapons per spawn point</li>
+                <li>3 ammo cubes of each color</li>
+                <li>Add 1 R/B/Y ammo</li>
+                <li>2 powerup cards; discard one to spawn</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Turn Order</h4>
+            <ol>
+                <li>Actions</li>
+                <li>Replace ammo/weapons</li>
+                <li><u>Character ability</u></li>
+                <li>Score boards that received killshot</li>
+                <li>Reload weapons</li>
+                <li>Respawn (marks remain)</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Actions</h4>
+            <ul>
+                <li>Orthogonal movement</li>
+                <li>Move <i>then</i> grab</li>
+                <li>Reload at end of turn</li>
+                <li>Ammo/guns respawn at end of turn</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Equipment</h4>
+            <ul>
+                <li>Max 3 powerups (unless respawning)
+                    <ul>
+                        <li>Free action</li>
+                        <li>Can discard in place of cubes</li>
+                    </ul>
+                </li>
+                <li>Max 3 guns
+                    <ul>
+                        <li>Top cube is free on pickup</li>
+                        <li>Loaded upon pickup</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Damage</h4>
+            <ol>
+                <li>Deal damage</li>
+                <li>Convert <i>your</i> marks to damage</li>
+                <li>Add new marks</li>
+            </ol>
+            
+            <ul>
+                <li>Boards limited to 3 marks of each other color</li>
+                <li>12 damage is overkill <span class="arrow"></span> revenge mark</li>
+            </ul>
+            
+            <h4>Scoring Kills</h4>
+            <ul>
+                <li>Must deal damage to receive points</li>
+                <li>Any damage will score at least 1 point</li>
+                <li>Add a skull to dead player's board</li>
+                <li>Double kill: multiple killshots on your turn <span class="arrow"></span> +1vp</li>
+                <li>Dying on your own turn will not count toward double kill count</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Final Frenzy</h4>
+            <ul>
+                <li>Trigger varies based on game mode</li>
+                <li>Triggering player gets the final turn</li>
+                <li>Undamaged players (and respawns) flip boards
+                    <ul>
+                        <li>Keep marks & ammo</li>
+                        <li>No points for first blood</li>
+                        <li>Reward is 2-1-1-1</li>
+                    </ul>
+                </li>
+                <li>All players flip action tile</li>
+                <li>1 or 2 actions, depending on seating position</li>
+                <li>Flip board if killed during final frenzy</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<!-- Death Match -->
+<h3>Death Match</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>8 skulls on killshot track</li>
+                <li>1 ammo tile on squares without spawn points</li>
+                <li>Killshot (#11) <span class="arrow"></span> marker replaces skull</li>
+                <li>Overkill (#12) <span class="arrow"></span> also goes to killshot board</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Final Frenzy</h4>
+            <ul>
+                <li><u>Trigger</u>: final skull is removed from killshot track</li>
+                <li>Add additional killshot and overkill tokens killshot track</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<h4>Final Scoring</h4>
+<ul>
+    <li>Boards with damage score as if the player had just been killed
+        <ul>
+            <li>No first blood</li>
+            <li>No killshot token</li>
+        </ul>
+    </li>
+    <li>Score the killshot track as 8-6-4-2-1</li>
+    <li>Tie: higher score on killshot track</li>
+</ul>
+
+<hr />
+
+<!-- Domination Mode -->
+<h3>Domination Mode</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Goal: control spawn points</li>
+                <li>Cover killshot track with domination board, 8 skulls</li>
+                <li><u>Starting in round 2</u>, can tag a spawn point
+                    <ul>
+                        <li>damage the spawnpoint</li>
+                        <li>end turn as the only player on a spawn point</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <h4>Tagging a Spawnpoint</h4>
+            <ul>
+                <li>Damage
+                    <ul>
+                        <li>treat as a player</li>
+                        <li>add 1 token, regardless of damage</li>
+                        <li>max 1 damage-tag per turn</li>
+                        <li>AOE also hits spawnpoint</li>
+                        <li>Tractor / Vortex: <i>can</i> tag spawnpoint, but <i>you</i> must see it</li>
+                        <li>THOR: can chain <u>to</u> spawnpoint, but not <u>from</u></li>
+                    </ul>
+                </li>
+                <li>Ending turn on a spawnpoint
+                    <ul>
+                        <li>add 1 token, even if tagged it from damage already</li>
+                        <li>take 1 damage (of your own color)</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Kills</h4>
+            <ul>
+                <li>Overkill tokens go to spawnpoint track of your choice</li>
+                <li>Self damage is counted like another player; points to bank</li>
+            </ul>
+            
+            <h4>Final Frenzy</h4>
+            <ul>
+                <li><u>Trigger</u>: skull box is empty <i>or</i> two spawn tracks reach 8+ tokens</li>
+            </ul>
+            
+            <h4>Final Scoring</h4>
+            <ul>
+                <li>Score each spawnpoint separately: 8-6-4-2-1</li>
+                <li>Tie: all tied players get highest value, skip next step for later players</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<hr />
+
+<!-- Turret Mode -->
+<h3>Turret Mode</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Cover killshot track with turret board, 8 skulls</li>
+                <li>No ammo tiles on the game board</li>
+                <li>5 ammo tiles face up on each ammo space of the turret board</li>
+                <li>After a turn, replace any taken ammo tiles</li>
+            </ul>
+
+            <h4>Final Frenzy</h4>
+            <ul>
+                <li><u>Trigger</u>: skull box is empty</li>
+            </ul>
+
+            <h4>Scoring</h4>
+            <ul>
+                <li>Score 8-6-4-2-1 points for controlling the most turrets</li>
+                <li>Tie: player whose final turn came earlier</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Turret Squares</h4>
+            <ul>
+                <li>Non-spawnpoints</li>
+                <li>Max 1 ammo per turn, from turret board</li>
+                <li>Commandeering the turret
+                    <ul>
+                        <li>Pass on <i>any</i> 1 bonus on the powerup card</li>
+                        <li>Place your damage token on the turret</li>
+                        <li>Add any existing damage token to your board as a mark</li>
+                    </ul>
+                </li>
+                <li>Taking damage from a turret
+                    <ul>
+                        <li>enter square of someone else's turret</li>
+                        <li>take 1 damage from that player</li>
+                        <li>applies even if another player moves you</li>
+                        <li>multiple moves can trigger a turret on each move</li>
+                        <li>does <i>not</i> convert marks into damage</li>
+                        <li>no using targeting scopes or tagback grenades</li>
+                        <li>complete action #2, even if you are dead</li>
+                        <li><i>you</i> get double kill credit on <i>your</i> turn, even for others' turrets</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<hr />
+
+<!-- Adding a Bot -->
+<h3>Adding a Bot</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Starting player chooses bot spawnpoint</li>
+                <li>Beginning with 2nd player, it acts as a player and gets actions</li>
+                <li>Turns have 3 actions: 2 player + 1 bot action, taken in any order</li>
+                <li>Bot has one action
+                    <ol>
+                        <li>Move 0-1 squares</li>
+                        <li><i>Must</i> choose and shoot 1 legal target</li>
+                    </ol>
+                </li>
+                <li>Legal targets:
+                    <ul>
+                        <li>figures the bot can see (including spawn points for Domination)</li>
+                        <li>not you, not itself</li>
+                    </ul></li>
+                <li>Bot shots deal 1 damage
+                    <ul>
+                        <li>+1 mark with both adrenaline unlocked</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Powerups with the Bot</h4>
+            <ul>
+                <li>Teleporter: cannot be used to move the bot</li>
+                <li>Targeting scope: cannot add 1 damage for bot action</li>
+                <li>Newton: can be used to move the bot</li>
+                <li>Tagback grenade: can be used in response to bot shot</li>
+            </ul>
+            
+            <h4>Scoring</h4>
+            <ul>
+                <li>score for bot like any other player</li>
+                <li>take the 1pt bonus for double kill if it happens on your turn, even if bot got one of them (or both?)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<!-- Characters-->
+<h3>Characters</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Setup</h4>
+            <ul>
+                <li>Reveal N+1 characters for draft</li>
+                <li>Randomize 1 of each character's weapon</li>
+                <li>Character-specific weapons do <i>not</i> count gun limit</li>
+                <li>Overlay adrenaline rush tile with revenge mark</li>
+                <li>Turn 1: pay to load starting weapon (mandatory free action)</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Adrenaline Rush</h4>
+            <ul>
+                <li>Pay by shifting adrenaline rush tile left
+                    <ul>
+                        <li><u>Either</u> unlocks <img src="~/lib/Images/Adrenaline/adrenalinerush.png" class="icon" /> effects <u>or</u></li>
+                        <li>Unlocks both adrenaline actions for the turn</li>
+                    </ul>
+                </li>
+                <li>If damage prevents further adrenaline rush payment
+                    <ul>
+                        <li><i>Always</i> have access to both adrenaline actions</li>
+                        <li><i>Always</i> have access to <img src="~/lib/Images/Adrenaline/adrenalinerush.png" class="icon" /> effects</li>
+                    </ul>
+                </li>
+                <li>Reset adrenaline rush tile after dying</li>
+                <li>Overkill another player <span class="arrow"></span> shift adrenaline rush tile right</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<hr />
+
+<!-- Team Play -->
+<h3>Team Play</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>3 characters per team</li>
+                <li>Include character-specific weapons
+                    <ul>
+                        <li>only useable by that character</li>
+                        <li>only reloadable by player controling them</li>
+                    </ul>
+                </li>
+                <li>Snake draft for characters: Team 1-22-11-2</li>
+                <li>No action tiles, yes adrenaline tile (with 1pt icon)</li>
+                <li>Each <i>player</i> has their own ammo, split among their characters</li>
+                <li>Start game by spawning all of team 1, then all of team 2</li>
+                <li>Each character takes 1 action
+                    <ul>
+                        <li><strike>Run Around</strike></li>
+                        <li>Move-Grab</li>
+                        <li>Shoot</li>
+                    </ul>
+                </li>
+                <li>Do all 3 actions <i>then</i> do all 3 special abilities</li>
+                <li>Teammates share <i>unloaded</i> weapons</li>
+                <li>Limit 3 powerups per <i>player</i></li>
+                <li>Limit 3 weapons per <i>player</i>, plus character-specific weapon</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>1-Player Team</h4>
+            <ul>
+                <li>Control all 3 characters</li>
+                <li>Initial spawn: draw 4, discard 3</li>
+                <li>1 set of ammo</li>
+                <li>All characters share all weapon, powerups</li>
+                <li>Load all as many starter weapons as you can</li>
+            </ul>
+            
+            <h4>2-Player Team</h4>
+            <ul>
+                <li>1 character is shared</li>
+                <li>Initial spawn: draw 2 / 3, discard 1 / 2</li>
+                <li>Each turn, decide who controls the shared character</li>
+                <li>May spend ammo for shared character</li>
+                <li>Must control shared character to use powerups for them unless
+                    <ul>
+                        <li>playing tagback grenade(s) - either but not both</li>
+                        <li>respawning</li>
+                        <li>discarding to reload the character-specific weapon</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<h4>Damage</h4>
+<ul>
+    <li>Damaged player puts <i>their own</i> tokens on damage buffer</li>
+    <li>Marks are also applied to the buffer</li>
+    <li>No limit to damage on buffer</li>
+    <li>End of turn: flush buffer for 6+ damage</li>
+</ul>
+
+<h4>End of Turn</h4>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ol>
+                <li>Replace weapons / ammo</li>
+                <li>All characters use end-of-turn abilities (any order)
+                    <ul>
+                        <li>Sprog venom is mandatory, skips buffer, counts toward multi-kill</li>
+                    </ul>
+                </li>
+                <li>Flush damage buffer (6+ only)
+                    <ul>
+                        <li>Gives rewards for # of targets</li>
+                        <li>Sprog venom damage is ignored for rewards</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+        <div class="table-cell tc-6">
+            <ol start="4">
+                <li>Score any killshots
+                    <ul>
+                        <li>8pt initially, less after adding skulls</li>
+                        <li>No points for first blood or lower ranks</li>
+                        <li>No overkill revenge, instead 1pt and heal for the attackers</li>
+                        <li>Tokens do not go to killshot track</li>
+                        <li>Double kill: +2pt; Triple kill: +4pt</li>
+                    </ul>
+                </li>
+                <li>Reload
+                    <ul>
+                        <li>Any of the team's unloaded weapons</li>
+                        <li>Character-specific weapon only if control that character</li>
+                        <li>Weapon limit: 3 weapons + character-specific(s)</li>
+                        <li>Unload a loaded weapon if exceeding limit</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<h4>End Game</h4>
+<ul>
+    <li>8 kills triggers endgame</li>
+    <li>Both teams get same number of turns; end immediately if triggered by team 2</li>
+    <li>Score leftover damage
+        <ul>
+            <li>Flush buffers, but no rewards</li>
+            <li>Tokens can go to killshot / overkill, but neither give points</li>
+            <li>Damage beyond overkill is wasted</li>
+            <li>3 damage = 1 point, remainders = 0</li>
+        </ul>
+    </li>
+    <li>Tie: team that scored more from leftover damage</li>
+</ul>
+

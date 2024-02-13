@@ -1,0 +1,436 @@
+﻿@{
+    ViewData["Title"] = "7 Wonders Guide";
+}
+
+<style>
+h3, h4, ol, ul, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-bottom: .5em;
+}
+
+ol, ul {
+    margin-bottom: 1em;
+}
+
+li > ul {
+    margin-bottom: 0;
+}
+
+footer {
+    margin-bottom: 0;
+}
+</style>
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-7">
+            <h3>Setup</h3>
+            <ul>
+                <li>N+2 guild cards for Age 3</li>
+                <li>$3 (Leaders: $6) per player</li>
+                <li>Leaders: deal 4 leaders and draft (pass right)</li>
+                <li>Cities: add N black per Age, +1 turn per Age</li>
+                <li>Babel: deal 3 tiles and draft (pass right)</li>
+                <li>Armada: Add N Armada cards per Age, remove <img src="~/lib/Images/7Wonders/doublearrow.png" /> cards for 3p, +1 turn per Age</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-5">
+            <h3>Reminders</h3>
+            <ul>
+                <li>Purchase resources simultaneously & immediately</li>
+                <li>Cannot purchase resources off yellow buildings</li>
+                <li>Cannot build identical structures (by name)</li>
+                <li>Discards remain face-down</li>
+                <li>Final turn: use 1 card, discard the other</li>
+                <li>Max 1 conflict between any pair of players per Age</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<h3>Ages</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Beginning of Age</h4>
+            <ol>
+                <li>Leaders: Recruitment Phase</li>
+                <li>Babel: setup Great Project</li>
+                <li>Distribute Age cards</li>
+            </ol>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>End of Age</h4>
+            <ol>
+                <li>Penalties/Rewards for Great Project</li>
+                <li>Resolve ground conflicts</li>
+                <li>Resolve naval conflict</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<h3>Turns</h3>
+<p>Applies to both leader Recruitment and normal age cards</p>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Build structure</li>
+                <li>Build Wonder stage</li>
+                <li>Discard for $3</li>
+                <li>Babel: Discard and add Babel tile</li>
+                <li>Armada: Discard to move yellow ship for free</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <ol>
+                <li>Pay all construction costs
+                    <ul>
+                        <li>card</li>
+                        <li>wonder</li>
+                        <li>naval construction XOR great project</li>
+                    </ul>
+                </li>
+                <li>Move ship for naval construction</li>
+                <li>Apply all effects (except coin losses)</li>
+                <li>Resolve island exploration</li>
+                <li>Resolve construction from discard (no naval construction)</li>
+                <li>Resolve coin losses, taxes, and pirates</li>
+                <li>Add Babel tiles</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<h3>Naval Conflicts</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>After ground conflicts, all players participate</li>
+                <li>Add naval shields from city, dockyard board, islands</li>
+                <li>Give penalty to weakest navy, award points to 1st, 2nd, 3rd</li>
+                <li>Cannot gain naval victory if you have gained naval defeat in same Age</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Global tie: no tokens for anyone</li>
+                <li>Tie for weakest: all tied players take defeat token</li>
+                <li>Tie for 1st: tied players take #2 bonus, 2nd place takes #3 bonus</li>
+                <li>Tie for 2nd: tied players take #3 bonus, unless there is a 1st place tie</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<h3>Cities</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Debt</h4>
+            <ul>
+                <li>Opponents (and only opponents) are affected by the symbol</li>
+                <li>Coins go to bank</li>
+                <li>Full/partial Payment is optional, take 1 debt token per unpaid coin</li>
+                <li>Cannot be repaid later</li>
+                <li>Each debt token is -1 vp</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Diplomacy</h4>
+            <ul>
+                <li>Absent for next conflict, then discard diplomacy token</li>
+                <li>The 2 neighbors are considered adjacent during conflict</li>
+                <li>Abstaining for that round is mandatory</li>
+                <li>May hold multiple diplomacy tokens, discard 1 per ground conflict</li>
+                <li>A pair of players compare military a maximum of 1 time</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<h3>Babel</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Tower of Babel</h4>
+            <ul>
+                <li>Adding tiles to tower resolves last</li>
+                <li>Add them in ascending numerical order, if multiple on same turn</li>
+                <li>Tile effects are active until the tile is covered</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Great Projects</h4>
+            <ul>
+                <li>Prepare a new project for each age</li>
+                <li>Add [N-1] participation tokens</li>
+                <li>Construct with matching color <span class="arrow"></span> may pay additional cost for token</li>
+                <li>May receive multiple tokens during the Age, but max 1 per turn</li>
+                <li>Participation is limited by tokens</li>
+                <li>Tokens will not "run out" mid turn; use extras from box</li>
+                <li>May participate after free construction, including builds from discard</li>
+                <li>Results
+                    <ul>
+                        <li><b>Success:</b> take 1 reward per participation token</li>
+                        <li><b>Failure:</b> 0 tokens <span class="arrow"></span> suffer penalty, take -A points if cannot</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<h3>Armada</h3>
+
+<h4>Naval Construction</h4>
+<ul>
+    <li>Immediately after constructing a building or wonder stage</li>
+    <li>Pay naval construction cost, in addition to card cost</li>
+    <li>Move fleet of corresponding color</li>
+    <li>May still do naval construction when Age card is free (e.g. chaining, Babel tokens, Olympia), but naval construction cost must be paid</li>
+    <li>Exception: free construction from discard (e.g. Halicarnassus, Solomon) does <u>not</u> allow naval construction</li>
+</ul>
+
+<br /><br /><br />
+
+<h4>Additional Rules</h4>
+<ul>
+    <li>Guild cards cap at 10 points</li>
+    <li>Tax symbol <img src="~/lib/Images/7Wonders/tax.png" style="width: 30px; vertical-align: middle;" />
+        <ul>
+            <li>If any yellow fleet reaches a tax symbol, other players lose the given amount (reduced by their commercial level)</li>
+            <li>Max 1 tax per turn, only the highest is applied</li>
+            <li>Coins can never be gained from tax</li>
+        </ul>
+    </li>
+    <li>Islands and Exploration
+        <ul>
+            <li>Solo exploration: player draws 4 cards, keeps 1</li>
+            <li>Group exploration: deal an equal number of cards to each player leaving any leftovers on the deck, each keeps 1</li>
+            <li>Shuffle after choosing</li>
+            <li>Island level is independent of Age</li>
+            <li>Neighbors cannot purchase island resources</li>
+        </ul>
+    </li>
+    <li>Incursion
+        <ul>
+            <li>Give target the incursion token immediately</li>
+            <li>Resolves ground conflict with 2 neighbors <i>and</i> incursion target (note Diplomacy and ground conflict limit of 1 per player pair)</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Variants</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>8 Player</h4>
+            <ul>
+                <li>Requires Cities or Armada</li>
+                <li>Prepare as a 7-player game</li>
+                <li>Babel: 6 participation tokens on Great Project</li>
+                <li>Cities/Armada: Deal 7 cards per player, 6 turns per Age</li>
+            </ul>
+
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell tc-3 tc-push-3">City cards</div>
+                    <div class="table-cell tc-3 tc-push-3">Armada cards</div>
+                    <div class="table-cell tc-3 tc-push-3">Guild cards</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">+Cities</div>
+                    <div class="table-cell tc-3">7</div>
+                    <div class="table-cell tc-3">0</div>
+                    <div class="table-cell tc-3">9</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">+Armada</div>
+                    <div class="table-cell tc-3">0</div>
+                    <div class="table-cell tc-3">7</div>
+                    <div class="table-cell tc-3">9</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-3">+both</div>
+                    <div class="table-cell tc-3">8*</div>
+                    <div class="table-cell tc-3">7</div>
+                    <div class="table-cell tc-3">9*</div>
+                </div>
+            </div>
+
+            <br /><br />
+            <p>* optional: use 7 & 10 for Age 3</p>
+
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Team Game</h4>
+            <ul>
+                <li>Teammates sit side-by-side
+                    <ul>
+                        <li>Cannot charge $0 for resources</li>
+                        <li>Cannot share coins, trade cards, or chain off teammate</li>
+                    </ul>
+                </li>
+                <li>Conflicts
+                    <ul>
+                        <li>Ground conflict only with non-teammate neighbor</li>
+                        <li>Award 2 victory & 2 penalty tokens per conflict</li>
+                        <li>Diplomacy token reduces tokens awarded to 1 each</li>
+                        <li>Naval conflict same as normal game, ignore teams</li>
+                        <li>Taxes and Coin losses from cards apply to <i>all</i> players, ignore teams</li>
+                        <li>Dock/Quay/Jetty give incursion token according to normal seating arrangement, but only 1 defeat & 1 victory token can be awarded</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<h3>Clarifications</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-4">
+            <h4>Discard Build</h4>
+            <p>Use this order:</p>
+            <ol>
+                <li>Halicarnassus</li>
+                <li>The Great Wall</li>
+                <li>Manneken Pis</li>
+                <li>Solomon</li>
+                <li>Counterfeiter's Office</li>
+                <li>Courtesans Guild</li>
+            </ol>
+        </div>
+        <div class="table-cell tc-8">
+            <h4>Wonders</h4>
+            <ul>
+                <li>Abu Simbel
+                    <ul>
+                        <li>A=3 for scoring purposes</li>
+                        <li>Courtesans guild may copy the leader as it gets buried</li>
+                        <li>Courtesans guild copy effect persists through death</li>
+                    </ul>
+                </li>
+                <li>Babylon B
+                    <ul style="margin-bottom: 0;">
+                        <li>may play both cards on final turn, including building the stage <i>then</i> using the other card</li>
+                        <li>extra card is an extra turn; thus a naval construction on turn 1 and/or turn 2 is possible</li>
+                    </ul>
+                </li>
+                <li>Halicarnassus: trigger at end of turn, may include cards discarded in final turn of the Age</li>
+                <li>Manneken Pis: cannot lose starting benefit from Great Project penalties, instead take -1vp</li>
+                <li>Zeus B: not cumulative with Trading Posts</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Leaders</h4>
+            <ul>
+                <li>Discarded leaders go to box, cannot be "resurrected"</li>
+                <li>Berenice: gain $1 after gaining money
+                    <ul>
+                        <li>only applies to money from bank</li>
+                        <li>with Nero, grants $1 extra even for 2+ wins</li>
+                        <li>limited to $1 per turn</li>
+                        <li>can trigger off rewards from Babel tiles and Great Projects</li>
+                    </ul>
+                </li>
+                <li>Hatshepsut: gain $1 after buying from a neighbor
+                    <ul>
+                        <li>grants coins <i>after</i> paying for resources</li>
+                        <li>can stack with Trading Posts</li>
+                        <li>Tile 9 or 11: effect still triggers on $0 purchase</li>
+                        <li>limit $1 per neighbor per turn</li>
+                    </ul>
+                </li>
+                <li>Hiram + Zeus (B) stage 3 does not grant an additional 2 points</li>
+                <li>Ramses + Tile 23: Guilds are still free</li>
+                <li>Stevie
+                    <ul>
+                        <li>Place under wonder stage face <u>up</u>, pay with coins instead</li>
+                        <li>Courtesans Guild may copy - emulate effect with guild card</li>
+                        <li>Counts for Diplomats' Guild, if face up</li>
+                        <li>Imhotep has no effect on Stevie</li>
+                        <li>cannot bury at Abu Simbel</li>
+                    </ul>
+                </li>
+                <li>Tomyris
+                    <ul>
+                        <li>ignores defeat token penalties from Great Projects</li>
+                        <li>effect applies to all defeat tokens given during ground conflicts</li>
+                    </ul>
+                </li>
+                <li>Vitruvius + Tile 14: coins are cumulative</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Guilds</h4>
+            <ul>
+                <li>Courtesan's Guild + Diplomat's Guild does not grant an additional point</li>
+            </ul>
+            
+            
+            <h4>Babel</h4>
+            <ul>
+                <li>Commerce Babel tiles are cumulative with Trading Posts</li>
+                <li>Secret Warehouse & Black Market ignore Babel tile resource production</li>
+                <li>Take 1 point penalty <i>per</i> unfulfilled penalty</li>
+                <li>Take a penalty if you have $0 and must discard <i>all</i> coins</li>
+                <li>"+A" taxes apply regardless of how the building was constructed</li>
+            </ul>
+            
+            <h4>Armada</h4>
+            <ul>
+                <li>Dock + Jetty: only resolve 1 additional ground conflict</li>
+                <li>Can be target of 2 incursions, would resolve 4 ground conflicts</li>
+                <li>Incursions ignore Diplomacy tokens, conflict still happens</li>
+            </ul>
+
+            <h4>Discounts</h4>
+            <p>Cumulative with Trading Posts:</p>
+            <ul>
+                <li><b>NO:</b> Zues B, Stage 1</li>
+                <li><b>YES:</b> Clandestine Docks, Babel commerce tiles, Smuggler's Cache</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+@*Ramses: the construction of Guilds remains free, even if Tile 23 is in play.
+
+Ramses: guilds cost 0 resources
+tile 23: guilds cost gold in place of resources
+-----
+
+Vitruvius: the coins granted by Vitruvius are cumulative with that of Tile 14.
+
+Vitruvius: gain $2 after each construction using chains
+tile 14: gain coins equal to the Age
+-----
+
+Hatshepsut: her effect works even if the player purchases a resource for 0 coins through the use of Babel tiles 9 and 11 and with buildings offering a rebate on commerce.
+
+Hatshepsut: gain $1 after purchasing a resource
+-----
+
+Tomyris: Tomyris is applied to all military defeat tokens earned during military conflicts.
+
+Tomyris: give defeat tokens to the victorious neighbor*@
+
+
+

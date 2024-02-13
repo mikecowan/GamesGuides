@@ -1,0 +1,499 @@
+﻿@{
+    ViewData["Title"] = "On Mars Building Summary";
+}
+
+<style>
+body {
+    width: 1020px;
+    margin: 0;
+}
+
+.table-cell.tc-1 {
+    font-size: 12px;
+    width: 12%;
+}
+
+.table-cell.tc-5 {
+    font-size: 11px;
+    width: 38%;
+}
+
+.table-row {
+    padding: 1em 1em 5em 1em;
+}
+
+
+.mineral {
+    background-image: url('@Url.Content("~/lib/Images/OnMars/minerals.png")');
+}
+
+.battery {
+    background-image: url('@Url.Content("~/lib/Images/OnMars/battery.png")');
+}
+
+.water {
+    background-image: url('@Url.Content("~/lib/Images/OnMars/water.png")');
+}
+
+.plant {
+    background-image: url('@Url.Content("~/lib/Images/OnMars/plant.png")');
+}
+
+.oxygen {
+    background-image: url('@Url.Content("~/lib/Images/OnMars/oxygen.png")');
+}
+
+.crystal {
+    background-image: url('@Url.Content("~/lib/Images/OnMars/crystal.png")');
+}
+
+.resource-icon {
+    background-repeat: no-repeat;
+    background-position-x: 1em;
+    background-position-y: 35px;
+    background-size: 5%;
+    -webkit-print-color-adjust: exact;
+}
+</style>
+
+@*<h3>Building Summary</h3>
+
+<p>Tech must exist somewhere in order to boost it, i.e. cannot boost from "level 0" to level 1</p>*@
+
+<div class="table table-100">
+    <!-- Minerals -->
+    <div class="table-row resource-icon mineral">
+        <div class="table-cell tc-1">
+            Construction Yard
+        </div>
+        <div class="table-cell tc-5">
+            <p>Upgrade 1 Building, may use Tech.</p>
+            <p>Boost: 1 additional upgrade.</p>
+        </div>
+
+        <div class="table-cell tc-1">
+            Metal Deposit
+        </div>
+        <div class="table-cell tc-5">
+            <p>Construct a Mine.</p>
+            <p>Boost: +1 level of Tech.</p>
+        </div>
+    </div>
+
+    <!-- Batteries -->
+    <div class="table-row resource-icon battery">
+        <div class="table-cell tc-1">
+            Automated Production
+        </div>
+        <div class="table-cell tc-5">
+            <p>Each Mine/Adv Building produces a matching resource/crystal.</p>
+            <p>Boost: 1 of those produces once more.</p>
+        </div>
+
+        <div class="table-cell tc-1">
+            Wind Turbines
+        </div>
+        <div class="table-cell tc-5">
+            <p>Construct a Generator.</p>
+            <p>Boost: +1 level of Tech.</p>
+        </div>
+    </div>
+
+    <!-- Water -->
+    <div class="table-row resource-icon water">
+        <div class="table-cell tc-1">
+            Private Ship
+        </div>
+        <div class="table-cell tc-5">
+            <p>Welcome 1 Ship for 2 Colonists +1 Bot/Colonist.</p>
+            <p>Boost: +1 Ship.</p>
+        </div>
+
+        <div class="table-cell tc-1">
+            Moisture Vaporator
+        </div>
+        <div class="table-cell tc-5">
+            <p>Construct a Water Extractor.</p>
+            <p>Boost: +1 level of Tech.</p>
+        </div>
+    </div>
+
+    <!-- Plants -->
+    <div class="table-row resource-icon plant">
+        <div class="table-cell tc-1">
+            Biomarket
+        </div>
+        <div class="table-cell tc-5">
+            <p>Take 1 Crystal/Resource from the Warehouse.</p>
+            <p>Boost: +1 Resource or Crystal.</p>
+        </div>
+
+        <div class="table-cell tc-1">
+            Hydroponic Farm
+        </div>
+        <div class="table-cell tc-5">
+            <p>Construct a Greenhouse.</p>
+            <p>Boost: +1 level of Tech.</p>
+        </div>
+    </div>
+
+    <!-- Oxygen -->
+    <div class="table-row resource-icon oxygen">
+        <div class="table-cell tc-1">
+            Oxygen Tank
+        </div>
+        <div class="table-cell tc-5">
+            <p>Buy 1 Tech tile from the Tech Grid.</p>
+            <p>Boost: buy 1 additional Tech tile.</p>
+        </div>
+
+        <div class="table-cell tc-1">
+            Concentrator
+        </div>
+        <div class="table-cell tc-5">
+            <p>Construct an Oxygen Condenser.</p>
+            <p>Boost: +1 level of Tech.</p>
+        </div>
+    </div>
+
+    <!-- Crystals -->
+    <div class="table-row resource-icon crystal">
+        <div class="table-cell tc-1">
+            Casino
+        </div>
+        <div class="table-cell tc-5">
+            <p>Gain 2 Crystals.</p>
+            <p>Boost: +1 Crystal.</p>
+        </div>
+
+        <div class="table-cell tc-1">
+            Gym
+        </div>
+        <div class="table-cell tc-5">
+            <p>Construct a Shelter.</p>
+            <p>Boost: +1 level of Tech.</p>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-12">
+            <hr />
+        </div>
+    </div>
+
+    <!-- Advanced Minerals -->
+    <div class="table-row resource-icon mineral">
+        <div class="table-cell tc-1">
+            Mineral Mine
+        </div>
+        <div class="table-cell tc-5">
+            Score 2 OP.
+        </div>
+
+        <div class="table-cell tc-1">
+            Biolab
+        </div>
+        <div class="table-cell tc-5">
+            Buy 1 Earth Contract.
+        </div>
+    </div>
+
+    <!-- Advanced Batteries -->
+    <div class="table-row resource-icon battery">
+        <div class="table-cell tc-1">
+            Radar
+        </div>
+        <div class="table-cell tc-5">
+            <p>Gain benefit of discovery tile.</p>
+            <p>First play: Add a discovery tile & gain its benefit.</p>
+        </div>
+
+        <div class="table-cell tc-1">
+            Builder Drone AI600
+        </div>
+        <div class="table-cell tc-5">
+            Upgrade a Building anywhere on the map.
+        </div>
+    </div>
+
+    <!-- Advanced Water -->
+    <div class="table-row resource-icon water">
+        <div class="table-cell tc-1">
+            Research Lab
+        </div>
+        <div class="table-cell tc-5">
+            <p>Pay to develop tech twice.</p>
+            <p>Boost: pay to develop Tech one additional time.</p>
+        </div>
+
+        <div class="table-cell tc-1">
+            Aqueduct
+        </div>
+        <div class="table-cell tc-5">
+            Move up to 2 Colonists from your Working Area to your Living Quarters.
+        </div>
+    </div>
+
+    <!-- Advanced Plants -->
+    <div class="table-row resource-icon plant">
+        <div class="table-cell tc-1">
+            Eco Resort
+        </div>
+        <div class="table-cell tc-5">
+            Colony or Orbit: Return some/all Colonists from Action slots to Living Quarters.
+        </div>
+
+        <div class="table-cell tc-1">
+            Trade Market
+        </div>
+        <div class="table-cell tc-5">
+            <p>Spend 1 resource to take 2 non-Mineral resources from supply.</p>
+            <p>Boost: +1 Resource.</p>
+        </div>
+    </div>
+
+    <!-- Advanced Oxygen -->
+    <div class="table-row resource-icon oxygen">
+        <div class="table-cell tc-1">
+            Recycling Bots
+        </div>
+        <div class="table-cell tc-5">
+            <p>Treat bots as rovers, use 1 or 2 movement points.</p>
+            <p>May spend Crystals to move further.</p>
+        </div>
+
+        <div class="table-cell tc-1">
+            Aerial Elevator
+        </div>
+        <div class="table-cell tc-5">
+            <p>Travel to Orbit, performing the travel steps as normal.</p>
+        </div>
+    </div>
+
+    <!-- Advanced Crystals -->
+    <div class="table-row resource-icon crystal">
+        <div class="table-cell tc-1">
+            Library
+        </div>
+        <div class="table-cell tc-5">
+            <p>Take 1 Blueprint.</p>
+            <p>Boost: +1 Blueprint.</p>
+        </div>
+
+        <div class="table-cell tc-1">
+            Command Center
+        </div>
+        <div class="table-cell tc-5">
+            <p>Move your Rover &leq;X, X = highest level of Rover tech in play.</p>
+            <p>May spend Crystals to move further.</p>
+        </div>
+    </div>
+
+</div>
+
+
+@*    <!-- Minerals -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            Construction Yard
+        </div>
+        <div class="table-cell tc-5">
+            Upgrade 1 Building following normal rules. May use Tech. For each worker you send to your Working Area, you may perform 1 additional upgrade.
+        </div>
+
+        <div class="table-cell tc-1">
+            Metal Deposit
+        </div>
+        <div class="table-cell tc-5">
+            Construct a Mine following normal rules. Tech required if creating or increasing the size of a Complex. Each worker you send to your Working Area counts as 1 level of Tech.
+        </div>
+    </div>
+
+    <!-- Batteries -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            Automated Production
+        </div>
+        <div class="table-cell tc-5">
+            Each of your Mines/Advanced Buildings produces 1 matching Resource (or 1 Crystal if a Shelter). For each worker you send to your Working Area, one of those Mines/Advanced Buildings produces once more.
+        </div>
+
+        <div class="table-cell tc-1">
+            Wind Turbines
+        </div>
+        <div class="table-cell tc-5">
+            Construct a Generator following normal rules. Tech required if creating or increasing the size of a Complex. Each worker you send to your Working Area counts as 1 level of Tech.
+        </div>
+    </div>
+
+    <!-- Water -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            Private Ship
+        </div>
+        <div class="table-cell tc-5">
+            Welcome 1 Ship. It costs 1 Plant and 1 Water, and brings 2 Colonists and 1 Bot or 3 Colonists. For each worker you send to your Working Area, Welcome 1 additional Ship. 
+        </div>
+
+        <div class="table-cell tc-1">
+            Moisture Vaporator
+        </div>
+        <div class="table-cell tc-5">
+            Construct a Water Extractor following normal rules. Tech required if creating or increasing the size of a Complex. Each worker you send to your Working Area counts as 1 level of Tech.
+        </div>
+    </div>
+
+    <!-- Plants -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            Biomarket
+        </div>
+        <div class="table-cell tc-5">
+            Take 1 Crystal or 1 Resource from the Warehouse. For each worker you send to your Working Area, take 1 additional Resource or Crystal.
+        </div>
+
+        <div class="table-cell tc-1">
+            Hydroponic Farm
+        </div>
+        <div class="table-cell tc-5">
+            Construct a Greenhouse following normal rules. Tech required if creating or increasing the size of a Complex. Each worker you send to your Working Area counts as 1 level of Tech.
+        </div>
+    </div>
+
+    <!-- Oxygen -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            Oxygen Tank
+        </div>
+        <div class="table-cell tc-5">
+            Take 1 Tech tile from the Tech Grid, as per normal rules. For each worker you send to your Working Area, take 1 additional Tech tile.
+        </div>
+
+        <div class="table-cell tc-1">
+            Concentrator
+        </div>
+        <div class="table-cell tc-5">
+            Construct an Oxygen Condenser following normal rules. Tech required if creating or increasing the size of a Complex. Each worker you send to your Working Area counts as 1 level of Tech.
+        </div>
+    </div>
+
+    <!-- Crystals -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            Casino
+        </div>
+        <div class="table-cell tc-5">
+            Gain 2 Crystals. For each worker you send to your Working Area, gain 1 additional Crystal.
+        </div>
+
+        <div class="table-cell tc-1">
+            Gym
+        </div>
+        <div class="table-cell tc-5">
+            Construct a Shelter following normal rules. Tech required if creating or increasing the size of a Complex. Each worker you send to your Working Area counts as 1 level of Tech.
+        </div>
+    </div>
+
+
+    <!-- Advanced Minerals -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            Mineral Mine
+        </div>
+        <div class="table-cell tc-5">
+            Score 2 OP.
+        </div>
+
+        <div class="table-cell tc-1">
+            Biolab
+        </div>
+        <div class="table-cell tc-5">
+            Take 1 Earth Contract from the display paying the cost.
+        </div>
+    </div>
+
+    <!-- Advanced Batteries -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            Radar
+        </div>
+        <div class="table-cell tc-5">
+            Place one of the Discovery tiles from the Exploration space onto this card (replace that tile with a new one). Then, gain the benefit of that tile. For the rest of the game, the Action of this card is to gain the benefit of that Discovery tile. 
+        </div>
+
+        <div class="table-cell tc-1">
+            Builder Drone AI600
+        </div>
+        <div class="table-cell tc-5">
+            Upgrade a Building anywhere on the map (the building zone of your Bots is unlimited for this action).
+        </div>
+    </div>
+
+    <!-- Advanced Water -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            Research Lab
+        </div>
+        <div class="table-cell tc-5">
+            Develop 1 of your Tech tiles up to 2 times or 2 Tech tiles one time each, paying normal costs. For each worker you send to your Working Area, develop a Tech one additional time, paying normal costs.
+        </div>
+
+        <div class="table-cell tc-1">
+            Aqueduct
+        </div>
+        <div class="table-cell tc-5">
+            Move up to 2 Colonists from your Working Area to your Living Quarters.
+        </div>
+    </div>
+
+    <!-- Advanced Plants -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            Eco Resort
+        </div>
+        <div class="table-cell tc-5">
+            Return some or all Colonists from Action slots in Orbit or on the Colony to your Living Quarters.
+        </div>
+
+        <div class="table-cell tc-1">
+            Trade Market
+        </div>
+        <div class="table-cell tc-5">
+            Spend 1 Resource from your Storage and take any 2 non-Mineral Resources from the general supply. For each worker you send to your Working Area, take 1 additional Resource.
+        </div>
+    </div>
+
+    <!-- Advanced Oxygen -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            Recycling Bots
+        </div>
+        <div class="table-cell tc-5">
+            Spend up to 2 Movement points to move your Bots (you may spend Crystals to move further). For this movement, treat your Bots as if they were Rovers (they can collect Crystals, Research tiles, and Discovery tiles).
+        </div>
+
+        <div class="table-cell tc-1">
+            Aerial Elevator
+        </div>
+        <div class="table-cell tc-5">
+            Travel to Orbit, performing the travel steps as normal. If you do this before your Main action, perform your Main action in Orbit.
+        </div>
+    </div>
+
+    <!-- Advanced Crystals -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            Library
+        </div>
+        <div class="table-cell tc-5">
+            Take 1 Blueprint.  For each worker you send to your Working Area, take 1 more.
+        </div>
+
+        <div class="table-cell tc-1">
+            Command Center
+        </div>
+        <div class="table-cell tc-5">
+            Move your Rover a number of hexes up to the highest level of Rover Tech in play. For each Crystal spent, move it 1 additonal hex.
+        </div>
+    </div>
+*@

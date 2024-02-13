@@ -1,0 +1,179 @@
+﻿@{
+    ViewData["Title"] = "Heat Guide";
+}
+
+<style>
+ h4, h3 {
+    margin-bottom: 0;
+}
+
+ul, ol {
+    margin-top: 0;
+}
+
+footer {
+    margin-bottom: 0;
+}
+
+h4 img {
+	margin-right: 2em;
+	max-width: 30px;
+	max-height: 30px;
+}
+</style>
+
+<ul>
+	<li>A <b>spot</b> is a rectangle that holds an individual car</li>
+	<li>A <b>space</b> consists of 2 spots, side by side</li>
+	<li>Cars move from space to space, ignoring any other cars</li>
+	<li>If the end space is blocked with cars in both spots, put car in first space with a free spot <i>behind</i> the cars that blocked you</li>
+	<li>Movement = Speed + Slipstream</li>
+</ul>
+
+
+<h3>Step Details</h3>
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+			<h4>4. Adrenaline</h4>
+			<ul>
+				<li>Only applies to last car <i>to move</i> (last 2 for 5+ players)</li>
+				<li>May add 1 speed, before or after boost (boost not required)</li>
+				<li>Gain access to 1 extra cooldown</li>
+				<li>May gain cooldown, while waiving +1 speed</li>
+				<li>Can use both advantages during <b>5. React</b></li>
+			</ul>
+			
+			<h4>5. React</h4>
+			<ul>
+				<li>Activate symbols in any order (e.g. cooldown, boost)</li>
+				<li>Symbols come from cards played, adrenaline or current gear</li>
+			</ul>
+        </div>
+        <div class="table-cell tc-6">
+			<h4>6. Slipstream</h4>
+			<ul>
+				<li>Optional</li>
+				<li>Available if landing next to another car, or in a space behind a car</li>
+				<li>Move 2 spaces forward, max 1<span class="cross"></span> per turn</li>
+				<li>Does <b>not</b> increase speed</li>
+				<li>Cannot slipstream across the finish line, or after crossing</li>
+			</ul>
+			
+			<h4>7. Check Corner</h4>
+			<ul>
+				<li>Only applies if crossing a <b>corner line</b></li>
+				<li>If <b>speed</b> exceeds limit by X, pay X heat</li>
+			</ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+			<h4>
+				<img src="~/lib/Images/Heat/boost.png" />
+				Boost
+			</h4>
+			<ul>
+				<li>May boost once per turn to increase speed</li>
+				<li>Pay 1 heat <span class="arrow"></span> reveal cards until speed card</li>
+				<li>Works just like stress card</li>
+			</ul>
+
+			<h4>
+				<img src="~/lib/Images/Heat/speed.png" />
+				Speed
+			</h4>
+			<ul>
+				<li>Cards played (speed and stress)</li>
+				<li>Boost</li>
+				<li>Adrenaline</li>
+			</ul>
+
+			<p>Slipstream does <b>not</b> add speed, only movement</p>
+
+			<h4>
+				<img src="~/lib/Images/Heat/cooldown.png" />
+				Cooldown
+			</h4>
+			<p>For each cooldown symbol, may move 1 heat card from hand to engine</p>
+        </div>
+        <div class="table-cell tc-6">
+			<h4>Spin Out</h4>
+			<p style="margin-top: 0;">Not enough heat for excess speed</p>
+			<ol>
+				<li>Pay all available heat</li>
+				<li>Move back to first available space before the corner</li>
+				<li>Take 1 stress card into hand, take another if in 3<sup>rd</sup> or 4<sup>th</sup> gear</li>
+				<li>Move to 1<sup>st</sup> gear</li>
+			</ol>
+
+			<h4>Cluttered Hand</h4>
+			<p style="margin-top: 0;">Unable to play enough cards because too much heat</p>
+			<ul>
+				<li>Use all available cards, cover the difference by <i>playing</i> heat cards</li>
+				<li>Car does not move this turn</li>
+				<li>Move to 1st gear</li>
+				<li>Cards in play area go to discard pile</li>
+				<li>Skip directly to step 9</li>
+			</ul>
+
+        </div>
+    </div>
+</div>
+
+<h3>Garage Module</h3>
+34 basic upgrade cards
+62 advanced upgrade cards (symbol)
+
+return starting upgrade cards to the box
+
+3-round snake draft, [N+3] cards to draft from
+first round starts with last-place player
+
+<h3>Legends Module</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-4">
+			<img src="~/lib/Images/Heat/legendexample.png" />
+        </div>
+        <div class="table-cell tc-8">
+			<h4>Before Legends Line</h4>
+			<ul>
+				<li>Red will attempt to move 16 spaces</li>
+				<li>If that causes a corner clear, <i>instead</i> move Red to space 2 behind the corner</li>
+			</ul>
+
+			<h4>After Legends Line</h4>
+			<ul>
+				<li>Move legend 2+X</li>
+				<li>X = corner speed limit</li>
+			</ul>
+        </div>
+    </div>
+</div>
+
+
+
+<h3>Weather & Road Conditions Module</h3>
+<ul>
+	<li>Draw 1 weather token, adjust heat & stress</li>
+	<li>Draw 1 road condition for each corner
+		<ul>
+			<li>Arrow icon <span class="arrow"></span> place it on tent of that sector instead</li>
+		</ul>
+	</li>
+</ul>
+
+<h3>Championship System</h3>
+Championship mat
+2 Press corner standees
+10 Event cards
+4 Track cards
+35 Sponsorship cards
+

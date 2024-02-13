@@ -1,0 +1,143 @@
+﻿@{
+    ViewData["Title"] = "7 Wonders New Player Aid";
+}
+
+<h3>Options</h3>
+<ul>
+    <li>Construct Building
+        <ul>
+            <li>Do you already have this building?</li>
+            <li>Do you have a chain to build it for free?</li>
+            <li>Do you have enough coins and/or resources?</li>
+            <li>Can you buy enough resources from neighbors ($2 each)?</li>
+        </ul>
+    </li>
+    <li>Build <u>next</u> stage of Wonder
+        <ul>
+            <li>Do you have enough coins and/or produce the resrouces?</li>
+            <li>Can you buy enough resources from neighbors?</li>
+        </ul>
+    </li>
+    <li>Discard for $3</li>
+</ul>
+
+<h3>General Strategy</h3>
+<ul>
+    <li>Invest in a few brown/gray cards early - Age 3 cards are expensive</li>
+    <li>Discard or build a Wonder stage with a card your neighbor might want</li>
+    <li>Your first 2 hands of 7 and 6 should usually have your strongest build options - rather than Wonder stage or discard</li>
+    <li>Pay attention to free building opportunities (chains)</li>
+    <li>Prioritize 1 or 2 guild(s) - what benefits you but also what benefits your neighbors?</li>
+    <li>Decide early if you want to build every stage of your Wonder, then plan resource production accordingly</li>
+    <li>You can rebound on military in Ages 2 and 3, when cards have more shields and victory tokens are bigger</li>
+    <li>For science cards, usually you want to collect sets, but if you cannot then specialize in one symbol</li>
+    <li>Low score: 36 or 2 points per card</li>
+    <li>Good score: 54 or 3 points per card</li>
+</ul>
+
+<h3>Science Scoring</h3>
+
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <div class="table table-padding-1">
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/7Wonders/sci-compass.png" />
+                        <img src="~/lib/Images/7Wonders/sci-compass.png" />
+                        <img src="~/lib/Images/7Wonders/sci-compass.png" />
+                    </div>
+                    <div class="table-cell tc-6">
+                        3 symbols <span class="arrow"></span> 3<sup>2</sup> = 9 points
+                    </div>
+                </div>
+            
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/7Wonders/sci-gear.png" />
+                        <img src="~/lib/Images/7Wonders/sci-gear.png" />
+                    </div>
+                    <div class="table-cell tc-6">
+                        2 symbols <span class="arrow"></span> 2<sup>2</sup> = 4 points
+                    </div>
+                </div>
+            
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/7Wonders/sci-tablet.png" />
+                    </div>
+                    <div class="table-cell tc-6">
+                        1 symbol <span class="arrow"></span> 1<sup>2</sup> = 1 points
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-cell tc-6">
+            also includes 1 complete set of all 3 symbols:
+            <br />
+            <img src="~/lib/Images/7Wonders/sci-example.png" style="vertical-align: middle;" /> = 7 points
+            @*<img src="~/lib/Images/7Wonders/sci-compass.png" style="vertical-align: middle;" /> <img src="~/lib/Images/7Wonders/sci-gear.png" style="vertical-align: middle;" /> <img src="~/lib/Images/7Wonders/sci-tablet.png" style="vertical-align: middle;" /> = 7 points*@
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-push-3 tc-3">
+            9 + 4 + 1
+        </div>
+        <div class="table-cell tc-push-5 tc-1">
+            + 7
+        </div>
+        <div class="table-cell tc-push-5 tc-1">
+            = 21 points
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+</div>
+
+<br />
+<br />
+
+
+<div class="table table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            If you add one extra ...
+        </div>
+        <div class="table-cell tc-6">
+
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/sci-compass.png" style="vertical-align: top;" /> +7 points
+        </div>
+        <div class="table-cell tc-6">
+            4<sup>2</sup> = 16 points
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/sci-gear.png" style="vertical-align: top;" /> +5 points
+        </div>
+        <div class="table-cell tc-6">
+            3<sup>2</sup> = 9 points
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/7Wonders/sci-tablet.png" style="vertical-align: top;" /> +10 points
+        </div>
+        <div class="table-cell tc-6">
+            2<sup>2</sup> = 4 points, but also complete another set for 7 points
+        </div>
+    </div>
+
+</div>
+

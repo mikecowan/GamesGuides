@@ -1,0 +1,139 @@
+﻿@{
+    ViewData["Title"] = "Search For Planet X Guide";
+}
+<style>
+footer {
+    margin-bottom: 20px;
+}
+</style>
+
+<h3>Notes</h3>
+<ul>
+    <li>When pawn lands in same sector as other pawns, the newly-moved pawn is placed ahead of all others</li>
+    <li>Return 3 Dwarf Planet theory tokens for a standard game</li>
+    <li>May only survey or target the visible sky</li>
+    <li>Target: two per game</li>
+    <li>Research: may not perform consecutive research actions</li>
+</ul>
+
+<h3>Celestial Objects</h3>
+<div class="table table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-2"><b>Object</b></div>
+        <div class="table-cell tc-1"><b>Count</b></div>
+        <div class="table-cell tc-9"><b>Rules</b></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Comet</div>
+        <div class="table-cell tc-1">2</div>
+        <div class="table-cell tc-9">Only in specific sectors</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Gas Cloud</div>
+        <div class="table-cell tc-1">2</div>
+        <div class="table-cell tc-9">Each is adjacent to at least 1 truly empty sector</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Dwarf Planet</div>
+        <div class="table-cell tc-1">1 (4)</div>
+        <div class="table-cell tc-9">In a band of exactly 6 sectors</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Asteroid</div>
+        <div class="table-cell tc-1">4</div>
+        <div class="table-cell tc-9">Each is adjacent to at least 1 other asteroid</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Truly Empty</div>
+        <div class="table-cell tc-1">2 (5)</div>
+        <div class="table-cell tc-9"></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Planet X</div>
+        <div class="table-cell tc-1">1</div>
+        <div class="table-cell tc-9">Not adjacent to a dwarf planet; its sector appears empty to surveys and targets</div>
+    </div>
+</div>
+
+<br /><br />
+
+<h3>Theory Submission</h3>
+<ul>
+    <li>Submit up to 1 (up to 2)</li>
+    <li>Place theories in player order, starting with player furthest back</li>
+    <li>Theories may be submitted for sectors outside of the visible sky</li>
+    <li>A player may submit two <i>different</i> theories for the same sector, but not at the same time</li>
+    <li>Advance all face-down theories, new and existing</li>
+</ul>
+
+
+<h3>Peer Review</h3>
+<ul>
+    <li>Review sectors in numerical order</li>
+    <li>Theories on same space that were placed on same turn are considered equal for scoring purposes</li>
+    <li>Correct: Flip over other theories, then
+        <ul>
+            <li>Incorrect theories are removed and that player advances pawn 1 space as a penalty</li>
+            <li>Correct theories stay in place for end game scoring</li>
+        </ul>
+    </li>
+    <li>Incorrect: discard, leave other theory tokens face-down</li>
+    <li>If multiple players receive a time penalty for an incorrect theory in the same sector at the same time, advance their pawns in player order (back to front) so that their position in turn order, relative to each other, does not change.</li>
+</ul>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br />
+
+<div class="table table-100">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>End Game</h3>
+            <ul>
+                <li>Find planet X correctly, advance 5 spaces, do not rotate earth board</li>
+                <li>Do not announce location to others</li>
+                <li>Other players (without moving pawns) either:
+                    <ul>
+                        <li>Submit 1 theory (1-3 sectors back)</li>
+                        <li>Submit up to 2 theories (4-5 sectors back)</li>
+                        <li>Locate Planet X</li>
+                    </ul>
+                </li>
+                <li>Check remaining theories, leaving them in place</li>
+            </ul>
+        </div>
+
+        <div class="table-cell tc-6">
+            <h3>Scoring</h3>
+            <ul>
+                <li>1 pt per sector where you were first to submit correct theory</li>
+                <li>Correct theory (any timing)
+                    <ul>
+                        <li>2pt - Asteroids</li>
+                        <li>3pt - Comets</li>
+                        <li>4pt - Gas Clouds</li>
+                        <li>4pt (2pt) - Dwarf Planets</li>
+                    </ul>
+                </li>
+                <li>Locating Planet X
+                    <ul>
+                        <li>10pt - First player</li>
+                        <li>2pt per sectors back from first player</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<h3>Ties</h3>
+<ul>
+    <li>Scored more points for locating Planet X</li>
+    <li>Scored more points for leader bonuses</li>
+</ul>

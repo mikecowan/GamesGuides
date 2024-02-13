@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "Mexica Guide";
+}
+
+<h3>Reminders</h3>
+<ul>
+    <li>districts
+        <ul>
+            <li>0 AP to found a district</li>
+            <li>Pilli must be in the district at time of founding</li>
+            <li>Pilli must be in "district" (founded or not) to build temple</li>
+            <li>may surround palace, 5 palace squares count toward district size</li>
+            <li>other Pilli get points for presence during founding</li>
+        </ul>
+    </li>
+    <li>no tokens or temples on palace squares</li>
+    <li>cannot walk on temples, other Pilli, or calpulli tokens</li>
+    <li>bridge must have each exit touching a land space (occupied land is ok)</li>
+    <li>cannot place a canal in a way that would break bridge rules for an existing bridge</li>
+    <li>bridge movement
+        <ul>
+            <li>must <i>begin</i> and <i>end</i> on bridges</li>
+            <li>cannot move diagonally (those canals are not connected)</li>
+            <li>may move under an occupied bridge, but must still spend additional AP for moving to the next bridge</li>
+        </ul>
+    </li>
+    <li>cannot pen a player in during first round</li>
+    <li>+5 points for standing on palace during scoring</li>
+    <li>in each era, all players get the same number of turns</li>
+    <li>unfounded districts at end game, size X
+        <ul>
+            <li>1st: X points</li>
+            <li>2nd: Y = ceiling(X / 2)</li>
+            <li>3rd: ceiling(Y / 2)</li>
+        </ul>
+    </li>
+</ul>
+
+<div class="table table-100">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Ties</h3>
+            <ul>
+                <li>full points for ties</li>
+                <li>2-way tie for 1st: no 2nd, yes 3rd</li>
+                <li>3-way tie for 1st: no 2nd, no 3rd</li>
+                <li>any tie for 2nd: no 3rd</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Scoring Phase Trigger</h3>
+            <ul>
+                <li>all era districts have been founded (or discarded for being impossible)</li>
+                <li>any player has placed 9 (<i>all</i>) temples</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<br /><br />
+
+<div class="table table-100">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <partial name="../PartialViews/_MexicaTable" />
+        </div>
+        <div class="table-cell tc-6">
+            <partial name="../PartialViews/_MexicaTable" />
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-12" style="padding: 2em;">&nbsp;</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <partial name="../PartialViews/_MexicaTable" />
+        </div>
+        <div class="table-cell tc-6">
+            <partial name="../PartialViews/_MexicaTable" />
+        </div>
+    </div>
+</div>

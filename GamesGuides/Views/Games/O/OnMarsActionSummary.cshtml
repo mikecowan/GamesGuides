@@ -1,0 +1,176 @@
+﻿@{
+    ViewData["Title"] = "On Mars Action Summary";
+}
+<style>
+h3, h4, ol, ul, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-bottom: .5em;
+}
+
+ol, ul {
+    margin-bottom: 1em;
+}
+
+li > ul {
+    margin-bottom: 0;
+}
+
+footer {
+    margin-bottom: 0;
+}
+</style>
+
+<h3>Orbital Actions</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <!-- Landing Pod -->
+            <h4>Landing Pod</h4>
+            <ul>
+                <li>Travel directly to colony</li>
+                <li>Follow rules for shuttle phase but skip step 1 (place discovery tile)</li>
+                <li>Lay down astronaut marker to indicate you already took your turn</li>
+                <li>May travel with shuttle back to orbit as normal, if applicable</li>
+            </ul>
+
+            <!-- Obtain Blueprint -->
+            <h4>Obtain Blueprint</h4>
+            <ul>
+                <li>Take 1 blueprint, gain indicated resource/crystal</li>
+                <li>Place advanced building marker on the card</li>
+                <li>Cannot take a blueprint if 0 building markers remaining</li>
+                <li>Do not draw replacement</li>
+                <li><u>Boost</u>: take an additional blueprint per boost</li>
+            </ul>
+
+        </div>
+
+        <div class="table-cell tc-6">
+            <!-- Learn New Technology -->
+            <h4>Learn New Technology</h4>
+            <ul>
+                <li>Take 1 tech from grid onto leftmost lab column, gain board benefit</li>
+                <li>Action unavailable if both left spaces of lab are full</li>
+                <li>Pay extra depending on the row the tile came from</li>
+                <li>Do not refill or slide tech tiles on the grid (Colony upgrade phase)</li>
+                <li>May not hold duplicate tech tiles</li>
+                <li><u>Boost</u>: take a 2nd tech</li>
+            </ul>
+
+            <!-- Research and Development -->
+            <h4>Research and Development</h4>
+            <ul>
+                <li>2 tech movement points (same tech or split)</li>
+                <li>Move tech, pay cost for new column, gain board benefit</li>
+                <li>May use bonuses from 1 movement to pay for next movement</li>
+                <li>Some printed benefits can be boosted (crystal or teal colonist icon)</li>
+                <li><u>Boost</u>: 1 additional movement for each boost</li>
+            </ul>
+
+            <!-- Resupply -->
+            <h4>Resupply</h4>
+            <ul>
+                <li>Take 1 resource/crystal from warehouse</li>
+                <li>Cannot take from warehouse if you don't have space for it</li>
+                <li><u>Boost</u>: 1 additional warehouse item per boost</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<hr />
+
+<h3>Colony Actions</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <!-- Control Center -->
+            <h4>Control Center</h4>
+            <ul>
+                <li>2 movement points for bots</li>
+                <li>2 movement points for rover</li>
+                <li>Can pass through other figures, but cannot end turn on one</li>
+                <li>Bots destroy/remove when <i>ending turn</i> on tiles/crystals</li>
+                <li>Rovers collect crystals by passing over them</li>
+                <li>Rovers collect tiles when <i>ending turn</i> on them</li>
+                <li>Rovers begin "in the garage" underneath the starting mine</li>
+                <li>Cannot take duplicate research tiles by color and letter</li>
+                <li>Costs must be paid, at least some benefit must be available</li>
+                <li>Tiles resolve and stay in your play area</li>
+                <li><u>Boost</u>: 1 additional movement point per boost, assigned to 1 figure</li>
+            </ul>
+
+            <!-- Construct a Building -->
+            <h4>Construct a Building</h4>
+            <ul>
+                <li>Adjacent or exactly 2 hexes away from a building of same type</li>
+                <li>Must be within a bot's Building Zone</li>
+                <li>Tech required for a complex</li>
+                <li>If depicted, add crystals to empty hexes</li>
+                <li>Gain X resources; X = 1 or new size of complex
+                <li>Add progress cube for a complex</li>
+                <li>Mines use colonist from living quarters instead of resource</li>
+                <li>Advance marker for LSS buildings</li>
+            </ul>
+
+        </div>
+        <div class="table-cell tc-6">
+            <!-- Upgrade a Building -->
+            <h4>Upgrade a Building</h4>
+            <ul>
+                <li>buildings can be upgraded once</li>
+                <li>blueprints can be used once</li>
+                <li>advanced buildings have a size and type requirement</li>
+                <li>Must be within a bot's Building Zone</li>
+                <li>can only upgrade your own shelters</li>
+                <li>Cost is always 1 mineral</li>
+                <li>follow displacement rules if there was a bot/rover on the tile</li>
+                <li>Move a miner back to owner's living quarters</li>
+                <li>May repeat X times with "Efficient Upgrading", X = level of the Tech</li>
+            </ul>
+
+            <!-- Welcome a Ship -->
+            <h4>Welcome a Ship</h4>
+            <ul>
+                <li>Move a private ship from depot to hangar</li>
+                <li>Cost = 1 plant + 1 water</li>
+                <li>Gain 1 colonist, then gain 1 colonist or bot</li>
+                <li>Colonists <span class="arrow"></span> living quarters</li>
+                <li>Bots <span class="arrow"></span> empty shelter (or closest available empty space)</li>
+                <li>Ships moved limited by current colony level</li>
+                <li><u>Boost</u>: pay for an additional ship per boost
+                    <ul>
+                        <li>cannot boost using just-acquired colonists</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Hire a Scientist or Take an Earth Contract -->
+            <h4>Hire a Scientist or Take an Earth Contract</h4>
+            <ul>
+                <li>1 available action slot per player, but still follow red colonist rule</li>
+                <li>Action slots do <i>not</i> clear when filled (unlike other action slots)</li>
+                <li>Geologist cost: move 2 colonists from living quarters to work area</li>
+                <li>Take scientist if applicable</li>
+                <li>Refill slot with a contract card of your choice, crystal cost showing</li>
+                <li>Delivery Contracts
+                    <ul>
+                        <li>may move resources onto card at any time</li>
+                        <li>gained resources can go directly to card, bypassing player board</li>
+                        <li>minerals cannot be used as substitutes</li>
+                        <li>resources on the card cannot be retrieved</li>
+                    </ul>
+                </li>
+                <li>Upgrade Contracts: advanced building on complex of size 4+</li>
+                <li>Complex Control Contracts: 2 advanced buildings in same complex</li>
+                <li>Blueprint Contracts: possess 3 cards, buildings need not be upgraded</li>
+            </ul>
+        </div>
+    </div>
+
+</div>

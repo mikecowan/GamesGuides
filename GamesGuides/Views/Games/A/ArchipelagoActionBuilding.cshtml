@@ -1,0 +1,161 @@
+﻿@{
+    ViewData["Title"] = "Archipelago Actions and Buildings";
+}
+
+
+
+<style>
+h3, h4, ol, ul, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-bottom: .5em;
+}
+
+ol, ul {
+    margin-bottom: 1em;
+}
+
+li > ul {
+    margin-bottom: 0;
+}
+
+footer {
+    margin-bottom: 0;
+}
+</style>
+
+<h3>Actions</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Construction</h4>
+            <ul>
+                <li>Requires an active, non-engaged citizen</li>
+                <li>Can use a non-engaged ship for a port</li>
+                <li>Max 1 building type per region</li>
+                <li>After constructing a building, move the unit onto the building;
+                    <br />it is now engaged, but may immediately use its ability</li>
+                <li>Ships are built by active, non-engaged citizens</li>
+                <li>Building a ship does not engage the citizen</li>
+            </ul>
+
+            <h4>Exploration</h4>
+            <ul>
+                <li>Decide whether you want top hex, no peeking</li>
+                <li>May discard top hex and take next hex</li>
+                <li>New placement must touch 2+ tiles</li>
+                <li>Must move an active, non-engaged unit into new region
+                    <ul>
+                        <li>a ship by sea</li>
+                        <li>a citizen by land, sea convoys not allowed</li>
+                        <li>only 1 unit is moved</li>
+                    </ul>
+                </li>
+                <li>Discard hex without effect if cannot place it</li>
+                <li>Take an explorer token after placing</li>
+                <li>Immediately take another AD when a explorer pile is empty</li>
+                <li>Follow steps under "adding a hex"</li>
+            </ul>
+
+            <h4>Harvest</h4>
+            <ul>
+                <li>Deploy any/all active, non-engaged units onto matching resource</li>
+                <li>Units must be on the hex with the resource</li>
+                <li>Take 1 cube per unit moved</li>
+                <li>Units moved are now engaged</li>
+                <li>Requires town-controller's permission</li>
+            </ul>
+
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Migration</h4>
+            <ul>
+                <li>Move any/all active, non-engaged units</li>
+                <li>Each unit can move to an adjacent region</li>
+                <li>Citizen can move to unoccupied building, on own region or adjacent</li>
+                <li>Ships can help convoy citizens (any number) across water</li>
+                <li>Convoys do not use a ship's migration action</li>
+                <li>Ships can migrate before or after doing a convoy</li>
+                <li>Without leaving the hex, move the non-engaged ship to the border;
+                    <br />those hexes are connected for purposes of moving meeples</li>
+            </ul>
+
+            <h4>Recruitment</h4>
+            <ul>
+                <li>Recruit any number of workers you can pay for</li>
+                <li>New meeple joins another active unit, may be engaged</li>
+                <li>Cannot break 3-citizen rule</li>
+                <li>Reduce surplus worker marker by X</li>
+                <li>Increase population marker by X</li>
+                <li>Cannot recruit if surplus worker marker is at 0</li>
+            </ul>
+            
+            <h4>Reproduction</h4>
+            <ul>
+                <li>On each region with exactly 2 citizens, add 1 citizen</li>
+                <li>Rebels do not reproduce</li>
+                <li>Engaged citizens <i>can</i> reproduce</li>
+                <li>Citizens on opposite sides of a sea inlet do <i>not</i> reproduce</li>
+            </ul>
+            
+            <h4>Taxes</h4>
+            <ul>
+                <li>+1 rebellion marker</li>
+                <li>$1 per active unit (not rebels)</li>
+                <li>$2 per town/temple under your control</li>
+            </ul>
+
+            <h4>Transaction</h4>
+            <ul>
+                <li>Perform 1 buy/sell on either market</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Buildings</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Port</h4>
+            <ul>
+                <li>active, non-engaged citizen or ship can build, occupy, and operate</li>
+                <li>perform two transactions on export market</li>
+                <li>can use 1 per turn without an AD</li>
+                <li>can control it from a town</li>
+                <li>spend $1 and place on boat to show you have used a port</li>
+                <li>the citizen/ship becomes engaged after using</li>
+            </ul>
+            
+            <h4>Temple</h4>
+            <ul>
+                <li>meeple never becomes a rebel</li>
+                <li>controller may stand any/all rebels</li>
+                <li>Can control remotely from town, but will still become rebel</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Market</h4>
+            <ul>
+                <li>similar to ports but for domestic market</li>
+            </ul>
+
+            <h4>Town</h4>
+            <ul>
+                <li>control other buildings remotely without a meeple</li>
+                <li>can use port and market from a town, despite being engaged</li>
+                <li>control all resources in the region</li>
+                <li>cannot steal control of occupied buildings</li>
+                <li>controller can expel a rebel from a building</li>
+                <li>opponents cannot take control of existing buildings</li>
+                <li>opponents can build and still control their own building</li>
+            </ul>
+        </div>
+    </div>
+</div>

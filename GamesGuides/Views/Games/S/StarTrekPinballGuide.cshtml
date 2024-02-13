@@ -1,0 +1,123 @@
+﻿@{
+    ViewData["Title"] = "Star Trek Super-Skill Pinball Guide";
+}
+
+<style>
+h3, h4, ol, ul, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-bottom: .5em;
+}
+
+ol, ul {
+    margin-bottom: 1em;
+}
+
+li > ul {
+    margin-bottom: 0;
+}
+
+footer {
+    margin-bottom: 0;
+}
+</style>
+
+<h3>Setup</h3>
+matching table & backglass
+2 ball tokens; 1 on start arrow
+fill round 1 circle
+
+
+round = series of turns
+players take turns simultaneously
+
+step 1: roll dice
+    roll 2, choose 1
+    a player rolls 2 dice, all simultaneously pick 1 to assign
+    nudging: change a die result for yourself only
+        fill a double-line box on the backglass, AND write the number X; X = difference between actual value and what you want
+        only 3 nudges per game, never erase the nudge box
+        may not nudge if it results in lost ball
+        may nudge to avoid losing ball
+        may not nudge to avoid a tilt
+    tilt
+        if |X-Y| >= nudge value, then OK
+        else: tilt; round ends and you lose all ball tokens in play
+        check for tilt only on the dice roll immediately following your nudge, THEN erase the nudge number (not the filled-in box)
+
+step 2: move your ball
+    move ball token to feature you want to hit
+    move ball token to a feature containing an unfilled box that has your chosen die value
+    normally you must move ball to a lower zone
+    may skip zones and move ball down even further
+    note special rules
+    FLIPPERS
+        if ball starts on a flipper, may move it to _any_ higher zone, does not have to be highest
+        yellow flipper -> feature with yellow/white die face
+        red flipper -> feature with red/white die face
+    MOVING TO THE SAME OR BETWEEN FLIPPERS
+        after moving from flipper, possible that you cannot or do not want to hit available features
+        ball falls back to an empty flipper box
+        ball can move back to same flipper
+
+step 3: fill a box
+    mark a box on the feature, score points and/or bonuses
+    MUST fill an empty box in new zone, otherwise ball cannot stay in that zone
+    may only fill an empty box showing chosen die result (color only matters when coming off flippers)
+    COMBINATION BOXES
+        _any_ of the dice faces shown in the box can be used to fill entire box
+    EARNING REWARDS
+        filling boxes earns points or other benefits
+        all bonuses stack; 2x for multiball and 3x for bumpers -> 6x bonus
+    SETS
+        "complete" when all boxes of the groups feature are filled in
+        erase the marks from entire set when complete
+
+
+Common Features
+    Flipper Zone
+    Inlanes
+        2pt, move to flipper without filling a box
+    Outlanes
+        2pt per red or yellow flipper box filled, then lose ball
+    Solid Line
+        usually a set, erase when all boxes are filled
+    Dashed Line
+        erase the box when round is complete
+    Double Line
+        never erase
+    Multiball
+        when unlocked, place 2nd ball token on start arrow
+        on next roll, use each die; 1 per ball; cannot use 1 die for both
+        move each ball completely and get bonuses, then do the next
+        both balls can be on same feature, flipper, bumper, etc; must fill different boxes though
+        multiball ends when starting turn with 0 or 1 active ball; still get special bonuses on the turn you lose ball(s)
+        cannot reactivate multiball until losing 1 of your balls
+Sets
+    after completing, erase the boxes
+    BUMPER SETS
+        may move from one bumper to the next, without dropping zones
+    DROP TARGET SETS
+        choice of bonuses when completing
+        most bonuses are limited to 1x per game
+        <span class="inf"></span> indicates no limit to taking bonus
+    SKILL SHOT SET
+        circle 1 of the numbers when completing
+        cannot circle the same number twice
+        erase when using to sub that value for a die
+        die value is not altered for other players
+        can nudge a skill shot
+        cannot use skill shots to avoid tilts
+Ending a Round
+    move to flipper zone and cannot fill a box with dice results -> ball is lost
+    fill an outlane box in  flipper zone -> ball is lost
+    tilt after a nudge -> ball is lost
+    erase all dashed-line boxes
+    fill next circle on round track
+    place 1 ball back on start arrow
+
+can never stay on same feature, e.g. bumpers
+game ends after 3 rounds, but players may have a different number of turns, or may be in different rounds

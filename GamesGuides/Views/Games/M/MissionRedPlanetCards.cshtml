@@ -1,0 +1,368 @@
+﻿@{
+    ViewData["Title"] = "Mission: Red Planet Event Cards";
+}
+
+<style>
+body {
+    width: 1020px;
+}
+
+.table-cell {
+    min-height: 80px;
+}
+
+.atom {
+    background-image: url('@Url.Content("~/lib/Images/MissionRedPlanet/atom.png")');
+}
+
+.production {
+    background-image: url('@Url.Content("~/lib/Images/MissionRedPlanet/production.png")');
+}
+
+.planet {
+    background-image: url('@Url.Content("~/lib/Images/MissionRedPlanet/planet.png")');
+}
+
+#event-table .tc-p5, #action-table .tc-p5 {
+    width: 5%;
+}
+
+#event-table .tc-p116, #action-table .tc-p116 {
+    /*width: 11.666%;*/
+    width: 15%;
+}
+
+#event-table .table-cell.tc-4, #action-table .table-cell.tc-4 {
+    width: 25%;
+    padding-left: 1em;
+}
+
+#mission-table .tc-p2 {
+    width: 2%;
+}
+
+#mission-table .tc-p12 {
+    width: 14%;
+}
+
+.icon {
+    background-repeat: no-repeat;
+    /*background-position-x: 1em;*/
+    /*background-position-y: 40px;*/
+    background-size: 75%;
+    -webkit-print-color-adjust: exact;
+}
+</style>
+
+<h3>Discovery Cards</h3>
+
+<div id="event-table" class="table table-100 table-padding-p5">
+    <div class="table-row">
+        <div class="table-cell tc-p5 icon atom">&nbsp;</div>
+        <div class="table-cell tc-p116">
+            Ether Magnet
+        </div>
+        <div class="table-cell tc-4">
+            @*Take all astronauts that are in docked ships and place them in this zone.*@
+            All docked astronauts go here
+        </div>
+
+        <div class="table-cell tc-p5 icon atom">&nbsp;</div>
+        <div class="table-cell tc-p116">
+            Analysis Error
+        </div>
+        <div class="table-cell tc-4">
+            @*Replace this zone's resource token with the resource token from the supply. Replace any point tokens here from previous rounds with point tokens matching the new resource.*@
+            Replace resource with supply resource
+        </div>
+    </div>
+
+
+    <div class="table-row">
+        <div class="table-cell tc-p5 icon atom">&nbsp;</div>
+        <div class="table-cell tc-p116">
+            Native Resistance
+        </div>
+        <div class="table-cell tc-4">
+            @*Each player removes 1 of his astronauts from this zone and places it on the Lost in Space Memorial.*@
+            All: Kill 1 astronaut
+        </div>
+
+        <div class="table-cell tc-p5 icon production">&nbsp;</div>
+        <div class="table-cell tc-p116">
+            Subterfuge
+        </div>
+        <div class="table-cell tc-4">
+            @*If only one player has the most astronauts in this zone, the player with the <b>second-most</b> astronauts receives the point tokens <b>instead</b>.*@
+            2nd place receives points instead
+        </div>
+    </div>
+
+
+    <div class="table-row">
+        <div class="table-cell tc-p5 icon production">&nbsp;</div>
+        <div class="table-cell tc-p116">
+            Even Ground
+        </div>
+        <div class="table-cell tc-4">
+            @*Treat each player who has an <b>even</b> number of astronauts in this zone as having 0 astronauts in this zone.*@
+            Even # = 0
+        </div>
+
+        <div class="table-cell tc-p5 icon production">&nbsp;</div>
+        <div class="table-cell tc-p116">
+            Uneven Ground
+        </div>
+        <div class="table-cell tc-4">
+            @*Treat each player who has an <b>odd</b> number of astronauts in this zone as having 0 astronauts in this zone.*@
+            Odd # = 0
+        </div>
+    </div>
+
+
+    <div class="table-row">
+        <div class="table-cell tc-p5 icon production">&nbsp;</div>
+        <div class="table-cell tc-p116">
+            Inexhaustible Deposit
+        </div>
+        <div class="table-cell tc-4">
+            @*This zone produces 2 additional point tokens.*@
+            Produce 2 more
+        </div>
+
+        <div class="table-cell tc-p5 icon production">&nbsp;</div>
+        <div class="table-cell tc-p116">
+            Depleted Deposit
+        </div>
+        <div class="table-cell tc-4">
+            @*This zone produces 1 fewer point token.*@
+            Produce 1 fewer
+        </div>    </div>
+
+
+    <div class="table-row">
+        <div class="table-cell tc-p5 icon production">&nbsp;</div>
+        <div class="table-cell tc-p116">
+            Mining Incident
+        </div>
+        <div class="table-cell tc-4">
+            @*Discard all point tokens already in this zone. This zone does not produce any more point tokens.*@
+            Discard all points, skip production
+        </div>
+
+        <div class="table-cell tc-p5 icon production">&nbsp;</div>
+        <div class="table-cell tc-p116">
+            Synergy
+        </div>
+        <div class="table-cell tc-4">
+            @*Each adjacent zone produces 1 additional point token.*@
+            Adjacent zones produce 1 more
+        </div>
+    </div>
+
+
+    <div class="table-row">
+        <div class="table-cell tc-p5 icon planet">&nbsp;</div>
+        <div class="table-cell tc-p116">
+            Virus
+        </div>
+        <div class="table-cell tc-4">
+            @*Each player with at least 1 astronaut in this zone loses points equal to the number of astronauts in this zone.*@
+            Lose 1 point per astronaut
+        </div>
+
+        <div class="table-cell tc-p5 icon planet">&nbsp;</div>
+        <div class="table-cell tc-p116">
+            Lichens
+        </div>
+        <div class="table-cell tc-4">
+            @*Each player with at least 1 astronaut in this zone gains 6 points.*@
+            1+ astronaut: +6 points
+        </div>
+    </div>
+
+
+    <div class="table-row">
+        <div class="table-cell tc-p5 icon planet">&nbsp;</div>
+        <div class="table-cell tc-p116">
+            Meteorite Field
+        </div>
+        <div class="table-cell tc-4">
+            @*Each player with at least 1 astronaut in this zone gains points equal to the number of his astronauts in this zone.*@
+            Gain 1 point per astronaut
+        </div>
+    </div>
+
+</div>
+
+<br /><br /><br /><br />
+
+<h3>Action Cards</h3>
+
+<div id="action-table" class="table table-100 table-padding-p5">
+    <div class="table-row">
+        <div class="table-cell tc-p5 icon atom">&nbsp;</div>
+        <div class="table-cell tc-p116">
+            Space Zombies
+        </div>
+        <div class="table-cell tc-4">
+            @*You may take any number of your astronauts from the Lost in Space Memorial and place them in any 1 zone where you have at least 1 astronaut.*@
+            Before revealing:<br />recover & place astronauts
+        </div>
+
+        <div class="table-cell tc-p5 icon atom">&nbsp;</div>
+        <div class="table-cell tc-p116">
+            Surprise Move
+        </div>
+        <div class="table-cell tc-4">
+            @*You may make up to 2 moves on Mars with your astronauts.*@
+            After revealing:<br />2 movements
+        </div>
+    </div>
+
+
+    <div class="table-row">
+        <div class="table-cell tc-p5 icon production">&nbsp;</div>
+        <div class="table-cell tc-p116">
+            Planetary Cleanup
+        </div>
+        <div class="table-cell tc-4">
+            Take all leftover points
+        </div>
+
+        <div class="table-cell tc-p5 icon production">&nbsp;</div>
+        <div class="table-cell tc-p116">
+            Blocks of Ice
+        </div>
+        <div class="table-cell tc-4">
+            @*You receive 2 ice point tokens.*@
+            +2 ice tokens
+        </div>
+    </div>
+
+</div>
+
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br />
+
+<h3>Mission Cards</h3>
+
+<div id="mission-table" class="table table-100 table-padding-p5">
+    <div class="table-row">
+        <div class="table-cell tc-p2">X</div>
+        <div class="table-cell tc-p12">Northern Influence</div>
+        <div class="table-cell tc-4">
+            @*If you have at least 1 astronaut in 1/2/3/4 of the red zones, gain 1/2/4/7 points.*@
+            1+ in VB, Ausonia, TS, Hellas
+        </div>
+
+        <div class="table-cell tc-p2">X</div>
+        <div class="table-cell tc-p12">Southern Influence</div>
+        <div class="table-cell tc-4">
+            @*If you have at least 1 astronaut in 1/2/3/4 of the red zones, gain 1/2/4/7 points.*@
+            1+ in MS, SS, VM, MT
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-p2">X</div>
+        <div class="table-cell tc-p12">Eastern Influence</div>
+        <div class="table-cell tc-4">
+            @*If you have at least 1 astronaut in 1/2/3/4 of the red zones, gain 1/2/4/7 points.*@
+            1+ in Hellas, TS, MT, SS
+        </div>
+
+        <div class="table-cell tc-p2">X</div>
+        <div class="table-cell tc-p12">Western Influence</div>
+        <div class="table-cell tc-4">
+            @*If you have at least 1 astronaut in 1/2/3/4 of the red zones, gain 1/2/4/7 points.*@
+            1+ in Ausonia, VB, SM, MS
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-p2">9</div>
+        <div class="table-cell tc-p12">Pockets of Influence</div>
+        <div class="table-cell tc-4">
+            @*If you have at least 1 astronaut in <b>each</b> red zone, gain 9 points.*@
+            1+ in <b>each</b>: Ausonia, Hellas, MT, MS
+        </div>
+
+        <div class="table-cell tc-p2">9</div>
+        <div class="table-cell tc-p12">Colonization</div>
+        <div class="table-cell tc-4">
+            @*If you have the higheste number of astronauts on Mars (not counting Phobos), gain 9 points.*@
+            Most on Mars
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-p2">6</div>
+        <div class="table-cell tc-p12">Strategic Zones</div>
+        <div class="table-cell tc-4">
+            @*If you have the highest number of astronauts in <b>both red zones combined</b>, gain 6 points.*@
+            Most in SM + VM
+        </div>
+
+        <div class="table-cell tc-p2">7</div>
+        <div class="table-cell tc-p12">Satellite</div>
+        <div class="table-cell tc-4">
+            @*If you have the most astronauts on Phobos, gain 7 points.*@
+            Most on Phobos
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-p2">X</div>
+        <div class="table-cell tc-p12">Collectioneer</div>
+        <div class="table-cell tc-4">
+            @*For each of your point token sets (1 celerium, 1 sylvanite, and 1 ice), gain 2 points.*@
+            Token set = 2
+        </div>
+
+        <div class="table-cell tc-p2">8</div>
+        <div class="table-cell tc-p12">Sylvanite Stash</div>
+        <div class="table-cell tc-4">
+            @*If you hae the most sylvanite point tokens, gain 8 points.*@
+            Most Sylvanite tokens
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-p2">X</div>
+        <div class="table-cell tc-p12">Good Intel</div>
+        <div class="table-cell tc-4">
+            @*For each zone in which you have at least 1 astronaut (including Phobos), gain 1 point.*@
+            Each zone: 1+ = 1 point
+        </div>
+
+        <div class="table-cell tc-p2">X</div>
+        <div class="table-cell tc-p12">Settlement</div>
+        <div class="table-cell tc-4">
+            @*For each of your astronauts in 1 zone of your choice, gain 1 point.*@
+            Pick any zone, X astronauts = X points
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-p2">X</div>
+        <div class="table-cell tc-p12">Eternal Fame</div>
+        <div class="table-cell tc-4">
+            @*For each of your astronauts on the Lost in Space Memorial, gain 2 points.*@
+            Lost astronaut = 2
+        </div>
+
+        <div class="table-cell tc-p2">9</div>
+        <div class="table-cell tc-p12">Ice Monopoly</div>
+        <div class="table-cell tc-4">
+            @*If you have the most ice point tokens, gain 9 points. In case of a tie, the tied players evenly divide the 9 points, rounded down.*@
+            Most ice tokens
+        </div>
+    </div>
+
+</div>
+

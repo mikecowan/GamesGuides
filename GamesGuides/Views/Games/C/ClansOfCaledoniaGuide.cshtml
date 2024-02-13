@@ -1,0 +1,316 @@
+﻿@{
+    ViewData["Title"] = "Clans of Caledonia";
+}
+
+<style>
+.icon {
+    width: 20px;
+}
+</style>
+
+<h3>Setup</h3>
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Module letters: alphabetical, clockwise, adjacent to middle of map</li>
+                <li>Port bonus tiles in corners, positions according to player count</li>
+                <li>Market board according to player count, price counters on circled values</li>
+                <li>Export board according to player count</li>
+                <li>2 available merchants</li>
+                <li>Export box tile showing player count</li>
+                <li>Randomize first player, then clockwise</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Clan draft
+                    <ul>
+                        <li>N+1 clans paired with starting tiles</li>
+                        <li>Last player chooses first</li>
+                    </ul>
+                </li>
+                <li>Initial placement draft
+                    <ul>
+                        <li>Snake draft placing 2 workers</li>
+                        <li>2 total workers</li>
+                        <li>May be same or different</li>
+                        <li>Need not be adjacent</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Phase 1: Preparation</h3>
+<ul>
+    <li>Flip previous scoring tile</li>
+    <li>Refill contract board</li>
+    <li>Retrieve merchants</li>
+</ul>
+
+<br /><br />
+
+<h3>Phase 2: Action</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Trade</h4>
+            <ul>
+                <li>Send X merchants to buy/sell X goods</li>
+                <li>No high-speed trading</li>
+            </ul>
+
+            <h4>Expand</h4>
+            <ul>
+                <li>Follow shipping level restriction</li>
+                <li>Tile must allow with forest, mountain, or grass</li>
+                <li>May trigger neighboring bonus(es)</li>
+                <li>May trigger building bonus</li>
+            </ul>
+
+            <h4>Obtain an Export Contract</h4>
+            <ul>
+                <li>Pay cost according to current round</li>
+                <li>Limit 1 unfulfilled export contract (exception: Buchanan)</li>
+                <li>May <i>not</i> discard a contract without fulfilling it</li>
+            </ul>
+
+            <h4>Upgrade Shipping</h4>
+            <p>Pay $4 <span class="arrow"></span> advance the shipping marker</p>
+
+            <br />
+
+            <h4>Upgrade technology</h4>
+            <ul>
+                <li>Pay $10 <span class="arrow"></span> flip a worker production tile</li>
+                <li>$5 when receiving bonus upgrade from a contract</li>
+            </ul>
+        </div>
+
+        <div class="table-cell tc-6">
+            <h4>Hire a merchant</h4>
+            <p>Pay $4 <span class="arrow"></span> add a merchant to stock</p>
+            
+            <br />
+
+            <h4>Fulfill an Export Contract</h4>
+            <ul>
+                <li>Pay left-half <span class="arrow"></span> receive right-half</li>
+                <li>Move cotton, tobacco, or sugar cane marker</li>
+                <li>Check for $1 bonus from marker movement</li>
+                <li>Beef & mutton require animal slaughter</li>
+            </ul>
+
+            <h4>Pass</h4>
+            <ul>
+                <li>No more actions for the round</li>
+                <li>Move turn order token to leftmost available slot</li>
+                <li>Receive bonus money</li>
+            </ul>
+
+            <h4>Free Action: Port bonus tile</h4>
+            <ul>
+                <li>Each is 1<span class="cross"></span> per game per player (mark them)</li>
+                <li>Available when a unit is neighboring or within shipping range</li>
+                <li>Use in addition to main action, either before or after</li>
+                <li>May use multiple port bonuses on the same turn</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<br /><br />
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Phase 3: Production</h3>
+            <ul>
+                <li>Money for workers</li>
+                <li>Basic goods (1 field = 2 grain)</li>
+                <li>Processed goods
+                    <ul>
+                        <li>optional</li>
+                        <li>basic goods <span class="arrow"></span> processed goods</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Phase 4: Scoring</h3>
+            <p>Give points for fulfilling requirements</p>
+        </div>
+    </div>
+</div>
+
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br /><br />
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Neighboring Bonus</h3>
+            <ul>
+                <li><u>Trigger</u>: expand into a space that <i>neighbors</i> another player's unit</li>
+                <li>Active player may do a modified trade action
+                    <ul>
+                        <li>buying only; no selling</li>
+                        <li>good matching opponent's unit</li>
+                        <li>max 3 buys (4 in 2p)</li>
+                        <li>cost reduced by $2 each (basic) or $3 each (processed)</li>
+                    </ul>
+                </li>
+                <li>Sending merchants is still required</li>
+                <li>Adjust price after purchase is complete</li>
+                <li>Multiple neighboring units
+                    <ul>
+                        <li>may use neighboring bonus for each <i>different</i> unit</li>
+                        <li>3-buy (4-buy for 2p) is a strict cap</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Direct Export Bonuses</h3>
+            <ul>
+                <li><img src="~/lib/Images/ClansOfCaledonia/money.png" class="icon" /> Money</li>
+                <li><img src="~/lib/Images/ClansOfCaledonia/freespace.png" class="icon" /> Free Space
+                    <ul>
+                        <li>immediate expand action</li>
+                        <li>$0 land cost</li>
+                        <li>shipping restrictions, neighbor & building bonuses still apply</li>
+                    </ul>
+                </li>
+                <li><img src="~/lib/Images/ClansOfCaledonia/bonusupgrade.png" class="icon" /> Bonus Upgrade
+                    <ul>
+                        <li>tech upgrade for $5, <i>or</i></li>
+                        <li>shipping upgrade at no cost, <i>or</i></li>
+                        <li>hire a merchant at no cost, <i>or</i></li>
+                        <li>retrieve 1 merchant</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<br />
+<hr />
+<br />
+
+<h3>Building Bonus</h3>
+<ul>
+    <li><img src="~/lib/Images/ClansOfCaledonia/buildingbonus.png" class="icon" /> <u>Trigger</u>: deploy 4th building 1 type <i>and</i> export box is empty</li>
+    <li>Draw 3 contracts <span class="arrow"></span> take 0 or 1, return the unselecteds to bottom of stack</li>
+    <li>If taking a contract, pay the cost as if performing the "Obtain an export contract" action</li>
+    <li>The bonus is considered part of the expand action</li>
+</ul>
+
+<br />
+<hr />
+<br />
+
+<h3>Final Scoring</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Resources</h4>
+            <div class="table table-padding-1">
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/ClansOfCaledonia/basicgoods.png" style="height: 20px;" />
+                    </div>
+                    <div class="table-cell tc-9">
+                        1
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/ClansOfCaledonia/processedgoods.png" style="height: 20px;" />
+                    </div>
+                    <div class="table-cell tc-9">
+                        2
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/ClansOfCaledonia/money.png" class="icon" />
+                    </div>
+                    <div class="table-cell tc-9">
+                        10 : 1
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/ClansOfCaledonia/hops.png" style="height: 20px;" />
+                    </div>
+                    <div class="table-cell tc-9">
+                        1
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/ClansOfCaledonia/exportgoods.png" style="height: 20px;" />
+                    </div>
+                    <div class="table-cell tc-3">
+                        3 / 4 / 5
+                    </div>
+                    <div class="table-cell tc-6">
+                        Ties:
+                        <img src="~/lib/Images/ClansOfCaledonia/cotton.png" style="height: 20px;" />
+                        <span style="font-size: 16pt;">&nbsp;&gt;&nbsp;</span>
+                        <img src="~/lib/Images/ClansOfCaledonia/tobacco.png" style="height: 20px;" />
+                        <span style="font-size: 16pt;">&nbsp;&gt;&nbsp;</span>
+                        <img src="~/lib/Images/ClansOfCaledonia/sugarcane.png" style="height: 20px;" />
+                    </div>
+                </div>
+            </div>
+
+            <br />
+
+            <h4>Contracts</h4>
+            <ul>
+                <li>Count fulfilled contracts</li>
+                <li>12vp - 6vp</li>
+                <li>2-player: 8vp - 0vp</li>
+                <li>Ties: divide VP for tiers among tied players, round down</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Settlements</h4>
+            <ul>
+                <li><u>Def</u>: cluster of neighboring units of one color; includes singleton units
+                    <ul>
+                        <li>neighboring: adjacent with no river between</li>
+                    </ul>
+                </li>
+                <li>Count number of settlements within shipping reach of each other</li>
+                <li>18vp - 12vp - 6vp</li>
+                <li>2-player: 12vp - 0vp</li>
+                <li>Ties: divide VP for tiers among tied players, round down</li>
+            </ul>
+
+            <br />
+
+            <p>NOTES:
+                <ul>
+                    <li>This does not count the number of units on the board</li>
+                    <li>Nor does it count the single biggest settlement</li>
+                    <li>Rather, score the most points by having many, non-neighboring settlements that are within shipping range</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+</div>
+
+

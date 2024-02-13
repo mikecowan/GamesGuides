@@ -1,0 +1,250 @@
+﻿@{
+    ViewData["Title"] = "Keyflower Guide";
+}
+
+<style>
+h4  {
+    margin: 0;
+}
+
+ol, ul {
+    margin-top: 0;
+}
+
+.icon {
+    width: 20px;
+}
+</style>
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Setup</h3>
+            <ul>
+                <li>Separate 20 green workers</li>
+                <li>Draw 8 workers</li>
+                <li>Deal home tile to each player - lowest number is starting player</li>
+                <li>Place N boat tiles
+                    <ul>
+                        <li><u>Merchants</u> pick either boat I or boat II from each</li>
+                    </ul>
+                </li>
+                <li>Place [N-1]* turn-order tiles
+                    <ul>
+                        <li>* 4 for 6-player</li>
+                        <li><u>Farmers</u> replace tiles 1-3</li>
+                    </ul>
+                </li>
+                <li>Bag of skill tiles - serves as both draw and discard</li>
+                <li>[N+4] tiles from spring/summer/fall</li>
+                <li>Deal 3/3/3/2/2 winter to each player
+                    <ul>
+                        <li><u>Farmers</u> 4/4/4/3/3</li>
+                    </ul>
+                </li>
+                <li><u>Merchants</u> form 3 piles of contracts, flip top contract face up</li>
+                <li><u>Merchants</u> set out extension tiles</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>End of Season</h3>
+            <ol>
+                <li>Retrieve workers from losing bids</li>
+                <li>Discard village tiles with no bids</li>
+                <li>Claim village tiles, <i>all</i> meeples for bid/activation <span class="arrow"></span> bag</li>
+                <li>Players collect workers placed in their own village</li>
+                <li>Turn-order and boat tiles; deal with boats 1 and/or boat 6 too</li>
+                <li><u>Farmers</u> Breeding (not winter)</li>
+                <li>Expand villages with tiles that were purchased</li>
+                <li><u>Merchants</u> Replace contract tiles</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Turn Order Tiles</h3>
+<p><u>Farmers</u> Cannot place workers directly on turn-order tiles to generate the resources</p>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Spring/Summer/Fall</h4>
+            <ol>
+                <li>Pick boat tiles based on turn order numbering, max 1 boat per player</li>
+                <li>Move start player when its turn order tile resolves</li>
+                <li>No turn-order tile <span class="arrow"></span> pick boats in clock-wise order from start player</li>
+                <li>If start player did not move, pass it to the left</li>
+            </ol>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Winter</h4>
+            <ul>
+                <li>No new workers/tiles</li>
+                <li>In turn order, take the turn order tile <i>and</i> a boat</li>
+                <li>No turn-order tile <span class="arrow"></span> pick boats in clock-wise order from start player</li>
+                <li>A player may win multiple turn order tiles, but only 1 boat</li>
+                <li>All players get exactly 1 boat</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>End Game</h3>
+<p>Start player marker can be used as any resource, skill tile, animal (on any field), wheat, or worker.
+    <br />This includes becoming a resource on an autumn scoring tile (Barn, Blacksmith, Stone Yard, Timber Yard).</p>
+<p>All items can only be scored once, and only be allocated to one bonus tile.</p>
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ol>
+                <li>Resources <i>on</i> the autumn scoring tiles</li>
+                <li><u>Farmers</u> Sheep Shelter</li>
+                <li><u>Farmers</u> Each field with animals</li>
+                <li>Apply Flipper or Flipper II</li>
+                <li>Fixed points on tiles</li>
+                <li><u>Merchants</u> Extensions</li>
+            </ol>
+        </div>
+        <div class="table-cell tc-6">
+            <ol start="7">
+                <li>Reallocate meeples/tiles/resources to winter tiles/boats/contracts</li>
+                <li><u>Merchants</u> 7 points per completed contract</li>
+                <li>Remaining winter tiles</li>
+                <li>Remaining boat tiles</li>
+                <li>Turn order tiles</li>
+                <li>All remaining gold</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+
+<hr />
+
+<h3>Farmers</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Fields & Animals</h4>
+            <ul>
+                <li>Fields can extend across multiple tiles</li>
+                <li>Place animals on the generating-tile, or home tile - exactly like resources</li>
+                <li>Fields can only hold 1 type of animal (exception: boat 5a)</li>
+                <li>Do not add animal if there are no available fields</li>
+                <li>If generating multiple animals, may place on different fields of same tile</li>
+                <li>Animals types can mix if fields become joined through adding tiles</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Movement</h4>
+            <ul>
+                <li>When using transport, split movement between resources and animals</li>
+                <li>Fields are adjacent if a single tile contains part of both fields</li>
+                <li>Moving between adjacent fields costs 1 movement point, ignore number of roads crossed</li>
+                <li>Animals move freely to any part of the field, even across multiple tiles</li>
+                <li>Animals can move <i>through</i> different animal types, but cannot end movement with different type</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Breeding</h4>
+            <ul>
+                <li>At end of non-Winter, <i>after</i> items have been taken from boats</li>
+                <li>2+ animals of same type in the same <i>field</i> <span class="arrow"></span> add <u>one</u> (total) to the field</li>
+                <li>Animals do not breed at end of winter</li>
+                <li>No breeding if there is a mix of animal types (exception: boat 5a)</li>
+                <li>Boat 6b: add animals <i>before</i> the breeding step</li>
+                <li>Distribute new animals in turn order, beginning with new start player</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Wheat</h4>
+            <ul>
+                <li>Keep wheat in front of you, similar to skill tiles</li>
+                <li>Spend wheat tile(s) to increase movement by 1 per wheat</li>
+                <li>Wheat movement is <i>not</i> doubled with boat 2b</li>
+                <li>Wheat cannot contribute to scoring of "Keyflower" tile</li>
+                <li>Start player marker can be declared wheat at end game</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<h4>Scoring</h4>
+<ul>
+    <li>Each <i>field</i> scores based on the animal type, independent of quantity of animals: 1/2/3 for sheep/pig/cow</li>
+    <li>A field scores for each animal type if there are multiple</li>
+    <li>Start player marker may be considered an animal in any field, including fields that already have animals</li>
+</ul>
+
+<br />
+
+<h3>Merchants</h3>
+<h4>Cabins</h4>
+<ul>
+    <li>All cabins are placed on home tile</li>
+    <li>Treated as extra <img src="~/lib/Images/Keyflower/upgrade.png" class="icon" /></li>
+    <li>Does not prevent tile from being upgraded with an extension or vice versa</li>
+    <li>Boat 2b doubles cabin's upgrade ability too</li>
+    <li>Cabins contribute to invincible II</li>
+    <li>No limit to number of cabins per player</li>
+</ul>
+
+<h4>Contracts</h4>
+<ul>
+    <li>When taking a contract from village action, may choose a face-up or a random face-down</li>
+    <li>Replace face-up contracts immediately</li>
+    <li>Discard and replace face-up contracts at the end of each season</li>
+    <li>Shuffle and create new stack if one ever depletes</li>
+    <li>Allocate items to contract at end game (max once per contract) to score 7 points</li>
+    <li>May discard a contract as a free action during turn
+        <ul>
+            <li>take one <i>specific</i> item shown on the contract, i.e. not an "any type" white outline symbol</li>
+            <li>animals acquired this way go on home tile</li>
+            <li>do not take start player marker, instead take any item that the start player could be exchanged for</li>
+        </ul>
+    </li>
+</ul>
+
+<h4>Extensions</h4>
+<ul>
+    <li>Extensions double the <i>fixed</i> point value of a tile, and nothing else</li>
+    <li>Get an extension by activating a tile with the <img src="~/lib/Images/Keyflower/upgrade.png" class="icon" /></li>
+    <li>An upgrade symbol cannot upgrade <u>and</u> add an extension - each is 1 upgrade action</li>
+    <li>Extension is added to an upgraded tile in your own village</li>
+    <li>1 extension per tile; cannot be removed, replaced, or re-positioned</li>
+    <li>Pay the cost on the extension tile
+        <ul>
+            <li>resources must be <i>on</i> the tile being upgraded</li>
+            <li>may pay with workers that have been outbid, but still may not separate them</li>
+        </ul>
+    </li>
+    <li>With boat 3a, may buy an extension that costs resources using any type of resources</li>
+    <li>If there are already workers on the tile: the extension must match the workers' color</li>
+    <li>After placing an extension, only workers of the same color may activate that tile for the rest of the game (exception: boat 4b)</li>
+    <li>Winter tiles cannot be upgraded, hence cannot be extended (by Flipper II)</li>
+</ul>
+
+<hr />
+
+<h3>Clarifications</h3>
+<ul>
+    <li>Skill tiles are placed face-up on the boats</li>
+    <li>Skill tiles are drawn from a bag, when spent they go back into the bag too</li>
+    <li><u>Merchants</u> contract tiles are placed face-down on the boats, taken randomly from a stack</li>
+    <li>Winter tiles committed: min 1, may contribute all</li>
+    <li>Green workers cannot be used as a substitute for other colors</li>
+    <li>When adding workers to an existing bid, it may currently be winning or losing, but the new total must be a winning bid</li>
+    <li>When moving workers who were outbid, they must remain together</li>
+    <li>Sea Breese caps at 32 points</li>
+    <li>Only exceptions to double counting items: fields scoring twice for multiple animal types; tiles with fields that extend the Hillside tile</li>
+</ul>
+

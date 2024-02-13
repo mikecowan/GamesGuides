@@ -1,0 +1,633 @@
+﻿@{
+    ViewData["Title"] = "Star Wars Rebellion Guide";
+}
+
+<style>
+h3, h4, ol, ul, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-bottom: .5em;
+}
+
+ol, ul {
+    margin-bottom: 1em;
+}
+
+li > ul, li > ol {
+    margin-bottom: 0;
+}
+
+footer {
+    margin-bottom: 0;
+}
+</style>
+
+<!-- Setup -->
+<h3>Setup</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ol>
+                <li>Take the 4 leaders without recruit icons</li>
+                <li>Time marker: 1, Reputation marker: 14</li>
+                <li>Objective deck (I atop II atop III), rebel draws 1
+                    <ul>
+                        <li>
+                            <u>Exp</u> unused cards to box
+                            <br />
+                            I: 5 cards
+                            <br />
+                            II: 4 cards + "Death Star Plans"
+                            <br />
+                            III: 4 cards + "Death Star Plans"
+                        </li>
+                    </ul>
+                </li>
+                <li>Action decks using cards with a recruit icon
+                    <ul>
+                        <li>
+                            <u>Advanced</u>:
+                            <br />
+                            draw 2 cards without recruit symbol,
+                            <br />
+                            discard rest to the box
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+        <div class="table-cell tc-6">
+            <ol start="5">
+                <li><u>Exp</u>: Mission Deck
+                    <ul>
+                        <li>Leader icon - always use</li>
+                        <li>No icon - base game set</li>
+                        <li>Vader icon - exp set</li>
+                    </ul>
+                </li>
+                <li>Take 4 starting missions, draw 2 more missions</li>
+                <li>Rebel chooses base from cards not containing Imperial units, remove Imperial cards from game
+                    <ul>
+                        <li>
+                            <u>Advanced</u>:
+                            <br />
+                            reveal probe cards until finding
+                            <br />
+                            3 rebel systems (rebel loyalty markers)
+                            <br />
+                            5 imperial systems (2 subjugation, 3 imperial loyalty)
+                            <br />
+                            remove 5 imperial cards from game
+                            <br />
+                            shuffle rebel/neutral cards back into deck
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<h3>Starting Units</h3>
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Imperial (base)</h4>
+            <ul>
+                <li>1 ground unit required for each system</li>
+                <li>3 Star Destroyers</li>
+                <li>3 Assault Carriers</li>
+                <li>12 TIE Fighters</li>
+                <li>12 Stormtroopers</li>
+                <li>5 AT-STs</li>
+                <li>1 AT-AT</li>
+                <li>1 Death Star</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Imperial (exp)</h4>
+            <ul>
+                <li>1 ground unit required for each system</li>
+                <li>Death Star on queue space 3</li>
+                <li>Choose any remote system, then remove its probe card from game
+                    <ul>
+                        <li>4 TIE Fighters</li>
+                        <li>1 Stormtrooper</li>
+                        <li>1 Death Star Under Construction</li>
+                    </ul>
+                </li>
+                <li>2 TIE Strikers</li>
+                <li>2 Assault Tanks</li>
+                <li>3 Star Destroyers</li>
+                <li>3 Assault Carriers</li>
+                <li>8 TIE Fighters</li>
+                <li>12 Stormtroopers</li>
+                <li>4 AT-STs</li>
+                <li>1 AT-AT</li>
+            </ul>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Rebel (base)</h4>
+            <ul>
+                <li>Place all in "Rebel Base" and/or any <i>one</i> rebel/neutral system</li>
+                <li>1 Corellian Corvette</li>
+                <li>1 Rebel Transport</li>
+                <li>2 X-wings</li>
+                <li>2 Y-wings</li>
+                <li>6 Rebel Troopers</li>
+                <li>2 Airspeeders</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Rebel (exp)</h4>
+            <ul>
+                <li>Place all in "Rebel Base" and/or any <i>one</i> rebel/neutral system</li>
+                <li>1 Rebel Vanguard</li>
+                <li>1 U-wing</li>
+                <li>1 Corellian Corvette</li>
+                <li>1 Rebel Transport</li>
+                <li>1 X-wings</li>
+                <li>1 Y-wings</li>
+                <li>5 Rebel Troopers</li>
+                <li>2 Airspeeders</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Game Rounds -->
+<h3>Game Rounds</h3>
+
+<h4>1. Assignment</h4>
+<ul>
+    <li>Rebel assigns all missions first, then Imperial</li>
+    <li>each player: assign any number of leaders to missions, 1 or 2 per mission placed on top of the face down mission card</li>
+</ul>
+
+<h4>2. Command</h4>
+
+Rebel first, alternate between players
+
+<p><b><u>Activate a System</u></b></p>
+<ul>
+    <li>place a leader from leader pool into <i>any</i> system</li>
+    <li>note: if a leader does not have any tactic values, it cannot activate a system</li>
+    <li>can move any ships from <b>adjacent</b> systems into the activated system</li>
+    <li>cannot move units <i>out of</i> a system that already contains one of their leaders note: there is no specification as to <i>how</i> the leader got there, whether it was from an activation, a mission defense, etc.</li>
+    <li>resolve combat if the system contains any opposing units</li>
+    <li>after <i>Imperial ground troops</i> move into a system, the rebel player declares whether the base is there
+        reveal the base before resolving a combat</li>
+</ul>
+
+<p><b><u>Reveal a mission</u></b></p>
+<ul>
+    <li>choose a face down mission with leader(s) assigned</li>
+    <li>declare system for any mission attempt, but no further decisions yet</li>
+    <li>place leader(s) in the declared system</li>
+    <li>for mission "attempts", opponent can send 1 leader from leader pool to oppose
+        if both players have a leader in the system, the mission is opposed and players roll to determine success/fail
+        roll dice equal to combined skill icons on all leaders in the system
+        ties favor defender
+        [target] and [hit]: 1 success
+        [lightsaber]: 2 successes</li>
+    <li>note: for missions attempted/resolved in "rebel base" space, put leader in special rebel base space, not in the actual system on the board</li>
+    <li>resolve: ability automatically occurs, cannot be opposed</li>
+    <li>attempt: ability is only performed if the mission succeeds
+        unopposed attempts automatically succeed</li>
+    <li>missions attempted "against a leader" are attempted in that leader's system</li>
+    <li>leader icon: any leader is eligible, but indicated leader adds +2 to success count</li>
+</ul>
+
+<p><b><u>Pass</u></b></p>
+<ul>
+    <li>turn is skipped for remainder of command phase</li>
+    <li>proceed to Refresh when both players have passed</li>
+</ul>
+
+<h4>3. Refresh</h4>
+<ol>
+    <li>retrieve leaders</li>
+    <li>draw 2 mission cards, discard down to 10 (projects count as missions, but objectives do not), cannot discard starting missions</li>
+    <li>launch probe droids: Imperial secretly draws 2 cards from probe deck</li>
+    <li>Rebel draws 1 objective</li>
+    <li>advance time marker
+        <ul>
+            <li>recruit: each draws 2 action cards and chooses 1 leader shown on either card, then discard without effect (first game)
+            may continue drawing action cards if neither have a recruitable leader
+            later games: also keep the action card, place other at bottom of deck</li>
+            <li>build: build 1 unit matching each resource icon in loyal/subjugated systems
+            subjugated: only use left-most icon</li>
+        </ul>
+    </li>
+    <li>deploy
+        <ul>
+            <li>start with rebel
+        slide all units 1 space, deploy any that are ready
+        deploy max 2 units in each system
+        systems with an opponent's unit or a sabotage marker can neither build units in step 5, not deploy in step 6</li>
+        </ul>
+    </li>
+</ol>
+
+<!-- Combat -->
+<h3>Combat</h3>
+
+<div class="table table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <!-- Combat Steps -->
+            <h4>Combat Steps</h4>
+            <ol>
+                <li>Add leader: may add a leader if none have tactics values</li>
+                <li>Draw Tactic Cards: use highest available number if have 2+ leaders
+                    <ul>
+                        <li><u>Exp</u>: each player retrieves tactic decks</li>
+                    </ul>
+                </li>
+                <li>Combat Round</li>
+            </ol>
+            
+            <!-- Combat Round -->
+            <h4>Combat Round</h4>
+            <ol>
+                <li>Space Battle
+                    <ol>
+                        <li><u>Exp</u>: Resolve Advanced Space Tactics cards</li>
+                        <li>AP resolves one attack with all ships</li>
+                        <li>NAP resolves one attack with all ships</li>
+                    </ol>
+                </li>
+                <li>Ground Battle
+                    <ol>
+                        <li><u>Exp</u>: Resolve Advanced Ground Tactics cards</li>
+                        <li>AP resolves one attack with all ground units</li>
+                        <li>NAP resolves one attack with all ground units</li>
+                    </ol>
+                 </li>
+                <li>Retreat
+                    <ol>
+                        <li>AP may retreat units from system</li>
+                        <li>NAP may retreat units from system</li>
+                    </ol>
+            
+                </li>
+                <li>Next Round
+                    <ul>
+                        <li>Resolve another combat round or End</li>
+                    </ul>
+                </li>
+            </ol>
+            
+            <!-- Advanced Tactics Cards -->
+            <h4>Advanced Tactics Cards</h4>
+            <ol>
+                <li>Each player chooses 1 advanced tactics card (required)</li>
+                <li>Each player simultaneously reveals card</li>
+                <li>AP chooses top or bottom ability (optional)
+                    <ul>
+                        <li>Exception: NAP's card uses CANCEL <span class="arrow"></span> resolve first</li>
+                    </ul>
+                </li>
+                <li>NAP chooses top or bottom ability (optional)</li>
+                <li>Discard tactic card; retrieve [X-1] cards if hand is empty</li>
+            </ol>
+            
+            <ul>
+                <li>Play additional card: it can neither cancel nor be canceled</li>
+                <li>Most top abilities require a unit type</li>
+                <li>Cards destroy units <i>after</i> both tactics cards are resolved
+                    <ul>
+                        <li>unit will not roll dice this round</li>
+                        <li>unit can fulfill card requirement</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <!-- Resolving an Attack (Base) -->
+            <h4>Resolving an Attack (Base)</h4>
+            <ol>
+                <li>Roll dice
+                    <ul>
+                        <li>Roll dice matching color & quantity of participating units</li>
+                        <li>Each attack limited to 5 red, 5 black dice</li>
+                    </ul>
+                </li>
+                <li>Combat Actions
+                    <ul>
+                        <li>Play a Tactic card, some require <img src="~/lib/Images/StarWarsRebellion/lightsaber.png" /></li>
+                        <li>Draw a Tactic card: requires <img src="~/lib/Images/StarWarsRebellion/lightsaber.png" /></li>
+                    </ul>
+                </li>
+                <li>Assign Damage
+                    <ul>
+                        <li>Place cards / dice next to units to count hits</li>
+                        <li><img src="~/lib/Images/StarWarsRebellion/target.png" /> 1 damage to unit with matching health color</li>
+                        <li><img src="~/lib/Images/StarWarsRebellion/hit.png" /> 1 damage to any unit</li>
+                    </ul>
+                </li>
+                <li>Block Damage
+                    <ul>
+                        <li>Opponent can play Tactic cards to block damage</li>
+                    </ul>
+                </li>
+                <li>Destroy Units
+                    <ul>
+                        <li>All units roll combat dice, even if destroyed</li>
+                        <li>Remove at the end of the combat round</li>
+                    </ul>
+                </li>
+            </ol>
+            
+            <!-- Resolving an Attack (Exp) -->
+            <h4>Resolving an Attack (Exp)</h4>
+            <ol>
+                <li>Roll dice
+                    <ul>
+                        <li>Roll dice matching color & quantity of participating units</li>
+                        <li>Each attack is limited to 5 red, 5 black dice, 3 green dice</li>
+                        <li>Re-roll up to X dice, each die can only be re-rolled once</li>
+                        <li>X = highest Space/Ground tactic value among leaders</li>
+                    </ul>
+                </li>
+                <li>Assign Dice
+                    <ul>
+                        <li><img src="~/lib/Images/StarWarsRebellion/target.png" /> 1 damage to a unit with matching health color</li>
+                        <li><img src="~/lib/Images/StarWarsRebellion/hit.png" /> 1 damage to any unit</li>
+                        <li><img src="~/lib/Images/StarWarsRebellion/lightsaber.png" /> remove 1 damage from unit with matching health color
+                            <ul>
+                                <li>can save units from destruction</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Destroy Units
+                    <ul>
+                        <li>Remove destroyed units after <i>all</i> units have attacked</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<!-- Mission Steps -->
+<h3>Mission Steps</h3>
+<ol>
+    <li>flip card faceup</li>
+    <li>choose system</li>
+    <li>attempt (go to 4) or resolve (go to 6)</li>
+    <li>send leader to oppose (always optional, even if leaders are already in the system)</li>
+    <li>opposition
+    unopposed -> auto success (go to 6)
+    opposed:
+        roll X dice for the combined mission icons on all leaders, max 10
+        ties go to defender
+        [lightsaber] = 2 success, other faces = 1, blank = 0
+        if defender has 0 icons, it is still opposed and the attacker must roll 1 success
+        "against a leader"
+            captured leader only participates if the mission is against that leader, otherwise treated as if not in system
+            all leaders in system participate</li>
+    <li>mission success: execute effects</li>
+    <li>discard or return to hand</li>
+</ol>
+
+<h3>Reminders</h3>
+<ul>
+    <li>Leaders are not affected by Death Star's planetary destruction
+    Imperial ground units can "escape" with enough transport capacity
+    ground units can move to destroyed system if carried, but no ground battle occurs</li>
+    <li>loyalty requirement is still met if the marker is physically in the system, even if there is subjugation or enemy units</li>
+    <li>Coruscant and "Rebel Base" cannot gain/lose loyalty
+    "Rebel Base" is not a system</li>
+    <li>leaders (1 or 2) assigned to a mission must have enough icons (combined) for the mission requirements
+    leader still needs requisite icons if an ability that assigns them to a mission</li>
+    <li>Immediate objectives
+    reveal and resolve upon drawing</li>
+    <li>cannot move through impassible areas (shaded in light red)
+cannot move OUT OF a system that already contains a leader of their faction
+    leader in "Rebel Base" prevents moving out of "Rebel Base", but not out of the actual system on the board
+leader must have tactic values to activate a system</li>
+    <li>2 unit limit applies to refresh phase (missions may have already deployed)</li>
+    <li>limit 1 objective card per combat, and 1 per refresh phase
+    Death Star Plans objective card can be used every combat round if it fails, but only 1x card per round (could have 2)
+        there can be multiple COMBAT ROUNDS in a BATTLE
+no hand limit on objective cards, separate from mission cards</li>
+    <li>when a deck is depleted shuffle the discard to create a new draw deck
+    items that go to the box after using:
+        action cards, but not unchosen action cards from recruitment phase (those go to bottom of deck)
+        eliminated leaders
+        objective cards
+        5 probe cards with imperial systems used during setup
+        the unchosen starting action cards from setup</li>
+    <li>leader, adjacency, transport capacity</li>
+    <li>Behind Enemy Lines, Hidden Fleet, Plan the Assault: "Leaders in the "Rebel Base" space do not prevent this movement"
+Rapid Mobilization: "... ignoring adjacency"
+Lead the Strike Team: "... ignoring transport restrictions and adjacency"</li>
+    <li>action cards used during a mission or combat require the depicted leader to be in the system, unless the action specifically moves that leader</li>
+    <li>leaders without tactics values cannot be used to activate a system</li>
+    <li>Rebel Base is revealed as soon as Imperial *ground* units enter a system</li>
+    <li>max 1 ring per leader, remove previous ring if necessary</li>
+    <li>subjugated systems only build with the far-left icon</li>
+    <li>if neither drawn action card has a recruitable leader, may continue drawing until finding one that does</li>
+    <li>cannot use resource icons for building when opponent has a unit in the system
+    System: planet artwork + "space" area + name + resource icons (populous) + loyalty space (populous)</li>
+    <li>Rebel Base also builds units, unless:
+    revealed
+    Imperial has loyalty or a unit in system</li>
+    <li>max 1 objective card per refresh phase
+max 1 objective card per combat
+Death Star Plans objective card can be used every combat round if it fails, but only 1x card per round (could have 2)</li>
+    <li>for any attack, max 5 red + 5 black; any dice reduction is applied before 5-dice limits</li>
+    <li>for missions, max 5 red + 5 black dice</li>
+    <li>assigned damage can exceed unit health</li>
+    <li>dice are assigned to represent damage, this can be blocked (base game)</li>
+    <li>any unit that is not destroyed gets damage markers assigned to it (and end of combat round), these damage marker assignments cannot be blocked (base game)</li>
+    <li>resolving missions is optional; any unresolved will return to hand without being revealed</li>
+</ul>
+
+<h3>Definitions</h3>
+<ul>
+    <li>Capital Ship: ship with red health value; Death Star is a space station (not a capital ship)</li>
+    <li>Figher: ship with black health value</li>
+    <li>Gain unit: skip queue and place directly in system</li>
+    <li>Ground unit: unit with orange resource icon</li>
+    <li>Imperial System: system with an imperial loyalty marker or subjugation marker</li>
+    <li>Neutral System: system without Rebel loyalty, Imperial loyalty, or subjugation (i.e. no markers at all)</li>
+    <li>Populous System: resource icon(s) and a loyalty space</li>
+    <li>Rebel System: system with a rebel loyalty marker and no subjugation marker</li>
+    <li>Region: group of 4 systems, separated by thick orange borders</li>
+    <li>Remote System: no loyalty or resource icons; always neutral, not deployment</li>
+    <li>Ship: all units with blue resource icons, also Super Star Destroyers, Death Star (Under Construction)</li>
+    <li>System: planet artwork, "outer space" area around planet, the name, resource icons (populous), and loyalty space (populous)</li>
+    <li>Theater: ground vs space</li>
+    <li>"win battle": opponent has 0 units from same theater
+    no winner if all units destroyed
+    cannot win the theater if opponent had no units at start</li>
+</ul>
+
+<h3>Captured Leaders</h3>
+<ul>
+    <li>do not oppose missions
+        unless it is attempted "against a captured leader"</li>
+    <li>do not prevent Rebel movement</li>
+    <li>cannot be moved when retreating</li>
+    <li>rescued if a second leader is captured</li>
+    <li>do not reteurn to leader pool</li>
+    <li>cannot be moved by Rebel</li>
+    <li>do not prevent Rebel units from moving out of the system</li>
+    <li>can be moved by Imperial like ground units, but does NOT count toward transport capacity</li>
+    <li>captured leader will oppose missions used against it</li>
+    <li>capturing a 2nd leader -> 1st captured leader is rescued</li>
+    <li>no Imperial units in captured leader's system -> leader is rescued</li>
+    <li>rescued: remove capture ring and place leader in "Rebel Base" space</li>
+</ul>
+
+<h3>Rescue</h3>
+<ul>
+    <li>place in "Rebel Base" space (unless revealed, then place in the system)</li>
+    <li>auto-rescue if no Imperial units in captured leader's system</li>
+    <li>after rescuing, any leaders assigned to the rescue may also move to the "Rebel Base" space, but only if involved in the rescue</li>
+</ul>
+
+
+<h3>Retreat</h3>
+<ul>
+    <li>cannot retreat to "Rebel Base"</li>
+    <li>Imperial cannot retreat from a system with Death Star (Under Construction)</li>
+    <li>must retreat *all* ships, but can leave ground units and tie fighters</li>
+    <li>any leader can retreat, even those without tactic values</li>
+
+    <li>move leader and all units from that system to an adjacent system</li>
+    <li>cannot retreat if does not have a leader</li>
+    <li>cannot retreat from the death star</li>
+    <li>cannot retreat to a system that opponent moved units from to initiate the combat (no retreat-attacking)</li>
+    <li>may only retreat to a system containing your units or has your loyalty marker</li>
+</ul>
+
+<h3>Deploy</h3>
+<ul>
+    <li>deploy max 2 units per system that is loyal or subjugated
+    if cannot (or does not want to) deploy, leave on space 1
+    cannot deploy to remote systems (because no loyalty)
+    </li>
+    <li>cannot deploy to a system with a sabotage marker, or any opponent ships or ground units</li>
+    <li>Rebel can deploy to both the "Base" and the actual system (if loyal) while base is hidden
+    while revealed, cannot deploy to "Base"
+    </li>
+</ul>
+
+<h3>Sabotage</h3>
+<ul>
+    <li>prevents system from using resource icons for building</li>
+    <li>prevents deployment</li>
+    <li>max 1 per system</li>
+    <li>blocks abilities that "build" or "deploy" but other abilities that refer to resource icons are still valid</li>
+    <li>stay on board until removed by a mission</li>
+    <li>affect both factions</li>
+</ul>
+
+<h3>Subjugation</h3>
+<ul>
+    <li>any imperial ground units on a system without Imperial loyalty causes it to become subjugated</li>
+    <li>remove token when no imperial ground units remain</li>
+    <li>does not change the system's loyalty, only whether it is an imperial/neutral/rebel system</li>
+    <li>players can gain/lose loyalty in a subjugated system</li>
+</ul>
+
+<h3>Win</h3>
+<ul>
+    <li>Imperial: imperial units in Rebel base's system and no Rebel units in the system
+        <br />base must be revealed</li>
+    <li>Rebel: reputation marker in same space as time marker</li>
+</ul>
+
+<h3>Rebel Base</h3>
+<ul>
+    <li>while hidden, Rebel can move between "base" and systems adjacent or containg base</li>
+    <li>if Imperial ever has loyalty or ground units in the same system as the rebel base, it is immediately revealed</li>
+    <li>while revealed, resource icons on "rebel base" space can be used, but units cannot be deployed in or moved to "rebel base" space, instead place in actual system</li>
+    <li>missions can only be attempted at "Rebel Base" if specified by card</li>
+</ul>
+
+<h4>new base</h4>
+<ul>
+    <li>*may* choose a new base when using Rapid Mobilization, but it cannot be a system with Imperial loyalty or Imperial units</li>
+    <li>reveal old base location, all units in "Rebel Base" go to the system, shuffle unchosen probe cards back into probe deck</li>
+</ul>
+
+<h4>Reveal</h4>
+<ul>
+    <li>Reveal when Imperial has loyalty or *ground units* in the base's system</li>
+    <li>ships alone will not reveal the base</li>
+    <li>when revealed, place all units in "Rebel Base" in the actual system</li>
+    <li>finish all movement before revealing the base. Then resolve combat</li>
+</ul>
+
+<h4>While Revealed</h4>
+<ul>
+    <li>Rebel cannot deploy or move to "Rebel Base" space</li>
+    <li>resource icons can still be used, unless there is an imperial unit in system or imperial loyalty</li>
+    <li>any cards that refer to "Rebel Base" instead refer to the actual system</li>
+</ul>
+
+<h4>New Base</h4>
+<ul>
+    <li>Rapid Mobilization mission - resolve (and make all decisions) at end of command phase, immediately before refresh</li>
+    <li>draw 4 (8), pick 1 (picking 1 is optional)</li>
+    <li>reveal previous probe card, give to Imperial</li>
+    <li>move all units and leaders from "Rebel Base" to previous base's system</li>
+    <li>shuffle unchosen 3 (7) cards, put on bottom of probe deck</li>
+    <li>cannot establish base in system with Imperial loyalty, Imperial units, or a destroyed system marker</li>
+</ul>
+
+<h3>Structures</h3>
+<ul>
+    <li>structures are destroyed if they are the Rebel's only remaining ground units AND there are imperial ground units</li>
+    <li>if Rebel rolled at least 1 die in ground battle, structures are not auto-destroyed</li>
+    <li>abilities that move units (yours or opponent's) do not apply to structures</li>
+</ul>
+
+<h3>Minor skills</h3>
+<ul>
+    <li>roll green die for the small icon</li>
+    <li>small icon still counts toward skill requirements the same as a regular icon</li>
+</ul>
+
+<h3>Leader limit</h3>
+<ul>
+    <li>8 leader limit</li>
+    <li>hard cap: remove a leader from the game if the limit is ever exceeded</li>
+</ul>
+
+<h3>Target Markers</h3>
+<ul>
+    <li>used by missions and objectives</li>
+    <li>remove when player has a ground unit in the system and opponent does not</li>
+    <li>destroying a system also removes any target markers (removal effect still resolves)</li>
+</ul>
+
+<h3>exp units</h3>
+<ul>
+    <li>Shield Bunker
+        <ul>
+            <li>Death Star (Under Construction) cannot be destroyed or dealt/assigned damage; immunity to Death Star Plans</li>
+            <li>may be deployed to any system that contains an imperial ground unit and no Rebel units, regardless of loyalty</li>
+            <li>while in a remote system without any Rebel units, Imperial may deploy there as if it were a loyal system; cannot be done same build step the bunker was deployed on</li>
+        </ul>
+    </li>
+
+    <li>Interdictor
+        <ul>
+            <li>prevents Rebel units from retreating, also prevents any special Rebel abilities that cause a retreat</li>
+            <li>retreating is allowed if all interdictors are destroyed</li>
+        </ul>
+    </li>
+</ul>
+

@@ -1,0 +1,401 @@
+﻿@{
+    ViewData["Title"] = "Space Alert Specific Internal Threats";
+}
+
+<style>
+.table ul {
+    /*list-style: none;*/
+    margin: 0;
+    padding: 0;
+}
+
+</style>
+
+<h3>Internal Threats</h3>
+
+<div class="table table-100 table-padding-1">
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Battlebot Uprising
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>X: does not knock out player in interceptors</li>
+                <li>When a player is knocked out, their battlebots are disabled</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Breached Airlock
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>Gravolifts are not affected</li>
+                <li>Teleportation (Teleporter and Siren) and Special Ops advanced special action can travel through seals</li>
+                <li>Heroic movement and Squad Leader special action take player “as close as possible” to the station</li>
+                <li>Slimes can slip through a sealed door</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+    
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Contamination
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>Each contamination has 1 hp</li>
+                <li>Remove 4th when removing 3rd</li>
+                <li>Z: cannot remove the remaining Contaminations</li>
+                <li>Z: players <i>here</i> [Contamination station] are knocked out; note: not considered a movement effect</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+    
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Cyber Gremlin
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>Each malfunction is considered an internal threat with 1 hp</li>
+                <li>Malfunctions do not disappear if Cyber Gremlin is destroyed, but they can be repaired</li>
+                <li>Malfunctions can still be repaired if Cyber Gremlin executes Z-action</li>
+                <li>Malfunctions have some trajectory number as the Cyber Gremlin - for priority purposes, and which threat is repaired first</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Driller
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>No movement in event of ties</li>
+                <li>Never changes decks</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Fissure
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>Requires 2 interceptor attacks</li>
+                <li>Repair fissure on takeoff turn</li>
+                <li>Do not target external threats while dealing with fissure</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Lateral Laser Jam
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>Determine the location as soon as it appears</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Ninja
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>Use (!) tokens to denote drones</li>
+                <li>X: players can be poisoned either until Ninja is destroyed or performs Z-action</li>
+                <li>Anyone poisoned <span class="arrow"></span> continue advancing numbered token, even if Ninja is destroyed</li>
+                <li>Poison trigger: players who <i>start</i> or <i>stop</i> a <u>movement</u> action in a drone's station</li>
+                <li>Poison does <u>not</u> trigger with:
+                    <ul style="padding-left: 1em;">
+                        <li>double/heroic movements that pass through station</li>
+                        <li>teleportation to/from these stations</li>
+                        <li>Special Ops advanced action</li>
+                        <li>players who do not move</li>
+                        <li>players who attempt to move but fail (no station change)</li>
+                    </ul>
+                </li>
+                <li>Mark poison with green block</li>
+                <li>No more actions once destroyed</li>
+                <li>Z: Poisoned players will be knocked out, even if Ninja is destroyed</li>
+                <li>Z: Rockets strike immediately, damage can be reduced with red zone shields</li>
+                <li>Z: poisoned players are knocked out even if Ninja is destroyed</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Nuclear Device
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>Treat as having Inaccessibility 2</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Overheated Reactor
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>Check for players at other reactors only at the exact moment of final repair</li>
+                <li>Neither retrospective nor prospective for same turn</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Parasite
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>“Movement” ignores teleportation and special ops's advanced special action</li>
+                <li>XYZ have no effect if parasite has not attached yet</li>
+                <li>Host cannot destroy his own parasite</li>
+                <li>Parasite cannot be destroyed until it has a host</li>
+                <li>If something else knocks out host, parasite has no further effect</li>
+                <li>Advanced action of Special Ops will disable attacking battlebots and protect the parasite</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Phasing Anomaly
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>Lasers in zones with disrupted optics cannot hit trajectory-spanning threats</li>
+                <li>Lasers cannot hit targets unless
+                    <ul style="padding-left: 1em; margin: initial">
+                        <li>interceptors are in space during Compute Damage step <i>or</i></li>
+                        <li>a player performed visual confirmation that turn</li>
+                    </ul>
+                </li>
+                <li>Effect applies on phased-out turns too</li>
+                <li>Can perform computer maintenance when phased out</li>
+                <li>Z: computer maintenance is impossible</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Phasing Mine Layer
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>Mark mines with red cubes</li>
+                <li>A station can have multiple mines</li>
+                <li>If destroyed, remove mines for no effect</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Power Pack Overload
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>X: red + blue Slime X actions</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Pulse Cannon Short Circuit
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>Shields apply to the attacks, just like external threats</li>
+                <li>The attack effect does not require or consume extra energy</li>
+                <li>Pulse attack only happens when central laser actually fires, even if there is no target</li>
+                <li>Z: Backfire effect does not persist, but pulse cannon will remain inoperable</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Rabid Beast
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>Mark infection with red cubes</li>
+                <li>Anyone infected <span class="arrow"></span> continue advancing numbered token, even if Rabid Beast is destroyed</li>
+                <li>No more actions once destroyed</li>
+                <li>Z: Infected players deal 2 damage, even if Rabid Beast is destroyed (exceptions: knocked-out or in interceptors)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+    
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Reverse Shields
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>No effect until it crosses X or Y</li>
+                <li>X: shields ignore attacks but are not drained</li>
+                <li>Y: hits to shields discard cubes and add that as damage, counts as an attack with no shield absorption</li>
+                <li>Y: shields do not absorb damage (for purposes of plasmatic knock-out effect)</li>
+                <li>Does not negate temporary shield effects e.g. energy tech</li>
+                <li>Bonus damage still applies if the lone player deals 2+ damage</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Seeker
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>Ignore player count in current station, destination may have fewer players than starting point</li>
+                <li>No movement in event of ties</li>
+                <li>Knockout will also disable battlebots</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Shambler
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>X: check for players in the <i>current</i> location, ignore player count in potential destination</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+    
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Siren
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>Teleports immediately if hit, before next player action</li>
+                <li>Knockout never affects players in interceptors</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+    
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Slime
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>Damage to progeny does not affect original</li>
+                <li>Only remove card and token when original <u>and</u> progenies are either destroyed or have done Z action</li>
+                <li>Will not spread to station that has slime</li>
+                <li>Delays are not cumulative, max 1 per station</li>
+                <li>Entering station with teleport does <i>not</i> trigger the delay</li>
+                <li><u>Can</u> spread through sealed doors from Breached Airlock</li>
+                <li>Red X: black cube to denote disabled bots; initial activation removes cube and binds bots to you, however they are disabled</li>
+                <li>Blue X: destroyed rocket reduces hp of Unstable Warheads</li>
+                <li>Z: token remains, delay effect persists, cannot be destroyed</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Space-Time Vortex
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>Teleportation occurs immediately, including after the action that destroys threat</li>
+                <li>Double actions may lead to performing second half in a different station</li>
+                <li>Single actions that deal 2+ damage will only trigger 1 deck-change effect</li>
+                <li>X: Treat as a normal delay, but repeat previous action instead of null action</li>
+                <li>Deck change effect and Y-action are teleports
+                    <ul style="padding-left: 1em;">
+                        <li>Do not use gravolift</li>
+                        <li>Ignore sealed doors</li>
+                        <li>Do not trigger effects for entering/leaving a station</li>
+                    </ul>
+                </li>
+                <li>Z: Draw a <u>normal</u> internal threat, execute actions immediately, awards 0 points</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+    
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Unstable Warheads
+        </div>
+        <div class="table-cell tc-10">
+            <ul>
+                <li>Counts unlaunched rockets at time of appearance</li>
+                <li>0 rockets = immediate threat defeat</li>
+                <li>Rockets on rocket track are not counted</li>
+                <li>HP reduced by blue Slime and Power Pack Overload effects</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+

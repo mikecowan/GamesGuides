@@ -1,0 +1,271 @@
+﻿@{
+    ViewData["Title"] = "Concordia Guide";
+}
+
+<style>
+#setuptable ul {
+    list-style: none;
+    padding: 0 10px;
+}
+</style>
+
+<h3>Setup</h3>
+<ul>
+    <li>Use most valuable bonus marker for each region</li>
+    <li>Deck I atop deck II ...</li>
+    <li>Remove deck [N+1] and above</li>
+    <li>(Salsa) Deal 2 Blue forum tiles to each player, keep one</li>
+</ul>
+
+<div class="table table-100" id="setuptable">
+    <div class="table-row">
+        <div class="table-cell tc-1"><h4>Base</h4></div>
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Cards with column</li>
+                <li>Replace 4 Venus cards with no-symbol cards</li>
+                <li>Mason shuffled into stack I, not stack II</li>
+                <li>Remove Magister cards</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-2">
+            <ul>
+                <li>Architect</li>
+                <li>Diplomat</li>
+                <li>Mercator</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-2">
+            <ul>
+                <li>Prefect</li>
+                <li>Prefect</li>
+                <li>Senator</li>
+                <li>Tribute</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1"><h4>Venus solo</h4></div>
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Cards with column</li>
+                <li>8 starting cards (with column)</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-2">
+            <ul>
+                <li>Architect</li>
+                <li>Diplomat</li>
+                <li>Mercator</li>
+                <li>Magister</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-2">
+            <ul>
+                <li>Prefect</li>
+                <li>Prefect</li>
+                <li>Senator</li>
+                <li>Tribute</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1"><h4>Venus team</h4></div>
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Cards with rings</li>
+                <li>2nd partner chooses a city not-adjacent to start city for both colonists</li>
+                <li>If it is land-only or sea-only, they can use 2 people or 2 boats</li>
+                <li>6 starting cards (with rings)</li>
+                <li>Partner 1: remove Diplomat</li>
+                <li>Partner 2: remove Architect</li>
+                <li>Both partners start with same amount of money: $5 / 6 / 7</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-2">
+            <ul>
+                <li><u>Partner 1</u></li>
+                <li>Architect</li>
+                <li>Mercator</li>
+                <li>Prefect</li>
+                <li>Praetor</li>
+                <li>Tribune</li>
+                <li>Legatus</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-2">
+            <ul>
+                <li><u>Partner 2</u></li>
+                <li>Diplomat</li>
+                <li>Mercator</li>
+                <li>Prefect</li>
+                <li>Praetor</li>
+                <li>Tribune</li>
+                <li>Legatus</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<br /><br /><br /><br />
+
+<h3>Cards</h3>
+<div class="table table-100">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Tribune
+                    <ul>
+                        <li>Receive money</li>
+                        <li>Colonist on start city</li>
+                    </ul>
+                </li>
+                <li>Architect
+                    <ul>
+                        <li>X movement points, X = # of colonists on board</li>
+                        <li>May move through occupied lines (for 1 movement point)</li>
+                    </ul>
+                </li>
+                <li>Prefect
+                    <ul>
+                        <li>All buildings in province produce</li>
+                    </ul>
+                </li>
+                <li>Colonist
+                    <ul>
+                        <li>New colonists on start city or with player's houses</li>
+                    </ul>
+                </li>
+                <li>Diplomat
+                    <ul>
+                        <li>Cannot copy Diplomat</li>
+                        <li>(Venus) Player chooses the card to copy, both execute it</li>
+                        <li>(Venus) Card cannot be copied again by partner on their turn</li>
+                    </ul>
+                </li>
+                <li>Senator
+                    <ul>
+                        <li>Slide & fill after at turn end</li>
+                        <li>Cards go to hand</li>
+                    </ul>
+                </li>
+                <li>Mercator
+                    <ul>
+                        <li>Receive money</li>
+                        <li>Choose two good <u>types</u></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Consul
+                    <ul>
+                        <li>Pay only goods printed on card</li>
+                        <li>Card goes to hand</li>
+                    </ul>
+                </li>
+                <li>Magister (Venus solo)
+                    <ul>
+                        <li>Repeat your own previous non-Senator card</li>
+                        <li>May Magister a Diplomat to copy a Senator</li>
+                    </ul>
+                </li>
+                <li>Praetor (team)
+                    <ul>
+                        <li>Cards are refilled after both partners are finished</li>
+                    </ul>
+                </li>
+                <li>Proconsul (team)
+                    <ul>
+                        <li>Cannot purchase a proconsul</li>
+                        <li>Partner plays a card (not Legatus) and resolves it solo</li>
+                        <li>Play order does not change</li>
+                    </ul>
+                </li>
+                <li>Legatus (team)
+                    <ul>
+                        <li>Inspect partner's hand and make suggestion</li>
+                        <li>Partner chooses & plays a card, then team executes card</li>
+                        <li>(A) plays Legatus, (B) plays architect:
+                            <ol>
+                                <li>(B) resolves architect</li>
+                                <li>(A) resolves architect</li>
+                            </ol>
+                        </li>
+                        <li>Play order does not change, follow orange pawn</li>
+                    </ul>
+                </li>
+                <li>Double Choice (Venus)
+                    <ul>
+                        <li>Solo: Pick either</li>
+                        <li>Team: Partner cannot make the same choice</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+
+<h3>Other</h3>
+<ul>
+    <li>Praefectus Magnus
+        <ul>
+            <li>Must use if you have it</li>
+            <li>Not activated by money collection</li>
+        </ul>
+    </li>
+    <li>Storehouse
+        <ul>
+            <li>May not discard goods voluntarily</li>
+            <li>If receiving goods beyond capacity (e.g. Prefect), may choose which to keep, but cannot choose to keep spaces empty</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Game End</h3>
+<ul>
+    <li>Triggers:
+        <ul>
+            <li>Last personality card is purchased; or</li>
+            <li>15th house is built</li>
+        </ul>
+    </li>
+    <li>Receive 7pt Concordia card</li>
+    <li>Other players (teams) perform final turn</li>
+    <li>Tie: owner, then closest recipient, of Praefectus Magnus</li>
+</ul>
+
+<h3>Salt</h3>
+<ul>
+    <li>Wild resource: may swap salt into any good at any time</li>
+    <li>May not purchase salt</li>
+    <li>Salt cities count toward:
+        <ul>
+            <li>Saturn (provinces)</li>
+            <li>Jupiter (non-brick)</li>
+            <li>Minverva (exactly one type of good)</li>
+        </ul>
+    </li>
+    <li>Salt cities do <u>not</u> count toward Mercury (different types of goods) i.e. Salt neither counts as a 6th good nor a substitute</li>
+</ul>
+    
+<h3>Forum Tiles</h3>
+<ul>
+    <li>Acquire when playing Tribute: 4+, 6+, 8+, 10+ to take from slots 1 / 2 / 3 / 4 or below</li>
+    <li>Architect build action cannot be interrupted, but you <u>can</u> use a forum tile between moving and building</li>
+    <li>(Venus) Divide card count equally or unequally and both partners may take a forum tile (or not)</li>
+</ul>
+
+<h3>Venus</h3>
+<ul>
+    <li>Actions of a card are also executed by partner</li>
+    <li>Money is shared between partners; may not refuse the taking</li>
+    <li><img src="~/lib/Images/Concordia/venus.png" style="width: 75px;" /> Max 14 points per card - solo game only, otherwise no limit</li>
+</ul>

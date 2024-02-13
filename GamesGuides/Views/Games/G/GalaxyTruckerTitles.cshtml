@@ -1,0 +1,270 @@
+﻿@{
+    ViewData["Title"] = "Galaxy Trucker Titles";
+}
+
+<style>
+.goldmedal {
+    width: 40px;
+    vertical-align: middle;
+    margin-right: 1em;
+}
+
+.box {
+    height: 300px;
+}
+
+.goldmedal-sm {
+    width: 30px;
+}
+
+.indent {
+    margin-left: 2em;
+}
+
+.button {
+    /*position: relative;*/
+    /*align-items: center;*/
+    justify-content: center;
+    display: flex;
+}
+
+.button > div {
+    border: 1px solid black;
+    /*display: inline-block;*/
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 20px;
+    margin: 0;
+    padding: 10px;
+    /*align-items: center;*/
+    /*vertical-align: middle;*/
+/*    text-align: center;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+*/    margin-top: 0;
+}
+</style>
+
+
+
+<div class="table table-100">
+    <div class="table-row">
+        <div class="table-cell tc-5">
+            <div class="box">
+                <h3>Freight Hauler</h3>
+                <p>
+                    <u>Count:</u> Cargo tiles with 1<sup>+</sup> blocks
+                </p>
+                <p class="indent">
+                    2nd Flight <span class="arrow"></span> $4 and <img src="~/lib/Images/goldmedal.png" class="goldmedal goldmedal-sm" />
+                </p>
+                <p class="indent">
+                    3rd Flight <span class="arrow"></span> $6
+                </p>
+            </div>
+        </div>
+        <div class="table-cell tc-5 tc-push-2">
+            <div class="box">
+                <h3>Power Trucker</h3>
+                <p>
+                    <u>Count:</u> Tiles that use batteries
+                </p>
+                <p class="indent">
+                    2nd Flight <span class="arrow"></span> $4 and <img src="~/lib/Images/goldmedal.png" class="goldmedal goldmedal-sm" />
+                </p>
+                <p class="indent">
+                    3rd Flight <span class="arrow"></span> $6
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-5">
+            <div class="box">
+                <h3>Xenoquartermaster</h3>
+                <p>
+                    <u>Count:</u> Walking distance from each alien to nearest cabin (sum)
+                </p>
+                <p class="indent">
+                    2nd Flight <span class="arrow"></span> $4 and <img src="~/lib/Images/goldmedal.png" class="goldmedal goldmedal-sm" />
+                </p>
+                <p class="indent">
+                    3rd Flight <span class="arrow"></span> $6
+                </p>
+            </div>
+        </div>
+        <div class="table-cell tc-5 tc-push-2">
+            <div class="box">
+                <h3>Cruise Captain</h3>
+                <p>
+                    <u>Count:</u> Occupied cabins with a view
+                    <br />
+                    "view": at least one smooth side that is not adjacent to a tile
+                </p>
+                <p class="indent">
+                    2nd Flight <span class="arrow"></span> $4 and <img src="~/lib/Images/goldmedal.png" class="goldmedal goldmedal-sm" />
+                </p>
+                <p class="indent">
+                    3rd Flight <span class="arrow"></span> $6
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-5">
+            <div class="box">
+                <h3>Master Engineer</h3>
+                <p>
+                    <u>Count:</u> Tiles in your ship
+                </p>
+                <p class="indent">
+                    2nd Flight <span class="arrow"></span> $4 and <img src="~/lib/Images/goldmedal.png" class="goldmedal goldmedal-sm" />
+                </p>
+                <p class="indent">
+                    3rd Flight <span class="arrow"></span> $6
+                </p>
+            </div>
+        </div>
+        <div class="table-cell tc-5 tc-push-2">
+            <div class="box">
+                <h3>Corridorist</h3>
+                <p>
+                    <u>Count:</u> Longest chain of corridor tiles (1 or 2 connectors)
+                </p>
+                <p class="indent">
+                    2nd Flight <span class="arrow"></span> $4 and <img src="~/lib/Images/goldmedal.png" class="goldmedal goldmedal-sm" />
+                </p>
+                <p class="indent">
+                    3rd Flight <span class="arrow"></span> $6
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="table-row">
+        <div class="table-cell tc-12">
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        </div>
+    </div>
+
+    <!-- GOLD MEDALS -->
+    <div class="table-row">
+        <div class="table-cell tc-5">
+            <div class="box">
+                <h3><img src="~/lib/Images/goldmedal.png" class="goldmedal" />Power Trucker</h3>
+                <p>
+                    <u>Count:</u> Tiles that use batteries
+                </p>
+                <p>
+                    <u>Penalty:</u> Battery tiles receive 0 batteries if joined to a tiles that uses batteries
+                </p>
+                <div class="button">
+                    <div>
+                        Defend for $12
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-cell tc-5 tc-push-2">
+            <div class="box">
+                <h3><img src="~/lib/Images/goldmedal.png" class="goldmedal" />Freight Hauler</h3>
+                <p>
+                    <u>Count:</u> Cargo tiles with 1<sup>+</sup> blocks
+                </p>
+                <p>
+                    <u>Penalty:</u> Cargo holds that are adjacent to another cargo hold<br />(even if not joined) cannot hold goods
+                </p>
+                <div class="button">
+                    <div>
+                        Defend for $12
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-5">
+            <div class="box">
+                <h3><img src="~/lib/Images/goldmedal.png" class="goldmedal" />Cruise Captain</h3>
+                <p>
+                    <u>Count:</u> Occupied cabins with a view
+                    <br />
+                    "view": at least one smooth side that is not adjacent to a tile
+                </p>
+                <p>
+                    <u>Penalty:</u> Exposed connectors on a cabin reduce its capacity by 1
+                </p>
+                <div class="button">
+                    <div>
+                        Defend for $12
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-cell tc-5 tc-push-2">
+            <div class="box">
+                <h3><img src="~/lib/Images/goldmedal.png" class="goldmedal" />Xenoquartermaster</h3>
+                <p>
+                    <u>Count:</u> Walking distance from each alien to nearest cabin (sum)
+                </p>
+                <p>
+                    <u>Penalty:</u> Alien life support systems only work if the connection to the cabin matches exactly
+                </p>
+                <div class="button">
+                    <div>
+                        Defend for $12
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-5">
+            <div class="box">
+                <h3><img src="~/lib/Images/goldmedal.png" class="goldmedal" />Corridorist</h3>
+                <p>
+                    <u>Count:</u> Longest chain of corridor tiles (1 or 2 connectors)
+                </p>
+                <p>
+                    <u>Penalty:</u> When a corridor tile is destroyed, any corridor tile joined will fall off (not a chain reaction)
+                </p>
+                <div class="button">
+                    <div>
+                        Defend for $12
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-cell tc-5 tc-push-2">
+            <div class="box">
+                <h3><img src="~/lib/Images/goldmedal.png" class="goldmedal" />Master Engineer</h3>
+                <p>
+                    <u>Count:</u> Tiles in your ship
+                </p>
+                <p style="margin-bottom: 0;">
+                    <u>Penalty:</u> During building:
+                </p>
+                <ul style="margin-top: 0;">
+                    <li>Must reserve 2 tiles with 5+ connector sides before adding any to ship</li>
+                    <li>Add these tiles to ship when everyone is finished building</li>
+                    <li>Pay $1 per side with a connection for any unplayable tile</li>
+                </ul>
+                <div class="button">
+                    <div>
+                        Defend for $12
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

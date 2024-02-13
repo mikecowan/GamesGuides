@@ -1,0 +1,323 @@
+﻿@{
+    ViewData["Title"] = "Life of the Amazonia Guide";
+}
+
+<style>
+.token {
+    width: 50px;
+}
+
+.bonusicon {
+    width: 30px;
+}
+
+.list-padding {
+    padding-left: 1em;
+    font-size: 14px;
+}
+</style>
+
+<h3>Setup</h3>
+
+<div class="table table-80">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Tokens</h4>
+        </div>
+        <div class="table-cell tc-3">
+            <h4>Unique Animals</h4>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/LifeOfTheAmazonia/yellow1.png" class="token" />
+            <br />
+            <img src="~/lib/Images/LifeOfTheAmazonia/yellow1.png" class="token" />
+            <br />
+            <img src="~/lib/Images/LifeOfTheAmazonia/yellow1.png" class="token" />
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/LifeOfTheAmazonia/yellow2.png" class="token" />
+            <br />
+            <img src="~/lib/Images/LifeOfTheAmazonia/yellow2.png" class="token" />
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/LifeOfTheAmazonia/green1.png" class="token" />
+            <br />
+            <img src="~/lib/Images/LifeOfTheAmazonia/green1.png" class="token" />
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/LifeOfTheAmazonia/blue1.png" class="token" />
+            <br />
+            <img src="~/lib/Images/LifeOfTheAmazonia/blue1.png" class="token" />
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/LifeOfTheAmazonia/red2.png" class="token" />
+        </div>
+
+        <div class="table-cell tc-6 tc-push-1">
+            <ul class="">
+                <li>Deal 2 to each player, keep 1</li>
+                <li>Abilities limited to 1<span class="cross"></span> per turn</li>
+                <li>Placement conditions do not need to be sustained</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<br /><br />
+<hr />
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Action Phase</h3>
+            <ul>
+                <li>Any number of actions</li>
+                <li>Any two resource <i>tokens</i> can substitute for any 1-value resource</li>
+                <li>Large animals <i>partially</i> in 2 habitats are considered to be in each;<br />if counting things in their habitat, count them all</li>
+                <li>Excess payment is wasted
+                    <ul>
+                        <li><u>Exception</u>: may repeat same <i>type</i> of action multiple times consecutively, using a single payment</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Clean-up Phase</h3>
+            <ul>
+                <li>Store unused resources</li>
+                <li>Draw 5 additional for next turn</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+@*<h4>1. purchase a resource token</h4>
+    new token goes to discard boat
+*@
+@*<h4>2. place a terrain tile</h4>
+    payment
+        advance player marker on terrain tile track
+        pay indicated amount
+        collect track bonus (if applicable)
+    placement
+        take any of 3 face-up tiles
+        new tile must connect by at least 2 hexes
+    refill*@
+@*<h4>3. Place a tree</h4>
+    advance player marker on Tree track
+    pay amount shown
+    collect bonus (if applicable)
+    place in unoccupied FOREST hex
+*@
+@*<h4>4. Place an aquatic flower</h4>
+    see "place a tree" as they follow same rules
+    advance player marker on flower track
+    place in unoccupied RIVER hex
+*@
+
+@*<h4>5. Place an animal</h4>
+    select an animal
+        choose from base or unique
+        base: 8 types, all players can place them
+        unique: can only be placed by player who selected the card, 1 per player
+    payment
+        lower left on card
+    placement
+        terrain conditions for placement on upper left on card
+        may rotate animal for placing
+        must use unoccupied hexes
+        gray hex: any type
+*@
+@*<h4>6. Purchase a nature card</h4>
+    take a nature card from the pool
+    limit 4 scenery cards - may discard to obtain a different card
+    insect cards - used immediately then discarded
+        not affected by scenery 4-limit
+        may purchase even if effects cannot be applied
+    refill immediately
+*@
+@*<h4>7. Expand Storage</h4>
+    payment
+        advance marker on storage track
+        pay indicated amount
+        collect bonus
+    number of resources that can be stored in-play during clean-up
+*@
+@*<h4>8. Purchase a bonus</h4>
+    payment
+        pay indicated amount for desired bonus
+        limit 1 bonus per turn of each type
+*@
+
+
+<hr />
+
+<h3>End Game</h3>
+
+<div class="table">
+    <div class="table-row">
+        <!-- left column -->
+        <div class="table-cell tc-5">
+            <ul>
+                <li><u>Trigger</u>: 5 of the 8 base animal cards are depleted</li>
+                <li>Finish current turn, then other players get 1 last turn</li>
+                <li>5-point token to player who triggers end</li>
+                <li>Tie-breaker: more animals</li>
+            </ul>
+
+            <h4>Calculate Scores</h4>
+            <ul>
+                <li>Base animals</li>
+                <li>Scenery cards</li>
+                <li>Waterfall tracks</li>
+                <li>Unused seed = 1vp</li>
+                <li>End game token = 5vp</li>
+            </ul>
+        </div>
+        <!-- right column -->
+        <div class="table-cell tc-7">
+            <h4>Grouping</h4>
+            <ul>
+                <li>Formation, scores points based on shape</li>
+                <li>Shape: the line connecting the edges of the lives that makes up the grouping</li>
+                <li>Shape can be rotated or reversed. Order of life placement is up to the player</li>
+                <li>Grouping requires 2+ different lives <span class="arrow"></span> each grouping must have 1+ of each life</li>
+                <li>Lives cannot double-dip groupings on a card, but each card scores independently</li>
+            </ul>
+
+            <h4>Community</h4>
+            <ul>
+                <li>Gathering of adjacent lives</li>
+                <li>Shape does not matter</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<hr />
+
+<!-- Bonuses -->
+<h3>Bonuses</h3>
+@*<ul>
+    <li>Taking a bonus is optional</li>
+    <li>placement, track, limited track, "purchase a bonus" actions, insect cards, unique animal cards</li>
+    <li>receive bonus _after_ paying full cost of action</li>
+    <li>when multiple, player chooses order</li>
+</ul>*@
+
+<div class="table">
+    <div class="table-row">
+        <!-- left column -->
+        <div class="table-cell tc-6">
+            <div class="table">
+
+                <div class="table-row">
+                    <div class="table-cell tc-1">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/Draw.png" class="bonusicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Draw</h4>
+                        <ul class="list-padding">
+                            <li>Draw a token, add to in-play</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-1">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/specialterrain.png" class="bonusicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Special Terrain</h4>
+                        <ul class="list-padding">
+                            <li>Choose &amp; place a 1-hex</li>
+                            <li>Can expand jungle or cover a hex</li>
+                            <li>Unoccupied hexes only</li>
+                            <li>Does <b>not</b> trigger placement bonus</li>
+                            <li>Place atop of another 1-hex <span class="arrow"></span> discard previous to supply</li>
+                            <li>Supply-limited, can run out</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-1">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/seed.png" class="bonusicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Gain Seed</h4>
+                        <ul class="list-padding">
+                            <li>1-time use</li>
+                            <li>Max capacity 4</li>
+                            <li>Can help pay for an action, worth 1 of any resource</li>
+                            <li>Does not count toward token storage</li>
+                            <li>May use multiple seeds on a payment</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- right column -->
+        <div class="table-cell tc-6">
+            <div class="table">
+
+                <div class="table-row">
+                    <div class="table-cell tc-1">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/relocate.png" class="bonusicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Relocate</h4>
+                        <ul class="list-padding">
+                            <li>New space must meet terrain conditions</li>
+                            <li>Cannot trigger placement bonuses</li>
+                            <li>Cannot trigger animals' immediate effects</li>
+                            <li>Cannot move (special) terrain tiles, unique animals</li>
+                            <li>May reveal a placement bonus and obtain it again</li>
+                            <li>Unique animal placement abilities do <b>not</b> apply during relocation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-1">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/renew.png" class="bonusicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Renew</h4>
+                        <ul class="list-padding">
+                            <li>Discard 1-2 nature cards and/or terrain tiles</li>
+                            <li>Refill nature card rows and terrain tiles</li>
+                            <li>Terrain tiles <span class="arrow"></span> bottom of stack</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell tc-1">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/compost.png" class="bonusicon" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h4>Compost</h4>
+                        <ul class="list-padding">
+                            <li>Trash a token from discard pile or play area</li>
+                            <li>Cannot compost tokens in the bag</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,622 @@
+﻿@*<!-- Expansion Components -->
+<h3>Expansion Components</h3>
+
+<h4>Booster Changes</h4>
+<ul>
+    <li>Boosters affect up to 3 components of the given type</li>
+    <li>Can boost <i>joined</i> tiles of the type, or tiles joined to another tile being boosted
+        <ul>
+            <li>boost chain</li>
+        </ul>
+    </li>
+    <li>+1 (0.5) str to cannons, instead of +3 (+1.5)</li>
+    <li>+1 str per engine, instead of hyperspace</li>
+    <li>Shields protect from 1 hit of any type</li>
+    <li>Max 1 boost to any component, even if powering multiple booster components</li>
+    <li>Components are <i>not</i> destroyed after boosting</li>
+</ul>
+
+<div class="table table-100 table-padding-1 datatable">
+    <div class="table-row" style="padding-top: 0;">
+        <div class="table-cell tc-6">
+            <h4 style="margin-top: 0;">Luxury Cabin</h4>
+            <ul>
+                <li>1 human (no aliens)</li>
+                <li>Stays empty if the astronaut is ever given up</li>
+                <li>$1/2/3 at end of flight</li>
+            </ul>
+            
+            <h4>Bi-Directional Cannon</h4>
+            <ul>
+                <li>Requires battery</li>
+                <li>Max strength is 1.5</li>
+            </ul>
+            
+            <h4>Shield Booster</h4>
+            <ul>
+                <li>Protect against large meteors and heavy cannon fire</li>
+                <li>Requires battery (2 total)</li>
+                <li>Effect requires direct join to shield generator</li>
+            </ul>
+            
+            <h4>Engine Booster</h4>
+            <ul>
+                <li>Ship is moved to hyperspace
+                    <ul>
+                        <li>Skip current and next Adventure or Evil Machinations cards</li>
+                    </ul>
+                </li>
+                <li>Requires battery (2 if boosting double engine)</li>
+                <li>Effect requires direct join to an engine</li>
+                <li>May use when card is revealed, or for a parameter check
+                    <ul>
+                        <li>cannot use partway through meteoric swarm</li>
+                        <li>can use at the check for <i>any</i> Combat Zone row</li>
+                    </ul>
+                </li>
+                <li>Must give up if boosting on final adventure card</li>
+                <li>Engine is destroyed</li>
+            </ul>
+            
+            <h4>Indestructible Plating</h4>
+            <ul>
+                <li>Protects against all cannon fire, all meteors</li>
+                <li>Does not protect against sabotage or explosions</li>
+            </ul>
+            
+            <h4>Thrusters</h4>
+            <ul>
+                <li>"Move" ship to change contact point for meteors, cannon fire, etc.</li>
+                <li>Requires battery, need not be joined</li>
+                <li>Max 1 row/column movement, even with multiple thrusters</li>
+                <li>No components in the immediate directions of the thruster</li>
+                <li>Does not contribute to engine strength</li>
+                <li>Movement does not carry over to subsequent dice rolls</li>
+                <li>Cannot be used against internal attacks, e.g. Sabotage</li>
+                <li>If <i>joined</i> to crew, can change entry point for intruders
+                    <ul>
+                        <li>awake humans, aliens, active crubots</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <h4>Mixed Life Support</h4>
+            <ul>
+                <li><i>Joined</i> cabins can support either alien</li>
+                <li>If joined to 2 cabins, can support alien A <i>and</i> alien B</li>
+            </ul>
+            
+            <h4>Auto-Defense System</h4>
+            <ul>
+                <li>Does not count as a cannon</li>
+                <li>Each <i>joined pair</i> contributes +1 strength to cannons</li>
+                <li>A single auto-defense stops an intruder</li>
+            </ul>
+
+            <h4>Cyan Aliens</h4>
+            <ul>
+                <li>Choose a unique specialization for your alien</li>
+                <li>Cards are chosen in build token order: 1, 2, 3, ...</li>
+            </ul>
+        </div>
+        <!-- Expansion Components Column 2 -->
+        <div class="table-cell tc-6">
+            <h4 style="margin-top: 0;">Stasis Chamber</h4>
+            <ul>
+                <li>4 sleeping crew</li>
+                <li>Sleeping crew do not count as crew, or toward any adventure cards
+                    <ul>
+                        <li>abandoned station, combat zone, sabotage, epidemic, etc.</li>
+                    </ul>
+                </li>
+                <li>Awake <i>human</i> crew (non-Alien, non-crubot) can wake up crew in stasis to repopulate non-luxury cabins</li>
+            </ul>
+            
+            <h4>Cannon Engine</h4>
+            <ul>
+                <li>Counts as both for any card that refers to cannon or engine</li>
+            </ul>
+            
+            <h4>Cannon Booster</h4>
+            <ul>
+                <li>Adds 3 / 1.5 strength to forward / non-forward cannons
+                    <ul>
+                        <li>adds 3 to bi-directional if one cannon is pointing forward</li>
+                        <li>Same boost for single and double</li>
+                    </ul>
+                </li>
+                <li>Requires battery (2 if boosting double cannon)</li>
+                <li>Effect requires direct join to a cannon</li>
+                <li>Cannon is destroyed</li>
+            </ul>
+            
+            <h4>Reactor Furnace</h4>
+            <ul>
+                <li>Pay 1 good to fully charge a battery component
+                    <ul>
+                        <li>Can <i>only</i> use when gaining goods</li>
+                        <li>new, existing, one you don't have room for</li>
+                    </ul>
+                </li>
+                <li>Effect requires direct join to battery component</li>
+                <li>Can burn one block per Adventure card</li>
+            </ul>
+            
+            <h4>Solar Panels</h4>
+            <ul>
+                <li>Power a component, just like a battery</li>
+                <li>Effect requires direct join to component</li>
+                <li>One use per card</li>
+            </ul>
+            
+            <h4>Router Module</h4>
+            <ul>
+                <li>Components are considered adjacent and joined for all effects,<br />good or bad</li>
+            </ul>
+            
+            <h4>Crubot Stations</h4>
+            <ul>
+                <li>Temporarily increase crew size by 4</li>
+                <li>Requires battery - lasts for entire Adventure card</li>
+                <li>Cannot sacrifice crubot in place of crew</li>
+                <li>Cannot awaken crew in stasis</li>
+                <li>Must give up if only crubots remain</li>
+                <li>Can use thrusters against intruders</li>
+                <li>Can be armed to defeat intruders</li>
+            </ul>
+            
+            <h4>Armory</h4>
+            <ul>
+                <li>Arm humans, aliens, and crubots
+                    <ul>
+                        <li>must be joined to cabins / crubots</li>
+                        <li>luxury humans yes, stasis humans no</li>
+                    </ul>
+                </li>
+                <li>Armed crew count double when comparing crew size
+                    <ul>
+                        <li>combat zone, sabotage</li>
+                    </ul>
+                </li>
+                <li>Armed crew do not count double for minimum crew requirements
+                    <ul>
+                        <li>slavers, abandoned ship</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<br />
+<br />
+<br />
+<br />
+<br />*@
+
+
+
+<!-- Expansion Components -->
+<h3>Expansion Components</h3>
+
+<h4>Booster Changes</h4>
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Boosters affect up to 3 components of the given type</li>
+                <li>Can boost <i>joined</i> tiles, or tiles joined to another tile being boosted
+                    <ul>
+                        <li>boost chain</li>
+                    </ul>
+                </li>
+                <li>Max 1 boost to any component, not cumulative</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Cannon: +1 (0.5) str to each; instead of +3 (+1.5)</li>
+                <li>Engine: +1 str to each; instead of hyperspace</li>
+                <li>Shield: protect from 1 hit of any type</li>
+                <li>Components are <i>not</i> destroyed after boosting</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="table table-padding-1">
+    <div class="table-row">
+        <!-- left column -->
+        <div class="table-cell tc-6">
+            <div class="table">
+
+                <!-- Luxury Cabin -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/GalaxyTrucker/luxurycabin.png" class="component" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h3 class="comp-title">Luxury Cabin</h3>
+                    </div>
+                    <div class="table-cell tc-8">
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-10 tc-push-1">
+                        <ul class="small-list">
+                            <li>1 human (no aliens)</li>
+                            <li>Cannot refill mid-flight</li>
+                            <li>$1 / 2 / 3 at end of flight</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bi-Directional Cannon -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/GalaxyTrucker/bidirectionalcannon.png" class="component" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h3 class="comp-title"><img src="~/lib/Images/GalaxyTrucker/batteryicon.png" class="titleicon" /> Bi-Directional Cannon</h3>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-10 tc-push-1">
+                        <ul class="small-list">
+                            @*<li>Requires battery</li>*@
+                            <li>1 str for forward-pointing</li>
+                            <li>0.5 str for side/rear-pointing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Shield Booster -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/GalaxyTrucker/shieldbooster.png" class="component" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h3 class="comp-title"><img src="~/lib/Images/GalaxyTrucker/connection.jpg" class="titleicon" /> <img src="~/lib/Images/GalaxyTrucker/batteryicon.png" class="titleicon" /> Shield Booster</h3>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-10 tc-push-1">
+                        <ul class="small-list">
+                            <li>Protect against large meteors and heavy cannon fire</li>
+                            @*<li>Requires battery (2 total)</li>*@
+                            @*<li>Effect requires direct join to shield generator</li>*@
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Engine Booster -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/GalaxyTrucker/enginebooster.png" class="component" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h3 class="comp-title"><img src="~/lib/Images/GalaxyTrucker/connection.jpg" class="titleicon" /> <img src="~/lib/Images/GalaxyTrucker/batteryicon.png" class="titleicon" /> Engine Booster</h3>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-10 tc-push-1">
+                        <ul class="small-list">
+                            <li>Ship is moved to hyperspace
+                                <ul>
+                                    <li>Skip current and next Adventure or Evil Machinations cards</li>
+                                </ul>
+                            </li>
+                            @*<li>Requires battery (2 if boosting double engine)</li>*@
+                            @*<li>Effect requires direct join to an engine</li>*@
+                            <li>May use when card is revealed, or for a parameter check
+                                <ul>
+                                    <li>cannot use partway through meteoric swarm</li>
+                                    <li>can use at the check for any Combat Zone row</li>
+                                </ul>
+                            </li>
+                            <li>Must give up if boosting on final adventure card</li>
+                            <li>Engine is destroyed</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Indestructible Plating -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/GalaxyTrucker/indestructibleplating.png" class="component" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h3 class="comp-title">Indestructible Plating</h3>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-10 tc-push-1">
+                        <ul class="small-list">
+                            <li>Protects against all cannon fire, all meteors</li>
+                            <li>Does not protect against sabotage or explosions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Thrusters -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/GalaxyTrucker/thruster.png" class="component" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h3 class="comp-title"><img src="~/lib/Images/GalaxyTrucker/batteryicon.png" class="titleicon" /> Thrusters</h3>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-10 tc-push-1">
+                        <ul class="small-list">
+                            <li>"Move" ship to change contact point for meteors, cannon fire, etc.</li>
+                            @*<li>Requires battery, need not be joined</li>*@
+                            <li>Max 1 movement, not cumulative</li>
+                            <li>No components in the immediate directions of the thruster</li>
+                            <li>Does not contribute to engine strength</li>
+                            <li>Movement does not carry over to subsequent dice rolls</li>
+                            <li>Cannot be used against internal attacks, e.g. Sabotage</li>
+                            <li>If <i>joined</i> to crew, can change entry point for intruders
+                                <ul>
+                                    <li>awake humans, aliens, active crubots</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Mixed Life Support -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/GalaxyTrucker/lifesupportmixed.png" class="component" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h3 class="comp-title">Mixed Life Support</h3>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-10 tc-push-1">
+                        <ul class="small-list">
+                            <li>Joined cabins can support either alien</li>
+                            <li>If joined to 2 cabins, can support alien A and alien B</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Auto-Defense System -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/GalaxyTrucker/autodefensesystem.png" class="component" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h3 class="comp-title">Auto-Defense System</h3>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-10 tc-push-1">
+                        <ul class="small-list">
+                            <li>Does not count as a cannon</li>
+                            <li>Each joined pair contributes +1 strength to cannons</li>
+                            <li>A single auto-defense stops an intruder</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Cannon Engine -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/GalaxyTrucker/cannonengine.png" class="component" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h3 class="comp-title">Cannon Engine</h3>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-10 tc-push-1">
+                        <ul class="small-list">
+                            <li>Counts as both for any card that refers to cannon or engine</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- right column -->
+        <div class="table-cell tc-6">
+            <div class="table">
+
+                <!-- Cyan Aliens -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/GalaxyTrucker/lifesupportcyan.png" class="component" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h3 class="comp-title">Cyan Aliens</h3>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-10 tc-push-1">
+                        <ul class="small-list">
+                            <li>Choose a unique specialization for your alien</li>
+                            <li>Cards are chosen in build token order: 1, 2, 3, ...</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Stasis Chamber -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/GalaxyTrucker/stasischamber.png" class="component" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h3 class="comp-title">Stasis Chamber</h3>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-10 tc-push-1">
+                        <ul class="small-list">
+                            <li>4 sleeping crew</li>
+                            <li>Sleeping crew do not count as crew, or toward any adventure cards
+                                <ul>
+                                    <li>abandoned station, combat zone, sabotage, epidemic, etc.</li>
+                                </ul>
+                            </li>
+                            <li>Awake human crew (non-Alien, non-crubot) can wake up crew in stasis to repopulate non-luxury cabins</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Cannon Booster -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/GalaxyTrucker/cannonbooster.png" class="component" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h3 class="comp-title"><img src="~/lib/Images/GalaxyTrucker/connection.jpg" class="titleicon" /> <img src="~/lib/Images/GalaxyTrucker/batteryicon.png" class="titleicon" /> Cannon Booster</h3>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-10 tc-push-1">
+                        <ul class="small-list">
+                            <li>Adds 3 / 1.5 strength to forward / non-forward cannons
+                                <ul>
+                                    <li>adds 3 to bi-directional if one cannon is pointing forward</li>
+                                    <li>Same boost for single and double</li>
+                                </ul>
+                            </li>
+                            @*<li>Requires battery (2 if boosting double cannon)</li>*@
+                            @*<li>Effect requires direct join to a cannon</li>*@
+                            <li>Cannon is destroyed</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Reactor Furnace -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/GalaxyTrucker/reactorfurnace.png" class="component" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h3 class="comp-title"><img src="~/lib/Images/GalaxyTrucker/connection.jpg" class="titleicon" /> Reactor Furnace</h3>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-10 tc-push-1">
+                        <ul class="small-list">
+                            <li>Pay 1 good to fully charge <i>one</i> battery component
+                                <ul>
+                                    <li>Can only use when gaining goods</li>
+                                    <li>new, existing, one you don't have room for</li>
+                                </ul>
+                            </li>
+                            @*<li>Effect requires direct join to battery component</li>*@
+                            <li>Can burn one block per Adventure card</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Solar Panels -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/GalaxyTrucker/solarpanel.png" class="component" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h3 class="comp-title"><img src="~/lib/Images/GalaxyTrucker/connection.jpg" class="titleicon" /> Solar Panels</h3>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-10 tc-push-1">
+                        <ul class="small-list">
+                            <li>Power a component, just like a battery</li>
+                            @*<li>Effect requires direct join to component</li>*@
+                            <li>One use per card</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Router Module -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/GalaxyTrucker/routermodule.png" class="component" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h3 class="comp-title">Router Module</h3>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-10 tc-push-1">
+                        <ul class="small-list">
+                            <li>Components are considered joined for <i>all</i> effects</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Crubot Stations -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/GalaxyTrucker/crubotstation.png" class="component" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h3 class="comp-title"><img src="~/lib/Images/GalaxyTrucker/batteryicon.png" class="titleicon" /> Crubot Stations</h3>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-10 tc-push-1">
+                        <ul class="small-list">
+                            <li>Temporarily increase crew size by 4</li>
+                            @*<li>Requires battery - lasts for entire Adventure card</li>*@
+                            <li>Cannot sacrifice crubot in place of crew</li>
+                            <li>Crewbots cannot awaken crew in stasis</li>
+                            <li>Only crubots remain <span class="arrow"></span> must give up </li>
+                            <li>Crewbots may use thrusters against intruders</li>
+                            <li>Crewbots can be armed to defeat intruders</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Armory -->
+                <div class="table-row">
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/GalaxyTrucker/armory.png" class="component" />
+                    </div>
+                    <div class="table-cell tc-10">
+                        <h3 class="comp-title"><img src="~/lib/Images/GalaxyTrucker/connection.jpg" class="titleicon" />Armory</h3>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-10 tc-push-1">
+                        <ul class="small-list">
+                            <li>Arm humans, aliens, and crubots
+                                <ul>
+                                    @*<li>must be joined to cabins / crubots</li>*@
+                                    <li>luxury humans yes, stasis humans no</li>
+                                </ul>
+                            </li>
+                            <li>Armed crew count double when comparing crew size
+                                <ul>
+                                    <li>combat zone, sabotage</li>
+                                </ul>
+                            </li>
+                            <li>Armed crew do not count double for minimum crew requirements
+                                <ul>
+                                    <li>slavers, abandoned ship</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+

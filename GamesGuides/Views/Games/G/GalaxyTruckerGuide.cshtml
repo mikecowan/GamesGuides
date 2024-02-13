@@ -1,0 +1,308 @@
+﻿@{
+    ViewData["Title"] = "Galaxy Trucker Guide";
+}
+
+<style>
+ h4, h3 {
+    margin-bottom: 0;
+}
+
+ul, ol {
+    margin-top: 0;
+}
+</style>
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Setup</h3>
+            <ul>
+                <li>Remove tiles if using expansions, same tiles for all flights</li>
+                <li>Remove 25 tiles per player below max player count</li>
+                <li>Exp 2: remove additional 25 tiles if <i>not</i> using Class IV ships</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Timer</h3>
+            <ul>
+                <li>Begin timer in circle X where X = round number</li>
+                <li>When timer runs out, any player can flip and move to next circle</li>
+                <li>Only a player who is done building may flip timer to START circle</li>
+                <li>All building stops when timer runs out in START circle</li>
+                <li>Class IV flights: timer starts off board</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<!-- 5 Player Rules -->
+<h3>Additional 5 player rules</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Cards such as Combat Zone and Sabotage will normally punish two players. But when there are only 2 players available (because of giving up or jumping to hyperspace) only one player is punished</li>
+                <li>Two players get the 1st place finishing bonus</li>
+                <li>1st and 2nd place get the bonus for best looking ship. If there is a tie for 2nd place, all 2nd-place players will get the bonus</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <ul>
+                <li>If a reward is available to a limited number of players, one extra player can claim the reward, but its value is reduced by 1 credit or 1 block</li>
+                <li>If a penalty affects only one player (the one with the lowest number) or a group of players (those who lost to a foe), the penalty applies also to the next player or group, but it is reduced by 1 (1 block, 1 flight day, 1 crew member, 1 blast of heavy cannon fire or 1 sabotage attempt)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Giving Up</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <p style="margin-bottom: 0">After a card is fully resolved, give up if
+                <ol>
+                    <li>0 remaining awake humans OR</li>
+                    <li>0 engine strength in open space OR</li>
+                    <li>lapped by leader</li>
+                </ol>
+            </p>
+        </div>
+        <div class="table-cell tc-6">
+            <p style="margin-bottom: 0">If you gave up
+                <ol>
+                    <li>Remove rocket from board</li>
+                    <li>No bonuses for finishing (order, nicest ship)</li>
+                    <li>Sell goods at half price of total (round up)</li>
+                    <li>Pay penalty for lost parts</li>
+                </ol>
+            </p>
+        </div>
+    </div>
+</div>
+
+<p>You may only choose to give up between adventure cards, not during the resolution.</p>
+
+<hr />
+
+<div class="table datatable">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <!-- Evil Machinations -->
+            <h3>Evil Machinations</h3>
+            <ul>
+                <li>Setup: give each player 4 cards</li>
+                <li>Before building: each player secretly chooses 1 card</li>
+                <li>Shuffle EM cards into middle 2 quarters of Adventure deck</li>
+                <li>1 EM card on top of middle 2 quarters</li>
+                <li>Loans
+                    <ul>
+                        <li>take loan token and $10</li>
+                        <li>any time: return the loan token plus $12</li>
+                        <li>if you cannot repay loan at end game, then you lose</li>
+                        <li>must go into debt to pay penalties for lost tiles</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+        <div class="table-cell tc-6">
+            <!-- Rough Roads -->
+            <h3>Rough Roads</h3>
+            <p style="margin-top: 0">With Evil Machinations, players choose Evil Machinations cards <i>before</i> the Rough Roads cards are revealed</p>
+            <p>Can use Rough Roads as a handicap for experienced players, but remove the Remorseless Fate card</p>
+            <ul>
+                <li>Pick a difficulty level X</li>
+                <li>For each round, before building, draw X Rough Roads cards</li>
+                <li>Discard those cards to box at end of round</li>
+            </ul>
+
+
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <!-- Support Team -->
+            <h3>Support Team</h3>
+            <ul>
+                <li>Round 1: no support team</li>
+                <li>Round 2:
+                    <ul>
+                        <li>deal 3 to each player, choose 1</li>
+                        <li>have access to ability A, but not B</li>
+                    </ul>
+                </li>
+                <li>Round 3:
+                    <ul>
+                        <li>deal 2 to each player, choose 1</li>
+                        <li>have access to both abilities for older support team</li>
+                        <li>have access to ability A for newer team, but not B</li>
+                    </ul>
+                </li>
+                <li>Round 4*:
+                    <ul>
+                        <li>deal 1 to each player</li>
+                        <li>have access to both abilities for older support teams</li>
+                        <li>have access to ability A for newer team, but not B</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Event Sequence</h3>
+            <ol>
+                <li>Timer Starts "GO"
+                    <br />
+                    <span style="margin-left: 10px;">1a. DURING BULIDING</span>
+                </li>
+                <li>Timer Ends
+                    <br />
+                    <span style="margin-left: 10px;">2a. AFTER BUILDING</span>
+                </li>
+                <li>Place batteries and crew
+                    <br />
+                    <span style="margin-left: 10px;">3a. BEFORE THE FLIGHT</span>
+                </li>
+                <li>Begin revealing Adventure cards</li>
+                <li>Finish Adventure cards
+                    <br />
+                    <span style="margin-left: 10px;">5a. AFTER THE FLIGHT or AT THE END OF THE FLIGHT</span>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+
+<h3>Intruders</h3>
+<div class="table datatable">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <!-- Entrance Point -->
+            <h4>Entrance Point</h4>
+            <ul>
+                <li>Shields, cannons, indestructible plating have no effect</li>
+                <li>Thrusters connected to crew can be activated</li>
+                <li>Red arrow & die roll determines entry point, either:
+                    <ul>
+                        <li>miss entirely - nothing happens</li>
+                        <li>attempt to enter a defended tile - nothing happens, no reward</li>
+                        <li>enter and begins moving through ship</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <!-- Movement -->
+            <h4>Movement</h4>
+            <ul>
+                <li>Use spare rocket to track position</li>
+                <li>Count number of steps, with entry tile being 1</li>
+                <li>Continue moving until reaching step limit OR encountering resistance</li>
+                <li>Left-hand and right-hand rules</li>
+                <li>Defeated when entering a defended tile - take reward</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <!-- Predators -->
+            <h4>Predators</h4>
+            <ul>
+                <li>Destroy crew, goods, batteries when entering tile</li>
+                <li>Does not destroy:
+                    <ul>
+                        <li>hidden goods (support team)</li>
+                        <li>hibernating astronauts in stasis chambers</li>
+                        <li>armed crew - predator dies instead</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <!-- Commandos -->
+            <h4>Commandos</h4>
+            <ul>
+                <li>Move the indicated number of step(s) then plant charge(s)</li>
+                <li>All planted charges will explode, even if commando is later destroyed</li>
+                <li>Defended tiles destroy commando <i>before</i> he can plant a charge</li>
+                <li>All charges explode simultaneously</li>
+                <li>Multiple charges on the same tile is the same as a single charge there</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-12">
+            <!-- Double Intruders -->
+            <h4>Double Intruders</h4>
+            <ul>
+                <li>Shared entry point; LHR for 1, RHR for the other</li>
+                <li>Explode all bombs for double commando simultaneously</li>
+                <li>Take reward for each defeated intruder</li>
+                <li>A defended tile can stop both intruders</li>
+                <li>Predator-commando plants bombs at intervals AND devours crew, goods, and batteries</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Titles</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Replace "best-looking ship" rewards</li>
+                <li>Randomly select N, return others to box</li>
+                <li>Flight 1:
+                    <ul>
+                        <li>only finishing players can win a title</li>
+                        <li>for each title, all players can earn $2 but only one gets the card; ties go to leading player</li>
+                        <li>a player can earn multiple titles</li>
+                        <li>if a player wins multiple, they only keep 1; give away the rest</li>
+                        <li>if all players score 0, give title to lead player (but no money)</li>
+                        <li>if no players finished, no one gets money, distribute titles randomly</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Flight 2:
+                    <ul>
+                        <li><u>all</u> players will have a title, keep for entire game</li>
+                        <li>defend title for $4:
+                            <ul>
+                                <li>finish without giving up</li>
+                                <li>in first place for category (or tied)</li>
+                            </ul>
+                        </li>
+                        <li>no money from other players' titles</li>
+                        <li>keep title, even if failing to defend</li>
+                        <li>flip to gold if successfully defend</li>
+                    </ul>
+                </li>
+                <li>Flight 3:
+                    <ul>
+                        <li>defend silver title for $6</li>
+                        <li>defend gold title for $12</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+

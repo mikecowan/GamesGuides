@@ -1,0 +1,659 @@
+﻿@{
+    ViewData["Title"] = "Village Guide";
+}
+
+<style>
+ h4, h3 {
+    margin-bottom: 0;
+}
+
+ul, ol {
+    margin-top: 0;
+}
+
+footer {
+    margin-bottom: 0;
+}
+
+.icon {
+    height: 18px;
+    vertical-align:bottom
+}
+</style>
+
+<h3>Setup</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>4 family: "1"</li>
+                <li>1 marker to right of bridge</li>
+                <li>$1</li>
+                <li>Shuffle customers, fill market</li>
+                <li>Block chronicle spaces for lower player counts</li>
+                <li>Use setup card for correct player count & expansions</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <ul>
+                <li><img src="~/lib/Images/Village/inn.png" class="icon" /> 1 beer</li>
+                <li><img src="~/lib/Images/Village/inn.png" class="icon" /> Villager cards: 3 decks, 10 cards each, face-up</li>
+                <li><img src="~/lib/Images/Village/port.png" class="icon" /> Captain cards: 3 decks, sorted by cost, face-up</li>
+                <li><img src="~/lib/Images/Village/port.png" class="icon" /> 6 treasure chests, [N+1] tea bales, [N+1] cocoa baskets</li>
+                <li><img src="~/lib/Images/Village/port.png" class="icon" /> Life Goals: 1 silver and 1 gold</li>
+                <li><img src="~/lib/Images/Village/inn.png" class="icon" /> <img src="~/lib/Images/Village/port.png" class="icon" /> Villager cards
+                    <ul>
+                        <li><b>Remove:</b> Count, Traveller, Messenger, Toll Keeper</li>
+                        <li><b>Add:</b> Admiral, Helmsman, Quartermaster, Cartographer</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<ul>
+    <li>When sending family to the board or the black bag, they must come directly from the farmyard</li>
+    <li>Coins can substitute for any influence cube</li>
+    <li>Leftover coins are worth 1 point each</li>
+    <li>Only family on the farmyard or visible on the board can die - not from church bag or yet to enter play</li>
+    <li>Family memers die at <i>end</i> of turn - may even choose family who just performed the action</li>
+    <li>Round end: last cube is taken from board</li>
+    <li>If there are not enough cubes of a color to go into the bag, substitute cubes are <i>not</i> used</li>
+    <li>May decline the chosen action (exception: Market)</li>
+    <li><img src="~/lib/Images/Village/inn.png" class="icon" /> May play any number of Villager cards at any time during your turn</li>
+    <li><img src="~/lib/Images/Village/port.png" class="icon" /> travel section of chronicle full <span class="arrow"></span> family that die in missionary church or ship are buried at sea, award points immediately</li>
+    <li><img src="~/lib/Images/Village/port.png" class="icon" /> missionary church only becomes empty if the family member dies</li>
+</ul>
+
+<hr />
+
+<h3>Mass</h3>
+<ol>
+    <li>Draw 4 figures from black bag
+        <ul>
+            <li>in clockwise order, each player may pay $1 per family to pick them from the bag (without randomly drawing)</li>
+            <li>a total, and maximum, of 4 figures must be drawn</li>
+            <li>undrawn family stay in bag for next round</li>
+        </ul>
+    </li>
+    <li>Move family up in church hierarchy
+        <ul>
+            <li>in clockwise order, pay grain to move as many family as you want & can afford up the church hierarchy</li>
+        </ul>
+    </li>
+    <li>Award 2 points to church majority
+        <ul>
+            <li>whoever has the most people at the church gets 2 points</li>
+            <li>tie goes to the player who has the most advanced family</li>
+            <li>further tie: all tied players get 2 points</li>
+        </ul>
+    </li>
+</ol>
+
+<hr />
+
+<h3>Game End</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-4">
+            <ul>
+                <li>Chronicle is full OR</li>
+                <li>Anonymous graves are full OR</li>
+                <li>Sea burial spaces are full</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>Everyone gets 1 final turn, except player who triggered end game</li>
+                <li>Using 3 cubes is <i>not</i> required if cubes on board run out during final turn</li>
+                <li>Market Day trigger - finish market day completely
+                    <ul>
+                        <li>triggerd by player who chose market day: other players do final turns</li>
+                        <li>else: all players will do 1 more turn, including the player who chose market day</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Final Scoring</h4>
+            <ul>
+                <li>Cities (skip if playing Port)</li>
+                <li>Council chamber</li>
+                <li>Church</li>
+                <li>Chronicle</li>
+                <li>Customer tiles (unless scored immediately)</li>
+                <li>Coins: 1 point each</li>
+                <li><u>Inn</u> Villager cards</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6" style="vertical-align: top;">
+            <h4>Tie Breakers</h4>
+            <ol>
+                <li>most customers</li>
+                <li>most living family</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Life Goal Cards</h3>
+<ul>
+    <li>Reveal card at any time to score points</li>
+    <li>Need not return resources, only show the requirement is met</li>
+    <li>Discard card to the box after scoring</li>
+</ul>
+
+<p>Remove these Life Goal cards depending on expansions</p>
+        
+<div class="table table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-1">&nbsp;</div>
+        <div class="table-cell tc-2"><u>Base</u></div>
+        <div class="table-cell tc-2"><u>Inn</u> <img src="~/lib/Images/Village/inn.png" class="icon" /></div>
+        <div class="table-cell tc-2"><u>Port</u> <img src="~/lib/Images/Village/port.png" class="icon" /></div>
+        <div class="table-cell tc-2"><u>Inn+Port</u> <img src="~/lib/Images/Village/inn.png" class="icon" /><img src="~/lib/Images/Village/port.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1"><b>Silver</b></div>
+        <div class="table-cell tc-2">Brewer<br />Explorer</div>
+        <div class="table-cell tc-2">Explorer</div>
+        <div class="table-cell tc-2">Brewer</div>
+        <div class="table-cell tc-2"></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1"><b>Gold</b></div>
+        <div class="table-cell tc-2">Innkeeper<br />Missionary</div>
+        <div class="table-cell tc-2">Missionary</div>
+        <div class="table-cell tc-2">Inkeeper<br />Travelling Salesman</div>
+        <div class="table-cell tc-2">Travelling Salesman</div>
+    </div>
+</div>
+
+<br />
+
+<!-- Actions -->
+<h3>Actions</h3>
+
+<div class="table actiontable table-padding-1">
+    <div class="table-row">
+        <!-- Action Column 1 -->
+        <div class="table-cell tc-6">
+            <!-- Grain Harvest -->
+            <h4>Grain Harvest</h4>
+            <ul>
+                <li>Requires family on farmyard</li>
+                <li>cannot combine family / animal / plow for more grain</li>
+                <li>family remains on farm, animals/plows are <u>not</u> discarded</li>
+                <li>5 grain max</li>
+            </ul>
+            
+            <!-- Family -->
+            <h4>Family</h4>
+            <ul>
+                <li>Add family to farmyard, OR</li>
+                <li>Recall living family back to farmyard</li>
+            </ul>
+
+            <!-- Crafts -->
+            <h4>Crafts</h4>
+            <ul>
+                <li>Produce 1 good or take 2 coins at mill</li>
+                <li><u>Inn</u> 2 beer (not 1)</li>
+                <li>either pay with time (requires trained family) OR pay with resources</li>
+                <li>pay with time
+                    <ol>
+                        <li>take action</li>
+                        <li>train family with time if necessary, leave them there</li>
+                        <li>spend time for good production</li>
+                    </ol>
+                </li>
+                <li>pay with cubes/grain
+                    <ul>
+                        <li>Take action <span class="arrow"></span> pay resources</li>
+                        <li>Always available, even if family already there</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Market -->
+            <h4>Market</h4>
+            <ul>
+                <li>All players participate, active player goes first</li>
+                <li>No returning after passing</li>
+                <li>Return required goods/grain; pay 1 green cube <i>and</i> 1 time</li>
+                <li>First player need not spend time & green cube for their <i>first</i> customer</li>
+                <li>Market ends when all players have passed or all customers are gone</li>
+                <li>Slide & fill, do not discard un-served customers</li>
+                <li>5p: same setup as 4-player</li>
+                <li><u>Port</u> Cocoa & Tea customers always available, no limit</li>
+            </ul>
+
+            <!-- Council Chamber -->
+            <h4>Council Chamber</h4>
+            <ul>
+                <li>When advancing stages, pay time plus [scroll / cubes]</li>
+                <li>A family member has access to all previous stages</li>
+                <li>3 action options:
+                    <ol>
+                        <li>Place family on stage 1 and do action 1</li>
+                        <li>Move family forward and do an available action</li>
+                        <li>Do an availalbe action for free</li>
+                    </ol>
+                </li>
+                <li>May not steal start player ring from another player</li>
+            </ul>
+
+            <!-- Well -->
+            <h4>Well</h4>
+            <ul>
+                <li>Spend 3 same-colored cubes</li>
+                <li>Instead of taking a cube from the board</li>
+                <li>Must be at least 1 cube left on the board</li>
+            </ul>
+
+        </div>
+        <!-- Action Column 2 -->
+        <div class="table-cell tc-6">
+            <!-- Travel -->
+            <h4>Travel</h4>
+            <ul>
+                <li>Pay wagon & cubes to supply, advance time</li>
+                <li>Either place new family or move existing</li>
+                <li>Place marker only for first visits, get points immediately</li>
+                <li>No limit to number of family on travel board</li>
+                <li>No limit to colored markers on any city</li>
+                <li>Cannot duplicate markers of same color on same city</li>
+            </ul>
+
+            <!-- Travel (Port) -->
+            <h4>Travel (Port)</h4>
+            <ul>
+                <li>Choose 1 action
+                    <ol>
+                        <li>Set sail from port
+                            <ul>
+                                <li>hire a captain (mandatory)</li>
+                                <li>load ship
+                                    <ul>
+                                        <li>no duplicate goods / multiple people</li>
+                                        <li>may load less than 3 or even 0</li>
+                                        <li>cubes don't need to be carried in holds</li>
+                                    </ul>
+                                </li>
+                                <li>move ship
+                                    <ul>
+                                        <li>first step is free (plus time printed on the board)</li>
+                                        <li>additional steps cost cubes (no limit)</li>
+                                        <li>other boats do not block you</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Continue from current sea space
+                            <ul>
+                                <li>same rules as "move ship" - first step is free</li>
+                            </ul>
+                        </li>
+                        <li>Return to port
+                            <ul>
+                                <li>go directly to port and spend 1 time</li>
+                                <li>unload ship</li>
+                                <li>discard captain to box</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </li>
+                <li>At an island, may perform any number of island actions
+                    <ul>
+                        <li>sell goods/grain</li>
+                        <li>pick up top cocoa/tea/treasure tile, free of charge</li>
+                        <li>place family into <u>empty</u> missionary church</li>
+                    </ul>
+                </li>
+                <li>May not voluntarily throw things overboard</li>
+                <li>Items in ship holds cannot be used for market, harvest, etc.</li>
+                <li>Family action cannot recall from missionary church</li>
+                <li>Captains are limited, they can run out and you can never leave port</li>
+            </ul>
+
+            <!-- Church -->
+            <h4>Church</h4>
+            <ul>
+                <li>Add family from farmyard to black bag</li>
+            </ul>
+        
+
+            <!-- Inn -->
+            <h4>Inn</h4>
+            <ul>
+                <li>Acquire 1 villager card</li>
+                <li>Requires family to be at the inn (could be leftover)</li>
+                <li>Pay 1 time (in additional to "training" time)</li>
+                <li>Put 1 card at the bottom of its deck</li>
+                <li>Pay for 1 card that is showing</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+
+<h3>Villager Cards</h3>
+
+<div class="table table-padding-1">
+    <!-- end game -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Mayor
+            <br />
+            Nun
+            <br />
+            Guild Master
+            <br />
+            Scholar
+        </div>
+        <div class="table-cell tc-4">
+            0vp for 4+ cubes
+            <br />
+            coins cannot substitute as cubes
+        </div>
+
+        <div class="table-cell tc-2">
+            Medico
+        </div>
+        <div class="table-cell tc-4">
+            +1vp per living family (farmyard, board, bag)
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Cutpurse
+        </div>
+        <div class="table-cell tc-4">
+            after all other scoring:<br />6vp for last place, otherwise 3vp
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <!-- any time -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Abbot
+        </div>
+        <div class="table-cell tc-4">
+            max advancement for 1 family member
+        </div>
+        <div class="table-cell tc-2">
+            Blacksmith
+            <br>
+            Cattle Breeder
+            <br />
+            Scribe
+            <br />
+            Wagon Maker
+            <br />
+            Farmhand
+        </div>
+        <div class="table-cell tc-4">
+            take the resources shown
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Councilman
+        </div>
+        <div class="table-cell tc-4">
+            2 council actions according to furthest stage
+        </div>
+        <div class="table-cell tc-2">
+            Herb Woman
+        </div>
+        <div class="table-cell tc-4">
+            advance or retreat time tracker to a space adjacent to bridge
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Lost Son
+        </div>
+        <div class="table-cell tc-4">
+            Free family action
+        </div>
+        <div class="table-cell tc-2">
+            Messenger
+        </div>
+        <div class="table-cell tc-4">
+            place a travel marker on an available city<br />gain any bonus<br />do not move family
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Noblewoman
+        </div>
+        <div class="table-cell tc-4">
+            pick a villager deck, take any card without changing the order
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <!-- situational -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Bard
+        </div>
+        <div class="table-cell tc-4">
+            place dead family on chronicle book
+            <br />
+            do not cover a space
+            <br />
+            ignore actual death location
+        </div>
+        <div class="table-cell tc-2">
+            Barker
+        </div>
+        <div class="table-cell tc-4">
+            may also serve customers in the waiting line
+            <br />
+            cannot combine with scrap dealer
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Juggler
+        </div>
+        <div class="table-cell tc-4">
+            take an additional action on your turn
+            <br />
+            resolve action 1 deaths before doing action 2
+        </div>
+        <div class="table-cell tc-2">
+            Old Man
+        </div>
+        <div class="table-cell tc-4">
+            next action is free - no taking or spending cubes
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Priest
+        </div>
+        <div class="table-cell tc-4">
+            choose all 4 pieces for church, no one may pay
+        </div>
+        <div class="table-cell tc-2">
+            Scrap Dealer
+        </div>
+        <div class="table-cell tc-4">
+            take 1 leftover customer, free of charge
+            <br />
+            cannot combine with with Barker
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Toll Keeper
+        </div>
+        <div class="table-cell tc-4">
+            travel action is free (no cubes, time, or wagon)
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <!-- Port -->
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Admiral
+        </div>
+        <div class="table-cell tc-4">
+            use this card instead of hiring a captain
+        </div>
+        <div class="table-cell tc-2">
+            Cartographer
+        </div>
+        <div class="table-cell tc-4">
+            move boat directly to any island space
+            <br />
+            hiring a captain is still required
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Helmsman
+        </div>
+        <div class="table-cell tc-4">
+            2 free boat movements instead of 1
+            <br />
+            lasts entirety of the hired Captain
+        </div>
+        <div class="table-cell tc-2">
+            Quartermaster
+        </div>
+        <div class="table-cell tc-4">
+            play when loading (at port or at an island)
+            <br />
+            may duplicate items in holds
+            <br />
+            may take 2 treasure/tea/cocoa
+        </div>
+    </div>
+
+</div>
+
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+
+<h3>Life Goals Cards</h3>
+
+<div class="table table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Explorer (Silver)
+        </div>
+        <div class="table-cell tc-4">
+            pieces must be on ship tile, any order
+        </div>
+        <div class="table-cell tc-2">
+            Secretary
+        </div>
+        <div class="table-cell tc-4">
+            Council Chamber stage 4, plus ring
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Master
+        </div>
+        <div class="table-cell tc-4">
+            4 family in "Crafts":
+            <br />
+            on board and/or craft section of chronicle
+        </div>
+        <div class="table-cell tc-2">
+            Historian
+        </div>
+        <div class="table-cell tc-4">
+            family in 4 sections of chronicle
+            <br />
+            Bard doesn't count
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Saint
+        </div>
+        <div class="table-cell tc-4">
+            3<sup>+</sup> family in church
+            <br />
+            1 on each of the 3 rightmost windows
+        </div>
+        <div class="table-cell tc-2">
+            Travelling Salesman
+        </div>
+        <div class="table-cell tc-4">
+            family (not just marker) in upper right city
+            <br />
+            2 customer tiles
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Acolyte
+        </div>
+        <div class="table-cell tc-4">
+            4th generation family in church
+        </div>
+        <div class="table-cell tc-2">
+            Merchant
+        </div>
+        <div class="table-cell tc-4">
+            6 customer tiles
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Missionary
+        </div>
+        <div class="table-cell tc-4">
+            family on 2 missionary churches
+        </div>
+        <div class="table-cell tc-2">
+            Innkeeper
+        </div>
+        <div class="table-cell tc-4">
+            4 villager cards in hand (unplayed)
+        </div>
+    </div>
+</div>
+

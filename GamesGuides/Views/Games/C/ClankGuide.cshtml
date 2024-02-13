@@ -1,0 +1,258 @@
+﻿@{
+    ViewData["Title"] = "Clank! Guide";
+}
+<style>
+.icon {
+    width: 20px;
+    /*text-align: center;*/
+    vertical-align: middle;
+}
+
+ul {
+    margin-top: 0;
+}
+
+h3, h4 {
+    margin-bottom: 0;
+}
+
+.treasure {
+    width: 50px;
+}
+
+.artifact {
+    width: 40px;
+}
+</style>
+
+<h3>Setup</h3>
+
+<ul>
+    <li>10 starting cards</li>
+    <li>5 / 6 / 7 artifacts</li>
+    <li>6 cards in dungeon row, replace dragon attacks</li>
+    <li>3 / 2 / 1 / 0 cubes in clank area</li>
+    <li>30 clank cubes per player</li>
+    <li>Add goblin</li>
+</ul>
+
+<h3>Reminders</h3>
+<ul>
+    <li>take <i>one</i> token when entering a room, not both</li>
+    <li>move dragon tracker when taking dragon egg or artifact</li>
+    <li>taking an artifact is optional, picking it up is an action (rather than on-enter)</li>
+    <li>refill dungeon row only at end of turn</li>
+    <li>max 1 dragon attack between turns</li>
+    <li>cannot leave dungeon without an artifact</li>
+    <li>0 points for dying without an artifact or dying in the depths</li>
+    <li>dead players' clank cubes are treated as dragon cubes</li>
+    <li>begin countdown track with first player token who leaves the dungeon <i>or</i> is knocked out</li>
+    <li>card order is extremely generous, works retrospectively</li>
+    <li>"arrive" effects trigger <i>before</i> dragon attacks</li>
+    <li>sword for monster path is optional, unless it would kill you</li>
+</ul>
+
+<h3>Final Score</h3>
+<ul>
+    <li>artifacts</li>
+    <li>tokens acquired</li>
+    <li>points on cards in deck, 1:1</li>
+    <li>mastery token for escaping</li>
+    <li>tie breaker: most valuable artifact</li>
+</ul>
+
+<h3>Items and Treasure</h3>
+<div class="table table-100 table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Clank/bag.png" class="treasure" />
+        </div>
+        <div class="table-cell tc-3">
+            <u>Backpack</u>
+            <br />
+            carry additional artifact
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Clank/scuba.png" class="treasure" />
+        </div>
+        <div class="table-cell tc-3">
+            <u>SCUBA</u>
+            <br />
+            ignore water penalties
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Clank/ankh.png" class="treasure" />
+        </div>
+        <div class="table-cell tc-3">
+            <u>Ankh</u>
+            <br />
+            heal when acquired
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Clank/timewinder.png" class="treasure" />
+        </div>
+        <div class="table-cell tc-3">
+            <u>Time-Winder</u>
+            <br />
+            remove 3 clank
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Clank/webtoken.png" class="treasure" />
+        </div>
+        <div class="table-cell tc-3">
+            <u>Web (Spider map)</u>
+            <br />
+            requires <img src="~/lib/Images/Clank/sword.png" class="icon" /> / <img src="~/lib/Images/Clank/boot.png" class="icon" />
+        </div>
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/Clank/roll-chalice.png" class="treasure" />
+        </div>
+        <div class="table-cell tc-3">
+            <u>Pyramid Items</u>
+            <br />
+            trigger die roll
+        </div>
+    </div>
+</div>
+
+<br /><br /><br /><br />
+
+<h3>Sunken Treasures</h3>
+<ul>
+    <li>add scuba tokens to market</li>
+    <li>add goldfish next to goblin</li>
+    <li>add the 35 sunken treasure cards</li>
+</ul>
+
+<br /><br /><br /><br />
+
+<h3 style="margin-bottom: 0;">Mummy's Curse</h3>
+<div class="table table-100">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Mummy begins on llama symbol</li>
+                <li>add mummy next to goblin</li>
+                <li>include pyramid die</li>
+                <li>add supreme monkey idol</li>
+                <li>add ankh tokens</li>
+                <li>use curse tokens</li>
+                <li>add the 40 mummy's curse cards</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <ul>
+                <li>curses are not limited</li>
+                <li>can only fight mummy if you are in his zone</li>
+                <li>after defeating mummy, roll die to determine its new location</li>
+                <li>no curses are given if the mummy does not move</li>
+                <li>some new items trigger mummy die roll</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<br /><br /><br /><br />
+<br />
+
+<h3 style="margin-bottom: 0;">Gold and Silk</h3>
+<div class="table table-row">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Dwarven Mine</h4>
+            <p>add 3 mining bonus tokens <img src="~/lib/Images/Clank/miningbonus.png" class="artifact" style="vertical-align: middle" /></p>
+
+            <ul>
+                <li>mining awards to 1st-2nd-3rd most veins mined</li>
+                <li>break ties with depth</li>
+                <li>must score points and mine at least once for award</li>
+                <li>elevators: pay $1 to use</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Spider Queen's Lair</h4>
+            <p>replace 7-point artifact with <img src="~/lib/Images/Clank/spiderartifact.png" class="artifact" style="vertical-align: middle" /></p>
+            
+            <ul>
+                <li>shuffle and distribute web tokens face down</li>
+                <li>move through web token: spend <img src="~/lib/Images/Clank/sword.png" class="icon" /> or extra <img src="~/lib/Images/Clank/boot.png" class="icon" />, and claim token</li>
+                <li>webbed room: after entering, spend <img src="~/lib/Images/Clank/sword.png" class="icon" /> to claim item</li>
+                <li>Queen's Web Cache: spend <img src="~/lib/Images/Clank/8skill.png" class="icon" />, place a cube to claim a reward</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<br /><br /><br />
+
+<h3 style="margin-bottom: 0;">Temple of the Ape Lords</h3>
+<p>replace 30-point artifact with <img src="~/lib/Images/Clank/apeartifact.png" class="artifact" style="vertical-align: middle" /></p>
+
+<div class="table table-row">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Welcome to the Jungle</h4>
+                <ul>
+                    <li>add 3 unique ape tokens to bronze guardian</li>
+                    <li>randomly place remaining 15 ape tokens</li>
+                    <li>pick up ape token only when using <img src="~/lib/Images/Clank/boot.png" class="icon" />, not teleport</li>
+                    <li>take a token for fighting bronze guardian</li>
+                    <li>end game: score points for each ape token category</li>
+                </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Monkeying Around the Temple</h4>
+            <p>Rage token <img src="~/lib/Images/Clank/rng.png" class="artifact" style="vertical-align: middle" /></p>
+
+            <ul>
+                <li>shuffle and add gear tokens</li>
+                <li>ape tokens
+                    <ul>
+                        <li>randomly deal 3 to each player</li>
+                        <li>discard to rotate adjacent matching gear in any orientation</li>
+                        <li>leftovers are not worth points</li>
+                    </ul>
+                </li>
+                <li>Rage tokens
+                    <ul>
+                        <li>randomly place <i>face down</i> on marked spaces</li>
+                        <li>remaining 4 on space above rage track</li>
+                        <li>trigger each when boss marker moves to its space</li>
+                        <li>final 4 are triggered when boss <i>would</i> move again</li>
+                        <li>rotate all matching gears clockwise, one click</li>
+                        <li>discard each after resolving</li>
+                    </ul>
+                </li>
+                <li>split paths
+                    <ul>
+                        <li>may choose path in one direction</li>
+                        <li>converge in other (cannot turn around)</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<h4>Mini-Campaign</h4>
+<p>Campaign token <img src="~/lib/Images/Clank/campaign.png" class="artifact" style="vertical-align: middle" /></p>
+<ul>
+    <li>play jungle then temple</li>
+    <li>jungle
+        <ul>
+            <li>award campaign tokens to 1st-2nd-3rd</li>
+            <li>no token if scoring 0 points</li>
+        </ul>
+    </li>
+    <li>temple
+        <ul>
+            <li>keep campaign token from jungle round</li>
+            <li>keep ape tokens from jungle round instead of receiving 3 at random</li>
+            <li>score normally but add campaign token values</li>
+            <li>leftover ape tokens score no points</li>
+        </ul>
+    </li>
+</ul>

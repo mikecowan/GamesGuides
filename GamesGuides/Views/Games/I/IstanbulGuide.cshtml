@@ -1,0 +1,472 @@
+﻿@{
+    ViewData["Title"] = "Istanbul Guide";
+}
+
+<style>
+h3, h4, ol, ul, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-bottom: .5em;
+}
+
+ol, ul {
+    margin-bottom: 1em;
+}
+
+li > ul {
+    margin-bottom: 0;
+}
+
+footer {
+    margin-bottom: 0;
+}
+
+.icon {
+    height: 20px;
+}
+</style>
+
+<!-- Setup -->
+<h3>Setup</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>$2/3/4/5/6</li>
+                <li>4 assistants, 5th is a bonus</li>
+                <li>1 bonus card</li>
+                <li>Wainwright: N rubies, 3N extensions</li>
+                <li>Sort and order Mosque tiles, 2 symbols on top, N rubies on each Mosque
+                    <ul>
+                        <li>5p: 4 rubies</li>
+                        <li>3p: 2-3-4 tiles</li>
+                        <li>2p: 2-4 tiles</li>
+                    </ul>
+                </li>
+                <li>2p: unused merchants on the Mosques and Gemstone Dealer</li>
+                <li>Small Market: light tiles</li>
+                <li>Large Market: dark tiles</li>
+                <li>Roll to place Governor and Smuggler</li>
+            </ul>
+
+            <ul>
+                <li>Blue numbers: short paths, learning game</li>
+                <li>Green numbers: long paths, experienced</li>
+                <li>Big numbers: similar places are grouped</li>
+                <li>Random
+                    <ul>
+                        <li>Fountain among 4 (6) central tiles</li>
+                        <li>Fountain in center for 5x5 grid</li>
+                        <li>Black Market and Tea House
+                            <ul>
+                                <li>not in same row</li>
+                                <li>not in same column</li>
+                                <li>3+ tiles apart</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+        <div class="table-cell tc-6">
+            <ul>
+                <li><u>Mocha and Baksheesh</u>
+                    <ul>
+                        <li>Replace Wainwright and Caravansary</li>
+                        <li>5x4 grid, Fountain among inner 6 places</li>
+                        <li>Black Market & Tea House not in same row / column</li>
+                        <li>Roll to place Coffee Trader</li>
+                        <li>Face-down stack of guild cards</li>
+                        <li>Baksheesh tile showing 3 yellow goods</li>
+                    </ul>
+                </li>
+                <li><u>Letters and Seals</u>
+                    <ul>
+                        <li>5x4 grid, Fountain among inner 6 places</li>
+                        <li>Black Market & Tea House not in same row / column</li>
+                        <li>Roll to place Courier</li>
+                        <li>2 face-down stacks of kiosk tiles</li>
+                        <li>Add money to Secret Society</li>
+                        <li>Form a stack of Letters showing 2 seals</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul>
+                <li>Refresh final ruby from supply when taking last Ruby from either
+                    <ul>
+                        <li>Sultan’s Palace</li>
+                        <li>Gemstone Dealer</li>
+                        <li>Coffee House</li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<!-- Turn Order / Encounters / Bonus Cards -->
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Turn Order</h3>
+            <ol>
+                <li>Movement or Guild card
+                    <ul>
+                        <li>Guild card replaces entire turn</li>
+                        <li>Move Merchant stack or Companion</li>
+                        <li>Can't/won't drop off assistant <span class="arrow"></span> turn ends immediately</li>
+                    </ul>
+                </li>
+                <li>Encounters with other Player tokens
+                    <ul>
+                        <li>$2 <i>to</i> each Merchant, $2 <i>to</i> each Companion</li>
+                        <li>Can't/won't pay other merchants <span class="arrow"></span> turn ends immediately</li>
+                    </ul>
+                </li>
+                <li>Action</li>
+                <li>Encounters (if any) in any order
+                    <ul>
+                        <li>Roll to place each</li>
+                        <li>All optional except family member</li>
+                        <li>May gain net 0 to move each (except Coffee Trader)</li>
+                    </ul>
+                </li>
+                <li>Trigger extra turn
+                    <ul>
+                        <li>Discard letters showing 3+ seals</li>
+                        <li>1<span class="cross"></span> per round per player</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Encounters</h3>
+            <div class="table table-padding-1">
+                <div class="table-row" style="padding-top: 0;">
+                    <div class="table-cell tc-4">
+                        Family Members
+                    </div>
+                    <div class="table-cell tc-3">
+                        1 card or $3
+                    </div>
+                    <div class="table-cell tc-5"></div>
+                </div>
+            
+                <div class="table-row">
+                    <div class="table-cell tc-4">
+                        Governor
+                    </div>
+                    <div class="table-cell tc-3">
+                        1 card
+                    </div>
+                    <div class="table-cell tc-5">
+                        Discard 1 card or pay $2
+                    </div>
+                </div>
+            
+                <div class="table-row">
+                    <div class="table-cell tc-4">
+                        Smuggler
+                    </div>
+                    <div class="table-cell tc-3">
+                        1 good
+                    </div>
+                    <div class="table-cell tc-5">
+                        Lose 1 good or pay $2
+                    </div>
+                </div>
+            
+                <div class="table-row">
+                    <div class="table-cell tc-4">
+                        Coffee Trader
+                    </div>
+                    <div class="table-cell tc-3">
+                        1 coffee
+                    </div>
+                    <div class="table-cell tc-5">
+                        Lose 1 good or pay $2
+                    </div>
+                </div>
+            
+                <div class="table-row">
+                    <div class="table-cell tc-4">
+                        Courier
+                    </div>
+                    <div class="table-cell tc-3">
+                        1 letter
+                    </div>
+                    <div class="table-cell tc-5">
+                        Discard 1 letter or pay $2
+                    </div>
+                </div>
+            </div>
+
+            <br />
+
+            <h3>Bonus cards</h3>
+            <ul>
+                <li>May play any number during turn</li>
+                <li>No hand limit</li>
+                <li>Draws come from face down pile (exception: Caravansary)</li>
+                <li>When taking cards with caravansary or guild hall
+                    <ul>
+                        <li>draw 2 then discard 1</li>
+                        <li>the discard can be a card you already had</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<!-- End Game-->
+<h3>End Game</h3>
+<ul>
+    <li>Trigger: any player collects 5 rubies (2p: 6 rubies)</li>
+    <li><u>Either expansion</u> triggered by 6 rubies at all player counts</li>
+    <li>Finish current round, then players can use any leftover bonus cards</li>
+    <li>Ties: money <span class="arrow"></span> goods <span class="arrow"></span> bonus cards</li>
+</ul>
+
+<hr />
+
+<!-- Companion / Letters -->
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Companion</h3>
+            <ul>
+                <li>Starts in general supply</li>
+                <li>Start of turn: may move Companion from <u>personal supply</u> to tile with Merchant, ignoring other Merchants</li>
+                <li>Fountain
+                    <ul>
+                        <li>Move Companion from general supply personal supply, OR</li>
+                        <li>Return Companion from board to personal supply</li>
+                    </ul>
+                </li>
+                <li>Limited to movement 1</li>
+                <li>Cards and tiles do not affect Companion's movement, unless explicitly stating otherwise</li>
+                <li>Companions must be paid, just like Merchants</li>
+                <li>Companions must pay when moving to a place, just like Merchants</li>
+            </ul>
+
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Letters</h3>
+            <ul>
+                <li>Token (merchant, family, companion) at location <span class="arrow"></span> Deliver (flip)</li>
+                <li>Passive effect, the token does not need to move for delivery</li>
+                <li>Gain
+                    <ul>
+                        <li>21 Embassy: take 2</li>
+                        <li>22 Kiosk: take 1</li>
+                        <li>Bonus cards</li>
+                        <li>Kiosk tiles</li>
+                        <li>Courier</li>
+                    </ul>
+                </li>
+                <li>Spend
+                    <ul>
+                        <li>24 Secret Society: discard 6 seals for a ruby</li>
+                        <li>Discard 3 seals for an extra turn</li>
+                        <li>Kiosk tiles</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<br /><br /><br />
+
+<!-- Place Summary -->
+<h3>Place Summary</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>1 Wainwright</h4>
+            <ul>
+                <li>$7 <span class="arrow"></span> extension</li>
+                <li>3 extensions <span class="arrow"></span> take ruby</li>
+            </ul>
+
+            <h4>2-4 Warehouses</h4>
+            <ul>
+                <li>Max out goods of matching color</li>
+                <li>Green mosque tile <span class="arrow"></span> additional good for $2</li>
+            </ul>
+
+            <h4>5 Post Office</h4>
+            <ul>
+                <li>Receive uncovered resources</li>
+                <li>Move leftmost cube down, or reset</li>
+            </ul>
+
+            <h4>6 Caravansary</h4>
+            <ul>
+                <li>Take 2 bonus cards, discard 1 from hand</li>
+                <li>May draw from discard pile</li>
+                <li><img src="~/lib/Images/Istanbul/coffee.png" class="icon" /> Take 1 coffee</li>
+            </ul>
+
+            <h4>7 Fountain</h4>
+            <ul>
+                <li>Recall any number of assistants</li>
+                <li>Do not pay other Merchants</li>
+                <li>Companion:
+                    <ul>
+                        <li>add it to your personal supply, OR</li>
+                        <li>may return it from board to personal supply</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4>8 Black Market</h4>
+            <ul>
+                <li>Gain 1 non-blue good</li>
+                <li>Roll dice and gain X blue goods</li>
+                <li>May use red mosque tile</li>
+            </ul>
+
+            <h4>9 Tea House</h4>
+            <ul>
+                <li>Announce 3-12 and roll dice</li>
+                <li>$X for high roll, otherwise $2</li>
+                <li>May use red mosque tile</li>
+            </ul>
+
+            <h4>10-11 Markets</h4>
+            <ul>
+                <li>Sell 1-5 goods</li>
+                <li>Cycle tile to bottom of stack</li>
+            </ul>
+
+            <h4>12 Police Station</h4>
+            <ul>
+                <li>Family member goes anywhere, does the action</li>
+                <li>Family member skips encounters, does not pay other merchants</li>
+            </ul>
+
+            <h4>13 Sultan's Palace</h4>
+            <ul>
+                <li>Pay <i>all</i> goods shown <span class="arrow"></span> take ruby</li>
+            </ul>
+
+            <h4>14-15 Mosques</h4>
+            <ul>
+                <li>Take mosque tile showing X goods</li>
+                <li>Must actually have X goods in wheelbarrow</li>
+                <li>Pay 1 good</li>
+            </ul>
+
+            <h4>16 Gemstone Dealer</h4>
+            <ul>
+                <li>Pay highest shown value <span class="arrow"></span> take ruby</li>
+            </ul>
+
+
+
+
+        </div>
+        <div class="table-cell tc-6">
+            <h4>17 <img src="~/lib/Images/Istanbul/coffee.png" class="icon" /> Roasting Plant</h4>
+            <ul>
+                <li>May activate each line</li>
+            </ul>
+
+            <h4>18 <img src="~/lib/Images/Istanbul/coffee.png" class="icon" /> Guild Hall</h4>
+            <ul>
+                <li>Gain 1 coffee</li>
+                <li>Draw 2 guild cards then discard 1</li>
+            </ul>
+
+            <h4>19 <img src="~/lib/Images/Istanbul/coffee.png" class="icon" /> Tavern</h4>
+            <p>Pay and activate 1 line</p>
+            <ul>
+                <li>Take barrier control tile, place barrier and activate either, no encounters</li>
+                <li>Buy a tavern tile</li>
+                <li>Pay coffee and goods for next gem from either
+                    <ul>
+                        <li>Gemstone Dealer</li>
+                        <li>Sultan's Palace</li>
+                        <li>Coffee House</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4>20 <img src="~/lib/Images/Istanbul/coffee.png" class="icon" /> Coffee House</h4>
+            <ul>
+                <li>Pay highest shown coffee amount <span class="arrow"></span> take ruby</li>
+            </ul>
+
+            <h4>21 <img src="~/lib/Images/Istanbul/letter.png" class="icon" /> Embassy</h4>
+            <ul>
+                <li>Take 2 letters face up</li>
+            </ul>
+
+            <h4>22 <img src="~/lib/Images/Istanbul/letter.png" class="icon" /> Kiosk</h4>
+            <ul>
+                <li>Take 1 letter face up</li>
+                <li>Flip [N+1] kiosk tiles and draft
+                    <ol style="margin-bottom: 0;">
+                        <li>choose 1 face up kiosk tile</li>
+                        <li>carry out action (optional)</li>
+                        <li>turn it face down</li>
+                    </ol>
+                </li>
+                <li>Active player picks first, also gets last remaining tile</li>
+            </ul>
+
+            <h4>23 <img src="~/lib/Images/Istanbul/letter.png" class="icon" /> Auction House</h4>
+            <ul>
+                <li>Take 1 good</li>
+                <li>Auction 2 bonus cards, blindly from deck
+                    <ol style="margin-bottom: 0;">
+                        <li>active player bids</li>
+                        <li>each player has chance to bid or pass</li>
+                        <li>active players gets 1 final chance to bid or pass</li>
+                        <li>winner gets 2 bonus cards from draw pile</li>
+                        
+                    </ol>
+                </li>
+                <li>Active player wins <span class="arrow"></span> pay bank</li>
+                <li>Other player wins <span class="arrow"></span> pay active player</li>
+            </ul>
+            
+            <h4>24 <img src="~/lib/Images/Istanbul/letter.png" class="icon" /> Secret Society</h4>
+            <ul>
+                <li>First player to activate gets the $3, next gets $2, then $1, then $0</li>
+                <li>discard 6 seals to take next ruby from either
+                    <ul>
+                        <li>Gemstone Dealer</li>
+                        <li>Sultan's Palace</li>
+                        <li>Coffee House</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4>25 <img src="~/lib/Images/Istanbul/coffee.png" class="icon" /><img src="~/lib/Images/Istanbul/letter.png" class="icon" /> Catacombs</h4>
+            <ul>
+                <li>Take 1 good or coffee</li>
+                <li>Move merchant stack (or companion) to a Place of your choice</li>
+                <li>Do not take that Place's action or have encounters</li>
+                <li>Any assistant at new destination does not join stack</li>
+            </ul>
+
+
+        </div>
+    </div>
+</div>
+

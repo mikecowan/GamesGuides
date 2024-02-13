@@ -1,0 +1,423 @@
+﻿@{
+    ViewData["Title"] = "Eldritch Horror Guide";
+}
+
+<h3>Setup</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Randomize non-epic monster tokens</li>
+                <li>Only use for chosen Ancient One:
+                    <ul>
+                        <li>research encounter cards</li>
+                        <li>mystery cards</li>
+                        <li>special encounter cards</li>
+                    </ul>
+                </li>
+                <li>Doom token according to AO sheet</li>
+                <li>Omen token on green comet space</li>
+                <li>Spawn gates - amount on reference card</li>
+                <li>Spawn clues - amount on reference card</li>
+                <li>Place expedition token according to top expedition card</li>
+                <li>Draw 1 mystery card, resolve "when this card enters play"</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Gate</h4>
+            <ul>
+                <li>Spawn a gate: draw 1 gate token, place it faceup on the indicated space</li>
+                <li>Draw 1 random monster and place it on the same space</li>
+            </ul>
+            
+            <h4>Mythos Deck</h4>
+            <ul>
+                <li>Separate mythos cards based on color</li>
+                <li>Build 3 stages by following instructions on AO sheet</li>
+                <li>Shuffle each stage then place I atop II atop III</li>
+                <li>Do not shuffle the entire mythos deck together</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Game Rounds</h3>
+<ol>
+    <li>Action Phase
+    investigators perform actions</li>
+    <li>Encounter Phase
+    fight monsters or resolve encounter cards in current space</li>
+    <li>Mythos Phase
+    resolve 1 mythos card</li>
+    <li>Optional: give away lead investigator token</li>
+</ol>
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Action Phase</h4>
+            <ul>
+                <li>Each investigator resolves 2 <i>different</i> actions</li>
+                <li>Clockwise starting with lead investigator</li>
+            </ul>
+            
+            
+            <h4>Encounter Phase</h4>
+            <ul>
+                <li>Each investigator resolves <i>one</i> encounter</li>
+                <li>Clockwise starting with lead investigator</li>
+                <li>Space has monsters <span class="arrow"></span> resolve combat encounter against each
+                    <ul>
+                        <li>player chooses order</li>
+                    </ul>
+                </li>
+                <li>No monsters <span class="arrow"></span> resolve location or token encounter
+                    <ul>
+                        <li>player's choice</li>
+                    </ul>
+                </li>
+                <li>Defeat all monsters <span class="arrow"></span> may resolve another encounter</li>
+                <li>Location encounter <span class="arrow"></span> either draw from
+                    <ul>
+                        <li>deck matching space's artwork <i>or</i></li>
+                        <li>general encounter deck</li>
+                    </ul>
+                </li>
+                <li>Token encounters
+                    <ul>
+                        <li>Clue <span class="arrow"></span> research encounter</li>
+                        <li>Gate <span class="arrow"></span> other world encounter</li>
+                        <li>Active Expedition <span class="arrow"></span> expedition encounter</li>
+                        <li>Rumor <span class="arrow"></span> encounter listed on the rumor mythos card</li>
+                        <li>Defeated Investigator <span class="arrow"></span> encounter listed on investigator</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Mythos Phase</h4>
+            <ul>
+                <li>Draw top card of mythos deck</li>
+                <li>Resolve effects in the order they appear</li>
+                <li><b>Advance Omen</b>
+                    <ul>
+                        <li>move omen track 1 space clockwise</li>
+                        <li>advance doom by 1 for each gate matching the omen marker</li>
+                    </ul>
+                </li>
+                <li><b>Reckoning Effects</b> red reckoning icon
+                    <ol style="margin-bottom: 0;">
+                        <li>monsters</li>
+                        <li>ancient one sheet</li>
+                        <li>ongoing mythos cards</li>
+                        <li>investigator possessions and conditions</li>
+                    </ol>
+                </li>
+                <li><b>Spawn Gates</b> number defined by ref card</li>
+                <li><b>Monster Surge</b>
+                    <ul>
+                        <li>spawn monsters at gates matching the omen marker</li>
+                        <li>number of monsters is defined by ref card</li>
+                        <li>no matches <span class="arrow"></span> spawn 1 gate with 1 monster</li>
+                    </ul>
+                </li>
+                <li><b>Spawn Clues</b> number defined by ref card</li>
+                <li><b>Place rumor token</b> on the indicated space</li>
+                <li><b>Place Eldritch tokens</b> as directed by Mythos card</li>
+                <li><b>Resolve effect</b>
+                    <ul>
+                        <li>events: resolved immediately</li>
+                        <li>ongoing: remains until game effect discards it</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Actions</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Travel</h4>
+            <ul>
+                <li>Move to adjacent space</li>
+                <li>May spend travel tickets for +1 space per ticket</li>
+            </ul>
+
+            <h4>Prepare for Travel</h4>
+            <ul>
+                <li>Only available on city spaces</li>
+                <li>Gain 1 travel ticket</li>
+                <li>Gaining a ticket requires adjacency to the corresponding path</li>
+                <li>Limit 2 travel tickets total</li>
+            </ul>
+
+            <h4>Rest</h4>
+            <ul>
+                <li>Recover 1 health and 1 sanity</li>
+                <li>Not available if there is a monster in the space</li>
+            </ul>
+
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Trade</h4>
+            <ul>
+                <li>Trade possessions with another investigator on the same space</li>
+                <li>Assets, artifacts, clues, spells, travel tickets</li>
+            </ul>
+
+            <h4>Acquire Assets</h4>
+            <ul>
+                <li>Only available on city spaces with no monsters</li>
+                <li>Roll for influence</li>
+                <li>Gain asset(s) with total value up to the test result</li>
+                <li>Gain 0 cards <span class="arrow"></span> may discard 1 card from the reserve</li>
+                <li>Draw replacements at the end of the action</li>
+            </ul>
+
+            <h4>Component Actions</h4>
+            <ul>
+                <li>May repeat this action, but only with different components</li>
+                <li>"Local Action" available to other investigators sharing the space</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Encounters</h3>
+<h4>Combat Encounters</h4>
+<br />
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-5">
+            <img src="~/lib/Images/EldritchHorror/monstertoken.webp" />
+        </div>
+        <div class="table-cell tc-6">
+            <p><b>1. Test of Will</b>
+                <ul>
+                    <li>Test result &geq; Horror <span class="arrow"></span> no negative effect</li>
+                    <li>Otherwise lose Sanity equal to difference</li>
+                </ul>
+            </p>
+
+            <p><b>2. Test of Strength</b>
+                <ul>
+                    <li>Test result &geq; Damage <span class="arrow"></span> no negative effects</li>
+                    <li>Otherwise lose Health equal to difference</li>
+                    
+                    <li style="margin-top:1em;">Monster loses health equal to test result</li>
+                    <li>Damage tokens remain; Toughness = hp</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+</div>
+
+<h4>Complex Encounters</h4>
+<br />
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-5">
+            <img src="~/lib/Images/EldritchHorror/complexencounter.png" style="width: 353px;" />
+        </div>
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Expedition, other world, special</li>
+                <li>Always resolve top box
+                    <ul>
+                        <li>Pass <span class="arrow"></span> resolve middle box</li>
+                        <li>Fail <span class="arrow"></span> resolve bottom box</li>
+                    </ul>
+                </li>
+                <li>"Close this gate" discard the gate token</li>
+                <li>Move expedition token after an expedition encounter</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<br /><br />
+
+<h4>Defeated Investigator Encounter</h4>
+<ul>
+    <li>Requires shared space</li>
+    <li>Resolve one of the encounters on the back of their sheet
+        <ul>
+            <li>health token <span class="arrow"></span> "crippled" encounter</li>
+            <li>sanity token <span class="arrow"></span> "insane" encounter</li>
+        </ul>
+    </li>
+    <li>After resolving, remove the defeated investigator entirely</li>
+</ul>
+
+
+<hr />
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Defeated Investigator</h4>
+            <p>0 health or 0 sanity</p>
+            
+            <ol>
+                <li>Advance doom by 1</li>
+                <li>Move to nearest city, place health/sanity token to denote which hit 0</li>
+                <li>Collect possessions:
+                    <ol style="list-style:lower-alpha; padding-left: 1em; margin-bottom: 0">
+                        <li>Discard all condition cards, health, sanity, improvement tokens</li>
+                        <li>Keep assets, artifacts, spells, clues, and travel tickets with investigator</li>
+                    </ol>
+                <li>Pass lead investigator (if the defeated investigator had it)</li>
+                <li>Choose and setup a new investigator at the end of the mythos phase</li>
+            </ol>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Devoured Investigators</h4>
+            <ul>
+                <li>Devoured investigators are considered defeated</li>
+                <li>Only follow steps 1 and 4</li>
+                <li>Remove investigator sheet from the game</li>
+            </ul>
+
+            <h4>Delayed Investigator</h4>
+            <ul>
+                <li>Tip standee to denote delayed</li>
+                <li>No actions; stand up instead</li>
+                <li>Become delayed during his actions <span class="arrow"></span><br />end turn and lose remaining actions instead of becoming delayed</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Monsters</h4>
+            <ul>
+                <li>Green icon spawn effects - except ambush</li>
+                <li>Return to monster cup when defeated</li>
+            </ul>
+            
+
+            <h4>Epic Monsters</h4>
+            <ul>
+                <li>Treated like monsters</li>
+                <li>Cannot be moved, discarded, or returned to monster cup</li>
+                <li>Only defeated through damage <span class="arrow"></span> return to game box</li>
+                <li>Never placed in monster cup, only spawned by specific effects</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Ambush</h4>
+            <ul>
+                <li>"A monster ambushes you"</li>
+                <li>Skip any "when spawned" effects</li>
+                <li>Draw a random monster token
+                    <ul>
+                        <li>unless ambushed by a Cultist or a <b>specific</b> monster</li>
+                    </ul>
+                </li>
+                <li>Immediately encounter the monster in combat</li>
+                <li>After combat, return monster to cup regardless of outcome</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+
+
+
+
+spawn clue: take a random clue token and place it facedown on the indicated space
+
+
+
+<h4>tests</h4>
+<ul>
+    <li>resolve test: roll # of dice according to value in the skill
+    some effects add or subtract
+    minimum 1 die</li>
+    <li>success: roll at least 1 success (5 or 6)</li>
+    <li>test result: # of successes</li>
+    <li>limit 1 card effect providing a skill bonus during each test
+    multiple bonuses: use the highest bonus only</li>
+    <li>after rolling dice, may spend 1 clue token to reroll _1 die_
+    may continue spending clues for the same test</li>
+</ul>
+
+
+<h4>spells and conditions</h4>
+<p>do not flip or look at back until instructed</p>
+
+
+
+
+
+<h4>rumors</h4>
+<ul>
+    <li>mythos card will sometimes add a rumor token to a specific space
+        if random: draw & discard a clue token</li>
+    <li>investigators can go to space with rumor and resolve the effect on the mythos card, instead of resolving an encounter card</li>
+</ul>
+
+<hr />
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h4>Mysteries</h4>
+            <ul>
+                <li>Draw 1 at setup</li>
+                <li>Solve 3 to win</li>
+                <li>AO awakens <span class="arrow"></span> must solve 1 additional final mystery</li>
+                <li>Solve mystery <span class="arrow"></span> immediately draw new mystery</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Ancient One Awakens</h4>
+            <ul>
+                <li>Triggered when doom token reaches 0</li>
+                <li>Flip AO sheet and resolve the awaken effect</li>
+                <li>Sheet never unflips, effects replace those on other side</li>
+                <li>Defeated or devoured investigators are never replaced</li>
+                <li>All players eliminated <span class="arrow"></span> lose game</li>
+            </ul>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-12">
+            <h4>Winning and Losing</h4>
+            <ul>
+                <li>Win: solve 3 of the ancient one's mysteries
+                    <ul>
+                        <li>if AO awakens: must also solve the final mystery</li>
+                    </ul>
+                </li>
+                <li>Lose:
+                    <ul>
+                        <li>doom reaches 0 and the AO gives a loss condition <i>or</i></li>
+                        <li>all investigators are eliminated <i>or</i></li>
+                        <li>a card causes a loss (e.g. rumor mythos card) <i>or</i></li>
+                        <li>mythos deck is empty when a mythos draw is required</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+

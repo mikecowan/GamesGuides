@@ -1,0 +1,554 @@
+﻿@{
+    ViewData["Title"] = "Space Alert Soundtrack";
+}
+
+<script src="@Url.Content("~/js/spacealert.js")"></script>
+
+<audio id="player" controls>
+  <source id="mp3_src" src="" type="audio/mp3">
+</audio>
+
+<br />
+
+<div>
+    <input type="range" min="1" max="5" value="3" class="slider" id="myRange" style="width: 400px;">
+
+    <p>Playback speed: <span id="playback">100%</span></p>
+</div>
+
+<br />
+
+<table border="1" cellpadding="5" cellspacing="5">
+    <thead>
+        <tr>
+            <td>Tutorials</td>
+            <td>Base Missions</td>
+            <td>Easy Double Missions</td>
+            <td>Standard Double Missions</td>
+        </tr>
+    </thead>
+  <tr>
+    <td><a id="train1" href="">First Test Run</a></td>
+    <td><a id="mission1" href="">Mission 1</a></td>
+    <td><a id="doubleEasy1" href="">Easy Double 1</a></td>
+    <td><a id="double1" href="">Standard Double 1</a></td>
+  </tr>
+  <tr>
+    <td><a id="train2" href="">Second Test Run</a></td>
+    <td><a id="mission2" href="">Mission 2</a></td>
+    <td><a id="doubleEasy2" href="">Easy Double 2</a></td>
+    <td><a id="double2" href="">Standard Double 2</a></td>
+  </tr>
+  <tr>
+    <td><a id="train3" href="">Simulation 1</a></td>
+    <td><a id="mission3" href="">Mission 3</a></td>
+    <td><a id="doubleEasy3" href="">Easy Double 3</a></td>
+    <td><a id="double3" href="">Standard Double 3</a></td>
+  </tr>
+  <tr>
+    <td><a id="train4" href="">Simulation 2</a></td>
+    <td><a id="mission4" href="">Mission 4</a></td>
+    <td><a id="doubleEasy4" href="">Easy Double 4</a></td>
+    <td><a id="double4" href="">Standard Double 4</a></td>
+  </tr>
+  <tr>
+    <td><a id="train5" href="">Simulation 3</a></td>
+    <td><a id="mission5" href="">Mission 5</a></td>
+    <td><a id="doubleEasy5" href="">Easy Double 5</a></td>
+    <td><a id="double5" href="">Standard Double 5</a></td>
+  </tr>
+  <tr>
+    <td><a id="train6" href="">Advanced Simulation 1</a></td>
+    <td><a id="mission6" href="">Mission 6</a></td>
+    <td><a id="doubleEasy6" href="">Easy Double 6</a></td>
+    <td><a id="double6" href="">Standard Double 6</a></td>
+  </tr>
+  <tr>
+    <td><a id="train7" href="">Advanced Simulation 2</a></td>
+    <td><a id="mission7" href="">Mission 7</a></td>
+    <td></td>
+    <td><a id="double7" href="">Standard Double 7</a></td>
+  </tr>
+  <tr>
+    <td><a id="train8" href="">Advanced Simulation 3</a></td>
+    <td><a id="mission8" href="">Mission 8</a></td>
+    <td></td>
+    <td><a id="double8" href="">Standard Double 8</a></td>
+  </tr>
+  <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><a id="double9" href="">Standard Double 9</a></td>
+  </tr>
+  <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><a id="double10" href="">Standard Double 10</a></td>
+  </tr>
+  <tr>
+      <td><button id="rndSimBtn">Random Sim</button></td>
+      <td></td>
+      <td></td>
+      <td><a id="double11" href="">Standard Double 11</a></td>
+  </tr>
+  <tr>
+      <td><button id="rndAdvSimBtn">Random Adv Sim</button></td>
+      <td></td>
+      <td></td>
+      <td><a id="double12" href="">Standard Double 12</a></td>
+  </tr>
+  <tfoot>
+      <tr>
+          <td></td>
+          <td><button id="rndBtn">Random Mission</button></td>
+          <td><button id="rndDoubleEasyBtn">Rand Easy Double</button></td>
+          <td><button id="rndDoubleBtn">Rand Standard Double</button></td>
+      </tr>
+  </tfoot>
+</table>
+
+<br />
+
+
+<p id="num"></p>
+
+
+<div id="missionDetailDiv" style="margin-bottom: 1000px;">
+  <p><button id="nextBtn">Next Time</button></p>
+  <p>Current Time: <span id="currentSpan">0</span></p>
+  <ol id="missionDetailList">
+  </ol>
+  <p><button id="resetBtn">Reset</button></p>
+</div>
+
+
+<script>
+var ROOT = '@Url.Content("~")';
+// https://localhost:44352/lib/Audio/cd2-1-Mission_1.mp3
+// http://www.codedozer.net/GameGuides/lib/Audio/cd2-1-Mission_1.mp3
+
+var trainingUrls = [
+  'https://www.youtube.com/watch?v=AkmxFlpnxCs',
+  'https://www.youtube.com/watch?v=fD5RG2sl-Jk',
+  'https://www.youtube.com/watch?v=XyZATiDAE2Q',
+  'https://www.youtube.com/watch?v=VHbsEQ_y9ck',
+  'https://www.youtube.com/watch?v=q8U4CVBQShY',
+  'https://www.youtube.com/watch?v=-hizkZ6dXVc',
+  'https://www.youtube.com/watch?v=FAPdUX0AklQ',
+  'https://www.youtube.com/watch?v=k7WcwVg_lY4'
+];
+
+var missionUrls = [
+  'https://www.youtube.com/watch?v=zW4uC5-yDq0',
+  'https://www.youtube.com/watch?v=7Z7p2EmJasQ',
+  'https://www.youtube.com/watch?v=lPlP_Nvbqt4',
+  'https://www.youtube.com/watch?v=Y_fBCZzfoX0',
+  'https://www.youtube.com/watch?v=t56SvF7ujOQ',
+  'https://www.youtube.com/watch?v=x8R6r-OYy5E',
+  'https://www.youtube.com/watch?v=DoWeupmrqw8',
+  'https://www.youtube.com/watch?v=yS2rQTDdK-c',
+];
+
+var trainingMp3s = [
+    "@Url.Content("~/lib/Audio/cd1-1-First_test_run.mp3")",
+    "@Url.Content("~/lib/Audio/cd1-2-Second_test_run.mp3")",
+    "@Url.Content("~/lib/Audio/cd1-3-Simulation_1.mp3")",
+    "@Url.Content("~/lib/Audio/cd1-4-Simulation_2.mp3")",
+    "@Url.Content("~/lib/Audio/cd1-5-Simulation_3.mp3")",
+    "@Url.Content("~/lib/Audio/cd1-6-Advanced_simulation_1.mp3")",
+    "@Url.Content("~/lib/Audio/cd1-7-Advanced_simulation_2.mp3")",
+    "@Url.Content("~/lib/Audio/cd1-8-Advanced_simulation_3.mp3")"
+];
+
+var missionMp3s = [
+    "@Url.Content("~/lib/Audio/cd2-1-Mission_1.mp3")",
+    "@Url.Content("~/lib/Audio/cd2-2-Mission_2.mp3")",
+    "@Url.Content("~/lib/Audio/cd2-3-Mission_3.mp3")",
+    "@Url.Content("~/lib/Audio/cd2-4-Mission_4.mp3")",
+    "@Url.Content("~/lib/Audio/cd2-5-Mission_5.mp3")",
+    "@Url.Content("~/lib/Audio/cd2-6-Mission_6.mp3")",
+    "@Url.Content("~/lib/Audio/cd2-7-Mission_7.mp3")",
+    "@Url.Content("~/lib/Audio/cd2-8-Mission_8.mp3")"
+];
+
+var doubleEasyMp3s = [
+    "@Url.Content("~/lib/Audio/easy_cd1.mp3")",
+    "@Url.Content("~/lib/Audio/easy_cd1.mp3")",
+    "@Url.Content("~/lib/Audio/easy_web1.mp3")",
+    "@Url.Content("~/lib/Audio/easy_web2.mp3")",
+    "@Url.Content("~/lib/Audio/easy_web3.mp3")",
+    "@Url.Content("~/lib/Audio/easy_web4.mp3")",
+];
+
+var doubleMp3s = [
+    "@Url.Content("~/lib/Audio/full_cd3.mp3")",
+    "@Url.Content("~/lib/Audio/full_cd4.mp3")",
+    "@Url.Content("~/lib/Audio/full_cd5.mp3")",
+    "@Url.Content("~/lib/Audio/full_cd6.mp3")",
+    "@Url.Content("~/lib/Audio/full_web1.mp3")",
+    "@Url.Content("~/lib/Audio/full_web2.mp3")",
+    "@Url.Content("~/lib/Audio/full_web3.mp3")",
+    "@Url.Content("~/lib/Audio/full_web4.mp3")",
+    "@Url.Content("~/lib/Audio/full_web5.mp3")",
+    "@Url.Content("~/lib/Audio/full_web6.mp3")",
+    "@Url.Content("~/lib/Audio/full_web7.mp3")",
+    "@Url.Content("~/lib/Audio/full_web8.mp3")",
+];
+
+$('a').on('click', function(e) {
+  e.preventDefault();
+});
+
+$('#train1').on('click', function() { SetTraining(trainingMp3s[0], 0) });
+$('#train2').on('click', function() { SetTraining(trainingMp3s[1], 1) });
+$('#train3').on('click', function() { SetTraining(trainingMp3s[2], 2) });
+$('#train4').on('click', function() { SetTraining(trainingMp3s[3], 3) });
+$('#train5').on('click', function() { SetTraining(trainingMp3s[4], 4) });
+$('#train6').on('click', function() { SetTraining(trainingMp3s[5], 5) });
+$('#train7').on('click', function() { SetTraining(trainingMp3s[6], 6) });
+$('#train8').on('click', function() { SetTraining(trainingMp3s[7], 7) });
+
+$('#mission1').on('click', function() { SetMission(missionMp3s[0], 0) });
+$('#mission2').on('click', function() { SetMission(missionMp3s[1], 1) });
+$('#mission3').on('click', function() { SetMission(missionMp3s[2], 2) });
+$('#mission4').on('click', function() { SetMission(missionMp3s[3], 3) });
+$('#mission5').on('click', function() { SetMission(missionMp3s[4], 4) });
+$('#mission6').on('click', function() { SetMission(missionMp3s[5], 5) });
+$('#mission7').on('click', function() { SetMission(missionMp3s[6], 6) });
+$('#mission8').on('click', function() { SetMission(missionMp3s[7], 7) });
+
+$('#doubleEasy1').on('click', function() { SetDoubleEasy(doubleEasyMp3s[0], 0) });
+$('#doubleEasy2').on('click', function() { SetDoubleEasy(doubleEasyMp3s[1], 1) });
+$('#doubleEasy3').on('click', function() { SetDoubleEasy(doubleEasyMp3s[2], 2) });
+$('#doubleEasy4').on('click', function() { SetDoubleEasy(doubleEasyMp3s[3], 3) });
+$('#doubleEasy5').on('click', function() { SetDoubleEasy(doubleEasyMp3s[4], 4) });
+$('#doubleEasy6').on('click', function() { SetDoubleEasy(doubleEasyMp3s[5], 5) });
+
+$('#double1').on('click', function() { SetDouble(doubleMp3s[0], 0) });
+$('#double2').on('click', function() { SetDouble(doubleMp3s[1], 1) });
+$('#double3').on('click', function() { SetDouble(doubleMp3s[2], 2) });
+$('#double4').on('click', function() { SetDouble(doubleMp3s[3], 3) });
+$('#double5').on('click', function() { SetDouble(doubleMp3s[4], 4) });
+$('#double6').on('click', function() { SetDouble(doubleMp3s[5], 5) });
+$('#double7').on('click', function() { SetDouble(doubleMp3s[6], 6) });
+$('#double8').on('click', function() { SetDouble(doubleMp3s[7], 7) });
+$('#double9').on('click', function() { SetDouble(doubleMp3s[8], 8) });
+$('#double10').on('click', function() { SetDouble(doubleMp3s[9], 9) });
+$('#double11').on('click', function() { SetDouble(doubleMp3s[10], 10) });
+$('#double12').on('click', function() { SetDouble(doubleMp3s[11], 11) });
+
+function SetTraining(mission, num) {
+  ChangeMp3(mission);
+  chosenDetail = trainingListJs[num];
+  Reset();
+}
+
+function SetMission(mission, num) {
+  ChangeMp3(mission);
+  chosenDetail = detailListJs[num];
+  Reset();
+}
+
+function SetDoubleEasy(mission, num) {
+  ChangeMp3(mission);
+  chosenDetail = doubleEasyListJs[num];
+  Reset();
+}
+
+function SetDouble(mission, num) {
+  ChangeMp3(mission);
+  chosenDetail = doubleListJs[num];
+  Reset();
+}
+
+var playbackVals = [.5, .75, 1, 1.5, 2];
+
+function ChangeMp3(name) {
+  var audio = $('#player');
+  $('#mp3_src').attr('src', name);
+
+  var sliderval = $('#myRange').val();
+
+  audio[0].pause();
+  audio[0].load();
+  audio[0].playbackRate = playbackVals[sliderval - 1];
+  audio[0].oncanplaythrough = audio[0].play();
+}
+
+$('#myRange').on('change', function() {
+  var val = $(this).val();
+  var text = 100 * playbackVals[val - 1];
+  $('#playback').html(text + "%");
+
+  var audio = $('#player');
+  audio[0].playbackRate = playbackVals[val - 1];
+});
+
+$('#rndSimBtn').on('click', function() {
+  var rand = Math.floor(3 * Math.random()) + 2;
+  ChangeMp3(trainingMp3s[rand]);
+  chosenDetail = trainingListJs[rand];
+  Reset();
+});
+
+$('#rndAdvSimBtn').on('click', function() {
+  var rand = Math.floor(3 * Math.random()) + 5;
+  ChangeMp3(trainingMp3s[rand]);
+  chosenDetail = trainingListJs[rand];
+  Reset();
+});
+
+$('#rndBtn').on('click', function() {
+  var rand = Math.floor(8 * Math.random());
+  ChangeMp3(missionMp3s[rand]);
+  chosenDetail = detailListJs[rand];
+  Reset();
+});
+
+$('#rndDoubleEasyBtn').on('click', function() {
+  var rand = Math.floor(6 * Math.random());
+  ChangeMp3(doubleEasyMp3s[rand]);
+  chosenDetail = doubleEasyListJs[rand];
+  Reset();
+});
+
+$('#rndDoubleBtn').on('click', function() {
+  var rand = Math.floor(12 * Math.random());
+  ChangeMp3(doubleMp3s[rand]);
+  chosenDetail = doubleListJs[rand];
+  Reset();
+});
+
+var trainingListJs = [];
+var detailListJs = [];
+var doubleEasyListJs = [];
+var doubleListJs = [];
+var currentTime = 0;
+var chosenDetail;
+
+$(document).ready(function() {
+  trainingListJs.push(training1);
+  trainingListJs.push(training2);
+  trainingListJs.push(training3);
+  trainingListJs.push(training4);
+  trainingListJs.push(training5);
+  trainingListJs.push(training6);
+  trainingListJs.push(training7);
+  trainingListJs.push(training8);
+
+  detailListJs.push(details1);
+  detailListJs.push(details2);
+  detailListJs.push(details3);
+  detailListJs.push(details4);
+  detailListJs.push(details5);
+  detailListJs.push(details6);
+  detailListJs.push(details7);
+  detailListJs.push(details8);
+
+  doubleEasyListJs.push(doubleEasy1);
+  doubleEasyListJs.push(doubleEasy2);
+  doubleEasyListJs.push(doubleEasy3);
+  doubleEasyListJs.push(doubleEasy4);
+  doubleEasyListJs.push(doubleEasy5);
+  doubleEasyListJs.push(doubleEasy6);
+
+  doubleListJs.push(double1);
+  doubleListJs.push(double2);
+  doubleListJs.push(double3);
+  doubleListJs.push(double4);
+  doubleListJs.push(double5);
+  doubleListJs.push(double6);
+  doubleListJs.push(double7);
+  doubleListJs.push(double8);
+  doubleListJs.push(double9);
+  doubleListJs.push(double10);
+  doubleListJs.push(double11);
+  doubleListJs.push(double12);
+
+});
+
+$('#nextBtn').on('click', function() {
+  currentTime++;
+  $('#currentSpan').html(currentTime);
+  var maxIdx = FindIndicesForTime(currentTime, chosenDetail);
+
+  if (maxIdx != -1) {
+    var str = BuildListString(maxIdx, chosenDetail);
+    $('#missionDetailList').html(str);
+  }
+
+});
+
+$('#resetBtn').on('click', function() {
+  Reset();
+});
+
+function Reset() {
+  currentTime = 0;
+  $('#currentSpan').html(currentTime);
+
+  $('#missionDetailList').html("");
+}
+
+function BuildListString(idx, det) {
+  var str = "";
+  var phaseNum = 1;
+
+  for (var i = 0; i <= idx; i++) {
+    if (det[i].eventType == 1) {
+      str += "<li>" + BuildThreatString(det[i].threat) + "</li>";
+    }
+    else if (det[i].eventType == 4) {
+      str += "<li> ********** " + det[i].event + " " + phaseNum + " ending **********</li>";
+      phaseNum++;
+    }
+    else if (det[i].eventType == 2) {
+      str += "<li>Incoming Data</li>";
+    }
+    else {
+      str += "<li>Data Transfer</li>";
+    }
+  }
+
+  return str;
+}
+
+function BuildThreatString(threat) {
+  var str = ">>>>> <span class='highlight'>Time " + threat.time + "</span>: ";
+  
+  if (threat.unconfirmed == true) {
+    str += "[Unconfirmed] - ";
+  }
+
+  if (threat.severity == 2) {
+    str += "<b><u><i>Serious</i></u></b> ";
+  }
+
+  if (threat.zoneId == 4) {
+    str += "<span class='Green'>Internal</span> Threat";
+  }
+  else {
+    str += "Threat, Zone <span class='" + threat.zone + "'>" + threat.zone + "</span>";
+  }
+
+  str += " <<<<<";
+
+  return str;
+}
+
+function FindIndexForThreat(time, det) {
+  for (var i = 0; i < det.length; i++) {
+    if (det[i].eventType == 1 && det[i].threat.time == time) {
+      return i;
+    }
+  }
+
+  if (time < 8)
+    return -1;
+  else
+    return det.length-1;
+}
+
+function FindIndicesForTime(time, det) {
+    var indices = [];
+    for (var i = 0; i < det.length; i++) {
+        if (det[i].eventType == 1 && det[i].threat.time == time) {
+            indices.push(i);
+        }
+    }
+
+    if (indices.length > 0) {
+        return indices[indices.length - 1];
+    }
+
+    if (time < 8)
+        return -1;
+    else
+        return det.length-1;
+}
+
+</script>
+
+<style>
+td {
+  padding: 5px;
+}
+
+.Red {
+  font-weight: bold;
+  color: red;
+}
+
+.White {
+  font-weight: bold;
+  color: white;
+  background-color: black;
+}
+
+.Blue {
+  font-weight: bold;
+  color: blue;
+}
+
+.Green {
+  font-weight: bold;
+  color: green;
+}
+
+.Highlight {
+  background-color: yellow;
+}
+
+</style>
+
+<h3>training 1</h3>
+<ul>
+    <li>red: T6</li>
+    <li>white: T2</li>
+    <li>blue: T4</li>
+    <li>E1-01 to E1-06 with E1-01 on top</li>
+    <li>only use 7 rounds</li>
+</ul>
+
+<h3>training 2</h3>
+<ul>
+    <li>red: T3</li>
+    <li>white: T5</li>
+    <li>blue: T1</li>
+    <li>keep remaining 3 cards from training 1</li>
+    <li>only use 7 rounds</li>
+</ul>
+
+<h3>simulation 1/2/3</h3>
+<ul>
+    <li>pick one randomly</li>
+    <li>12 rounds</li>
+    <li>face down action cards</li>
+    <li>randomized trajectories</li>
+    <li>serious (white) threat cards</li>
+    <li>threats with variable parameters</li>
+    <li>"unconfirmed report"</li>
+    <li>"com system down"</li>
+    <li>new systems: rockets & computer maintenance</li>
+    <li>delays</li>
+    <li>tripping</li>
+    <li>gravolift; multiple: subsequent players still change decks but their next action is delayed</li>
+    <li>use damage octogons instead of red cubes</li>
+</ul>
+
+<h3>advanced simulation 1/2/3</h3>
+<ul>
+    <li>pick one randomly</li>
+    <li>internal threats: malfunctions & intruders</li>
+    <li>battlebots</li>
+    <li>knock out</li>
+    <li>interceptors</li>
+</ul>
+
+
+
+
+
+

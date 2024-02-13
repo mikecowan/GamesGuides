@@ -1,0 +1,300 @@
+﻿@{
+    ViewData["Title"] = "Puerto Rico All Buildings";
+}
+
+<style>
+footer {
+    margin-bottom: 10px;
+}
+
+#building-table {
+    font-size: 13px;
+}
+</style>
+
+<div id="building-table" class="table table-60 table-padding-p5">
+    <!-- 1 -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <div style="padding-top: 1em">1</div>
+        </div>
+        <div class="table-cell tc-11">
+            <div class="table table-padding-1">
+                <div class="table-row">
+                    <div class="table-cell tc-3">Small Market</div>
+                    <div class="table-cell tc-9">+$1 with sale (trader)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Aqueduct</div>
+                    <div class="table-cell tc-9">+1 good with large sugar mill and large indigo plant (craftsman)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+    
+    <!-- 2 -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <div style="padding-top: 1em">2</div>
+        </div>
+        <div class="table-cell tc-11">
+            <div class="table table-padding-1">
+                <div class="table-row">
+                    <div class="table-cell tc-3">Hacienda</div>
+                    <div class="table-cell tc-9">+1 plantation from supply (settler)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Construction Hut</div>
+                    <div class="table-cell tc-9">quarry instead of plantation (settler)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Forest House</div>
+                    <div class="table-cell tc-9">forest as plantation; 2 forests: -1 doubloon with building (setter/builder)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Black Market</div>
+                    <div class="table-cell tc-9">-$1 for each 1vp, good, colonist (builder)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Land Office</div>
+                    <div class="table-cell tc-9">buy (C) or sell (N) a plantation tile (trader)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <!-- 3 -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <div style="padding-top: 1em">3</div>
+        </div>
+        <div class="table-cell tc-11">
+            <div class="table table-padding-1">
+                <div class="table-row">
+                    <div class="table-cell tc-3">Small Warehouse</div>
+                    <div class="table-cell tc-9">store 1 <u>kind</u> of good (captain)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Storehouse</div>
+                    <div class="table-cell tc-9">store 3 of <u>any</u> kinds of goods (captain)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Chapel</div>
+                    <div class="table-cell tc-9">+$1 (C) or +1vp (N) (craftsman)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <!-- 4 -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <div style="padding-top: 1em">4</div>
+        </div>
+        <div class="table-cell tc-11">
+            <div class="table table-padding-1">
+                <div class="table-row">
+                    <div class="table-cell tc-3">Hospice</div>
+                    <div class="table-cell tc-9">+1 colonist for settling (settler)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Guesthouse</div>
+                    <div class="table-cell tc-9">move guests (all)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Hunting Lodge</div>
+                    <div class="table-cell tc-9">discard (C) a plantation or take 2vp (N) for having most empty spaces (settler)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <!-- 5 -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <div style="padding-top: 1em">5</div>
+        </div>
+        <div class="table-cell tc-11">
+            <div class="table table-padding-1">
+                <div class="table-row">
+                    <div class="table-cell tc-3">Office</div>
+                    <div class="table-cell tc-9">sell same kind of goods (trader)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Large Market</div>
+                    <div class="table-cell tc-9">+$2 with sale (trader)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Trading Post</div>
+                    <div class="table-cell tc-9">your own trading house (trader)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Church</div>
+                    <div class="table-cell tc-9">+0/1/1/2 vp with building (builder)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Zoning Office</div>
+                    <div class="table-cell tc-9">$1 discount, $2 discount for large buildings (builder)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <!-- 6 -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <div style="padding-top: 1em">6</div>
+        </div>
+        <div class="table-cell tc-11">
+            <div class="table table-padding-1">
+                <div class="table-row">
+                    <div class="table-cell tc-3">Large Warehouse</div>
+                    <div class="table-cell tc-9">store 2 <u>kinds</u> of goods (captain)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Small Wharf</div>
+                    <div class="table-cell tc-9">your own ship, +1vp per 2 goods (captain)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Royal Supplier</div>
+                    <div class="table-cell tc-9">ship X unique goods directly to supply (captain)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <!-- 7 -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <div style="padding-top: 1em">7</div>
+        </div>
+        <div class="table-cell tc-11">
+            <div class="table table-padding-1">
+                <div class="table-row">
+                    <div class="table-cell tc-3">Factory</div>
+                    <div class="table-cell tc-9">+$0/1/2/3/5 with production (craftsman)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Lighthouse</div>
+                    <div class="table-cell tc-9">+$1 per shipment and per captain (captain)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Villa</div>
+                    <div class="table-cell tc-9">+1 noble from supply (mayor)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <!-- 8 -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <div style="padding-top: 1em">8</div>
+        </div>
+        <div class="table-cell tc-11">
+            <div class="table table-padding-1">
+                <div class="table-row">
+                    <div class="table-cell tc-3">University</div>
+                    <div class="table-cell tc-9">+1 colonist for building (builder)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Harbor</div>
+                    <div class="table-cell tc-9">+1vp per delivery (captain)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Specialty Factory</div>
+                    <div class="table-cell tc-9">#-1 doubloon with production of same goods (craftsman)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Library</div>
+                    <div class="table-cell tc-9">double each privilege (all)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Jeweler</div>
+                    <div class="table-cell tc-9">+$1 per noble (craftsman)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <!-- 9 -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <div style="padding-top: 1em">9</div>
+        </div>
+        <div class="table-cell tc-11">
+            <div class="table table-padding-1">
+                <div class="table-row">
+                    <div class="table-cell tc-3">Wharf</div>
+                    <div class="table-cell tc-9">your own ship (captain)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Union Hall</div>
+                    <div class="table-cell tc-9">before shipping: +1vp per 2 same goods (captain)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-row"><div class="table-cell tc-12"><hr /></div></div>
+
+    <!-- 10 -->
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <div style="padding-top: 1em">10</div>
+        </div>
+        <div class="table-cell tc-11">
+            <div class="table table-padding-1">
+                <div class="table-row">
+                    <div class="table-cell tc-3">Guild Hall</div>
+                    <div class="table-cell tc-9">+1/2 vp for each small/large production building</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Residence</div>
+                    <div class="table-cell tc-9">+4/5/6/7 vp for &leq;9/10/11/12 occupied island spaces</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Fortress</div>
+                    <div class="table-cell tc-9">+1vp for every 3 colonists</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Customs House</div>
+                    <div class="table-cell tc-9">+1vp for every 4 vp chips</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">City Hall</div>
+                    <div class="table-cell tc-9">+1vp for each violet building</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Statue</div>
+                    <div class="table-cell tc-9">-</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Cloister</div>
+                    <div class="table-cell tc-9">+1/3/6/10 vp for 1/2/3/4 sets of 3 same plantations</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell tc-3">Royal Garden</div>
+                    <div class="table-cell tc-9">+1vp per noble</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

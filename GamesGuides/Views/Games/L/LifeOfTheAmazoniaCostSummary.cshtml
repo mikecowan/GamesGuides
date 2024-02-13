@@ -1,0 +1,304 @@
+﻿@{
+    ViewData["Title"] = "Life of the Amazonia Cost Summary";
+}
+
+<style>
+.token {
+    width: 50px;
+}
+
+.bonusicon {
+    width: 30px;
+}
+
+.list-padding {
+    padding-left: 1em;
+    font-size: 14px;
+}
+
+h4 {
+    font-size: 20pt;
+}
+
+.animeeple-sm {
+    max-width: 75px;
+}
+
+.animeeple-lg {
+    max-width: 110px;
+}
+
+.resource {
+    max-width: 20px;
+}
+
+#animaltable .table .table-cell {
+    padding-bottom: 3em;
+}
+
+.hex {
+    width: 70px;
+}
+
+.padbottom {
+    padding-bottom: 2em;
+}
+</style>
+
+
+<div class="table table-padding-1" id="animaltable">
+    <div class="table-row">
+        <!-- left column -->
+        <div class="table-cell tc-6">
+            <div class="table table-padding-1">
+
+                <!-- Caiman -->
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/caiman.png" class="animeeple-lg" />
+                    </div>
+                    <div class="table-cell tc-3 tc-push-1">
+                        <h3>Caiman</h3>
+
+                        <h4>
+                            6 <img src="~/lib/Images/LifeOfTheAmazonia/fruit.png" class="resource" />
+                            2 <img src="~/lib/Images/LifeOfTheAmazonia/water.png" class="resource" />
+                        </h4>
+                    </div>
+                    <div class="table-cell tc-2 tc-push-1">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/hexes.png" class="hex" />
+
+
+@*river + wild
+flowers (usually)
+*@                    
+                    </div>
+                    <div class="table-cell tc-3 tc-push-1">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/flower.png" class="resource" />
+                    </div>
+                </div>
+
+                <!-- Macaw -->
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/macaw.png" class="animeeple-lg" />
+                    </div>
+                    <div class="table-cell tc-3 tc-push-1">
+                        <h3>Macaw</h3>
+
+                        <h4>
+                            6 <img src="~/lib/Images/LifeOfTheAmazonia/fruit.png" class="resource" />
+                            2 <img src="~/lib/Images/LifeOfTheAmazonia/leaf.png" class="resource" />
+                        </h4>
+                    </div>
+                    <div class="table-cell tc-2 tc-push-1">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/hexes.png" class="hex" />
+@*forest + wild
+trees (usually)*@
+                    </div>
+                    <div class="table-cell tc-3 tc-push-1">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/tree.png" class="resource" />
+                    </div>
+                </div>
+
+                <!-- Jaguar -->
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/jaguar.png" class="animeeple-lg" />
+                    </div>
+                    <div class="table-cell tc-3 tc-push-1">
+                        <h3>Jaguar</h3>
+
+                        <h4>
+                            10 <img src="~/lib/Images/LifeOfTheAmazonia/fruit.png" class="resource" />
+                        </h4>
+                    </div>
+                    <div class="table-cell tc-2 tc-push-1">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/hexes.png" class="hex" />
+@*marsh + wild
+adjacency*@
+                    </div>
+                    <div class="table-cell tc-3 tc-push-1">
+                        adjacency
+                    </div>
+                </div>
+
+                <!-- Giant Otter -->
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/giantotter.png" class="animeeple-lg" />
+                    </div>
+                    <div class="table-cell tc-3 tc-push-1">
+                        <h3>Giant Otter</h3>
+
+                        <h4>
+                            8 <img src="~/lib/Images/LifeOfTheAmazonia/fruit.png" class="resource" />
+                            2 <img src="~/lib/Images/LifeOfTheAmazonia/leaf.png" class="resource" />
+                        </h4>
+                    </div>
+                    <div class="table-cell tc-2 tc-push-1">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/hexes-equal.png" class="hex" />
+@*2 wilds of the same type
+habitat*@
+                    </div>
+                    <div class="table-cell tc-3 tc-push-1">
+                        habitat
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- right column -->
+        <div class="table-cell tc-6">
+            <div class="table table-padding-1">
+
+                <!-- Leaf Frog -->
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/leaffrog.png" class="animeeple-sm" />
+                    </div>
+                    <div class="table-cell tc-3">
+                        <h3>Leaf Frog</h3>
+
+                        <h4>
+                            3 <img src="~/lib/Images/LifeOfTheAmazonia/fruit.png" class="resource" />
+                            1 <img src="~/lib/Images/LifeOfTheAmazonia/water.png" class="resource" />
+                        </h4>
+                    </div>
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/hex-or-h.png" class="hex" />
+@*marsh / river
+flowers*@
+                    </div>
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/flower.png" class="resource" />
+                    </div>
+                </div>
+
+                <!-- Woodpecker -->
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/woodpecker.png" class="animeeple-sm" />
+                    </div>
+                    <div class="table-cell tc-3">
+                        <h3>Woodpecker</h3>
+
+                        <h4>
+                            3 <img src="~/lib/Images/LifeOfTheAmazonia/fruit.png" class="resource" />
+                            1 <img src="~/lib/Images/LifeOfTheAmazonia/leaf.png" class="resource" />
+                        </h4>
+                    </div>
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/hex-or-h.png" class="hex" />
+@*marsh / forest
+trees*@
+                    </div>
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/tree.png" class="resource" />
+                    </div>
+                </div>
+
+                <!-- Tamarin -->
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/tamarin.png" class="animeeple-sm" />
+                    </div>
+                    <div class="table-cell tc-3">
+                        <h3>Tamarin</h3>
+
+                        <h4>
+                            5 <img src="~/lib/Images/LifeOfTheAmazonia/fruit.png" class="resource" />
+                        </h4>
+                    </div>
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/hex.png" class="hex-single" />
+@*wild
+nearby life*@
+                    </div>
+                    <div class="table-cell tc-3">
+                        nearby life
+                    </div>
+                </div>
+
+
+                <!-- Toucan -->
+                <div class="table-row">
+                    <div class="table-cell tc-3">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/toucan.png" class="animeeple-sm" />
+                    </div>
+                    <div class="table-cell tc-3">
+                        <h3>Toucan</h3>
+
+                        <h4>
+                            5 <img src="~/lib/Images/LifeOfTheAmazonia/fruit.png" class="resource" />
+                            2 <img src="~/lib/Images/LifeOfTheAmazonia/water.png" class="resource" />
+                        </h4>
+                    </div>
+                    <div class="table-cell tc-2">
+                        <img src="~/lib/Images/LifeOfTheAmazonia/hex.png" class="hex-single" />
+@*wild
+placement bonuses*@
+                    </div>
+                    <div class="table-cell tc-3">
+                        placement bonus
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<div class="table table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <div style="border: 3px solid black; display: inline-block; padding: 1em; background: #ddd;">
+                <img src="~/lib/Images/LifeOfTheAmazonia/bonuses.png" />
+            </div>
+        </div>
+        <div class="table-cell tc-6">
+
+            <div class="padbottom">
+                <div style="display: inline-block;">
+                    <img src="~/lib/Images/LifeOfTheAmazonia/terrain.png" style="width: 50px;" />
+                </div>
+                <div style="display: inline-block; margin-left: 3em;">
+                    <h4 style="position: relative; top: -10px;">1-7 <img src="~/lib/Images/LifeOfTheAmazonia/leaf.png" class="resource" /></h4>
+                </div>
+            </div>
+
+            <div class="padbottom">
+                <div style="display: inline-block;">
+                    <img src="~/lib/Images/LifeOfTheAmazonia/tree.png" style="width: 50px;" />
+                </div>
+                <div style="display: inline-block; margin-left: 3em;">
+                    <h4 style="position: relative; top: -10px;">1-6 <img src="~/lib/Images/LifeOfTheAmazonia/leaf.png" class="resource" /></h4>
+                </div>
+            </div>
+
+            <div class="padbottom">
+                <div style="display: inline-block;">
+                    <img src="~/lib/Images/LifeOfTheAmazonia/flower.png" style="width: 50px;" />
+                </div>
+                <div style="display: inline-block; margin-left: 3em;">
+                    <h4 style="position: relative; top: -10px;">1-6 <img src="~/lib/Images/LifeOfTheAmazonia/water.png" class="resource" /></h4>
+                </div>
+            </div>
+
+            <div class="padbottom">
+                <div style="display: inline-block;">
+                    <img src="~/lib/Images/LifeOfTheAmazonia/storage.png" style="width: 50px;" />
+                </div>
+                <div style="display: inline-block; margin-left: 3em;">
+                    <h4 style="position: relative; top: -10px;">2 or 4 <img src="~/lib/Images/LifeOfTheAmazonia/water.png" class="resource" /></h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

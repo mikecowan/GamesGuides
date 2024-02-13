@@ -1,0 +1,223 @@
+﻿@{
+    ViewData["Title"] = "Dungeon Petz Pet Cage Reference";
+}
+
+<style>
+#pet-table .table-row {
+    padding-top: 3em;
+}
+
+#pet-table ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+</style>
+
+
+<h3>Special Pets</h3>
+
+<div id="pet-table" class="table table-100">
+    <div class="table-row" style="padding-top: 0;">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/DungeonPetz/Piggy.png" style="" />
+        </div>
+        <div class="table-cell tc-2">
+            Sly Piggy
+        </div>
+        <div class="table-cell tc-8">
+            Each <b>satisfied</b> play need: may move 1 manure to neighboring cage/plot
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/DungeonPetz/Pearlpusher.png" style="" />
+        </div>
+        <div class="table-cell tc-2">
+            Pearlpusher
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>After adding 1<sup>+</sup> manure, put a gold token on <b>one</b></li>
+                <li>Keep gold if it is cleaned</li>
+            </ul>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/DungeonPetz/Nomnivore.png" style="" />
+        </div>
+        <div class="table-cell tc-2">
+            Nomnivore
+        </div>
+        <div class="table-cell tc-8">
+            Eats all items depicted
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/DungeonPetz/Vampire.png" style="" />
+        </div>
+        <div class="table-cell tc-2">
+            House Vampire
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>Hunger needs beyond 1 require an imp</li>
+                <li>Send imp to hospital (armor doesn't block)</li>
+            </ul>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/DungeonPetz/Spook.png" style="" />
+        </div>
+        <div class="table-cell tc-2">
+            Shining Spook
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>When adding mutation, may give it to neighboring pet instead</li>
+                <li>Max 1 mutation per pet per round (i.e. max 2)</li>
+            </ul>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/DungeonPetz/Lemur.png" style="" />
+        </div>
+        <div class="table-cell tc-2">
+            Soulful-Eyed Lemur
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>Each pair of like needs <b>assigned</b> to a neighbor satisfies one of that need</li>
+                <li>Can benefit from both neighbors</li>
+                <li>A pair must come from same neighbor</li>
+            </ul>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/DungeonPetz/Sickie.png" style="" />
+        </div>
+        <div class="table-cell tc-2">
+            Snuggly Sickie
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>0 disease: treat as 1 disease</li>
+                <li>Else: treat as 0 disease</li>
+            </ul>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/DungeonPetz/Pony.png" style="" />
+        </div>
+        <div class="table-cell tc-2">
+            Pony
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>Each excess anger need: satisfy 1 play need for <b>all other</b> cages</li>
+                <li>Applies whether or not she escapes</li>
+            </ul>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/DungeonPetz/Wreckie.png" style="" />
+        </div>
+        <div class="table-cell tc-2">
+            Wreckie
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>Each excess anger need: remove one cage or addon</li>
+                <li>Contained by destroying things, rather than imps</li>
+                <li>Other pets will not run away (until phase 3)</li>
+            </ul>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/DungeonPetz/Yummy.png" style="width: 60px" />
+        </div>
+        <div class="table-cell tc-2">
+            Yummy
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>Eats only meat or vegetables, depending on turn</li>
+                <li>Choose color before drawing cards by placing one facedown</li>
+                <li>Facedown card cannot be used this round</li>
+            </ul>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell tc-1">
+            <img src="~/lib/Images/DungeonPetz/Skelly.png" style="width: 60px" />
+        </div>
+        <div class="table-cell tc-2">
+            Skelly
+        </div>
+        <div class="table-cell tc-8">
+            <ul>
+                <li>Never eats, any hunger need (even from potion) adds suffering</li>
+                <li>Take a potion when acquiring</li>
+                <li>Each potion: choose a need to apply for exhibitions & sales</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+@*p y r p y r p*@
+
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br />
+
+
+<h3 style="padding-top: 2em;">Cages and Addons</h3>
+
+<div class="table table-100">
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/DungeonPetz/ExperimentalCage.png" style="width: 100px;" />
+        </div>
+        <div class="table-cell tc-8">
+            <ul style="margin: 0; padding: 0">
+                <li>May double 1 symbol to reduce the others to 0</li>
+                <li>May make different choice each round</li>
+            </ul>
+        </div>
+
+        <div class="table-row" style="padding-top: 3em;">
+            <div class="table-cell tc-2">
+                <img src="~/lib/Images/DungeonPetz/GoesDing.png" style="width: 100px;" />
+            </div>
+            <div class="table-cell tc-8">
+                <ul style="margin: 0; padding: 0">
+                    <li>after evaluating all needs, pay 1 gold to remove 1 suffering and/or 1 mutation</li>
+                    <li>may pay to use once per round</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="table-row" style="padding-top: 3em;">
+            <div class="table-cell tc-2">
+                <img src="~/lib/Images/DungeonPetz/Jukebox.png" style="width: 100px;" />
+            </div>
+            <div class="table-cell tc-8">
+                <ul style="margin: 0; padding: 0">
+                    <li>starts empty</li>
+                    <li>before evaluating needs in phase 4, may pay to change token</li>
+                    <li>may pay to move token once per round</li>
+                    <li>effect continues indefinitely</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

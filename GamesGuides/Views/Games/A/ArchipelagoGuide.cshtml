@@ -1,0 +1,425 @@
+﻿@{
+    ViewData["Title"] = "Archipelago Guide";
+}
+
+
+
+<style>
+h3, h4, ol, ul, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-bottom: .5em;
+}
+
+ol, ul {
+    margin-bottom: 1em;
+}
+
+li > ul {
+    margin-bottom: 0;
+}
+
+footer {
+    margin-bottom: 0;
+}
+
+.datatable .tc-2 {
+    text-align: center;
+}
+
+.icon {
+    width: 20px;
+}
+
+.datatable > .table-row {
+    padding: 1.5em 1em;
+}
+</style>
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Setup</h3>
+            <ul>
+                <li>1 cube on each <i>domestic</i> market</li>
+                <li>Population, rebellion, surplus all at 0</li>
+                <li>24 explorer tokens in 3 piles of 8</li>
+                <li>Open sea hex, 1 ship from each player</li>
+                <li>3 action discs, $10</li>
+                <li>After Turn 0:
+                    <ul>
+                        <li>re-shuffle all unused hexes back into stack</li>
+                        <li>add top 5 cards to evolution track</li>
+                        <li>add 1 trend card</li>
+                        <li>give each player 1 objective card</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Turn 0</h3>
+            <ul>
+                <li>Randomize turn order track</li>
+                <li>Deal 3 hexes to each player</li>
+                <li>New hexagons do not need to touch 2 (for turn 0)</li>
+                <li>each player:
+                    <ol>
+                        <li>places a hex</li>
+                        <li>move ship into new region</li>
+                        <li>take an explorer tile</li>
+                        <li>add two citizens to the land area</li>
+                        <li>increase population by 2</li>
+                        <li>follow steps for "adding a hex"</li>
+                    </ol>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<div class="table datatable">
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            <b>Action</b>
+        </div>
+        <div class="table-cell tc-2">
+            <b>Unit needed</b>
+        </div>
+        <div class="table-cell tc-2">
+            <b>Engages unit</b>
+        </div>
+        <div class="table-cell tc-2">
+            <b>Can be done by<br />engaged unit</b>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Market / Port
+        </div>
+        <div class="table-cell tc-2">
+            Citizen / Ship
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/checkmark.png" class="icon" />
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/checkmark.png" class="icon" />
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Harvest
+        </div>
+        <div class="table-cell tc-2">
+            Citizen / Ship
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/checkmark.png" class="icon" />
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/x.png" class="icon" />
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Construct Building
+        </div>
+        <div class="table-cell tc-2">
+            Citizen / Ship (Port only)
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/checkmark.png" class="icon" />
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/x.png" class="icon" />
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Construct Ship
+        </div>
+        <div class="table-cell tc-2">
+            Citizen
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/x.png" class="icon" />
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/x.png" class="icon" />
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Exploration
+        </div>
+        <div class="table-cell tc-2">
+            Citizen / Ship
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/x.png" class="icon" />
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/x.png" class="icon" />
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Migration
+        </div>
+        <div class="table-cell tc-2">
+            Citizen / Ship
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/x.png" class="icon" />
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/x.png" class="icon" />
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Recruitment
+        </div>
+        <div class="table-cell tc-2">
+            Citizen / Ship
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/x.png" class="icon" />
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/checkmark.png" class="icon" />
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Taxes
+        </div>
+        <div class="table-cell tc-2">
+            -
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/x.png" class="icon" />
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/checkmark.png" class="icon" />
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">
+            Reproduction
+        </div>
+        <div class="table-cell tc-2">
+            2 Citizens,<br />same land region
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/x.png" class="icon" />
+        </div>
+        <div class="table-cell tc-2">
+            <img src="~/lib/Images/checkmark.png" class="icon" />
+        </div>
+    </div>
+</div>
+
+<br />
+<hr />
+
+<h3>End Game</h3>
+<ul>
+    <li>Trigger: any objective card condition is met OR rebellion marker moves past population marker</li>
+    <li>Card objective: game ends at the end of active player's turn</li>
+    <li>No points for triggering end game</li>
+    <li>Separatist wins alone in event of rebellion, but can still score points and win when no rebellion occurs</li>
+    <li>Pacifist scores 3 points alone if their condition is met</li>
+    <li>Score for <i>every</i> objective card criteria, the trend card, and certain evolution cards</li>
+    <li>0 points if no contribution to point condition</li>
+    <li>Ties are friendly: 5-5-3-2-0 distributes points as 3-3-2-1-0</li>
+    <li>Score trend card the same way</li>
+    <li>Benefactor: add $1 from bank to corresponding color zone whenever that player contributes a cube for a crisis, or when building a temple</li>
+    <li>Score evolution cards with points on them</li>
+    <li>Tie breaker: money</li>
+    <li>Uncontrolled buildings only contribute to end-game conditions, otherwise they must be controlled for any in-game effects</li>
+</ul>
+
+<h3>2-player</h3>
+<ul>
+    <li>Remove pacifist & separatist</li>
+    <li>2 objectives per player</li>
+    <li>Red/Yellow vs Green/Blue</li>
+    <li>5 AD limit per player</li>
+</ul>
+
+<br /><br />
+<br /><br />
+<br /><br />
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>1. Disengagement</h3>
+            <ul>
+                <li>Skip in turn 1</li>
+                <li>Reset cards owned by players</li>
+                <li>Citizens and ships move off resources</li>
+                <li>Rebel citizens stand up</li>
+            </ul>
+            
+            <h3>2. Order of Play</h3>
+            <ul>
+                <li>Secret bids, all money to bank</li>
+                <li>Bid winner decides order for all players</li>
+                <li>No bids <span class="arrow"></span> turn order is unchanged</li>
+                <li>Tie: tied players bid again; another tie <span class="arrow"></span> turn order unchanged</li>
+            </ul>
+            
+            <h3>3. Population Effects</h3>
+            <ul>
+                <li>Board I: for each resource, adjust worker and rebellion markers</li>
+                <li>Board II: same as board I</li>
+                <li>Board III: adjust worker & rebellion markers using pop. marker</li>
+                <li>Board IV: adjust rebellion marker using worker marker</li>
+            </ul>
+
+            <h3>4. Balance of the Archipelago</h3>
+            <ul>
+                <li>Skip in turn 1</li>
+                <li>Ignore red zones, resolve any revealed tan zone</li>
+                <li>A crisis may be repeated multiple turns</li>
+                <li>Domestic crisis
+                    <ul>
+                        <li>lay down all citizens</li>
+                        <li>provide resources in turn order, once around the table</li>
+                        <li>contribute from domestic market (free) or personal supply</li>
+                        <li>stand up X citizens per cube, cannot stand up fewer</li>
+                        <li>advance rebellion marker 1 per rebel</li>
+                    </ul>
+                </li>
+                <li>Export crisis
+                    <ul>
+                        <li>provide resources in turn order, once around the table</li>
+                        <li>contribute from export market (free) or personal supply</li>
+                        <li>advance rebellion marker 1 per missing resource</li>
+                    </ul>
+                </li>
+                <li>Events ignore whether the building is controlled</li>
+            </ul>
+            
+            <h3>5. Actions</h3>
+            <ul>
+                <li>3 discs, unlock another disc each time an exploration pile is emptied</li>
+                <li>Limited actions: taxes, reproduction, exploration</li>
+                <li>All other actions are unlimited</li>
+            </ul>
+            
+            <h3>6. Evolution Card Purchase</h3>
+            <ul>
+                <li>Clear action wheel</li>
+                <li>In turn, either
+                    <ul>
+                        <li>purchase a card then rotate another, or</li>
+                        <li>rotate 2 different cards</li>
+                    </ul>
+                </li>
+                <li>Discard if pointing at skull</li>
+                <li>After purchase / rotation, fill empty spaces one at a time</li>
+                <li>Resolve red-zone crises immediately, similar to phase 4</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Adding a Hex</h4>
+            <ul>
+                <li>Increase surplus workers by number of huts</li>
+                <li>Choose 1 circle <span class="arrow"></span> add cube to domestic market</li>
+                <li>Choose another resource circle <span class="arrow"></span> add cube to personal supply</li>
+            </ul>
+            
+            <h4>Engaged</h4>
+            <ul>
+                <li>These actions engage a unit
+                    <ul>
+                        <li>harvest</li>
+                        <li>construction of a <i>building</i></li>
+                        <li>using a port or market</li>
+                    </ul>
+                </li>
+                <li>Engaged units can reproduce and recruit</li>
+            </ul>
+
+            <h4>Evolution cards</h4>
+            <ul>
+                <li>can only be used during action phase</li>
+                <li>1 card per turn</li>
+                <li>pay [cost+1] to the owner if activating another player's card</li>
+            </ul>
+
+            <h4>Explorer Tokens</h4>
+            <ul>
+                <li>can only be converted for crisis resolution or during actions</li>
+                <li>Empty stack immediately unlocks extra action disc</li>
+            </ul>
+
+            <h4>Independence</h4>
+            <ul>
+                <li>the rebellion marker moves <i>past</i> the population marker</li>
+                <li>game ends, all players lose except the separatist</li>
+            </ul>
+
+            <h4>Hex Limits</h4>
+            <ul>
+                <li>Max 3 citizens per color per region</li>
+                <li>Limit does not block other colors</li>
+                <li>No ship limits</li>
+            </ul>
+
+            <h4>Meeples</h4>
+            <ul>
+                <li><u>Unit</u> ship or citizen (active or rebel)</li>
+                <li><u>Active Unit</u> active citizen or ship</li>
+                <li>Citizens can be active/rebel, engaged/non-engaged</li>
+            </ul>
+
+            <h4>Rebel Citizens</h4>
+            <ul>
+                <li>cannot perform actions</li>
+                <li>cannot use/control a building</li>
+                <li>no money contribution during taxes</li>
+            </ul>
+
+            <h4>Sea Inlets</h4>
+            <ul>
+                <li>Citizens on opposite banks of a sea
+                    <ul>
+                        <li>cannot reproduce</li>
+                        <li>cannot harvest on the other bank</li>
+                    </ul>
+                </li>
+                <li>Ships can recruit to either bank</li>
+                <li>Towns control both sides, temples affect both sides</li>
+                <li>During turn 0 exploration, may deploy to either/both banks</li>
+            </ul>
+
+            <h4>Wonders</h4>
+            <ul>
+                <li>Must be built for the reward (construction icon)</li>
+                <li>Takes the card activation for the turn, not the action</li>
+                <li>Requires active non-engaged citizen</li>
+            </ul>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,374 @@
+﻿@{
+    ViewData["Title"] = "Cyclades Guide";
+}
+
+<style>
+h3 {
+    margin-bottom: 0;
+}
+
+ul, ol {
+    margin-top: 0;
+}
+</style>
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Setup</h3>
+            <ul>
+                <li>$5</li>
+                <li>Create creature deck</li>
+                <li><b>Heroes</b> add heroes and new creatures to deck</li>
+                <li><b>Divine Favors</b> include Priestess, Magic Item, Divine Favors</li>
+                <li><b>Divine Artifacts</b> shuffle 5 artifact cards into creature deck</li>
+                <li><b>Titans map</b> randomly place 1 of each building; include Kronos board</li>
+                <li><b>Special Metro</b> draw 2, return other 3 to box</li>
+                <li><b>Monuments</b> draw N, return rest to box. display all</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Free Positioning</h3>
+            <ul>
+                <li>$7</li>
+                <li>No units on board</li>
+                <li>Round 0: auction, limit 1 player on Apollo</li>
+                <li>Round 1: clear Gods and shuffle, skip income phase</li>
+                <li>In order, place 2 troops and 2 fleets
+                    <ul>
+                        <li>troops on 2 different islands (adjacent territories on Titans map)</li>
+                        <li>fleets in 2 different spaces, adjacent to island(s) they control</li>
+                    </ul>
+                </li>
+                <li>Bonus for each God
+                    <ul>
+                        <li>Poseidon: +1 fleet; may use 3rd space on base map</li>
+                        <li>Ares: +1 troop; may choose 3rd island on base map</li>
+                        <li>Athena: +1 philosopher</li>
+                        <li>Zeus: +1 priest</li>
+                        <li>Apollo: +1 prosperity marker (also +$1 on Titans map)</li>
+                        <li>Kronos: +1 titan; +1 titan or +1 building</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Creature Row</h3>
+            <ul>
+                <li>Generally: discard $2 creature, slide, fill spaces</li>
+                <li>Round 1: 1 creature in $4 space</li>
+                <li>Round 2: slide & draw so $2 space is empty but others are not</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>End Game</h3>
+            <ul>
+                <li>Check for 2 metropolises at <i>end</i> of round</li>
+                <li>Ties: most metropolises, then most gold</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Round Order</h3>
+            <ol>
+                <li>Update Creature row</li>
+                <li>Roll Hades dice, Arrange God tiles</li>
+                <li>Revenue, Hero upkeep</li>
+                <li>Auction</li>
+                <li>Actions</li>
+            </ol>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Combat</h3>
+            <ol>
+                <li>Roll and add number of troops/fleets</li>
+                <li>Add 1 for forts and defender's ports</li>
+                <li>Loser removes a troop/fleet; both remove for a tie</li>
+                <li>Defender can retreat</li>
+                <li>Attacker can retreat</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+@*<h3>Actions</h3>
+<div class="table table-70 table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-2">&nbsp;</div>
+        <div class="table-cell tc-2">Ares</div>
+        <div class="table-cell tc-2">Poseidon</div>
+        <div class="table-cell tc-2">Zeus</div>
+        <div class="table-cell tc-2">Athena</div>
+        <div class="table-cell tc-2">Apollo</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Creatures</div>
+        <div class="table-cell tc-2"><span class="win"></span></div>
+        <div class="table-cell tc-2"><span class="win"></span></div>
+        <div class="table-cell tc-2"><span class="win"></span></div>
+        <div class="table-cell tc-2"><span class="win"></span></div>
+        <div class="table-cell tc-2"><span class="lose"></span></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Recruit</div>
+        <div class="table-cell tc-2">troops</div>
+        <div class="table-cell tc-2">fleets</div>
+        <div class="table-cell tc-2">priests</div>
+        <div class="table-cell tc-2">philosophers</div>
+        <div class="table-cell tc-2"><span class="lose"></span></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Build</div>
+        <div class="table-cell tc-2">fortress</div>
+        <div class="table-cell tc-2">port</div>
+        <div class="table-cell tc-2">temple</div>
+        <div class="table-cell tc-2">university</div>
+        <div class="table-cell tc-2"><span class="lose"></span></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Special</div>
+        <div class="table-cell tc-2">move troops</div>
+        <div class="table-cell tc-2">move fleets</div>
+        <div class="table-cell tc-2">change creatures</div>
+        <div class="table-cell tc-2"><span class="lose"></span></div>
+        <div class="table-cell tc-2"><span class="lose"></span></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Revenue</div>
+        <div class="table-cell tc-2"><span class="lose"></span></div>
+        <div class="table-cell tc-2"><span class="lose"></span></div>
+        <div class="table-cell tc-2"><span class="lose"></span></div>
+        <div class="table-cell tc-2"><span class="lose"></span></div>
+        <div class="table-cell tc-2">$1 or $4</div>
+    </div>
+</div>*@
+
+<hr />
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-4">
+            <h3>Apollo</h3>
+            <ul>
+                <li>Only 1 player adds a prosperity marker</li>
+                <li>All players get the $1/$4 bonus</li>
+                <li>Cannot buy from creature row</li>
+                <li>Cannot sacrifice heroes</li>
+                <li>Cannot move Titans</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-8">
+            <h3>Team Play</h3>
+            <ul>
+                <li>Mandatory for 6-player</li>
+                <li>Teammates must start on different islands</li>
+                <li>Cannot:
+                    <ul>
+                        <li>gift gold to teammate</li>
+                        <li>cross into teammate's territory (even if empty)</li>
+                        <li>use teammate's fleet as a bridge</li>
+                    </ul>
+                </li>
+                <li>New goal: 3 metropolises among the team</li>
+                <li>3rd metro triggers game end, even if that team loses the metro later in the round</li>
+                <li>Military victory: if conquering an opponent's final territory, may immediately place a metropolis if
+                    <ul>
+                        <li>it does not already have a metropolis</li>
+                        <li>has room for a metropolis (red square)</li>
+                        <li>it would give the team a 3rd (4th, 5th, ...) metro</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Hades</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Start with Threat side up, Hades column at 0</li>
+                <li>Before phase 2, roll 2 dice to advance column</li>
+                <li>If column reaches 9, Hades enters play</li>
+                <li>Hades covers the god above Apollo</li>
+                <li>After Apollo, remove undead units and reset Hades</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <ul>
+                <li>1 free undead, extra cost $1/2/3/4, max 5</li>
+                <li>May mix & match troops / ships</li>
+                <li>Moving undead is identical to Ares/Poseidon, but must include undead</li>
+                <li>$2 for Necropolis, overwrites buildings</li>
+                <li>Add $1 to Necropolis whenever a normal unit is killed</li>
+                <li>Claim gold on Necropolis during revenue phase</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Heroes</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Buy from creature row, place figure on one of your islands</li>
+                <li>Temples do not provide discounts and Zeus cannot discard</li>
+                <li>Requires $2 maintenance, paid after revenue</li>
+                <li>Never shuffled back into the deck, only retrievable with Charon</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Worth 1 troop in combat</li>
+                <li>Cannot sacrifice hero on same turn he is recruited</li>
+                <li>Apollo player cannot sacrifice a hero</li>
+                <li>Cannot sacrifice a hero while dying as a combat casualty</li>
+                <li>Heroes may co-exist with Heroes, and may co-exist with creatures</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<br /><br /><br /><br />
+<br />
+
+<h3>Divine Favors</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Hades in play: shuffle <i>all</i> Divine Favor tiles, set aside</li>
+                <li>Hades not in play: draw top Divine Favor for the god above Apollo</li>
+                <li>Discard after action phase (whether it was used or not)</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Magic Items can be used right away or saved for later</li>
+                <li>Magic Items stay face-up (exception: Hephaestus)</li>
+                <li>Priestess: discard to pay a Hero or keep a creature in play</li>
+                <li>Theater: "wild" building, no innate powers</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Kronos</h3>
+            <ul>
+                <li>Free building corresponding to 1 of the Gods located above him</li>
+                <li>Top position: free titan instead</li>
+                <li>May spend $2 for a titan</li>
+                <li>Titans: count as 1 troop</li>
+                <li>May spend $1/2/3/... to move a titan on any non-Apollo turn</li>
+                <li>Harpy cannot kill a titan</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Divine Artifacts</h3>
+            <ul>
+                <li>Temples do not provide discounts and Zeus cannot discard</li>
+                <li>Never shuffled back into the deck</li>
+                <li>When purchased, place corresponding figure in a territory you control</li>
+                <li>Artifacts can be "carried" with troops/titans</li>
+                <li>Artifacts can be stolen if the territory is conquered</li>
+                <li>Win <u>immediately</u> if player/team owns all 5, do not finish the round</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Special Metropolises</h3>
+            <ul>
+                <li>First 2 metros that are built will be these special metros</li>
+                <li>Military: +3 defense (ground battles)</li>
+                <li>Seaside: +3 defense (sea battles)</li>
+                <li>Religious: $2 discount (= 2 temples)</li>
+                <li>Cultural: new metro for 3 philosophers (mandatory)</li>
+                <li>Commercial: $2 during revenue phase</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Monuments</h3>
+            <ul>
+                <li>Place the monument in a territory after acquiring 2nd building</li>
+                <li>The 2 buildings remain</li>
+                <li>Does not occupy a building space</li>
+                <li>Remains for entire game, can be conquered</li>
+                <li>Cannot contribute to metro construction</li>
+                <li>Theaters cannot contribute to monument construction</li>
+                <li>Special metros and monuments can stack</li>
+                <li>Buildings have no "memory"; can contribute to multiple requirements</li>
+                <li>Multiple monuments can be built on the same turn</li>
+                <li>Multiple monuments can be placed in the same territory</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Clarifications</h3>
+<ul>
+    <li>Necropolis
+        <ul>
+            <li>Necropolis can replace a metropolis</li>
+            <li>Metropolis can be built over a Necropolis</li>
+            <li>Only normal living units contribute gold: living troops/boats, not heroes</li>
+            <li>May choose the order for casualties (i.e. undead vs normal)</li>
+            <li>Take & move the existing Necropolis to "rebuild" one, leaving any gold behind on the board (owner of the island takes the gold at next income)</li>
+        </ul>
+    </li>
+    <li>Heroes
+        <ul>
+            <li>if hero leaves game due to death in combat, sacrifice ability, discarded from creature row (no one purchased), or player did not pay upkeep,
+then remove the card from the game. It does not go to the discard pile. Only Charon can revive them.
+</li>
+            <li>Exception: sacrificing Penthesilea, her card denotes the island and cannot be revived by Charon because she's not dead</li>
+        </ul>
+    </li>
+    <li>Building abilities stack</li>
+    <li>Divine Favors attach to the god directly above Apollo</li>
+    <li>No limit to special actions, so long as you have enough gold</li>
+    <li>Reshuffle Magic Item deck if it runs out (unlikely)</li>
+    <li>Mandatory to build metro if the theater can make it happen</li>
+    <li>Bidding: minimum payment is $1, regardless of priests</li>
+    <li>Creatures: minimum payment is $1, regardless of temples</li>
+    <li>Temples: price reduction of a temple/metropolis can only be used once per round</li>
+    <li>Creatures with figurines cannot co-exist</li>
+    <li>Creature figurines can be placed on <i>any</i> island</li>
+    <li>Chimera triggers a shuffle when it enters the discard pile by any means, and shuffles itself along with its target card</li>
+</ul>

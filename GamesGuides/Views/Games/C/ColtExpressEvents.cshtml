@@ -1,0 +1,188 @@
+﻿@{
+    ViewData["Title"] = "Colt Express Events";
+}
+
+<h3>Events</h3>
+
+<div class="event-row">
+	<div class="event">
+		<img src="~/lib/Images/ColtExpress/angry_marshal.png" />
+		<p>The Marshal shoots bandits on roof of his car.</p>
+		<p>Then the Marshal moves one car toward caboose.</p>
+	</div>
+	<div class="event">
+		<img src="~/lib/Images/ColtExpress/swivel_arm.png" />
+		<p>All bandits on roof are moved to roof of caboose.</p>
+	</div>
+</div>
+
+
+<div class="event-row">
+	<div class="event">
+		<img src="~/lib/Images/ColtExpress/braking.png" />
+		<p>All bandits on roof are moved one car toward locomotive.</p>
+	</div>
+
+	<div class="event">
+		<img src="~/lib/Images/ColtExpress/take_it_all.png" />
+		<p>Place the second strongbox in Marshal's location.</p>
+	</div>
+</div>
+
+<div class="event-row">
+	<div class="event">
+		<img src="~/lib/Images/ColtExpress/passengers_rebellion.png" />
+		<p>Bandits inside a car take a neutral bullet.</p>
+	</div>
+
+	<div class="event">
+		<img src="~/lib/Images/ColtExpress/safekeeping.png" />
+		<p>Move all loot from the Marshal's car to the roof.</p>
+	</div>
+</div>
+
+<div class="event-row">
+	<div class="event">
+		<img src="~/lib/Images/ColtExpress/rumors.png" />
+		<p>The Marshal reveals 1 goal card.</p>
+	</div>
+
+	<div class="event">
+		<img src="~/lib/Images/ColtExpress/reflex_action.png" />
+		<p>After stealin' phase, each player may play and resolve an action card directly from hand.</p>
+	</div>
+</div>
+
+<div class="event-row">
+	<div class="event">
+		<img src="~/lib/Images/ColtExpress/higher_speed.png" />
+		<p>All bandits on roof are moved one car toward caboose.</p>
+		<p>All horses, the stagecoach, and Shotgun are moved one car toward caboose.</p>
+	</div>
+
+	<div class="event">
+		<img src="~/lib/Images/ColtExpress/shotguns_rage.png" />
+		<p>All bandits in/on the stagecoach get a neutral bullet.</p>
+		<p>All bandits in/on the stagecoach's adjacent car get a neutral bullet.</p>
+	</div>
+</div>
+
+<div class="event-row">
+	<div class="event">
+		<img src="~/lib/Images/ColtExpress/panting_horses.png" />
+		<p>Remove 2 horses closest to the caboose (remove 3 with 5+ players).</p>
+	</div>
+	
+	<div class="event">
+		<img src="~/lib/Images/ColtExpress/shot_of_whiskey.png" />
+		<p>If there is whiskey on the Marshal's location, remove it from the game.</p>
+		<img src="~/lib/Images/ColtExpress/normal_whiskey.png" class="whiskey" /> Marshal moves 1 space toward caboose.
+		<br />
+		<img src="~/lib/Images/ColtExpress/old_whiskey.png" class="whiskey" /> Marshal moves to caboose, 1 space at a time.
+	</div>
+</div>
+
+<br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br />
+<div style="" class="event-row">
+	<br /><br /><br />
+	<h3>Stations</h3>
+</div>
+
+
+
+<div class="event-row">
+	<div class="event">
+		<img src="~/lib/Images/ColtExpress/pickpocketing.png" />
+		<p>Each bandit who is alone can take a purse from their location.</p>
+	</div>
+
+	<div class="event">
+		<img src="~/lib/Images/ColtExpress/marshals_revenge.png" />
+		<p>Each bandit directly above the Marshal loses their most expensive purse.</p>
+		<p>No effect against jewels or strongboxes.</p>
+	</div>
+</div>
+
+<div class="event-row">
+	<div class="event">
+		<img src="~/lib/Images/ColtExpress/hostage_taking.png" />
+		<p>Each bandit on the locomotive or its roof receives $250.</p>
+	</div>
+
+	<div class="event">
+		<img src="~/lib/Images/ColtExpress/guilty_conscience.png" />
+		<p>If Marshal wins then poorest bandit also wins.</p>
+		<p>If multiple bandits are tied then only the Marshal wins.</p>
+	</div>
+</div>
+
+<div class="event-row">
+	<div class="event">
+		<img src="~/lib/Images/ColtExpress/deadly_fall.png" />
+		<p>Can punch other players off the roof.</p>
+		<p>Knocked-off players cannot win.</p>
+	</div>
+
+	<div class="event">
+		<img src="~/lib/Images/ColtExpress/crime_doesnt_pay.png" />
+		<p>A bandit in the cell cannot win.</p>
+	</div>
+</div>
+
+<div class="event-row">
+	<div class="event">
+		<img src="~/lib/Images/ColtExpress/sharing_the_loot.png" />
+		<p>If a bandit owns a strongbox, all other bandits in that location share the reward (round down).</p>
+	</div>
+	
+	<div class="event">
+		<img src="~/lib/Images/ColtExpress/escape.png" />
+		<p>Bandits must escape or they cannot win.</p>
+		<p>Be in/on the stagecoach at end of game, OR play a ride card (ignore further actions).</p>
+	</div>
+</div>
+
+<div class="event-row">
+	<div class="event">
+		<img src="~/lib/Images/ColtExpress/mortal_bullet.png" />
+		<p>Each player loses $150 for each bullet card.</p>
+	</div>
+</div>
+
+<style>
+body {
+/*	font-family: courier new;
+	font-family: calibri;
+	width: 750px;
+*/}
+
+.event p {
+	margin: 0;
+}
+
+.event-row {
+	clear: both;
+	
+}
+
+.event-row .event {
+	/*border: 1px solid black;*/
+	padding: 0 1em;
+	vertical-align: top;
+	width: 45%;
+	float: left;
+	margin-bottom: 8em;
+}
+
+.whiskey {
+	width: 32px;
+}
+
+.event h4 span {
+	vertical-align: top;
+	margin-left: 5px;
+}
+
+</style>

@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Escape the Curse of the Temple";
+}
+<style>
+.diceicon {
+    width: 23px;
+    vertical-align: middle;
+}
+
+.adventurer {
+    width: 20px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.chamber {
+    width: 65px
+}
+
+.curse {
+    width: 45px;
+}
+
+h3 {
+    margin: 0;
+}
+</style>
+
+<h2>Escape the Curse of the Temple</h2>
+
+<p>@Html.ActionLink("Guide", "Index", "Games", new { gamename = "EscapeGuide" })</p>
+
+<br /><br /><br /><br />
+
+<h3>Key</h3>
+<div class="table table-60 table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+             <img src="~/lib/Images/Escape/start.png" class="diceicon" /> game setup
+        </div>
+        <div class="table-cell tc-6">
+            <img src="~/lib/Images/Escape/discovery.png" class="diceicon" /> after discovery, or when revealed
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-6">
+             <img src="~/lib/Images/Escape/completion.png" class="diceicon" /> completion requirement
+        </div>
+        <div class="table-cell tc-6">
+            <img src="~/lib/Images/Escape/gong.png" class="diceicon" /> gong effect
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-6">
+             <img src="~/lib/Images/Escape/activation.png" class="diceicon" /> chamber or tile activation
+        </div>
+        <div class="table-cell tc-6">
+            <img src="~/lib/Images/Escape/enter.png" class="diceicon" /> enter chamber
+        </div>
+    </div>
+</div>

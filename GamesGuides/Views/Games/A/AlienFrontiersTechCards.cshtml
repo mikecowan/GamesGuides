@@ -1,0 +1,413 @@
+﻿@{
+    ViewData["Title"] = "Alien Frontiers Tech Cards";
+}
+
+<style>
+#cardtable .table-row {
+    padding: 1em;
+}
+
+.table-cell:first-child {
+    font-weight: bold;
+}
+
+.complex .table-cell:first-child {
+    /*background-color: lightblue;*/
+}
+
+.generator {
+    display: inline-block;
+    text-align: center;
+    border-radius: 15px;
+    width: 20px;
+    padding: 2px;
+    color: white;
+    font-weight: bold;
+    outline: 1px solid black;
+}
+
+.orange {
+    background-color: #ED5822;
+}
+
+.green {
+    background-color: #8BC042;
+}
+
+.purple {
+    background-color: #6B2B84;
+}
+
+.icon {
+    width: 25px;
+    vertical-align:middle;
+}
+
+.bigicon {
+    width: 35px;
+}
+
+.header .table-cell {
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+footer {
+    margin-bottom: 50px;
+}
+</style>
+
+
+
+
+<h3>Alien Tech Cards</h3>
+
+<div class="table table-100" id="cardtable">
+    <div class="table-row header">
+        <div class="table-cell tc-2">Name</div>
+        <div class="table-cell tc-5">Trigger/Passive</div>
+        <div class="table-cell tc-5">Discard</div>
+    </div>
+
+    <!-- base cards -->
+    <div class="table-row">
+        <div class="table-cell tc-2">Alien City</div>
+        <div class="table-cell tc-5">1 vp</div>
+        <div class="table-cell tc-5"></div>
+    </div>
+    
+    <div class="table-row">
+        <div class="table-cell tc-2">Alien Monument</div>
+        <div class="table-cell tc-5">1 vp</div>
+        <div class="table-cell tc-5"></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Booster Pod</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> +1pip</div>
+        <div class="table-cell tc-5">Remove <span class="generator purple">R</span> / <span class="generator green">P</span> / <span class="generator orange">I</span></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Data Crystal</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> per <img src="~/lib/Images/AlienFrontiers/dome.png" class="icon" /> (min 1) <span class="arrow"></span> use territory bonus</div>
+        <div class="table-cell tc-5">Place/move <span class="generator green">P</span></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Gravity Manipulator</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> transfer 1 pip</div>
+        <div class="table-cell tc-5">Place/move <span class="generator purple">R</span></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Holographic Decoy</div>
+        <div class="table-cell tc-5">Protect <img src="~/lib/Images/AlienFrontiers/resource.png" class="icon" /> from raiders; raids must steal this</div>
+        <div class="table-cell tc-5"></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Mind Control Helmet</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> move & use 1 <img src="~/lib/Images/AlienFrontiers/enemyship.png" class="icon" />, cannot change value <img src="~/lib/Images/AlienFrontiers/noterraforming.png" class="icon bigicon" /></div>
+        <div class="table-cell tc-5"></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Orbital Teleporter</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> move <img src="~/lib/Images/AlienFrontiers/noterraforming.png" class="icon bigicon" /> & reuse a <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" />, cannot change value</div>
+        <div class="table-cell tc-5">Move any <img src="~/lib/Images/AlienFrontiers/dome.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Plasma Cannon</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> per <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /> <span class="arrow"></span> displace <img src="~/lib/Images/AlienFrontiers/enemyship.png" class="icon" /> to <img src="~/lib/Images/AlienFrontiers/maintenance.png" class="icon" /></div>
+        <div class="table-cell tc-5">Return 1 <img src="~/lib/Images/AlienFrontiers/enemyship.png" class="icon" /> to stock</div>
+    </div>
+    
+    <div class="table-row">
+        <div class="table-cell tc-2">Polarity Device</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> flip a <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /></div>
+        <div class="table-cell tc-5">Swap 2 <img src="~/lib/Images/AlienFrontiers/dome.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Resource Cache</div>
+        <div class="table-cell tc-5">Gain <img src="~/lib/Images/AlienFrontiers/resource.png" class="icon" /> after roll</div>
+        <div class="table-cell tc-5"></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Stasis Beam</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> -1pip</div>
+        <div class="table-cell tc-5">Place/move <span class="generator orange">I</span></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Temporal Warper</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> reroll any/all <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /></div>
+        <div class="table-cell tc-5">Claim <img src="~/lib/Images/AlienFrontiers/card.png" class="icon" /> from discard</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-12"><hr /></div>
+    </div>
+
+
+
+
+    
+    <div class="table-row complex"> <!-- exp 1 -->
+        <div class="table-cell tc-2">Alien Sarcophagus</div>
+        <div class="table-cell tc-5">1 vp with city/monument <img src="~/lib/Images/AlienFrontiers/card.png" class="icon" /></div>
+        <div class="table-cell tc-5">Gather & use relic ship</div>
+    </div>
+
+    <div class="table-row complex"> <!-- Factions -->
+        <div class="table-cell tc-2">Astrogation Servo</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> use any <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /> from <img src="~/lib/Images/AlienFrontiers/maintenance.png" class="icon" />, <img src="~/lib/Images/AlienFrontiers/noterraforming.png" class="icon bigicon" /></div>
+        <div class="table-cell tc-5">Send ships to <img src="~/lib/Images/AlienFrontiers/maintenance.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row complex"> <!-- exp 1 -->
+        <div class="table-cell tc-2">Auto Pilot A.I.</div>
+        <div class="table-cell tc-5">Place a <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /> here <span class="arrow"></span> each turn gain <img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> / <img src="~/lib/Images/AlienFrontiers/ore.png" class="icon" /></div>
+        <div class="table-cell tc-5">Move the placed <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /> to <img src="~/lib/Images/AlienFrontiers/maintenance.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row"> <!-- exp 1 -->
+        <div class="table-cell tc-2">Bio-Integration Circuit</div>
+        <div class="table-cell tc-5">&nbsp;</div>
+        <div class="table-cell tc-5">Turn start: reclaim <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /> docked at <img src="~/lib/Images/AlienFrontiers/terraforming.png" class="icon" />, send to <img src="~/lib/Images/AlienFrontiers/maintenance.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row complex"> <!-- Factions -->
+        <div class="table-cell tc-2">Chameleon Cloak</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> replace all <img src="~/lib/Images/AlienFrontiers/enemyship.png" class="icon" /> with yours, <img src="~/lib/Images/AlienFrontiers/noterraforming.png" class="icon bigicon" /></div>
+        <div class="table-cell tc-5">Swap all <img src="~/lib/Images/AlienFrontiers/dome.png" class="icon" /> between two territories</div>
+    </div>
+
+    <div class="table-row"> <!-- exp 1 -->
+        <div class="table-cell tc-2">Chrono Spike</div>
+        <div class="table-cell tc-5">Re-roll 1 unplaced <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /></div>
+        <div class="table-cell tc-5">Re-roll 1/2 <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /> to move & reuse</div>
+    </div>
+
+    <div class="table-row complex"> <!-- exp 2 -->
+        <div class="table-cell tc-2">Deflector Shield</div>
+        <div class="table-cell tc-5">Enemies pay +1 <img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> to target your <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /></div>
+        <div class="table-cell tc-5">Place/move <span class="generator purple">R</span> or <span class="generator green">P</span> to <img src="~/lib/Images/AlienFrontiers/dome.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row"> <!-- Factions -->
+        <div class="table-cell tc-2">*Electrofabricator</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> <img src="~/lib/Images/AlienFrontiers/ore.png" class="icon" /></div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/ore.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/ore.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/ore.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row complex"> <!-- Factions -->
+        <div class="table-cell tc-2">*Experimental FTL Drive</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> change a <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /> to any value; place 1 <img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> from supply</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> ? forced discard</div>
+    </div>
+
+    <div class="table-row complex"> <!-- exp 2 -->
+        <div class="table-cell tc-2">Field Amplifier</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> move <span class="generator purple">R</span> / <span class="generator green">P</span> / <span class="generator orange">I</span> to a border</div>
+        <div class="table-cell tc-5">Move all fields to 1 <img src="~/lib/Images/AlienFrontiers/dome.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row complex"> <!-- exp 2 -->
+        <div class="table-cell tc-2">Field Propagator</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> move/place random field to <img src="~/lib/Images/AlienFrontiers/dome.png" class="icon" /></div>
+        <div class="table-cell tc-5">Move a field</div>
+    </div>
+
+    <div class="table-row"> <!-- exp 2 -->
+        <div class="table-cell tc-2">Fleet Interlink</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> +1 to all <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /></div>
+        <div class="table-cell tc-5">Place a field on <img src="~/lib/Images/AlienFrontiers/dome.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row"> <!-- promo -->
+        <div class="table-cell tc-2">Frontier Outpost</div>
+        <div class="table-cell tc-10"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/ore.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/ore.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/ore.png" class="icon" /> <span class="arrow"></span> place <img src="~/lib/Images/AlienFrontiers/dome.png" class="icon" /> with no other <img src="~/lib/Images/AlienFrontiers/dome.png" class="icon" />; discard this</div>
+    </div>
+
+    <div class="table-row complex"> <!-- exp 3 -->
+        <div class="table-cell tc-2">Graviton Shunt</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> move any <img src="~/lib/Images/AlienFrontiers/dome.png" class="icon" /> here</div>
+        <div class="table-cell tc-5"></div>
+    </div>
+
+    <br /><br />
+
+    <div class="table-row complex"> <!-- exp 3 -->
+        <div class="table-cell tc-2">Infiltration A.I.</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> gather and use <img src="~/lib/Images/AlienFrontiers/enemyship.png" class="icon" />, <img src="~/lib/Images/AlienFrontiers/noterraforming.png" class="icon bigicon" /></div>
+        <div class="table-cell tc-5">Gather and use <img src="~/lib/Images/AlienFrontiers/enemyship.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/enemyship.png" class="icon" />, <img src="~/lib/Images/AlienFrontiers/noterraforming.png" class="icon bigicon" /></div>
+    </div>
+
+    <div class="table-row complex"> <!-- exp 3 -->
+        <div class="table-cell tc-2">Infinity Mirror</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> roll 1 <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" />, set others to same value</div>
+        <div class="table-cell tc-5">Set all <img src="~/lib/Images/AlienFrontiers/enemyship.png" class="icon" /> to 1</div>
+    </div>
+
+    <div class="table-row complex"> <!-- faction 2 -->
+        <div class="table-cell tc-2">*Ion Fluctuator</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> move 1 <img src="~/lib/Images/AlienFrontiers/enemydome.png" class="icon" /> away from <img src="~/lib/Images/AlienFrontiers/dome.png" class="icon" /></div>
+        <div class="table-cell tc-5">Move all <img src="~/lib/Images/AlienFrontiers/enemydome.png" class="icon" /> away from 1 <img src="~/lib/Images/AlienFrontiers/dome.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row"> <!-- Factions -->
+        <div class="table-cell tc-2">Lunar Tunneler</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> extra <img src="~/lib/Images/AlienFrontiers/ore.png" class="icon" /> at <img src="~/lib/Images/AlienFrontiers/mine.png" class="icon" /></div>
+        <div class="table-cell tc-5">Move all <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /> at <img src="~/lib/Images/AlienFrontiers/mine.png" class="icon" /> to <img src="~/lib/Images/AlienFrontiers/maintenance.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row complex"> <!-- exp 3 -->
+        <div class="table-cell tc-2">*Magnetic Lockdown</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> here <span class="arrow"></span> protect <img src="~/lib/Images/AlienFrontiers/dome.png" class="icon" /> 1 round</div>
+        <div class="table-cell tc-5">Move 1/2 <img src="~/lib/Images/AlienFrontiers/dome.png" class="icon" /> to 1 territory</div>
+    </div>
+
+    <div class="table-row"> <!-- promo -->
+        <div class="table-cell tc-2">Matter Extractor</div>
+        <div class="table-cell tc-5">May steal <img src="~/lib/Images/AlienFrontiers/resource.png" class="icon" /> or <img src="~/lib/Images/AlienFrontiers/card.png" class="icon" /> from supply or <img src="~/lib/Images/AlienFrontiers/alien.png" class="icon" /></div>
+        <div class="table-cell tc-5"></div>
+    </div>
+
+    <div class="table-row"> <!-- Factions -->
+        <div class="table-cell tc-2">*Multiverse Window</div>
+        <div class="table-cell tc-5">Allows 4th agenda</div>
+        <div class="table-cell tc-5">Reveal & score an agenda</div>
+    </div>
+
+    <div class="table-row"> <!-- exp 4 -->
+        <div class="table-cell tc-2">*Nano-Recycler</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/ore.png" class="icon" /> <span class="arrow"></span> <img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> (<img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" />)</div>
+        <div class="table-cell tc-5">Return 1 <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /> to stocks <span class="arrow"></span> <img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/ore.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/ore.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/ore.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row complex"> <!-- exp 7 -->
+        <div class="table-cell tc-2">Neutrino Missile Salvo</div>
+        <div class="table-cell tc-5">X <img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> move all <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /> with value X to <img src="~/lib/Images/AlienFrontiers/maintenance.png" class="icon" /></div>
+        <div class="table-cell tc-5">Clear & refill asteroid cards</div>
+    </div>
+
+    <div class="table-row complex"> <!-- exp 4 -->
+        <div class="table-cell tc-2">Null-Time Vault</div>
+        <div class="table-cell tc-5">Transfer 1-3 <img src="~/lib/Images/AlienFrontiers/resource.png" class="icon" /> here</div>
+        <div class="table-cell tc-5">Add <img src="~/lib/Images/AlienFrontiers/resource.png" class="icon" /> to your pool</div>
+    </div>
+
+    <div class="table-row complex"> <!-- faction 4 --> 
+        <div class="table-cell tc-2">*Oracle Engine</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> draw & attempt an agenda's in-game goal for 2vp</div>
+        <div class="table-cell tc-5">Does not count toward agenda limit</div>
+    </div>
+
+    <div class="table-row"> <!-- Factions -->
+        <div class="table-cell tc-2">*Oscillation Capacitor</div>
+        <div class="table-cell tc-5">Reuse a <img src="~/lib/Images/AlienFrontiers/card.png" class="icon" /> with <img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> cost</div>
+        <div class="table-cell tc-5">Discard an enemy <img src="~/lib/Images/AlienFrontiers/card.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row complex"> <!-- exp 6 -->
+        <div class="table-cell tc-2">Peta-Bit Processor</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> discard & trigger additional <img src="~/lib/Images/AlienFrontiers/card.png" class="icon" /></div>
+        <div class="table-cell tc-5">Remove from game: all <img src="~/lib/Images/AlienFrontiers/card.png" class="icon" /> from <img src="~/lib/Images/AlienFrontiers/alien.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row complex"> <!-- exp 7 -->
+        <div class="table-cell tc-2">Pocket Universe</div>
+        <div class="table-cell tc-5">X <img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> X <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /> here, play on others' turns</div>
+        <div class="table-cell tc-5"></div>
+    </div>
+
+    <div class="table-row complex"> <!-- exp 4 -->
+        <div class="table-cell tc-2">Probability Focus</div>
+        <div class="table-cell tc-5">May place <img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> each turn; 4 of a kind: swap the <img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> for <img src="~/lib/Images/AlienFrontiers/ore.png" class="icon" /></div>
+        <div class="table-cell tc-5"></div>
+    </div>
+
+    <div class="table-row"> <!-- Outer Belt -->
+        <div class="table-cell tc-2">Proximity Analyzer</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> ignore 1 <img src="~/lib/Images/AlienFrontiers/navigation.png" class="icon" /></div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> claim asteroid card</div>
+    </div>
+
+    <div class="table-row"> <!-- exp 4 -->
+        <div class="table-cell tc-2">Resonating Beacon</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> cycle <img src="~/lib/Images/AlienFrontiers/card.png" class="icon" /></div>
+        <div class="table-cell tc-5">Claim a <img src="~/lib/Images/AlienFrontiers/card.png" class="icon" />, may cycle 3x</div>
+    </div>
+
+    <div class="table-row complex"> <!-- exp 5 -->
+        <div class="table-cell tc-2">Retrieval Webbing</div>
+        <div class="table-cell tc-5">Take enemy excess <img src="~/lib/Images/AlienFrontiers/resource.png" class="icon" /></div>
+        <div class="table-cell tc-5">Steal 1 <img src="~/lib/Images/AlienFrontiers/resource.png" class="icon" /> from all enemies (ignore Holographic Decoy)</div>
+    </div>
+
+    <div class="table-row"> <!-- exp 7 -->
+        <div class="table-cell tc-2">Ring Repeater</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> after <img src="~/lib/Images/AlienFrontiers/asteroid.png" class="icon" /> <span class="arrow"></span> card to slot 1 instead of discard</div>
+        <div class="table-cell tc-5">Rearrange asteroid cards</div>
+    </div>
+
+    <div class="table-row complex"> <!-- exp 6 -->
+        <div class="table-cell tc-2">Scout Drone</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> peek top 3 tech/asteroid cards, replace in any order</div>
+        <div class="table-cell tc-5">Move a <img src="~/lib/Images/AlienFrontiers/dome.png" class="icon" /> to empty territory</div>
+    </div>
+
+    <div class="table-row"> <!-- faction 1 -->
+        <div class="table-cell tc-2">Seismic Detonator</div>
+        <div class="table-cell tc-5">&nbsp;</div>
+        <div class="table-cell tc-5">Remove from game, move all <img src="~/lib/Images/AlienFrontiers/dome.png" class="icon" /> to adjacent</div>
+    </div>
+
+    <div class="table-row complex"> <!-- faction 3 -->
+        <div class="table-cell tc-2">*Shipbreaker Drone</div>
+        <div class="table-cell tc-5">Return <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /> #5 or #6 to stocks <span class="arrow"></span> gain its <img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> & <img src="~/lib/Images/AlienFrontiers/ore.png" class="icon" /> cost</div>
+        <div class="table-cell tc-5">2x main action</div>
+    </div>
+
+    <div class="table-row"> <!-- exp 5 -->
+        <div class="table-cell tc-2">*Shipfitter Drone</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> & dock <img src="~/lib/Images/AlienFrontiers/die5.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/die5.png" class="icon" /> / <img src="~/lib/Images/AlienFrontiers/die6.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/die6.png" class="icon" /> <span class="arrow"></span> free <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /></div>
+        <div class="table-cell tc-5">Roll & use new <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row"> <!-- Factions -->
+        <div class="table-cell tc-2">*Solar Harvester</div>
+        <div class="table-cell tc-5">+1 <img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> per <img src="~/lib/Images/AlienFrontiers/enemyship.png" class="icon" /> at <img src="~/lib/Images/AlienFrontiers/solar.png" class="icon" /></div>
+        <div class="table-cell tc-5">Return all enemy <img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> to supply</div>
+    </div>
+
+    <div class="table-row"> <!-- Outer Belt -->
+        <div class="table-cell tc-2">Spacial Stabilizer</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> cancel <img src="~/lib/Images/AlienFrontiers/asteroid.png" class="icon" /></div>
+        <div class="table-cell tc-5">Cancel raid against asteroid cards</div>
+    </div>
+
+    <div class="table-row complex"> <!-- exp 5 -->
+        <div class="table-cell tc-2">Superconducting Grapple</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> per <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /> <span class="arrow"></span> dock at full station</div>
+        <div class="table-cell tc-5">Move all <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /> from 1 station to <img src="~/lib/Images/AlienFrontiers/maintenance.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row"> <!-- exp 5 -->
+        <div class="table-cell tc-2">Suppression Matrix</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> -1 to all <img src="~/lib/Images/AlienFrontiers/ship.png" class="icon" /></div>
+        <div class="table-cell tc-5">Remove a field with <img src="~/lib/Images/AlienFrontiers/dome.png" class="icon" /></div>
+    </div>
+
+    <div class="table-row"> <!-- exp 6 -->
+        <div class="table-cell tc-2">Tele-Operator</div>
+        <div class="table-cell tc-5"><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /><img src="~/lib/Images/AlienFrontiers/fuel.png" class="icon" /> <span class="arrow"></span> use <img src="~/lib/Images/AlienFrontiers/card.png" class="icon" /> at <img src="~/lib/Images/AlienFrontiers/alien.png" class="icon" /></div>
+        <div class="table-cell tc-5">Claim a <img src="~/lib/Images/AlienFrontiers/card.png" class="icon" /> at <img src="~/lib/Images/AlienFrontiers/alien.png" class="icon" /></div>
+    </div>
+
+</div>

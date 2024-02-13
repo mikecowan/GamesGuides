@@ -1,0 +1,452 @@
+﻿@{
+    ViewData["Title"] = "Alien Frontiers Agenda Cards";
+}
+
+<style>
+#cardtable .table-row {
+    padding: 1em;
+}
+
+.header .table-cell {
+    font-weight: bold;
+}
+
+.table-cell:first-child {
+    /*font-weight: bold;*/
+}
+
+.complex .table-cell:first-child {
+    background-color: lightblue;
+}
+
+.generator {
+    display: inline-block;
+    text-align: center;
+    border-radius: 15px;
+    width: 20px;
+    padding: 2px;
+    color: white;
+    font-weight: bold;
+    outline: 1px solid black;
+}
+
+.orange {
+    background-color: #ED5822;
+}
+
+.green {
+    background-color: #8BC042;
+}
+
+.purple {
+    background-color: #6B2B84;
+}
+
+.icon {
+    width: 25px;
+    vertical-align:middle;
+}
+
+.header .table-cell {
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+</style>
+
+
+@*alien tech
+------------------
+Booster Pod
+Data Crystal
+Electrofabricator       X
+Experimental FTL Drive  X
+Holographic Decoy
+Ion Fluctuator          X
+Magnetic Lockdown       X
+Multiverse Window       X
+
+Nano-Recycler           X
+Oracle Engine           X
+Oscillation Capacitor   X
+Plasma Cannon
+Polarity Device
+Resource Cache
+Shipbreaker Drone       X
+Solar Harvester         X
+Shipfitter Drone        X
+Stasis Beam
+
+
+factions
+------------------
+Proxima Centauri Scholars
+Brethren Ship
+REV (faction piece)
+
+territories
+------------------
+Asimov Crater
+Blish Expanse           X
+Bradbury Plateau
+Burroughs Desert
+Heinlein Plains
+Herbert Valley
+Lem Badlands
+Pohl Foothills
+Van Vogt Mountains
+
+
+orbital facilities
+------------------
+Alien Artifact
+Colonist Hub
+Lunar Mine
+Raiders' Outpost
+Solar Converter
+Terraforming Station
+
+
+asteroid cards
+------------------
+Alien Beacon
+Alien Satellite
+Cargo Salvage
+Orbital Debris
+
+
+terms
+------------------
+Agenda Cards
+Alien Tech cards
+Asteroid Cards
+
+
+Relic Ship
+Repulsor Field
+Isolation Field
+
+"contiguous"
+    group of territories that share a border
+"colony"
+"control" of territory
+    having the most colonies on a territory, grants the bonus
+
+"faction facility"
+    the docking slot on your faction board; other players may pay you 1 fuel to use it
+"field generator"
+    any of the 3 plastic tokens that modify a territory; Isolation/Repulsor/Positron
+"in tow"
+    an asteroid card that is still tapped sideways and cannot yet be used, because the owner has not held it for a full round yet
+
+"orbital facility"
+    places where you send your ships on the board
+
+"pilot" asteroid cards
+    specific asteroid cards that allow for direct dice manipulation; Orbital, Belter, System, Hyperspace
+
+"raided"
+"territory"
+    a region on the planet
+"territory benefit"
+    the bonus for having the most colonies in a region
+"unclaimed"
+    when no one has the territory benefit, usually because the territory is empty or there is a tie for majority
+
+z*@
+
+<h3>Agenda Cards</h3>
+
+<div class="table table-100 table-padding-1">
+    <div class="table-row header">
+        <div class="table-cell tc-3">In-Game</div>
+        <div class="table-cell tc-3 tc-push-1">End-Game</div>
+        <div class="table-cell tc-3 tc-push-2">Notes</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Take control of two territories belonging to other players in a single turn</div>
+        <div class="table-cell tc-3 tc-push-1">Possess Plasma Cannon and Electrofabricator</div>
+        <div class="table-cell tc-3 tc-push-2">Electrofabricator</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Go from the lowest untied score to the highest untied score in a single turn</div>
+        <div class="table-cell tc-3 tc-push-1">Possess Booster Pod and Experimental FTL Drive</div>
+        <div class="table-cell tc-3 tc-push-2">Experimental FTL Drive</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Take control of a territory using the Ion Fluctuator</div>
+        <div class="table-cell tc-3 tc-push-1">Control at least one territory with only a single colony</div>
+        <div class="table-cell tc-3 tc-push-2">Ion Fluctuator</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Use the Relic Ship at the Terraforming Station</div>
+        <div class="table-cell tc-3 tc-push-1">Possess Relic Ship and Magnetic Lockdown</div>
+        <div class="table-cell tc-3 tc-push-2">Magnetic Lockdown</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Steal from all opponents on a single turn</div>
+        <div class="table-cell tc-3 tc-push-1">Possess a Polarity Device and a Multiverse Window</div>
+        <div class="table-cell tc-3 tc-push-2">Multiverse Window</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">The Lunar Mine has five sequentially numbered ships and at least one ship is yours</div>
+        <div class="table-cell tc-3 tc-push-1">Possess Nano-Recycler and control Van Vogt Mountains</div>
+        <div class="table-cell tc-3 tc-push-2">Nano-Recycler</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Another player steals the Oracle Engine card from you</div>
+        <div class="table-cell tc-3 tc-push-1">Possess the Oracle Engine card</div>
+        <div class="table-cell tc-3 tc-push-2">Oracle Engine</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Gather fleet of seven ships</div>
+        <div class="table-cell tc-3 tc-push-1">Possess Resource Cache and Oscillation Capacitor</div>
+        <div class="table-cell tc-3 tc-push-2">Oscillation Capacitor</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Use the Shipbreaker Drone to destroy one of your ships</div>
+        <div class="table-cell tc-3 tc-push-1">Possess the Shipbreaker Drone and exactly four ships</div>
+        <div class="table-cell tc-3 tc-push-2">Shipbreaker Drone</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Build a ship using the Shipfitter Drone</div>
+        <div class="table-cell tc-3 tc-push-1">There are no Field Generators in any territory</div>
+        <div class="table-cell tc-3 tc-push-2">Shipfitter Drone</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Gain two or more Alien Tech cards in a single turn</div>
+        <div class="table-cell tc-3 tc-push-1">Possess Stasis Beam and Solar Harvester</div>
+        <div class="table-cell tc-3 tc-push-2">Solar Harvester</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-12"><hr /></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Use the Brethren Ship to hijack a ship at the Alien Artifact</div>
+        <div class="table-cell tc-3 tc-push-1">Brethren Ship is docked at an orbital or faction facility</div>
+        <div class="table-cell tc-3 tc-push-2">Brethren of the Stars</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Place the Repulsor Field without using Proxima Centauri Scholars</div>
+        <div class="table-cell tc-3 tc-push-1">Do not have any colonies on Lem Badlands</div>
+        <div class="table-cell tc-3 tc-push-2">Proxima Centauri Scholars (optional)</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Move REV into a territory that has the Isolation Field</div>
+        <div class="table-cell tc-3 tc-push-1">The REV is located in a territory that you control</div>
+        <div class="table-cell tc-3 tc-push-2">Xeno Explorations Inc.</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Place or Move the Repulsor Field onto the territory where the REV is located</div>
+        <div class="table-cell tc-3 tc-push-1">The REV and the Relic Ship are both in Burroughs Desert Score 1 VP</div>
+        <div class="table-cell tc-3 tc-push-2">Xeno Explorations Inc.</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-12"><hr /></div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Claim two Asteroid cards on the same turn</div>
+        <div class="table-cell tc-3 tc-push-1">Control Blish Expanse</div>
+        <div class="table-cell tc-3 tc-push-2">Outer Belt</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Raid an Asteroid card that is “in tow”</div>
+        <div class="table-cell tc-3 tc-push-1">Have two or more “pilot” Asteroid cards</div>
+        <div class="table-cell tc-3 tc-push-2">Outer Belt</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-3">Possess Cargo Salvage and Orbital Debris</div>
+        <div class="table-cell tc-3 tc-push-1">Possess Alien Beacon and Alien Satellite</div>
+        <div class="table-cell tc-3 tc-push-2">Outer Belt</div>
+    </div>
+
+</div>
+
+@*
+Gather fleet of seven ships
+possess Resource Cache and Oscillation Capacitor                              Oscillation Capacitor exp tech
+
+Roll five sequential ships without using Alien Tech
+control Pohl Foothills
+
+Land three colonies in a single turn
+control Herbert Valley
+
+Roll four-of-a-kind without using Alien Tech
+control Van Vogt Mountains
+
+Take control of two territories belonging to other players in a single turn            Electrofabricator exp tech
+possess Plasma Cannon and Electrofabricator
+
+Gain six or more ore in a single turn
+control a territory with a single colony on it
+
+Possess four Alien Tech cards that no other player possesses
+control Asimov Crater
+
+Land a colony on a territory that already has the Isolation Field on it
+control Bradbury Plateau
+
+Bump your own ships from the Raiders’ Outpost
+control a territory containing three or more colonies belonging to other players
+
+Gain twelve or more fuel in a single turn
+control a territory with three field generators on it
+
+Gain two or more Alien Tech cards in a single turn                                      Solar Harvester exp tech
+possess Stasis Beam and Solar Harvester
+
+Go from the lowest untied score to the highest untied score in a single turn            Experimental FTL Drive exp tech
+possess Booster Pod and Experimental FTL Drive
+
+Move colonies so that you and an opponent both gain VPs
+control Burroughs Desert
+
+Take control of a territory from an opponent and use its benefit immediately
+control Heinlein Plains
+
+Move five spaces on the Colonist Hub track in a single turn
+control Lem Badlands
+
+Steal from all opponents on a single turn                                               Multiverse Window exp tech
+possess a Polarity Device and a Multiverse Window
+
+Gain two ships in a single turn
+do not have any colonies on Van Vogt Mountains
+
+Dock four ships totaling exactly 8 points at the Alien Artifact
+do not have any colonies on Pohl Foothills
+
+--------------
+
+Use your ships to fill all unused docks at the Solar Converter
+do not have any colonies on Heinlein Plains
+
+Dock your ships at five different orbital facilities on the same turn
+do not have any colonies on Burroughs Desert
+
+Fill every dock at the Lunar Mine with your ships
+do not have any colonies on Herbert Valley
+
+Launch a colony from the Colonist Hub and begin work on a new colony in the same turn
+do not have any colonies on Asimov Crater
+
+Roll 10 or less with your fleet of five or more ships without using Alien Tech
+do not have any colonies on Bradbury Plateau
+
+12
+first player to build 6th ship
+have (or tie for) most colonies in contiguous territories
+
+12
+Discard the Plasma Cannon to return a ship to the stock
+have exactly one colony in the territory with the Repulsor Field
+
+13
+Move or remove two Field Generators in the same turn
+possess no Alien Tech cards
+
+13
+A player uses the Raiders’ Outpost against you (raid fails)
+possess Data Crystal and Holographic Decoy
+
+14
+have 3+ landed colonies but control no territories
+all colonies are in territories you control
+
+15
+raid (and discard) an Alien Tech card you already have
+have 3 ships docked at the Raiders’ Outpost
+
+16
+You are raided on two consecutive turns
+have 4+ or more colonies on one territory
+
+
+-----------
+
+
+
+Place the Repulsor Field without using Proxima Centauri Scholars                                            faction
+do not have any colonies on Lem Badlands
+
+Move REV into a territory that has the Isolation Field                                                      faction
+The REV is located in a territory that you control
+
+Place or Move the Repulsor Field onto the territory where the REV is located                                faction
+The REV and the Relic Ship are both in Burroughs Desert Score 1 VP
+
+24
+take control of a territory using the Ion Fluctuator                                                        exp tech
+control at least one territory with only a single colony
+
+24
+Move your colony into an unclaimed territory
+your colonies are the only colonies in every territory you occupy
+
+25
+use the Brethren Ship to hijack a ship at the Alien Artifact                                                faction
+Brethren Ship is docked at an orbital or faction facility.
+
+25
+use the Shipbreaker Drone to destroy one of your ships                                                      exp tech
+possess the Shipbreaker Drone and exactly four ships
+
+26
+another player steals the Oracle Engine card from you                                                       exp tech
+possess the Oracle Engine card
+
+26
+draw four or more Agenda cards on a single turn
+this was your last face-down Agenda card
+
+14
+Use the Relic Ship at the Terraforming Station                                                              exp tech
+possess Relic Ship and Magnetic Lockdown
+
+15
+The Lunar Mine has five sequentially numbered ships and at least one ship is yours                          exp tech
+possess Nano-Recycler and control Van Vogt Mountains
+
+16
+Build a ship using the Shipfitter Drone                                                                     exp tech
+there are no Field Generators in any territory
+
+23
+Claim two Asteroid cards on the same turn                                                                   outer belt
+control Blish Expanse
+
+34
+Raid an Asteroid card that is “in tow”                                                                      outer belt
+have two or more “pilot” Asteroid cards
+
+34
+Possess Cargo Salvage and Orbital Debris                                                                    asteroid cards
+possess Alien Beacon and Alien Satellite
+
+
+
+
+*@
+

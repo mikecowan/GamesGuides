@@ -1,0 +1,380 @@
+﻿@{
+    ViewData["Title"] = "Puerto Rico Guide";
+}
+
+<h3>Setup</h3>
+
+<div class="table-60 table-padding-1">
+
+    <div class="table-row">
+        <div class="table-cell tc-2" style="border-bottom: 1px solid black;">Players:</div>
+        <div class="table-cell tc-2" style="border-bottom: 1px solid black;">3</div>
+        <div class="table-cell tc-2" style="border-bottom: 1px solid black;">4</div>
+        <div class="table-cell tc-2" style="border-bottom: 1px solid black;">5</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Colonists*</div>
+        <div class="table-cell tc-2">55</div>
+        <div class="table-cell tc-2">75</div>
+        <div class="table-cell tc-2">95</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Plantations</div>
+        <div class="table-cell tc-2">I-I-C</div>
+        <div class="table-cell tc-2">I-I-C-C</div>
+        <div class="table-cell tc-2">I-I-I-C-C</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Points</div>
+        <div class="table-cell tc-2">75</div>
+        <div class="table-cell tc-2">100</div>
+        <div class="table-cell tc-2">122</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Money</div>
+        <div class="table-cell tc-2">$2</div>
+        <div class="table-cell tc-2">$3</div>
+        <div class="table-cell tc-2">$4</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Boats</div>
+        <div class="table-cell tc-2">4/5/6</div>
+        <div class="table-cell tc-2">5/6/7</div>
+        <div class="table-cell tc-2">6/7/8</div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-2">Prospectors</div>
+        <div class="table-cell tc-2">0</div>
+        <div class="table-cell tc-2">1</div>
+        <div class="table-cell tc-2">2</div>
+    </div>
+
+</div>
+
+<br />
+
+<p>* in the supply, after filling the colonist ship</p>
+
+<h3>Recommended changes</h3>
+<ul>
+    <li>Corn starts with $1 less</li>
+    <li>Factory costs $8</li>
+    <li>University costs $7</li>
+    <li>Do not use Office + Trading Post</li>
+    <li>Do not use Forest House + Hacienda (player suggestion)</li>
+    <li>Do not use Villa + Jeweler (player suggestion)</li>
+</ul>
+
+<h3>Clarifications</h3>
+<ul>
+    <li>Craftsman: takes bonus good last; must produce goods to receive privilege</li>
+    <li>Settler: taking a tile is optional</li>
+    <li>Mayor: privilege is optional; may store excess colonists on windrose, but <u>only</u> if there are no available circles</li>
+    <li>Buccaneer
+        <ul>
+            <li>Do not add doubloons at end of round</li>
+            <li>May not take again until another player takes it - use the reward tile</li>
+            <li>Raid: Colonists must be added to buildings/tiles - cannot go to windrose</li>
+            <li>Kidnap:
+                <ul>
+                    <li>Take any doubloons on the selected role</li>
+                    <li>No one else takes kidnapped role: +$3</li>
+                    <li>Else: play the kidnapped role as normal</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+
+<div id="building-table" class="table table-90 table-padding-1">
+    <div class="table-row">
+        <div class="table-cell tc-1">Small Market</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>+Trading Post: No extra doubloons</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-1">Aqueduct</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>Large production buildings only</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">Hacienda</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>Take face-down bonus tile <u>before</u> normal face-up tile</li>
+                <li>+Hospice: No colonist for face-down tile</li>
+                <li>+Forest House: May look at tile first, keep it or return it for forest tile</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-1">Forest House</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>+Hacienda: May look at tile first, keep it or return it for forest tile</li>
+                <li>+Hospice: Extra colonist goes on windrose</li>
+                <li>+Library: May place 0/1/2 plantation tiles as forests</li>
+                <li>+Land Office: May look at tile first, keep it or return it for forest tile</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">Construction Hut</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>+Library: May take 2 quarries</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-1">Black Market</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>Max 1 each of colonist, good, and/or vp</li>
+                <li>Must have $0 remaining after purchase</li>
+                <li>Colonist on Black Market cannot be chosen</li>
+                <li>Cannot "undo" game end trigger</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">Hospice</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>Take from colonist ship if supply is empty</li>
+                <li>+Hacienda: No colonist for face-down tile</li>
+                <li>+Forest House: Extra colonist goes on windrose</li>
+                <li>+Library: Bonus colonist only for first tile</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-1">Guest House</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>May move colonists at start/during/end of all phases to any building/plantation/quarry</li>
+                <li>+Church: 0vp, even if immediately moving colonists onto newly-built Church</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">Large Market</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>+Trading Post: No extra doubloons</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-1">Trading Post</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>+Small Market: No extra doubloons</li>
+                <li>+Large Market: No extra doubloons</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">Factory</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>Must actually produce all the types of goods for the doubloons</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-1">Church</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>+University: 0vp for building Church</li>
+                <li>+Guest House: 0vp, even if immediately moving colonists onto newly-built Church</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">University</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>Take from colonist ship if supply is empty</li>
+                <li>Max 1 bonus colonist, even for buildings with 2+ circles</li>
+                <li>+Church: 0vp for building Church</li>
+                <li>+Statue: Bonus colonist goes to windrose</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-1">Small Wharf</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>May mix different types of goods</li>
+                <li>+Wharf: May use both on same captain phase</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">Wharf</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>May use as a boat of the same "type" as an existing boat</li>
+                <li>+Small Wharf: May use both on same captain phase</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-1">Lighthouse</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>+$1 per shipment does not require being Captain</li>
+                <li>+$1 for Captain does not require any shipments</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">Guild Hall</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>+Jeweler: Jeweler counts as large production</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-1">Specialty Factory</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>Cannot use corn as your most-produced good</li>
+                <li>Only count goods that you actually produced</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">City Hall</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>Counts self</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-1">Library</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>Settler: Take another face-up non-quarry after last player selects</li>
+                <li>Craftsman: 2 goods may be different</li>
+                <li>+Hospice: Bonus colonist only for first tile</li>
+                <li>+Construction Hut: May take 2 quarries</li>
+                <li>+Forest House: May place 0/1/2 plantation tiles as forests</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">&nbsp;</div>
+        <div class="table-cell tc-5">&nbsp;</div>
+        <div class="table-cell tc-1">Union Hall</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>Evaluate vp for each type of good separately</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">&nbsp;</div>
+        <div class="table-cell tc-5">&nbsp;</div>
+        <div class="table-cell tc-1">Statue</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>+University: Bonus colonist goes to windrose</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="table-row">
+        <div class="table-cell tc-12"><hr /></div>
+    </div>
+
+
+    <div class="table-row">
+        <div class="table-cell tc-1">Land Office</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>Buy a face-down plantation or sell a plantation (colonist goes to San Juan)</li>
+                <li>May not discard tile instead of placing it</li>
+                <li>+Forest House: May look at tile first, keep it or return it for forest tile</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-1">Royal Supplier</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>Before first shipment, place up to 1 good per noble directly to the supply for +1vp each</li>
+                <li>Cannot duplicate goods</li>
+                <li>No other bonuses apply</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">Villa</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>Take 1 noble from supply, similar to mayor privilege</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-1">Hunting Lodge</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>0vp if tied</li>
+                <li>Forests may be discarded, but not quarries</li>
+                <li>Colonists on discarded tiles go to windrose</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-row">
+        <div class="table-cell tc-1">Jeweler</div>
+        <div class="table-cell tc-5">
+            <ul>
+                <li>+Guild Hall: Jeweler counts as large production</li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<style>
+#building-table .tc-5 {
+    font-size: 11px;
+}
+
+#building-table .tc-1 {
+    font-size: 13px;
+}
+
+.table ul {
+    /*padding-left: 0;*/
+    margin: 0;
+/*    list-style: none; */
+}
+
+.table li {
+    margin: 5px auto;
+}
+</style>

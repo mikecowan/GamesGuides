@@ -1,0 +1,102 @@
+﻿@{
+    ViewData["Title"] = "Scoville Guide";
+}
+
+<style>
+.chart {
+    width: 60%;
+}
+</style>
+
+<div class="table table-100">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <h3>Setup</h3>
+            <ul>
+                <li>4 bonus action tiles (2x "Plant Extra")</li>
+                <li>$10</li>
+                <li>3 peppers: red, yellow, blue</li>
+                <li>Display morning Market deck</li>
+                <li>Display recipe cards</li>
+                <li>Auction House decks</li>
+                <li>Award plaques (remove top award for 2p/3p, unless using exp)</li>
+                <li>Lab board (exp)</li>
+                <li>Randomize turn order</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h3>Scoring</h3>
+            <ul>
+                <li>Market Cards</li>
+                <li>Recipe Cards</li>
+                <li>Award Plaques</li>
+                <li>Unplayed Bonus Tiles</li>
+                <li>$3 = 1 point</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<h3>Phases</h3>
+<ol>
+    <li>Auction
+        <ul>
+            <li>Skip for turn 1</li>
+            <li>Blind auction</li>
+            <li>Choose turn placement</li>
+            <li>Claim Auction cards in turn order</li>
+            <li>Refill auction cards depending on phase</li>
+        </ul>
+    </li>
+    <li>Planting (turn order)
+        <ul>
+            <li>Mandatory</li>
+            <li>Plant adjacent to an existing pepper</li>
+            <li>May use a bonus tile</li>
+            <li>Earn award plaque; max 1 per round; duplicates are allowed</li>
+            <li>Exp: Lab board
+                <ul>
+                    <li>Must finish <i>all</i> main field planting before planting in Lab</li>
+                    <li><i>may</i> plant on lab board, adjacent to existing pepper (beyond 1st)</li>
+                    <li>Gain pepper(s) based on cross-breeds with all adjacent peppers</li>
+                    <li>May use bonus tile for Lab</li>
+                    <li>No award plaques for Lab</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>Harvesting (reverse turn order)
+        <ul>
+            <li>Move up to 3, min 1</li>
+            <li>Begin on star (turn 1)</li>
+            <li>May not pass through or step on other farmers</li>
+            <li>May not turn around mid turn</li>
+        </ul>
+    </li>
+    <li>Fulfillment (turn order)
+        <ul>
+            <li>May do each action, max 1 per type</li>
+            <li>Farmers' Market: cash in peppers for reward</li>
+            <li>Chili Cookoff: cash in peppers for recipe card</li>
+            <li>Sell: 1 color, up to 5, gain $1 per 2 peppers <u>currently planted</u>
+                <ul>
+                    <li>Exp: Count peppers in your own Lab too</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>Time Check: Count the remaining <u>R</u>ecipe and <u>M</u>arket cards</li>
+</ol>
+
+<br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br />
+
+<img src="~/lib/Images/Scoville/morningflow.png" class="chart" />
+
+<br /><br /><br /><br /><br /><br />
+<br /><br />
+
+<img src="~/lib/Images/Scoville/afternoonflow.png" class="chart" />
+

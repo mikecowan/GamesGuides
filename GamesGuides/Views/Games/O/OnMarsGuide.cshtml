@@ -1,0 +1,357 @@
+﻿@{
+    ViewData["Title"] = "On Mars Guide";
+}
+<style>
+h3, h4, ol, ul, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-bottom: .5em;
+}
+
+ol, ul {
+    margin-bottom: 1em;
+}
+
+li > ul {
+    margin-bottom: 0;
+}
+
+footer {
+    margin-bottom: 0;
+}
+</style>
+
+<h3>Setup</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Starting mine (S) on center hex</li>
+                <li>Randomly place the other 4 starting buildings (S)</li>
+                <li>Shuffle tech tiles separately by back colors; fill tech grid</li>
+                <li>Fill scientist display, cover crystal icons</li>
+                <li>3 mission cards: long/long/short or long/short/short</li>
+                <li>Separate research tiles by color and letter, place on indicated hexes</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <ul>
+                <li>1 of each resource</li>
+                <li>1 crystal in depot</li>
+                <li>1 bot on starting shelter</li>
+                <li>3 colonists in living quarters</li>
+                <li>3 private goal cards, + 4th tech grid goal</li>
+                <li>Place astronauts on turn order spaces, immediately receive benefit</li>
+                <li>Player with marker on highest number chooses starting side for shuttle</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<hr />
+
+<br />
+
+<h3>Shuttle Phase</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <ul>
+                <li>Move shuttle 1 space toward middle of board</li>
+                <li>If shuttle is already on a 1 space, it travels</li>
+                <li>Players make travel decision in turn order</li>
+                <li>When traveling, gain bonus for new turn order space</li>
+                <li>May discard ship from hangar to do normal travel steps</li>
+                <li>If not traveling, do not receive bonus for turn order space</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-6">
+            <h4>Exploration</h4>
+            <ul>
+                <li>Discovery tile on empty hex, !3 spaces from your rover (skip if none)</li>
+                <li>Draw new discovery tile</li>
+            </ul>
+
+            <h4>Production</h4>
+            <ul>
+                <li>All your advanced buildings produce a resource/crystal</li>
+                <li>Miners produce minerals</li>
+            </ul>
+
+            <h4>Retrieve Colonists</h4>
+            <ul>
+                <li>Retrieve colonists from action slots at the destination</li>
+                <li>Retrieve colonists in the working area</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<br />
+
+<hr />
+
+<br />
+
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-6">
+            <!-- Building Complex -->
+            <h4>Building Complex</h4>
+            <p>group of connected buildings of the same type</p>
+            <ul></ul>
+
+            <!-- Building Zone -->
+            <h4>Building Zone</h4>
+            <p>6 hexes surrounding the bot, plus the hex the bot is on</p>
+            <ul></ul>
+
+            <!-- Crystals -->
+            <h4>Crystals</h4>
+            <ul>
+                <li>Add to depot area when gained</li>
+                <li>Move to crystal slots at start of turn</li>
+                <li>Cannot be spent on the turn they are gained</li>
+            </ul>
+
+            <!-- Displacement Rule -->
+            <h4>Displacement Rule</h4>
+            <p>When building on top of things,</p>
+            <ul>
+                <li>Return crystals to the supply</li>
+                <li>Return tiles to the box</li>
+                <li>Owner of a bot/rover moves it to closest available hex
+                    <ul>
+                        <li>empty, or</li>
+                        <li>building with no other piece on it</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Max Storage -->
+            <h4>Max Storage</h4>
+            <ul>
+                <li>[X+1] of each resource</li>
+                <li>X = number of your shelter tiles on the map</li>
+            </ul>
+
+            <!-- Minerals -->
+            <h4>Minerals</h4>
+            <ul>
+                <li>Can sub for any other resource</li>
+                <li>Cannot sub for crystals or when completing earth contracts</li>
+            </ul>
+            
+            <!-- Mines -->
+            <h4>Mines</h4>
+            <ul>
+                <li>Cost is 1 colonist from living quarters</li>
+                <li>Any player may upgrade a any mine</li>
+                <li>Miners return to living quarters after an upgrade</li>
+            </ul>
+
+            <!-- Rounds -->
+            <h4>Rounds</h4>
+            <ol>
+                <li>Colonization Phase
+                    <ul>
+                        <li>Turn order 1-8</li>
+                        <li>Mandatory Main Action</li>
+                        <li>Optional Executive Action (before or after Main)</li>
+                    </ul>
+                </li>
+                <li>Shuttle Phase</li>
+            </ol>
+
+        </div>
+        <div class="table-cell tc-6">
+            <!-- Colony Status Update -->
+            <h4>Colony Status Update</h4>
+            <p>triggered when all LSS markers are at (or above) the colony level marker
+                <br />
+                update status at end of your turn
+            </p>
+            <ol>
+                <li>Move colony level marker up 1 row</li>
+                <li>Adjust blueprint cards (level 2 and 3)</li>
+                <li>Fill empty spaces in tech grid, bottom to top </li>
+                <li>Refill warehouse</li>
+                <li>Gain points for progress cubes (only first two status updates)</li>
+                <li>For level 3+, move Remaining Missions marker 1 space right</li>
+            </ol>
+            
+            <!-- LSS Markers -->
+            <h4>LSS Markers</h4>
+            <ul>
+                <li>Advance after adding a building</li>
+                <li>If marker did not move past the colony level marker,
+                    <ul>
+                        <li>Gain VP for tile in that column, do not remove tile</li>
+                        <li>Gain 1 benefit shown in top-left of LSS</li>
+                    </ul>    
+                </li>
+            </ul>
+
+            <!-- Using Tech -->
+            <h4>Using Tech</h4>
+            <ul>
+                <li>May use other players' tech</li>
+                <li>For each <i>instance</i> of using another player's tech, that player may
+                    <ul>
+                        <li>gain 1 oxygen from supply, <i>or</i></li>
+                        <li>develop the tech tile that was used</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <!-- Using Technology to Construct Buildings -->
+            <h4>Using Technology to Construct Buildings</h4>
+            <ul>
+                <li>Required when creating/expanding a complex</li>
+                <li>To connect to X buildings, tech must be at least level X</li>
+            </ul>
+
+            <!-- Boost -->
+            <h4>Boost</h4>
+            <ul>
+                <li>Crystal or teal colonist icon at bottom of action</li>
+                <li>Extra colonist(s) can be moved to working area</li>
+                <li>Generally adds a movement or repeats the action</li>
+            </ul>
+
+            <!-- Red Colonist Icon -->
+            <h4>Red Colonist Icon</h4>
+            <ul>
+                <li>Requires adding a colonist from <i>living quarters</i> to an action slot</li>
+                <li>Must make 1 payment per <i>other player color</i> already present
+                    <ul>
+                        <li>1 crystal, or</li>
+                        <li>move 1 colonist to the working area</li>
+                    </ul>    
+                </li>
+                <li>If all action slots are full
+                    <ul>
+                        <li>Remove all colonists of player(s) with most colonists there</li>
+                        <li>Removed colonists go to <i>working area</i></li>
+                        <li>Proceed with action as normal</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<br /><br /><br /><br />
+
+<h4>Executive Actions</h4>
+<ul>
+    <li>1x per turn, before or after main action</li>
+    <li>Available executive actions are shown on board, unlock more with Welcome a Ship action</li>
+    <li>Boosting tech
+        <ul>
+            <li>Some Advanced Building actions depict the Teal Colonist icon at the bottom.
+                <br />
+                This means that you may send Colonists to your Working Area to temporarily add to the level of the tech when taking the action.</li>
+            <li>The tech must be owned by someone</li>
+        </ul>
+    </li>
+    <li>2 crystals to use your own advanced building</li>
+    <li>Scientists
+        <ul>
+            <li><u>Executive action</u> use <i>any</i> advanced building that matches a scientist you have hired</li>
+            <li>Move the scientist to a matching blueprint card</li>
+            <li>As long as the scientist is on the blueprints, both players may perform that upgraded building's executive action at no cost</li>
+            <li>Scientists remain on the blueprints until they are moved to work somewhere else (from another executive action)</li>
+        </ul>
+    </li>
+</ul>
+
+<h4>Missions</h4>
+<ul>
+    <li>3 missions per game</li>
+    <li>Gain reward each contribution to the mission, move mission tracker</li>
+    <li>When complete, remove card from game and move the Remaining Mission marker 1 space</li>
+    <li>Hard limit on number of mission rewards
+        <ul>
+            <li>e.g. boost an action and the mission tracker is at 1, only get 1 mission reward</li>
+        </ul>
+    </li>
+    <li>3 complete missions will trigger endgame, can be reduced by colony level</li>
+</ul>
+
+<h4>Private Goals</h4>
+<ul>
+    <li>May complete at any time during your turn in colonization phase</li>
+    <li>Keep card face up and collect reward</li>
+    <li>Max 1 private goal per player per game</li>
+    <li>May discard to use <i>as</i> a crystal, not to gain a crystal</li>
+    <li>Discarding is independent of whether a private goal has been completed</li>
+    <li>Cannot use private goal cards as crystals to fulfill contracts, must use actual crystals</li>
+</ul>
+
+<br />
+
+<hr />
+
+<br />
+
+<h3>End Game</h3>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell tc-8">
+            <ul>
+                <li>Trigger: end of colonization phase if Remaining Missions marker reached 0</li>
+                <li>Finish current round; then play 1 final round, skipping the final shuttle phase</li>
+                <li>Add any crystals gained in final round to the player depot as normal (tie breaker)</li>
+                <li>Retrieve colonists from working area</li>
+                <li>Retrieve colonists from all action slots from either orbit or colony, depending on player marker</li>
+                <li>Scientists score 3vp per advanced building on the board, regardless of owner</li>
+                <li>May add resources to earth contracts during final scoring</li>
+            </ul>
+        </div>
+        <div class="table-cell tc-4">
+            <ol>
+                <li>Progress cubes</li>
+                <li>Ship in hangar</li>
+                <li>Colonists</li>
+                <li>Tech</li>
+                <li>Advanced buildings</li>
+                <li>Scientists</li>
+                <li>Earth contracts</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<h4>Tie Breakers</h4>
+<ol>
+    <li>most crystals</li>
+    <li>most advanced buildings</li>
+    <li>most progress cubes in progress area</li>
+    <li>shared victory</li>
+</ol>
+
+<br />
+
+<hr />
+
+<br />
+
+<h3>Changes for Lower Player Counts</h3>
+<ul>
+    <li>2p: 2 of each item in warehouse</li>
+    <li>2p: Only use 1 set of tech tiles for tech grid</li>
+    <li>2p: Never refill tech grid</li>
+    <li>2p: Additional cost for red colonist icon includes your own colonists</li>
+</ul>
+
+
+
+
